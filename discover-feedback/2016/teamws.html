@@ -11,7 +11,7 @@
 
 
 
-<title>Metodologie vědy (Aug)</title>
+<title>R Notebook</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,11 +22,6 @@
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
-<script src="site_libs/htmlwidgets-0.7/htmlwidgets.js"></script>
-<script src="site_libs/raphael-2.1.4/raphael-2.1.4.min.js"></script>
-<link href="site_libs/justgage-1.2.2.1/justgage.css" rel="stylesheet" />
-<script src="site_libs/justgage-1.2.2.1/justgage.js"></script>
-<script src="site_libs/gauge-binding-0.3/gauge.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
@@ -175,7 +170,7 @@ $(document).ready(function ()  {
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
     };
-    options.showAndHide = true;
+    options.showAndHide = false;
     options.smoothScroll = true;
 
     // tocify
@@ -237,6 +232,13 @@ div.tocify {
   border-radius: 0px;
 }
 
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+  padding-left: 10px;
+}
 
 </style>
 
@@ -444,87 +446,23 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Metodologie vědy (Aug)</h1>
+<h1 class="title toc-ignore">R Notebook</h1>
 
 </div>
 
 
-<div id="hodnoceni-kurzu" class="section level1">
-<h1>Hodnocení kurzu</h1>
-<div id="celkove-hodnoceni" class="section level2">
-<h2>Celkové hodnocení</h2>
-<p>Průměrná známka:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Blok setkání</th>
-<th align="right">Průměrná známka</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">slot1</td>
-<td align="right">1.17</td>
-</tr>
-</tbody>
-</table>
-<p>(Je možné, že jsi učil/a jen v jednom slotu, ale ukazují se ti oba, nebo naopak. Je to tím, jak studenti zadali kurzy v dotazníku.)</p>
+<div id="tymove-workshopy" class="section level1">
+<h1>Týmové workshopy</h1>
+<div id="zajimavost-a-uzitecnost" class="section level2">
+<h2>Zajímavost a užitečnost</h2>
+<div id="jul" class="section level3">
+<h3>Júl</h3>
+<p><img src="teamws_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>
-<div id="co-se-studentum-nejvic-libilo" class="section level2">
-<h2>Co se studentům nejvíc líbilo?</h2>
-<ul>
-<li><p>Pacilo sa mi to ze to vyvratilo moju predstavu ze ma statistika nebavi</p></li>
-<li><p>Dozvľdľla jsem se hodnľ o výzkumu. Díky kurzu se budu jinak dívat na statistiky</p></li>
-<li><p>Možnosť skúsiť si vlastný výskum.</p></li>
-<li><p>Vlastní výzkum.</p></li>
-<li><p>Přístup lektora - Jára byl vždycky milý a ochotný, hodně zapojoval studenty a vybíral zajímavá témata. Přesně tak by to podle mě mělo být.</p></li>
-<li><p>Prístup Jara, ktorý bol vysoko profesionálny. Ďalej skupina ľudí, ktorá fungovala vysoko nadpriemerne. Témy, ktoré mi otvorili obzory v behaviorálnej ekonómii aj vo veciach potrebných v debate. A do bežného života je podstatné získavanie údajov.</p></li>
-</ul>
+<div id="august" class="section level3">
+<h3>August</h3>
+<p><img src="teamws_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
-<div id="co-zlepsit-na-kurzu" class="section level2">
-<h2>Co zlepšit na kurzu</h2>
-<ul>
-<li><p>Počítat s vlastním výzkumem v plánu hodin.</p></li>
-<li><p>Nic. Hlavně ho zachovejte, mohlo by to zajímat více lidí.</p></li>
-<li><p>Možno by som od začiatku počítal s prieskumom, aby mi potom nebolo ľúto, že nestíhame :(</p></li>
-</ul>
-</div>
-<div id="obtiznost" class="section level2">
-<h2>Obtížnost</h2>
-</div>
-</div>
-<div id="zpetna-vazba-na-lektora" class="section level1">
-<h1>Zpětná vazba na lektora</h1>
-<div id="hodnoceni" class="section level2">
-<h2>Hodnocení</h2>
-</div>
-<div id="poznamky-k-lektorovi" class="section level2">
-<h2>Poznámky k lektorovi</h2>
-<ul>
-<li>Jarov prístup ku kurzu bol stavaný tak, že si viem predstaviť, že by zvládol aj nevyrovnanú skupinu. My sme však boli dynamická partia preto aj ten kurz taký bol.</li>
-</ul>
-</div>
-</div>
-<div id="ovlivnil-kurz-studenty" class="section level1">
-<h1>Ovlivnil kurz studenty?</h1>
-<div id="ano-nebo-ne" class="section level2">
-<h2>Ano, nebo ne?</h2>
-<div id="htmlwidget-3a4d4817bb0e85d996af" style="width:672px;height:480px;" class="gauge html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3a4d4817bb0e85d996af">{"x":{"value":100,"min":0,"max":100,"customSectors":[{"lo":80,"hi":100,"color":"success"},{"lo":40,"hi":79,"color":"warning"},{"lo":0,"hi":39,"color":"danger"}],"symbol":"%","label":null,"humanFriendly":true,"humanFriendlyDecimal":1,"href":null},"evals":[],"jsHooks":[]}</script>
-</div>
-<div id="v-cem" class="section level2">
-<h2>V čem?</h2>
-<ul>
-<li><p>Rozšíril mi pohled na svľt a na rôyná společenská témata</p></li>
-<li><p>Utvrdil ma v tom, že v budúcnosti chcem určite nejakým spôsobom pracovať okolo dát, pri najhoršom aspoň s ich veľkým množstvom.</p></li>
-<li><p>Vnímání dotazníků a feedbacku.</p></li>
-<li><p>už umím číst data, vím, jak je kriticky hodnotit. Také umím dělat dotazníky a znám základy metodologie.</p></li>
-<li><p>V profilácii můjho očakávaného štúdia ekonómie.</p></li>
-</ul>
-</div>
-<div id="pokud-ne-proc-ne" class="section level2">
-<h2>Pokud ne, proč ne?</h2>
-<p>Nic.</p>
 </div>
 </div>
 
