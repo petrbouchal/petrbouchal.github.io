@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Zpětná vazba Discover</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/htmlwidgets-0.7/htmlwidgets.js"></script>
+<script src="site_libs/d3-3.5.14/d3.min.js"></script>
+<link href="site_libs/customcss-0.0.1/html_ggiraph.css" rel="stylesheet" />
+<script src="site_libs/ggiraph-binding-0.3.1.9000/ggiraph.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+  padding-left: 10px;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Discover 2016</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-graduation-cap"></span>
+     
+    Kurzy
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="kurzy_srovnani.html">Srovnání</a>
+    </li>
+    <li class="dropdown-header">Júl</li>
+    <li>
+      <a href="kurz_bioetika_1.html">Bioetika</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">August</li>
+    <li>
+      <a href="kurz_matika_2.html">Matika</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="tymove.html">Týmové</a>
+</li>
+<li>
+  <a href="dopad.html">Dopad</a>
+</li>
+<li>
+  <a href="volnycas.html">Volný čas</a>
+</li>
+<li>
+  <a href="demog.html">Demografie</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://example.com">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Zpětná vazba Discover</h1>
+
+</div>
+
+
+<p><i class="fa fa-camera-retro"> 12 </i></p>
+<div id="tymove-workshopy" class="section level1">
+<h1>Týmové workshopy</h1>
+<div id="srovnani" class="section level2">
+<h2>Srovnání</h2>
+</div>
+<div id="international" class="section level2">
+<h2>International</h2>
+<div id="htmlwidget-30428d3c884fdf79339e" style="width:960px;height:500px;" class="ggiraph html-widget"></div>
+<script type="application/json" data-for="htmlwidget-30428d3c884fdf79339e">{"x":{"html":"<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' id='svg_1' viewBox='0 0 432.00 432.00' width='432.00' height='432.00'><g><defs><clipPath id='cl1_0'><rect x='0.00' y='432.00' width='0.00' height='0.00'/>\u003c/clipPath>\u003c/defs><rect x='0.00' y='0.00' width='432.00' height='432.00' id='1' clip-path='url(#cl1_0)' fill=\"#FFFFFF\" fill-opacity=\"1\" stroke-width=\"0.75\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><defs><clipPath id='cl1_1'><rect x='0.00' y='0.00' width='432.00' height='432.00'/>\u003c/clipPath>\u003c/defs><rect x='0.00' y='0.00' width='432.00' height='432.00' id='2' clip-path='url(#cl1_1)' fill=\"#FFFFFF\" fill-opacity=\"1\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><defs><clipPath id='cl1_2'><rect x='51.82' y='22.00' width='138.25' height='381.49'/>\u003c/clipPath>\u003c/defs><rect x='51.82' y='22.00' width='138.25' height='381.49' id='3' clip-path='url(#cl1_2)' fill=\"#EBEBEB\" fill-opacity=\"1\" stroke=\"none\"/><polyline points='73.82,403.49 73.82,22.00' id='4' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"0.533489\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='105.24,403.49 105.24,22.00' id='5' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"0.533489\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='136.66,403.49 136.66,22.00' id='6' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"0.533489\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='168.08,403.49 168.08,22.00' id='7' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"0.533489\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='51.82,331.96 190.08,331.96' id='8' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='51.82,212.74 190.08,212.74' id='9' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='51.82,93.53 190.08,93.53' id='10' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='58.11,403.49 58.11,22.00' id='11' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='89.53,403.49 89.53,22.00' id='12' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='120.95,403.49 120.95,22.00' id='13' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='152.37,403.49 152.37,22.00' id='14' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='183.79,403.49 183.79,22.00' id='15' clip-path='url(#cl1_2)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><rect x='58.11' y='278.31' width='60.60' height='107.29' id='16' clip-path='url(#cl1_2)' fill=\"#FF61C3\" fill-opacity=\"1\" stroke=\"none\"/><rect x='118.71' y='278.31' width='53.87' height='107.29' id='17' clip-path='url(#cl1_2)' fill=\"#DB72FB\" fill-opacity=\"1\" stroke=\"none\"/><rect x='172.57' y='278.31' width='11.22' height='107.29' id='18' clip-path='url(#cl1_2)' fill=\"#00C19F\" fill-opacity=\"1\" stroke=\"none\"/><rect x='58.11' y='159.10' width='44.89' height='107.29' id='19' clip-path='url(#cl1_2)' fill=\"#FF61C3\" fill-opacity=\"1\" stroke=\"none\"/><rect x='103.00' y='159.10' width='56.11' height='107.29' id='20' clip-path='url(#cl1_2)' fill=\"#DB72FB\" fill-opacity=\"1\" stroke=\"none\"/><rect x='159.11' y='159.10' width='20.20' height='107.29' id='21' clip-path='url(#cl1_2)' fill=\"#00C19F\" fill-opacity=\"1\" stroke=\"none\"/><rect x='179.31' y='159.10' width='4.49' height='107.29' id='22' clip-path='url(#cl1_2)' fill=\"#00BA38\" fill-opacity=\"1\" stroke=\"none\"/><rect x='58.11' y='39.88' width='56.11' height='107.29' id='23' clip-path='url(#cl1_2)' fill=\"#FF61C3\" fill-opacity=\"1\" stroke=\"none\"/><rect x='114.22' y='39.88' width='53.87' height='107.29' id='24' clip-path='url(#cl1_2)' fill=\"#DB72FB\" fill-opacity=\"1\" stroke=\"none\"/><rect x='168.08' y='39.88' width='11.22' height='107.29' id='25' clip-path='url(#cl1_2)' fill=\"#00C19F\" fill-opacity=\"1\" stroke=\"none\"/><rect x='179.31' y='39.88' width='2.24' height='107.29' id='26' clip-path='url(#cl1_2)' fill=\"#00BA38\" fill-opacity=\"1\" stroke=\"none\"/><rect x='181.55' y='39.88' width='2.24' height='107.29' id='27' clip-path='url(#cl1_2)' fill=\"#93AA00\" fill-opacity=\"1\" stroke=\"none\"/><script type='text/javascript'><![CDATA[document.querySelectorAll('#svg_1')[0].getElementById('16').setAttribute('title','Very useful 48%');document.querySelectorAll('#svg_1')[0].getElementById('17').setAttribute('title','Somewhat useful 43%');document.querySelectorAll('#svg_1')[0].getElementById('18').setAttribute('title','Not very useful  9%');document.querySelectorAll('#svg_1')[0].getElementById('19').setAttribute('title','Very useful 36%');document.querySelectorAll('#svg_1')[0].getElementById('20').setAttribute('title','Somewhat useful 45%');document.querySelectorAll('#svg_1')[0].getElementById('21').setAttribute('title','Not very useful 16%');document.querySelectorAll('#svg_1')[0].getElementById('22').setAttribute('title','Not at all useful  4%');document.querySelectorAll('#svg_1')[0].getElementById('23').setAttribute('title','Very useful 45%');document.querySelectorAll('#svg_1')[0].getElementById('24').setAttribute('title','Somewhat useful 43%');document.querySelectorAll('#svg_1')[0].getElementById('25').setAttribute('title','Not very useful  9%');document.querySelectorAll('#svg_1')[0].getElementById('26').setAttribute('title','Not at all useful  2%');document.querySelectorAll('#svg_1')[0].getElementById('27').setAttribute('title','Don&#8217t know  2%');]]>\u003c/script><script type='text/javascript'><![CDATA[document.querySelectorAll('#svg_1')[0].getElementById('16').setAttribute('data-id','23');document.querySelectorAll('#svg_1')[0].getElementById('17').setAttribute('data-id','20');document.querySelectorAll('#svg_1')[0].getElementById('18').setAttribute('data-id','11');document.querySelectorAll('#svg_1')[0].getElementById('19').setAttribute('data-id','25');document.querySelectorAll('#svg_1')[0].getElementById('20').setAttribute('data-id','22');document.querySelectorAll('#svg_1')[0].getElementById('21').setAttribute('data-id','13');document.querySelectorAll('#svg_1')[0].getElementById('22').setAttribute('data-id','10');document.querySelectorAll('#svg_1')[0].getElementById('23').setAttribute('data-id','24');document.querySelectorAll('#svg_1')[0].getElementById('24').setAttribute('data-id','21');document.querySelectorAll('#svg_1')[0].getElementById('25').setAttribute('data-id','12');document.querySelectorAll('#svg_1')[0].getElementById('26').setAttribute('data-id','9');document.querySelectorAll('#svg_1')[0].getElementById('27').setAttribute('data-id','7');]]>\u003c/script><defs><clipPath id='cl1_3'><rect x='0.00' y='0.00' width='432.00' height='432.00'/>\u003c/clipPath>\u003c/defs><defs><clipPath id='cl1_4'><rect x='195.56' y='22.00' width='138.25' height='381.49'/>\u003c/clipPath>\u003c/defs><rect x='195.56' y='22.00' width='138.25' height='381.49' id='28' clip-path='url(#cl1_4)' fill=\"#EBEBEB\" fill-opacity=\"1\" stroke=\"none\"/><polyline points='217.55,403.49 217.55,22.00' id='29' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"0.533489\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='248.97,403.49 248.97,22.00' id='30' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"0.533489\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='280.39,403.49 280.39,22.00' id='31' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"0.533489\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='311.82,403.49 311.82,22.00' id='32' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"0.533489\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='195.56,331.96 333.81,331.96' id='33' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='195.56,212.74 333.81,212.74' id='34' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='195.56,93.53 333.81,93.53' id='35' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='201.84,403.49 201.84,22.00' id='36' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='233.26,403.49 233.26,22.00' id='37' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='264.68,403.49 264.68,22.00' id='38' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='296.11,403.49 296.11,22.00' id='39' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='327.53,403.49 327.53,22.00' id='40' clip-path='url(#cl1_4)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><rect x='201.84' y='278.31' width='51.62' height='107.29' id='41' clip-path='url(#cl1_4)' fill=\"#619CFF\" fill-opacity=\"1\" stroke=\"none\"/><rect x='253.46' y='278.31' width='13.47' height='107.29' id='42' clip-path='url(#cl1_4)' fill=\"#00B9E3\" fill-opacity=\"1\" stroke=\"none\"/><rect x='266.93' y='278.31' width='58.35' height='107.29' id='43' clip-path='url(#cl1_4)' fill=\"#D39200\" fill-opacity=\"1\" stroke=\"none\"/><rect x='325.28' y='278.31' width='2.24' height='107.29' id='44' clip-path='url(#cl1_4)' fill=\"#F8766D\" fill-opacity=\"1\" stroke=\"none\"/><rect x='201.84' y='159.10' width='26.93' height='107.29' id='45' clip-path='url(#cl1_4)' fill=\"#619CFF\" fill-opacity=\"1\" stroke=\"none\"/><rect x='228.77' y='159.10' width='8.98' height='107.29' id='46' clip-path='url(#cl1_4)' fill=\"#00B9E3\" fill-opacity=\"1\" stroke=\"none\"/><rect x='237.75' y='159.10' width='85.29' height='107.29' id='47' clip-path='url(#cl1_4)' fill=\"#D39200\" fill-opacity=\"1\" stroke=\"none\"/><rect x='323.04' y='159.10' width='4.49' height='107.29' id='48' clip-path='url(#cl1_4)' fill=\"#F8766D\" fill-opacity=\"1\" stroke=\"none\"/><rect x='201.84' y='39.88' width='42.64' height='107.29' id='49' clip-path='url(#cl1_4)' fill=\"#619CFF\" fill-opacity=\"1\" stroke=\"none\"/><rect x='244.48' y='39.88' width='6.73' height='107.29' id='50' clip-path='url(#cl1_4)' fill=\"#00B9E3\" fill-opacity=\"1\" stroke=\"none\"/><rect x='251.22' y='39.88' width='4.49' height='107.29' id='51' clip-path='url(#cl1_4)' fill=\"#93AA00\" fill-opacity=\"1\" stroke=\"none\"/><rect x='255.71' y='39.88' width='65.09' height='107.29' id='52' clip-path='url(#cl1_4)' fill=\"#D39200\" fill-opacity=\"1\" stroke=\"none\"/><rect x='320.79' y='39.88' width='6.73' height='107.29' id='53' clip-path='url(#cl1_4)' fill=\"#F8766D\" fill-opacity=\"1\" stroke=\"none\"/><script type='text/javascript'><![CDATA[document.querySelectorAll('#svg_1')[0].getElementById('41').setAttribute('title','Rather yes 41%');document.querySelectorAll('#svg_1')[0].getElementById('42').setAttribute('title','Rather no 11%');document.querySelectorAll('#svg_1')[0].getElementById('43').setAttribute('title','Definitely yes 46%');document.querySelectorAll('#svg_1')[0].getElementById('44').setAttribute('title','Definitely no  2%');document.querySelectorAll('#svg_1')[0].getElementById('45').setAttribute('title','Rather yes 21%');document.querySelectorAll('#svg_1')[0].getElementById('46').setAttribute('title','Rather no  7%');document.querySelectorAll('#svg_1')[0].getElementById('47').setAttribute('title','Definitely yes 68%');document.querySelectorAll('#svg_1')[0].getElementById('48').setAttribute('title','Definitely no  4%');document.querySelectorAll('#svg_1')[0].getElementById('49').setAttribute('title','Rather yes 34%');document.querySelectorAll('#svg_1')[0].getElementById('50').setAttribute('title','Rather no  5%');document.querySelectorAll('#svg_1')[0].getElementById('51').setAttribute('title','Don&#8217t know  4%');document.querySelectorAll('#svg_1')[0].getElementById('52').setAttribute('title','Definitely yes 52%');document.querySelectorAll('#svg_1')[0].getElementById('53').setAttribute('title','Definitely no  5%');]]>\u003c/script><script type='text/javascript'><![CDATA[document.querySelectorAll('#svg_1')[0].getElementById('41').setAttribute('data-id','17');document.querySelectorAll('#svg_1')[0].getElementById('42').setAttribute('data-id','14');document.querySelectorAll('#svg_1')[0].getElementById('43').setAttribute('data-id','4');document.querySelectorAll('#svg_1')[0].getElementById('44').setAttribute('data-id','1');document.querySelectorAll('#svg_1')[0].getElementById('45').setAttribute('data-id','19');document.querySelectorAll('#svg_1')[0].getElementById('46').setAttribute('data-id','16');document.querySelectorAll('#svg_1')[0].getElementById('47').setAttribute('data-id','6');document.querySelectorAll('#svg_1')[0].getElementById('48').setAttribute('data-id','3');document.querySelectorAll('#svg_1')[0].getElementById('49').setAttribute('data-id','18');document.querySelectorAll('#svg_1')[0].getElementById('50').setAttribute('data-id','15');document.querySelectorAll('#svg_1')[0].getElementById('51').setAttribute('data-id','8');document.querySelectorAll('#svg_1')[0].getElementById('52').setAttribute('data-id','5');document.querySelectorAll('#svg_1')[0].getElementById('53').setAttribute('data-id','2');]]>\u003c/script><defs><clipPath id='cl1_5'><rect x='0.00' y='0.00' width='432.00' height='432.00'/>\u003c/clipPath>\u003c/defs><defs><clipPath id='cl1_6'><rect x='51.82' y='5.48' width='138.25' height='16.52'/>\u003c/clipPath>\u003c/defs><rect x='51.82' y='5.48' width='138.25' height='16.52' id='54' clip-path='url(#cl1_6)' fill=\"#D9D9D9\" fill-opacity=\"1\" stroke=\"none\"/><g clip-path='url(#cl1_6)'><text x='86.27' y='16.52' id='55' font-size='6.60pt' fill=\"#1A1A1A\" fill-opacity=\"1\" font-family='Calibri'>wsTymovePrinosne\u003c/text>\u003c/g><defs><clipPath id='cl1_7'><rect x='0.00' y='0.00' width='432.00' height='432.00'/>\u003c/clipPath>\u003c/defs><defs><clipPath id='cl1_8'><rect x='195.56' y='5.48' width='138.25' height='16.52'/>\u003c/clipPath>\u003c/defs><rect x='195.56' y='5.48' width='138.25' height='16.52' id='56' clip-path='url(#cl1_8)' fill=\"#D9D9D9\" fill-opacity=\"1\" stroke=\"none\"/><g clip-path='url(#cl1_8)'><text x='229.64' y='16.52' id='57' font-size='6.60pt' fill=\"#1A1A1A\" fill-opacity=\"1\" font-family='Calibri'>wsTymoveZajimave\u003c/text>\u003c/g><defs><clipPath id='cl1_9'><rect x='0.00' y='0.00' width='432.00' height='432.00'/>\u003c/clipPath>\u003c/defs><polyline points='58.11,406.23 58.11,403.49' id='58' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='89.53,406.23 89.53,403.49' id='59' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='120.95,406.23 120.95,403.49' id='60' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='152.37,406.23 152.37,403.49' id='61' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='183.79,406.23 183.79,403.49' id='62' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><g clip-path='url(#cl1_9)'><text x='50.31' y='413.98' id='63' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>0.00\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='81.73' y='413.98' id='64' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>0.25\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='113.15' y='413.98' id='65' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>0.50\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='144.57' y='413.98' id='66' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>0.75\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='175.99' y='413.98' id='67' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>1.00\u003c/text>\u003c/g><polyline points='201.84,406.23 201.84,403.49' id='68' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='233.26,406.23 233.26,403.49' id='69' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='264.68,406.23 264.68,403.49' id='70' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='296.11,406.23 296.11,403.49' id='71' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='327.53,406.23 327.53,403.49' id='72' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><g clip-path='url(#cl1_9)'><text x='194.04' y='413.98' id='73' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>0.00\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='225.46' y='413.98' id='74' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>0.25\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='256.88' y='413.98' id='75' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>0.50\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='288.30' y='413.98' id='76' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>0.75\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='319.73' y='413.98' id='77' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>1.00\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='26.81' y='334.74' id='78' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>Pátek\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='23.62' y='215.52' id='79' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>Středa\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='20.04' y='96.31' id='80' font-size='6.60pt' fill=\"#4D4D4D\" fill-opacity=\"1\" font-family='Calibri'>Pondělí\u003c/text>\u003c/g><polyline points='49.08,331.96 51.82,331.96' id='81' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='49.08,212.74 51.82,212.74' id='82' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><polyline points='49.08,93.53 51.82,93.53' id='83' clip-path='url(#cl1_9)' fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/><g clip-path='url(#cl1_9)'><text x='180.49' y='426.41' id='84' font-size='8.25pt' font-family='Calibri'>share\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text transform='translate(12.43,220.76) rotate(-90)' id='85' font-size='8.25pt' font-family='Calibri'>day\u003c/text>\u003c/g><rect x='345.15' y='129.35' width='81.37' height='166.79' id='86' clip-path='url(#cl1_9)' fill=\"#FFFFFF\" fill-opacity=\"1\" stroke=\"none\"/><g clip-path='url(#cl1_9)'><text x='345.15' y='136.30' id='87' font-size='8.25pt' font-family='Calibri'>value\u003c/text>\u003c/g><rect x='345.15' y='140.62' width='17.28' height='17.28' id='88' clip-path='url(#cl1_9)' fill=\"#F2F2F2\" fill-opacity=\"1\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x='345.86' y='141.33' width='15.86' height='15.86' id='89' clip-path='url(#cl1_9)' fill=\"#F8766D\" fill-opacity=\"1\" stroke=\"none\"/><rect x='345.15' y='157.90' width='17.28' height='17.28' id='90' clip-path='url(#cl1_9)' fill=\"#F2F2F2\" fill-opacity=\"1\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x='345.86' y='158.61' width='15.86' height='15.86' id='91' clip-path='url(#cl1_9)' fill=\"#D39200\" fill-opacity=\"1\" stroke=\"none\"/><rect x='345.15' y='175.18' width='17.28' height='17.28' id='92' clip-path='url(#cl1_9)' fill=\"#F2F2F2\" fill-opacity=\"1\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x='345.86' y='175.89' width='15.86' height='15.86' id='93' clip-path='url(#cl1_9)' fill=\"#93AA00\" fill-opacity=\"1\" stroke=\"none\"/><rect x='345.15' y='192.46' width='17.28' height='17.28' id='94' clip-path='url(#cl1_9)' fill=\"#F2F2F2\" fill-opacity=\"1\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x='345.86' y='193.17' width='15.86' height='15.86' id='95' clip-path='url(#cl1_9)' fill=\"#00BA38\" fill-opacity=\"1\" stroke=\"none\"/><rect x='345.15' y='209.74' width='17.28' height='17.28' id='96' clip-path='url(#cl1_9)' fill=\"#F2F2F2\" fill-opacity=\"1\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x='345.86' y='210.45' width='15.86' height='15.86' id='97' clip-path='url(#cl1_9)' fill=\"#00C19F\" fill-opacity=\"1\" stroke=\"none\"/><rect x='345.15' y='227.02' width='17.28' height='17.28' id='98' clip-path='url(#cl1_9)' fill=\"#F2F2F2\" fill-opacity=\"1\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x='345.86' y='227.73' width='15.86' height='15.86' id='99' clip-path='url(#cl1_9)' fill=\"#00B9E3\" fill-opacity=\"1\" stroke=\"none\"/><rect x='345.15' y='244.30' width='17.28' height='17.28' id='100' clip-path='url(#cl1_9)' fill=\"#F2F2F2\" fill-opacity=\"1\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x='345.86' y='245.01' width='15.86' height='15.86' id='101' clip-path='url(#cl1_9)' fill=\"#619CFF\" fill-opacity=\"1\" stroke=\"none\"/><rect x='345.15' y='261.58' width='17.28' height='17.28' id='102' clip-path='url(#cl1_9)' fill=\"#F2F2F2\" fill-opacity=\"1\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x='345.86' y='262.29' width='15.86' height='15.86' id='103' clip-path='url(#cl1_9)' fill=\"#DB72FB\" fill-opacity=\"1\" stroke=\"none\"/><rect x='345.15' y='278.86' width='17.28' height='17.28' id='104' clip-path='url(#cl1_9)' fill=\"#F2F2F2\" fill-opacity=\"1\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><rect x='345.86' y='279.57' width='15.86' height='15.86' id='105' clip-path='url(#cl1_9)' fill=\"#FF61C3\" fill-opacity=\"1\" stroke=\"none\"/><g clip-path='url(#cl1_9)'><text x='364.59' y='152.04' id='106' font-size='6.60pt' font-family='Calibri'>Definitely no\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='364.59' y='169.32' id='107' font-size='6.60pt' font-family='Calibri'>Definitely yes\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='364.59' y='186.60' id='108' font-size='6.60pt' font-family='Calibri'>Don't know\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='364.59' y='203.88' id='109' font-size='6.60pt' font-family='Calibri'>Not at all useful\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='364.59' y='221.16' id='110' font-size='6.60pt' font-family='Calibri'>Not very useful\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='364.59' y='238.44' id='111' font-size='6.60pt' font-family='Calibri'>Rather no\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='364.59' y='255.72' id='112' font-size='6.60pt' font-family='Calibri'>Rather yes\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='364.59' y='273.00' id='113' font-size='6.60pt' font-family='Calibri'>Somewhat useful\u003c/text>\u003c/g><g clip-path='url(#cl1_9)'><text x='364.59' y='290.28' id='114' font-size='6.60pt' font-family='Calibri'>Very useful\u003c/text>\u003c/g>\u003c/g>\u003c/svg>","code":"document.querySelectorAll('#svg_1')[0].getElementById('16').setAttribute('title','Very useful 48%');document.querySelectorAll('#svg_1')[0].getElementById('17').setAttribute('title','Somewhat useful 43%');document.querySelectorAll('#svg_1')[0].getElementById('18').setAttribute('title','Not very useful  9%');document.querySelectorAll('#svg_1')[0].getElementById('19').setAttribute('title','Very useful 36%');document.querySelectorAll('#svg_1')[0].getElementById('20').setAttribute('title','Somewhat useful 45%');document.querySelectorAll('#svg_1')[0].getElementById('21').setAttribute('title','Not very useful 16%');document.querySelectorAll('#svg_1')[0].getElementById('22').setAttribute('title','Not at all useful  4%');document.querySelectorAll('#svg_1')[0].getElementById('23').setAttribute('title','Very useful 45%');document.querySelectorAll('#svg_1')[0].getElementById('24').setAttribute('title','Somewhat useful 43%');document.querySelectorAll('#svg_1')[0].getElementById('25').setAttribute('title','Not very useful  9%');document.querySelectorAll('#svg_1')[0].getElementById('26').setAttribute('title','Not at all useful  2%');document.querySelectorAll('#svg_1')[0].getElementById('27').setAttribute('title','Don&#8217t know  2%');;document.querySelectorAll('#svg_1')[0].getElementById('16').setAttribute('data-id','23');document.querySelectorAll('#svg_1')[0].getElementById('17').setAttribute('data-id','20');document.querySelectorAll('#svg_1')[0].getElementById('18').setAttribute('data-id','11');document.querySelectorAll('#svg_1')[0].getElementById('19').setAttribute('data-id','25');document.querySelectorAll('#svg_1')[0].getElementById('20').setAttribute('data-id','22');document.querySelectorAll('#svg_1')[0].getElementById('21').setAttribute('data-id','13');document.querySelectorAll('#svg_1')[0].getElementById('22').setAttribute('data-id','10');document.querySelectorAll('#svg_1')[0].getElementById('23').setAttribute('data-id','24');document.querySelectorAll('#svg_1')[0].getElementById('24').setAttribute('data-id','21');document.querySelectorAll('#svg_1')[0].getElementById('25').setAttribute('data-id','12');document.querySelectorAll('#svg_1')[0].getElementById('26').setAttribute('data-id','9');document.querySelectorAll('#svg_1')[0].getElementById('27').setAttribute('data-id','7');;document.querySelectorAll('#svg_1')[0].getElementById('41').setAttribute('title','Rather yes 41%');document.querySelectorAll('#svg_1')[0].getElementById('42').setAttribute('title','Rather no 11%');document.querySelectorAll('#svg_1')[0].getElementById('43').setAttribute('title','Definitely yes 46%');document.querySelectorAll('#svg_1')[0].getElementById('44').setAttribute('title','Definitely no  2%');document.querySelectorAll('#svg_1')[0].getElementById('45').setAttribute('title','Rather yes 21%');document.querySelectorAll('#svg_1')[0].getElementById('46').setAttribute('title','Rather no  7%');document.querySelectorAll('#svg_1')[0].getElementById('47').setAttribute('title','Definitely yes 68%');document.querySelectorAll('#svg_1')[0].getElementById('48').setAttribute('title','Definitely no  4%');document.querySelectorAll('#svg_1')[0].getElementById('49').setAttribute('title','Rather yes 34%');document.querySelectorAll('#svg_1')[0].getElementById('50').setAttribute('title','Rather no  5%');document.querySelectorAll('#svg_1')[0].getElementById('51').setAttribute('title','Don&#8217t know  4%');document.querySelectorAll('#svg_1')[0].getElementById('52').setAttribute('title','Definitely yes 52%');document.querySelectorAll('#svg_1')[0].getElementById('53').setAttribute('title','Definitely no  5%');;document.querySelectorAll('#svg_1')[0].getElementById('41').setAttribute('data-id','17');document.querySelectorAll('#svg_1')[0].getElementById('42').setAttribute('data-id','14');document.querySelectorAll('#svg_1')[0].getElementById('43').setAttribute('data-id','4');document.querySelectorAll('#svg_1')[0].getElementById('44').setAttribute('data-id','1');document.querySelectorAll('#svg_1')[0].getElementById('45').setAttribute('data-id','19');document.querySelectorAll('#svg_1')[0].getElementById('46').setAttribute('data-id','16');document.querySelectorAll('#svg_1')[0].getElementById('47').setAttribute('data-id','6');document.querySelectorAll('#svg_1')[0].getElementById('48').setAttribute('data-id','3');document.querySelectorAll('#svg_1')[0].getElementById('49').setAttribute('data-id','18');document.querySelectorAll('#svg_1')[0].getElementById('50').setAttribute('data-id','15');document.querySelectorAll('#svg_1')[0].getElementById('51').setAttribute('data-id','8');document.querySelectorAll('#svg_1')[0].getElementById('52').setAttribute('data-id','5');document.querySelectorAll('#svg_1')[0].getElementById('53').setAttribute('data-id','2');","canvas_id":1,"data_id_class":"cl36e871f9b338","tooltip_extra_css":"font-family:sans-serif; background-color:black; color: white; font-size: 8pt; padding:5px;border-radius:5px 5px 5px 5px;","hover_css":"opacity: .5;","tooltip_opacity":0.9,"tooltip_offx":10,"tooltip_offy":0,"zoom_max":1,"zoompan":false,"selection_type":"multiple","selected_css":"fill:orange;","width":"70%","padding_bottom":"70%"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="chart" class="section level2">
+<h2>Chart</h2>
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" width="672" /><img src="index_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+</div>
+</div>
+<div id="two-part-workshops" class="section level1">
+<h1>Two-part workshops</h1>
+<i class="fa fa-camera-retro">Hi</i>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+
+</script>
+
+
+</body>
+</html>
