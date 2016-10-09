@@ -1,7 +1,7 @@
 body, td {
-   font-family: "Adobe Garamond Pro","Garamond", serif;
+   font-family: "Gill Sans MT","Garamond", serif;
    background-color: white;
-   font-size: 13px;
+   font-size: 15px;
 }
 
 body {
@@ -16,23 +16,25 @@ tt, code, pre {
 }
 
 h1 {
-   font-size:2.4em;
+   font-size: 180%;
    font-weight: normal;
+   font-variant: small-caps;
 }
 
 h2 {
-   font-size:2em;
+   font-size: 140%;
    font-weight: normal;
+   font-variant: small-caps;
 }
 
 h3 {
-   font-size:1.8em;
-   font-weight: normal;
+   font-size: 140%;
+   font-weight: italic;
 }
 
 h4 {
-   font-size:1.4em;
-   font-weight: normal;
+   font-size: 100%;
+   font-weight: italic;
 }
 
 h5 {
