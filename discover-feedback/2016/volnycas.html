@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Leisure etc.</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+  padding-left: 10px;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Discover 2016</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-graduation-cap"></span>
+     
+    Júl
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="kurz_bioetika_júl.html">Bioetika</a>
+    </li>
+    <li>
+      <a href="kurz_behaviorální ekonomie_júl.html">Behaviorální ekonomie</a>
+    </li>
+    <li>
+      <a href="kurz_debata pro začátečníky_júl.html">Debata pro začátečníky</a>
+    </li>
+    <li>
+      <a href="kurz_fyzika_júl.html">Fyzika</a>
+    </li>
+    <li>
+      <a href="kurz_informatika_júl.html">Informatika</a>
+    </li>
+    <li>
+      <a href="kurz_matematika_júl.html">Matematika</a>
+    </li>
+    <li>
+      <a href="kurz_medicína_júl.html">Medicína</a>
+    </li>
+    <li>
+      <a href="kurz_metodologie vědy_júl.html">Metodologie vědy</a>
+    </li>
+    <li>
+      <a href="kurz_politologie_júl.html">Politologie</a>
+    </li>
+    <li>
+      <a href="kurz_robotika_júl.html">Robotika</a>
+    </li>
+    <li>
+      <a href="kurz_psychologie_júl.html">Psychologie</a>
+    </li>
+    <li>
+      <a href="kurz_sociologie_júl.html">Sociologie</a>
+    </li>
+    <li>
+      <a href="kurz_teorie her_júl.html">Teorie her</a>
+    </li>
+    <li>
+      <a href="kurz_výtvarné umění_júl.html">Výtvarné umění</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-graduation-cap"></span>
+     
+    Aug
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="kurz_chemie_aug.html">Chemie</a>
+    </li>
+    <li>
+      <a href="kurz_debata pro pokročilé_aug.html">Debata pro pokročilé</a>
+    </li>
+    <li>
+      <a href="kurz_ekonomie_aug.html">Ekonomie</a>
+    </li>
+    <li>
+      <a href="kurz_fyzika_aug.html">Fyzika</a>
+    </li>
+    <li>
+      <a href="kurz_historie_aug.html">Historie</a>
+    </li>
+    <li>
+      <a href="kurz_interdisciplinarita_aug.html">Interdisciplinarita</a>
+    </li>
+    <li>
+      <a href="kurz_literatura_aug.html">Literatura</a>
+    </li>
+    <li>
+      <a href="kurz_medicína_aug.html">Medicína</a>
+    </li>
+    <li>
+      <a href="kurz_medicínská etika_aug.html">Medicínská etika</a>
+    </li>
+    <li>
+      <a href="kurz_metodologie vědy_aug.html">Metodologie vědy</a>
+    </li>
+    <li>
+      <a href="kurz_neurověda_aug.html">Neurověda</a>
+    </li>
+    <li>
+      <a href="kurz_právo_aug.html">Právo</a>
+    </li>
+    <li>
+      <a href="kurz_psychologie_aug.html">Psychologie</a>
+    </li>
+    <li>
+      <a href="kurz_rozvojová studia_aug.html">Rozvojová studia</a>
+    </li>
+    <li>
+      <a href="kurz_sociologie_aug.html">Sociologie</a>
+    </li>
+    <li>
+      <a href="kurz_teorie rozmnožování_aug.html">Teorie rozmnožování</a>
+    </li>
+    <li>
+      <a href="kurz_trestní právo_aug.html">Trestní právo</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-globe"></span>
+     
+    Int'l
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Courses</li>
+    <li>
+      <a href="kurz_fine art: from dots to dragons_int.html">Biology and psychology: sleep and dreams</a>
+    </li>
+    <li>
+      <a href="kurz_development economics: poverty and human development_int.html">Development economics: poverty and human development</a>
+    </li>
+    <li>
+      <a href="kurz_fine art: from dots to dragons_int.html">Fine art</a>
+    </li>
+    <li>
+      <a href="kurz_law in practice_int.html">Law in practice</a>
+    </li>
+    <li>
+      <a href="kurz_literature: in the beginning was the word_int.html">Literature: in the beginning was the word</a>
+    </li>
+    <li>
+      <a href="kurz_machine learning_int.html">Machine Learning</a>
+    </li>
+    <li>
+      <a href="kurz_materials science: from atoms to fusion reactors_int.html">Materials Science: from atoms to fusion reactors</a>
+    </li>
+    <li>
+      <a href="kurz_neuroscience: the first look on the most important kilogram of fat in your body_int.html">Neuroscience</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="international.html">International aspects</a>
+    </li>
+    <li>
+      <a href="twopartws.html">Two-part workshops</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="teams.html">
+    <span class="fa fa-heart"></span>
+     
+    Teams &amp;c
+  </a>
+</li>
+<li>
+  <a href="workshops.html">
+    <span class="fa fa-hand-spock-o"></span>
+     
+    Workshops
+  </a>
+</li>
+<li>
+  <a href="volnycas.html">
+    <span class="fa fa-rocket"></span>
+     
+    Leisure &amp;c
+  </a>
+</li>
+<li>
+  <a href="dopad.html">
+    <span class="fa fa-bomb"></span>
+     
+    Impact
+  </a>
+</li>
+<li>
+  <a href="demog.html">
+    <span class="fa fa-area-chart"></span>
+     
+    
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Leisure etc.</h1>
+
+</div>
+
+
+<div id="should-we-change-the-programme" class="section level1">
+<h1>Should we change the programme?</h1>
+<div id="july" class="section level2">
+<h2>July</h2>
+<ul>
+<li><p>bolo to fajn</p></li>
+<li><p>By som rada brala tenis.</p></li>
+<li><p>Evolucia; zacat menavkou, to je take ze si na zadku a robis blum blum blum, lebo ak mas smnolu a problem s kolenami, byt kuratom je tazke</p></li>
+<li><p>nemyslim si ze je nutne nieco zmenit ale ja by som urcite timove workshopy ponala v inom smere velmi ma to nezaujalo</p></li>
+<li><p>viem, ze tento rok sme tu boli s inym taborom, a preto to nebolo mozne, no uvitala by som o taborak naviac :)</p></li>
+<li><p>Nedavejte prosim kazdy rok evoluci jako seznamovaci aktivitu. Myslim, ze se pri ni tolik clovek neseznami.</p></li>
+<li><p>určite minuloročnú aktivitu večer - keď sme hrali rozne žánre a filmy, ktoré spolu nesúviseli…</p></li>
+<li><p>Uvital bych napr. kdyby ti, kteri by meli zajem, mohli po malych skupinkach s instruktorem vylezt na “skalu” nad taborem.</p></li>
+<li><p>Nie som si momentalne vedoma ziadnej konkretnej veci.</p></li>
+<li><p>Mozna vice sportu, celkove je program vice na sezeni.</p></li>
+<li><p>Více deskových her nebo aktivit kde se týmy naplno projevit.</p></li>
+<li><p>Kebz boly spolocne worshopy dobrovolne a program dobrovolny . A dve volitelne workshopy povinne.</p></li>
+<li><p>Ani nie, všetky aktivity sa mi páčili, obzvlášť stavanie katapultu, čo považujem za najlepšiu hru za celý Discover</p></li>
+<li><p>Podla mna by sa nemuselo rušiť tancovanie v posledny večer</p></li>
+<li><p>No tak myslim si ze tie aktivity su zmysluplne, no mozno forma moze byt obmenena</p></li>
+<li><p>pridat viac volneho casu</p></li>
+<li><p>Na zoznamovanie by som vybrala viac icebrakerov. A taktiez nejake spolocne hry, na spolocne travenie casu. Nemusia byt pohybove, ale je toho hodne.</p></li>
+<li><p>Pop quiz by se dal vylepsit aby nebyl v tolika tymech a otazky by se mohli zamerit na vice okruhu nez je Slovenko a Cesko. Je to tezke kdyz nikdo nevi kolik meri nejvyssi hora</p></li>
+<li><p>Víc altivit typu katapulty</p></li>
+<li><p>Moznost zmerať si IQ cez Mensa .. Velmi ma zaujíma priemerne IQ učastníkov Discoveru</p></li>
+<li><p>mohlo ho byť viac, pretože s niektorými ľudmi sme sa ani nemali šancu spoznať. príp. nejaké aktivity na spoznanie aj osobnosťou, aké má človek hodnoty a pod. ( v skupinke )</p></li>
+<li><p>Vice zajímavých sportu Individuální/v jiných týmech hry</p></li>
+<li><p>nenapadaju, ten volny cas je najlepsie si yariadit kazdy podla seba</p></li>
+<li><p>Nie sú potrebné veľké zmeny.</p></li>
+<li><p>doniest viac spolocenskych hier</p></li>
+<li><p>Zrealizování volnočasových aktivit asi nemám co vytknout.</p></li>
+<li><p>na voľnočasové aktivity nebolo až tak veľa času</p></li>
+<li><p>Pridat k výletum i délku trvání, doladit slbbovvano vzdálennost.</p></li>
+<li><p>viac zoznamiek, aj celotáborových, nie len v skupinkách. My sa chceme spoznať, ale treba nám ten počiatočný impulz. Napríklad hru “hodiny” kde sa každých 10 min rozprávaš s iným človekom na určenú tému.</p></li>
+<li><p>Pub quiz byl z části nudný, jelikož tam byly otázky, o které se moc lidí nezajímá.</p></li>
+<li><p>nezaujala me stavba katapultu</p></li>
+<li><p>Vsetko v poriadku.</p></li>
+<li><p>Párty by mohly mít víc EDM hudbu a nebo dát víc volnou ruku účastníkům, aby uspořádali něco sami.</p></li>
+<li><p>prekvapilo ma že nebol talent, ale nechýbal mi</p></li>
+<li><p>viac hututu</p></li>
+<li><p>Pub quiz. Nápad je to skvělý, ale změnila bych formu. Řvoucí jídelna podle mě není zrovna příjemné místo, bolí z něj hlava. Pokud by měl pokračovat, volila bych spíše individuální formu.</p></li>
+<li><p>Více diskuzí na politická témata, člověk se dozví mnoho nových názorů.</p></li>
+<li><p>ponechala bych vice volneho casu po vecerech, at se student lepe seznami.</p></li>
+<li><p>Ani nie.</p></li>
+</ul>
+</div>
+<div id="august" class="section level2">
+<h2>August</h2>
+<ul>
+<li><p>Možno este viac aktivit kedy by sme boli vonku,trosku aktivnejsie rozbit veci. Zmente jedlo za zdravsie,hah.</p></li>
+<li><p>Možno by som pozmenil úvodnú hru evolúcia :)</p></li>
+<li><p>Pub quiz nebol úplne najlepsi, nepáčila sa mi jeho organizácia.</p></li>
+<li><p>bringbackTalentmania</p></li>
+<li><p>Voleyball</p></li>
+<li><p>Predlzila by som pauzu z 15 min na 20 medzi prvymi kurzami, lebo ked koncime neskor nie je cas zjest olovrant</p></li>
+<li><p>Myslím si že by opäť mal byť discover má talent</p></li>
+<li><p>Keď sme stavali katapult, pri zbieraní materiálov sme sa museli deliť, to sa mi nepáčilo, taktiež nebolo dostatok nožníc, pri taboraku boli špekačky takmer nejedle.</p></li>
+<li><p>Pridat stolne hry [ Dixit, Carcassone, Twister,…].</p></li>
+<li><p>Seznamovací hry málo zábavné. Jinak vše super, možná by se mi líbil návrat Talentmanie, jejíž koncept se mi líbil.</p></li>
+<li><p>Viac tímových aktivít.</p></li>
+<li><p>Workshop o spánku</p></li>
+<li><p>Pub quiz nebol najlepší. Jeho organizácia bola dost zla.</p></li>
+<li><p>Možno viac zoznamovacích aktivít aj počas poobedia 2. dňa.</p></li>
+<li><p>Programove to bylo fajn. Nejlepsi bylo cviceni s Lenkou a joga!!!!!! Udelala bych to ale delsi</p></li>
+<li><p>skratit workshopy na 45 min az hodinu a dat ich aspon 3</p></li>
+<li><p>Nějaká společná meditácie o obědě byla fajn</p></li>
+<li><p>Pridal by som viac kultúrnych a umelecký aktivít. Na našom turnuse zásadne chýbali.</p></li>
+<li><p>Ano. Talentmanii! A Famfrpál! A pub quiz bych klidne vynechala a katapulty za světla.. A Hututu bylo úžasné</p></li>
+<li><p>Mohlo by být karaoke.</p></li>
+<li><p>Občas ako by zabírali miesto workshopom, často zla organizacia, nie každy rad pracuje v timu</p></li>
+<li><p>Upřímně ani ne, čas je tu hodně vzácné zboží, takže jsem měla každou chvíli co dělat, a všechny aktivity, co tu byly mě bavily. Jediné co možná, Pub quiz mi přišel hodně dlouhý a úplně mě to na 100% nechytlo, takže možná trochu zkrátit Pub quiz a možná obměnit otázky, protože třeba v hudbě jsem se skoro vůbec nechytala, protože poslouhcám moderní hudbu a v tom, jaké byly otázky jsem byla naprosto mimo, i když je to možná spíš můj problém, že nemám úplně historický přehled.</p></li>
+<li><p>Táborák bol organiyacne nezvládnutý</p></li>
+<li><p>Místo katapultů můžeme stavět hrady z písku.</p></li>
+<li><p>mmožno okrem športu skúsiť nejaké aktivity so psychologičkami, kde by sa rozprávalo o láske a takkýchto témach-lebo toto si veľa ľudí rado vypočuje alebo si o tom odiskutuje, pretože nie každý je na športy :D</p></li>
+<li><p>Me se velmi libili volnocasove aktivity, jenom bych udelal vetsi mnozstvi seznamovacich her, abychom se mohli doopravdy poznat. Bohuzel asi zadne jine neznam, a tak je nemohu doporucit.</p></li>
+<li><p>Priestor pre talentovanych ludi, viac priestoru pre umenie</p></li>
+<li><p>zaradiť nazad TALENTMÁNIU pridať TEDx Discover ako stálu súčasť programu (tak ako ho tento rok v rámci panelu účasťníckych workshopov pripravili Miňo a Paťka), a prípadne aj vo viaceré dni a mocť tak zaradiť do panelov viacero účastníkov a aj lektorov s ich mini workshopmi, prípadne u lektorov by to mohlo byť aj také reklamno-informačné brief intro do ich kurzu</p></li>
+<li><p>vratit Talentmaniu</p></li>
+<li><p>Pub quiz byl moc dlouhy a ne moc dobre organizovany. Chtelo by to pri nem vtipnejsi a bizarnejsi otazky.</p></li>
+<li><p>myslím si, že bola chyba zrušiř TalentManiu :(</p></li>
+<li><p>Chýbala TalentMania, veľa ľudí sa na ňu tešilo.</p></li>
+<li><p>Možná poslední den nějaká “diskotéka”</p></li>
+<li><p>Bring Talentmánia back !!</p></li>
+<li><p>Více aktivit, na kterých se celý tým podílí společne.</p></li>
+<li><p>Mozno sa viac zamerat na dusevny rozvoj</p></li>
+<li><p>Myslim ze by davalo smysl, aby byly volnocasove aktivity pokud mozno presunuty na odpoledne, na priklad staveni katapultu v noci nebylo uplne idealni.</p></li>
+<li><p>Večer po celom dni by som radšej behala za loptou ako znova rozmýšľa nad tým, ako postaviť katapult.</p></li>
+<li><p>Uvítala bych méně klasických táborových her a dala přesnost například skupinovým uměleckým aktivitám</p></li>
+<li><p>mozno trochu menej debat a timovych diskuzii. napriek tomu ze boli super, ich bolo proste vela. mozno trochu viac sportovych aktivit by bolo fajn. napriklad hututu medzi timami, alebo volejbal.</p></li>
+<li><p>pohybové aktivity by mohli byť poobede, v tme nie je vidno metlobal bol super, talentmaniu namiesto katapultov</p></li>
+<li><p>Na Discoveru jsem byl poprvé, ale ze všech stran znělo, že chybí Talentmania. Proč ji do budoucna nepřidat?</p></li>
+<li><p>Viac Marleniek</p></li>
+<li><p>pridat sporty rano, vice moznosti a treba i kratsi tymove workshopy</p></li>
+<li><p>Občas jsme se během debat nedostali nikam daleko či hluboko a moc jsme si ze zamýšlení neodnesli.</p></li>
+<li><p>Mohla by se vrátit talentmanie a famfrpal v týmech</p></li>
+<li><p>Tancirna by bola sranda</p></li>
+<li><p>Všetky aktiviti boli dobré len frisbee mohlo byť častejšie :D</p></li>
+<li><p>Ano vrátit talentmaniu a timový metlobal</p></li>
+<li><p>menej timovych aktivit, nie vsetkym je to prijemne</p></li>
+<li><p>mne sa to pacilo- bolo to super</p></li>
+<li><p>Jak jsem uvedla výše, možná po obědě přidat ke sportům i nějaké diskuye a podobně, protože jsme měli po jídle už hodně času.</p></li>
+<li><p>Možná víc her typu Pevnost Podskalie atd. Aktivity, ve kterých se projevil týmový duch. Někdy mě ty týmové diskuse úplně nezaujaly.</p></li>
+<li><p>neviem, ozvem sa ak mi nieco napadne</p></li>
+</ul>
+</div>
+<div id="international" class="section level2">
+<h2>International</h2>
+<ul>
+<li><p>Maybe more sport?</p></li>
+<li><p>I guess they were good.</p></li>
+<li><p>The activities for me are actually fine. Actually you provided us the net to play volleyball and also badminton and I do not think that students have used them.</p></li>
+<li><ul>
+<li>more sport activities, maybe more time just for sport</li>
+</ul></li>
+<li><p>more trips - it doesn’t matter if hiking trip or something else, maybe for people form other countries to get to know CZE more</p></li>
+<li><p>Activities were great this year, compared to Czechoslovak session. I didnt miss the theatre at all and I felt that it was really balanced - we didnt have to do something every night, we could instead choose workshops.</p></li>
+<li><p>Please, provide more time for naps. But I wouldn’t change anything.</p></li>
+<li><p>More sports</p></li>
+<li><p>I think that the chapel quiz should have contained questions that people would actually know the answer to, like general common knowledge. Also on monday’s game I think that the ciphers should have lead to books that people have heard of.</p></li>
+<li><p>I don’t think there’s a way to make a dramatic change, I really enjoyed all of them.</p></li>
+<li><p>No one from our team has heard about one of the books in the cipher game, something like “atlas….” and the capital city- countries mini game was a bit hard but still exiting. Please make it a little bit easier. Everything else was so great</p></li>
+<li><p>Not give students so many assignments or just make them quick and easy.</p></li>
+<li><p>We needed more trips and hiking</p></li>
+<li><p>Maybe we should include sport or maybe something less… Exhausting?</p></li>
+<li><p>I would definetly include more free time into the programme.</p></li>
+<li><p>More time with team. Perhaps more ,,bonding&quot; activities such as catapult.</p></li>
+<li><p>You could, perhaps, arrange a trip to Prague.</p></li>
+<li><ol style="list-style-type: decimal">
+<li>There should be an option to sleep or simply relax and chat. This should be presented as a workshop, thus most people will remain active, but, say, 20 people each day, will have the chance to take a break.</li>
+</ol></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>There must be more sports or outdoor events in general. There was a serious lack of this.</li>
+</ol>
+<ul>
+<li><p>I think you could organise some kind of sports event.</p></li>
+<li><p>I think there should be more sports activities, because we are sitting in lectures all day long.</p></li>
+<li><p>They were great but I might appreciate a bit more free time :)</p></li>
+<li><p>We should have had more free time and maybe more trips as it was on Thursday.</p></li>
+<li><p>I would appreciate more movie evenings.</p></li>
+<li><p>None, sorry</p></li>
+<li><p>Maybe more trips</p></li>
+<li><p>Many people I know would call for more sport activities, but personally I think they were all great - especially the more personal stuff such as the team workshop about relationships.</p></li>
+<li><p>Maybe adding more sport activities.</p></li>
+<li><p>I think they were both fun and original</p></li>
+<li><p>You could include more sport activities. It is uncomfortable to just sit during the courses and workskops … For instance some voleyball turnament or outside game in teams.</p></li>
+<li><p>There could be more sporty activities, maybe frisbee, slack-line and swimming of course :D Generally there may be more outside activities, maybe even trips.</p></li>
+<li><p>I would add more sports that are not in the morning</p></li>
+<li><p>As I said, more physical activity,</p></li>
+<li><p>Maybe have an option to play more board games or card games or do sports.</p></li>
+<li><p>More physical activities and games.</p></li>
+<li><p>The catapult felt really dumb, I’d change that</p></li>
+<li><p>Mabye more of them could have been outside, but I understand that the weather was not that good.</p></li>
+<li><p>More walking / sports, less sitting.</p></li>
+<li><p>More out-doors activities.</p></li>
+<li><p>I think drama could be good.</p></li>
+<li><p>They could be more outside in the nature and not in the building</p></li>
+<li><p>Definitely more time in the nature (also some courses and workshops could be run outside if it is possible).</p></li>
+<li><p>a little bit more sport activities. amlittle bit more free time between courses and workshops. but there was a really wide range of workshops, so i guess everyone got to discuss things they were interested in</p></li>
+<li><p>I would have more sports activities or just stuff outside. Moreover I would also add maybe one more shorter trip or like how there was the sunrise trip then to have a sunset trip.</p></li>
+<li><p>More sport (football, volleyball, running) but it wouldn’t have to be mandatory,</p></li>
+<li><p>have pairs of teams compete against each other to increase the sense of competition, the chapel quiz was slow and mentally tiring because of the amount of noise in the chapel</p></li>
+</ul>
+</div>
+</div>
+<div id="accommodation-food-c." class="section level1">
+<h1>Accommodation, food &amp;c.</h1>
+<div id="july-1" class="section level2">
+<h2>July</h2>
+<ul>
+<li><p>Jedlo bolo miestami naozaj príšerné a hlavne tá vegetariánska strava bola nejedlá. Jest soju dni po sebe rovnako pripravenú bolo nepríjemné.</p></li>
+<li><p>Je zly napad davit dievcata na okale, je nam zima a sme chore</p></li>
+<li><p>jedla bolo maaaaalo a v podstate stale to iste mala som pocit akoby nerobili ani tolko porcii kolko mali … a tie desiate no uslo sa mi asi len raz kedze moje kurzy trvali vzdy viac ako mali</p></li>
+<li><p>Všetko úplne fajn, jedlo bolo väčšinou v pohode a tety kuchárky boli veľmi milé a dostal som aj dupľu keď som chcel :) a Podskalie je veľmi pekné</p></li>
+<li><p>Ubytovanie by mohlo byt rozdelene podla narokov na spanku ak niekto chodi spavat skor a ak niekto rad ponocuje.</p></li>
+<li><p>nie, vsetko je super :)</p></li>
+<li><p>Chybel toaletni papir vsude po areale. Sdilet s patnacti lidmi koupelnu byla “chutovka”</p></li>
+<li><p>boli malé porcie a veľa chlebov s maslom</p></li>
+<li><p>Lokalita je velmi prijemna. K ubytovani bych mel jen drobne pripominky typu, ze u nas v okalu 1 nebylo na patre mydlo na umyvadle a ke konci pobytu nebyly k dispozici toaletni papiry.</p></li>
+<li><p>Musel jsem si objednat pizzu…./ Boli mne zada….////</p></li>
+<li><p>Jedlo mohlo byt lepsie a tak isto aj ubytovanie. Lokalita je skvela.</p></li>
+<li><p>Areal je opravdu krasny. Ubytovani bych si k takoveto akci dokazala predstavit vice na urovni, jidlo dle meho nazoru slo, predevsim jsem uvitala druhe vecere a ovoce ke svacine.</p></li>
+<li><p>I LOVE PODSKALIE</p></li>
+<li><p>Rád bych apeloval na permanentní nedostatek pitné vody v jídelně jako jediné alternativě toho odporně přeslazeného čaje a štávy. Příští rok bych uvítal stejně velký barel s čistou vodou jako má čaj.</p></li>
+<li><p>Na Okale 1 byli svabi, pavouci a plisen. Nikdo y nas neprisel na to, co to vlastne rano byva za pomazanku.</p></li>
+<li><p>Okrem jedla bolo všetko super. Raňajky by mohli byť výdatnejšie.</p></li>
+<li><p>Casto nam chýbal toaletný papier a mydlo pre umývanie rúk.</p></li>
+<li><p>Ubytovanie celkom fajn, okrem malo sprch a preplnenych miestnosti. Jedlo by mohlo byt lepsie a chutnejsi3nnajm medzi vegetarianmi</p></li>
+<li><p>malo masa bolo</p></li>
+<li><p>Lokalita není nejlépe dostupná, ale neni to úplná katastrofa. Jídlo mi přišlo až příliš často sladké, jinak to šlo. Ubytování není nejhezčí, ale stačí to.</p></li>
+<li><p>Občas bylo na pokoji docela zima.</p></li>
+<li><p>Internet.</p></li>
+<li><p>za tie peniaze som čakala oveľa lepšie ubytovanie a možno rozdelenie do izieb by mohlo byť štýlom kto chce byť ako dlho hore, aby sme sa navzájom neobmedzovali. Lokalita je super.</p></li>
+<li><p>Lokalita Dobře Jídlo Střední, trochu malo Není WiFi!</p></li>
+<li><p>niekedy boli porcie fakt male, inac je ubytovanie a lokalita fajn</p></li>
+<li><p>hlavne veganska strava, toaletny papier a mydlo neboli v dostatocnom mnozstve a v izbach bolo chladno a tie spolocne kupelne tez nie su velmi ciste, ale priroda okolo bola prekrasna</p></li>
+<li><p>jedlo nebolo moc dobré</p></li>
+<li><p>Všetko bolo super.</p></li>
+<li><p>za tu cenu to bolo primerae a chapem ze sa snazie aby bol iscover pristupny pre vsetkych ale ja by som osobne ocenila aj lepsie ubytovanie a stravu</p></li>
+<li><p>Odcenila by som viac ovocia a zeleniny, ale inak bola strava v poriadku. Ubytovanie i lokalita mi vyhovovali, len mi trošku prekážal malý počet kúpeľní a to, že nie vždy boli celkom čisté.</p></li>
+<li><p>ubytovanie bolo vyhovujúce. Jeho problémy neboli vašou chybou a dali sa tolerovať. Kvantita jedla bola v poriadku ale kolísať. Lokalita nemohla byť lepšia.</p></li>
+<li><p>Jidlo bzlo docela dost spatne, nekdy se to fakt nedalo moc jist. Lokalita a ubytovani bylo moc fajn.</p></li>
+<li><p>male porcie inac fajn</p></li>
+<li><p>Jídlo nebylo špatné, ale mohlo se dávat víc ovoce a zeleniny.</p></li>
+<li><p>Strava byla hoooodne nevyvážená. Prilis mnoho cukru, což je nezdravé a toxické. Možná by bylo lepsi alternativní stravu nechat raw a do havních jídel zahranout vice ovoce a zeleniny.</p></li>
+<li><p>Ubytovanie je dosť zlé (nie nehnuteľnosť ako taká ale skôr údržba, napr. žiadne handry v kúpeľni a tak), jedla by mohlo byť viac ale lokalita je skvelá :)</p></li>
+<li><p>Sprchy boli špinavé nakoľko využívalo jednu 20 ľudí.</p></li>
+<li><p>Jídlo bylo dosti špatné. Spálené kde co, moc sladkého, všechno rozvařené, snídaně hrůza.</p></li>
+<li><p>Lokalita je super, ubytování ujde, ale jídlo by mohlo být lepší, pestřejší a mohlo by ho být více.</p></li>
+<li><p>jidlo bylo velmi slabe, jinak si ale na lokalitu ani ubytovani nemohu stezovat</p></li>
+<li><p>Ocenila by som jedalny listok vopred, pretoze niekedy som sa z mojho jedla vobec nenajedla, ale napriklad z vegetarianskeho by sa dalo. Lokalita bola perfektna a ubytovanie dostacujuce.</p></li>
+<li><p>Jídlo pro vegetariány by mohlo do příště být více nápaditější, jelikož jíst každý den sójové maso člověka omrzí a pak má morální dilema, jestli to hovězí přece jen není lepší nápad. Také snídaně by mohly být víc formou švédského stolu, ty pomazánky mi nahání celkem hrůzu a další týden si asi dám pauzu od chleba úplně. Mohlo bz do příště být víc ovoce a zeleniny namísto chleba s máslem.</p></li>
+<li><p>chcela by som viac ovocia a zeleniny</p></li>
+<li><p>Jídlo mi už druhým rokem ne zcela chutnalo.</p></li>
+<li><p>Přišlo mi, že často nebyl dostatek pití/hrnečků pro dodržování pitného režimu. Ubytování nebylo nejčistší a bylo trochu stísněné, ale celkově bylo všechno ok.</p></li>
+<li><p>Občas zajímavé kombinace jídel (hlavně u vegetariánů), ale všeobecně bez problémů.</p></li>
+<li><p>Vacsie porcie a na večeru sa mi nehodí sladké jedlo. Ale celkovo bolo v pohode.</p></li>
+<li><p>vse v pohode</p></li>
+</ul>
+</div>
+<div id="august-1" class="section level2">
+<h2>August</h2>
+<ul>
+<li><p>Jedlo-mnozstvo fajn,len velmi nezdrave a vela chleba. Dat viac zeleniny,ovocia..ubytovanie na chatke bolo ok až na zimu v noci.</p></li>
+<li><p>:) nie, mozno pre vegetarianov nie soja everyday</p></li>
+<li><p>radsi bych si vzala svoje jidlo, ale svaciny byly dobre</p></li>
+<li><p>s trochou prineseneho jedla sa to da zvladnut, dodatok desiat a olovrantov bol prijemny dodatok. V nasej kupelni na okale 1 rastie hrib zo steny, no okrem toho je kvalita ubytovania vyborna, vzhladom na cenu.</p></li>
+<li><p>Jídlo bylo strašný :(, nedostatek toaletního papíru, často chybľly hrníčky nebo pití celkovľ</p></li>
+<li><p>Strava poskytovala typický slovenský závodno-jedálenský priemer, až na tie hrozné dukátové buchtičky rozmočené v presladenej riedkej omáčke. Ináč lokalita/ubytovanie prijateľné, jediné čo trochu vadí je ten hrozný signál.</p></li>
+<li><p>Prijala by som viac zeleniny, ovocia a menej sladkých večer.</p></li>
+<li><p>Zišla by sa napríklad jedna metla na poschodie, kvôli hraniu Hututu a všade prítomnému piesku (ale neruši ani neobmedzovať Hututu ;)</p></li>
+<li><p>Dosť málo spŕch na ubytovaniach.</p></li>
+<li><p>Higience prostredie v Kúpeľkách</p></li>
+<li><p>Jedlo mi nejako extra nechutilo, ale dalo sa to prežiť. Ubytovanie je síce v peknej prírode, ale na izbe bolo stále vlhko a zima.</p></li>
+<li><p>Jídlo by mohlo být lepší, hlavně více ovoce a zeleniny a méně sladkých večeří. Co se týká ubytování, tak jediná moje výtka je malé množství sprch.</p></li>
+<li><p>Chýbal bufet :)</p></li>
+<li><p>Neboli zavesy na balkonovych dverach</p></li>
+<li><p>Nie, všetko bolo super</p></li>
+<li><p>Ubytovani bylo v pohode, ale na zacatku nebyl toaletni papir a mydlo.</p></li>
+<li><p>Káva sa nedá robiť do umelých hrnčekov. Ale nabudúce si vezmem svoj takže pohoda Bola tu príšerna zima vo vnútri stále.</p></li>
+<li><p>Lokalita je výborná, ale jídlo by mohlo být lepší a udělal by mi raodst otevřený bufet</p></li>
+<li><p>Jedlo- viac zeleniny, menej chleba { aj ovocnu variantu}.</p></li>
+<li><p>Jídlo nebylo moc chutné. Ale hlavní problém byl, že bylo velmi nevýživné, to se mi opravdu nelíbilo. Lokalita skvělá a ubytování ucházející, jen mi tam vadila velká vlhkost.</p></li>
+<li><p>Prijala by som, aby izby boli počas týždňa upratané (podlaha, umytie.kúpeľne, doplnenie.mydla a t. papieru) a antialergické periny a vankúše. Celkovo väčšia hygiena.</p></li>
+<li><p>Žemlovka byla dobrá, ale u řízku máte co zlepšovat. Chutnaly jako palačinky. Posílám srdečné pozdravy do kuchyně.</p></li>
+<li><p>Hodila by sa napríklad metla na každé poschdie kvôli hraniu Hututu (v samotnej hre nie je problém ;) )</p></li>
+<li><p>Mala by byť pestrejšia strava.</p></li>
+<li><p>Bylo by fajn,kdyby v kuchyni vyhoveli i veganum.Prece jenom jich pribyva a zrat chleba celej tyden byl des…. a ta soja to ma bejt jako co? A sladky jidla jako hlavni jidlo? Zachody jsou tu spinavy,kose nikdo nevynasi,trideni odpadu nefunguje…. Lokalita je nadherna!</p></li>
+<li><p>Caj by sa mal doplnat castejsie</p></li>
+<li><p>Všetko bylo na 1 ;)</p></li>
+<li><p>málo různorodosti, veľa sladkého, málo ovocia a zeleniny</p></li>
+<li><p>Myslim si ,ze oproti minulemu roku sa strava vyrazne zhorsila co ma velmi nepotesilo kedze predtym tu bola strava naozaj velmi chutna.</p></li>
+<li><p>Jedlo super, keďže sa prispůsobilo mojim potrebám. Ubytovanie sa zdalo byť lepšie ako minulý rok, ale na Okáloch je to tradične vojna, takže by bodlo menej ľudí na izbu, a presunúť ich inam. Lokalita je snáď nemenná :)</p></li>
+<li><p>Jidlo…. No takový průměr. A ubytováni.. Chyběl nam kos a věcně jsme neměli wc papír. A v pokojích byla zima a vlhko</p></li>
+<li><p>Prijala by som viac zeleniny a ovocia a menej sladkých večeri.</p></li>
+<li><p>Jídlo bylo celkem fajn i dostatek. Lokalita byla dle mého názoru špatná, jelikož v 21. století se moc nedal žít bez signálu a Wi-Fi. A co se týče ubytováni, tak to se mi vubec nelíbilo.</p></li>
+<li><p>Jedlo bolo tento rok neuspokojivé, málo zeleniny, nekvalitní suroviny, opakující se jídla (SUNKOVA PĚNA!). Ubytovanie bolo Lwów dost takže s tým sa dalo pocitat</p></li>
+<li><p>Ano! Hlavně k jídlu, protože já nejsem vůbec zvyklá jíst pečivo (ne kvůli alergiím, ale čistě z mého osobního fyzického pocitu, jak se po pečivu cítím), ale samozřejmě tady jsem chápala, že tu bude. Ale teda, chleba, chleba, chleba… To bylo šílené. Chápu, že nám tady nebudou dávat francouzské bagety a celozrnný žitné pečivo, ale myslím, že poskytnout nám nějaké housky nebo rohlíky by nebyl až takový problém. Takže tohle za mě velké mínus. Ubytování bylo fajn, až na všechny vrzající dveře, le na to si člověk zvykle a nevadí mu to. I lokalita je fajn, Discover pro mě měl hodně kouzlo i v tom, že tu není signál ani wifi. Protože kdyby to tu bylo, myslím že hodně lidí b spíš místo hraní Hututu a sezení u ohně a kecání spíš sedělo na telefonech a chatovali se svými partnery, kamarády apod. Takže tohle zase bylo takové zvlášní plus pro mě. Ale teda ten chleba, to bylo zlo.</p></li>
+<li><p>Jediný problém bola vlhkosť na izbe a pleseň na kúpeľni.</p></li>
+<li><p>ranajky boli velmi slabe, jedla neboli prave uzasne ale dali sa, v kupelni nam zo steny rastla huba, ale inac to bolo OK, no lokalita je super</p></li>
+<li><p>Lokalita nádherná, ubytování slušné, jídlo doslova příšerné!</p></li>
+<li><p>To jídlo se někdy nedalo žrát, a když to člověk teda sežral, tak udržet to v sobě nebylo samo o sobě. No more šodo. Ale jsem vděčná za neustálý přísun svačinek a chlebů, to bylo super ! Navíc se pak dalo zvládnout i to experimentální jídlo.</p></li>
+<li><p>Trošku tu zlyhávala služba ubytovania čo sa týka udržiavania čistoty toaliet a dopĺňania toaletného papiera (naozaj som ho málokedy našla pr kucchynke, kde mal údaajne byť)- to bol trošku problém. Inak všetko super</p></li>
+<li><p>Lokalita skvela, ubytovani tez. Jidlo bylo dobre, mohlo by byt lepsi, ale bylo dobre (lepsi, nez jsem cekal). Jedine, co mi vadilo, byl nedostatek mydla a toaletaku, ktery se vyresil.</p></li>
+<li><p>jedlo - OK, len do budúcna viac roznorodej zeleniny a ovocia, a menej pečiva a múčnych jedál ubytovanie - OK, len odtoky v kúpeľne a na WC by mohli fungovať lepšie + lepšia hygiena WC v krbovej by sa tiež zišlo + aj viac toaletného papiera na WC všade by bolo v udúcnosti fajn lokalita - Podskálie je ako lokalita supeer :)</p></li>
+<li><p>Jedlo nebolo velmi dochutene.</p></li>
+<li><p>katastrofalna strava, ziadne ziviny, napr. ranajky - chlieb,vianocka, obed - knedla, vecera - dukatove buchticky, nedostatok zeleniny a ovocia, lokalita uzasna, ubytovanie na primeranej urovni</p></li>
+<li><p>Lokalita je krásna. Ubytovanie nie je najlepšie, ale vyhovujúce. Discover patrí do Podskalia! Jedlo bolo naopak tento rok sklamanie. Minulý rok som tiež mala vegetariánsku stravu, ale narozdiel od tohto Discoveru som si ju pochvaľovala. Jedlo bolo rôznorodé a chutné, tento rok to bolo iba ne-vegetariánske jedlo, z ktorého niekto ubral mäso a dal tam sóju, ktorá bola na tanieri minimálne každý druhý deň. Nepoznám vegetariána, ktorý by jedol toľko sóje - namiesto rezňa, v polievkach, v omáčkach… bola proste všade! Tiež na snack boli často chleby so šunkovou penou a musela som si vypýtať chlieb s maslom, alebo suchý chlieb. Moje sklamanie je znásobené tím, že viem že to môže byť lepšie.</p></li>
+<li><p>Mohlo byť trochu viac jedla, lokalita je super, a ubytovanie prijateľné</p></li>
+<li><p>Dopokavad jsem nesu dala povlečení,tak ne</p></li>
+<li><p>Drevené okná netesnia dobre a tak bola často zima v izbe, 18 chlapcov na jednu kúpeľnú je trošku veľa ale vyrovnali to sprchy dole takže to je asi v pohode</p></li>
+<li><p>Som spokojná, jedlo bolo primerané prostrediu a ubytovanie jedlu</p></li>
+<li><p>Bola som so vsetkym spokojna</p></li>
+<li><p>Ocenila by som zlepsenie jedla</p></li>
+<li><p>Jediny problem bola vlhkost na izbach a plesen v kupelniach.</p></li>
+<li><p>spinave sprchy, jidlo spatne kvality</p></li>
+<li><p>Co se týče jídla, asi nejvetší problém jsem mel s prilis castymi sladkymi veceremi…</p></li>
+<li><p>Lokalita - super ubytovanie - fajn jedlo - nie vždy to bolo zrovna chutné</p></li>
+<li><p>Věřím že je těžké najít vyhovující objekt, ale.uvízala.bych lepší kvalitu jídla nebo lepší možnost vlastního stravování</p></li>
+<li><p>dukatove buchticky mi nesadli :D ale inak bolo jedlo uplne normalne, a lokalita je strasne super. neviem si predstavit nejake lepsie miesto. ubytovanie bolo tiez fajn, aj ked izba bola trochu mala.</p></li>
+<li><p>Lokalita super. Ubytovanie je v pohode. Chýbal mi dostatok vody. Jedlo bolo celkom dobré až na dukátove buchtičky.</p></li>
+<li><p>jedlo bolo dosť zlé, vegetariánskej strave chýba čerstvá zelenina, priveľa sójového masa</p></li>
+<li><p>Lokalita je skvělá, nádherné prostředí. Ubytování je čisté a dostačující. Jídlo bylo největší slabinou.</p></li>
+<li><p>Vadil mi slabý signál, ale chápem, že to nedokážu organizátori ovplyvniť</p></li>
+<li><p>jidlo nebylo moc dobre a kvalita kolisava, v kuchyni prijemni lide ale jidlo… ubytovani v poradku, pouze cistota v koupelnach po ruznych tymovych hrach, lokalita je vyborna</p></li>
+<li><p>Neměli jsme mýdlo ani toaletní papír, jídlo mi moc nechutnalo</p></li>
+<li><p>Vecer nerada jim sladke a nemam rada tolik chleba.</p></li>
+<li><p>Jedlo mohlo byť na vyššej úrovni</p></li>
+<li><p>Nepáčilo sa mi, že v chatkách bol často neporiadok, hlavne v kúpenách.</p></li>
+<li><p>všetko ok až na občasný hmyz</p></li>
+<li><p>ubytovanie a strava nie su najlepsie</p></li>
+<li><p>dukátové buchtičky boli príšerné puding nemá byť vodový</p></li>
+<li><p>Možná by bylo dobré někde varovat lidi před dvoukilometrovou cestou z Ďurďové razc. protože ne vždy je možné ji projít. Poslední jídlo, buchtičky se šodó bylo příšerné, chutnalo jako rohlík rozmočený v mléku. Ale to je jen můj osobní problém s jídlem…</p></li>
+<li><p>nevaria najlepsie</p></li>
+<li><p>jidlo meh, ale jinak bozi, nemenil/a bych</p></li>
+<li><p>ach to jidlo, myslim ze jsem to probrala s dostatecnym mnozstvim lektoru a organizatoru, aby to nebylo potreba rozepisovat. ja sama bych byla ochotna priplatit za lepsi stravovani, ale pokud by se cena zvedala z 200 euro na 300, mohlo by to odradit nektere od ucasti. ale jina je ubytovani ok a priroda uzasna.</p></li>
+</ul>
+</div>
+<div id="international-1" class="section level2">
+<h2>International</h2>
+<ul>
+<li><p>I didn’t have any problem with that. I really love this place (especially the law class).</p></li>
+<li><p>there should be more fruits</p></li>
+<li><p>Coffee after lunch would be great. And I would appreciate to get much more fruit.</p></li>
+<li><p>Food: Well, you probably know…I didn’t like the idea of sweet food for lunch or for dinner by much. Accomodation: I think there were not enough showers and toilets for all the girls Location: I like this place. And I also liked the fact we didn’t have wifi</p></li>
+<li><p>best location ever</p></li>
+<li><p>Actually, I was really glad that we could choose vegetarian option, but the cook aparently didn’t know what to do with soy-meat. But it could still way worse location near Prag is the best I had room for 4 people, but I can imagine that being in a room with 8 people wasn’tvery comfortable</p></li>
+<li><p>Food wasnt good, especially the vegeterian lets-put-soy-in-everthing-and-hope-for-the-best. It was bland, boring and frankly I feel that they could have done a better job even on a budget (eg. fried calliflower, baked vegetables,…). I appreciated the food at the bonfire though, but last year at Czechoslovak session it was definitely better, both tasty and properly managed. The location itself is splendid and I loved the fact that we could go to Karlstejn on the trip day. However, regarding the accomodation, having seven other people in the room wasnt the best - i didnt mind most of the time, but someone would always wake up the others early in the morning or in the evening and there was very little privacy. I had to share a bed with another girl, which wasnt entirely comfortable and had I been a more private person, I would have minded a lot.</p></li>
+<li><p>Vegetarian food was not very tasty.</p></li>
+<li><p>It was extremely cold here. I was freezing all the time. Food wasn’t that bad, but I can imagine better. With everything else I am satisfied.</p></li>
+<li><p>The food wasnt the worst quality but for me there wasnt enough. I really like the fact that there was no WiFi. Location itself is fantastic. Id only like to have a chance to make a shopping.</p></li>
+<li><p>I didn’t particularly like the food because I am not used to eating czech food and so I think that maybe the food should have been more international (esspecially since it is the international academy) to acomodate more people.</p></li>
+<li><p>It’s fine.</p></li>
+<li><p>I would appreciate having my own key from my room but i can survive without it</p></li>
+<li><p>I felt more comfortable coming to the location thanks to the directions from website as well as someone meeting us at the bus stop</p></li>
+<li><p>The food was quite bad and there was way too few of it. I think it’d be better if the food contained more protein. But that might be just due to the fact that I need to eat a lot. Regarding the accommodation, it wasn’t bad but I didn’t really particularly enjoy it either. I think that the way Podskali was organised was better in a sense that people needed to spend more time outside but that again might be due to the fact that the weather was awful. The building itself is beautiful on the outside but it didn’t really quite match my expectations on the inside. Plus it quite bothered me that there was no pool nearby.</p></li>
+<li><p>Location was great, accommodation too, and food was ok.</p></li>
+<li><p>The food was not that great, but it was okay. I was dissapointed about the shop, it was not opened on the weekend. Acommodation was good, but maybe too many people in one room. Sometimes it was uncomfortable (some of the roomates getting up early). Also the signal thing… It was a good thing, but some of the parents were furious.</p></li>
+<li><p>Since there was hardly any mobile reception was really worrying for the parents.</p></li>
+<li><p>The food was not very tasty. The temperature in the building low - also it would be good to know there is almost no reception in the building to avoid phone calls from my upset mother the next time:).</p></li>
+<li><p>It was really cold at nights. Food was okay but I would have loved it even better if there was more meat included in the meals. It is not so good that there is no reception for calls, but I actually loved it.</p></li>
+<li><p>Food was often oversalted or simply disgusting. There were no options. There was also a lack of snacks (fruit, vegetables). I was often hungry. The location is fine, but we should take advantage of the neighboring forest and town. Sometimes I felt imprisoned.</p></li>
+<li><p>Food could be more nutritious. Really, I am so tired of sandwiches and cereals in the morning.</p></li>
+<li><p>I like it that there are many pianos here, since music makes you relax. The food wasn’t bad but the it’s a little bit cold in the castle.</p></li>
+<li><p>Food and accommodation was OK the location was great :)</p></li>
+<li><p>According to me the accommodation was great, the opportunity to stay in former monastery was great and I really enjoyed it. Food could be better, but it was good.</p></li>
+<li><p>I was not really happy about the food. But accommodation was alright and the location is amazingly beautiful.</p></li>
+<li><p>The food wasn’t particularly good at all, further the location was beautiful, but the fact that connection was missing had both it’s pros and cons - pros was that we actually socialised and did something else than googling things and checking our social medias. On the other hand it made it hard to stay in touch with my family, and it was pretty frustrating.</p></li>
+<li><p>I didn’t like food.</p></li>
+<li><p>The food staff were rude.</p></li>
+<li><p>I didn’t really enjoy accommodation and food but I know it’s hard to find something better for a reasonable price. I’d come back. The location was amazing.</p></li>
+<li><p>Food - too salty, no fruit, no vegetables. People want to eat healthly. The building is really cold.</p></li>
+<li><p>Location is just beautiful, accommodation could be better, food is, in all honesty, s***</p></li>
+<li><p>The food wasn’t great, but I expected that and it wasn’t too much of an issue. The location was great as it was close to Prague and the scenery was beautiful.</p></li>
+<li><p>Accommodation was really cold. On the other hand it was perfect place, because I really like this part of the Czech Republic, so the location was perfect.</p></li>
+<li><p>I think all of it can be rated on the scale of satisfactory to great</p></li>
+<li><p>I was satisfied.</p></li>
+<li><p>The food was very good, accomodation was fine, but the building was too cold for me.</p></li>
+<li><p>Cool place, I thing it worked very well for the purpose. The classrooms felt a bit like school (maybe because it actually is a school), but that’s just my problem of associating classrooms with boredom.</p></li>
+<li><p>The accommodation was good, I would advise people to bring snacks in case they don’t like the food.</p></li>
+<li><p>The location was a perfect one, we were not distracted by the surroundings, for example, with a beautiful view and a close proximity to the nature. Regarding food, the lunches were not particularly delightful, but on the other hand, it is a school canteen, so it is understandable</p></li>
+<li><p>The building is very noisy (you can hear everything) and I had seven roommates, some of whom were loud, woke up too early and didn’t respect others sleeping, so I felt tired a lot.</p></li>
+<li><p>I lacked vegetables and fruit, also it wasn’t very tasty.</p></li>
+<li><p>Acceptable, not a problém. I liked the pianos</p></li>
+<li><p>The place was very well-chosen.</p></li>
+<li><p>Location beautiful, but there should be a warning about the cold temeprature so that people will pack wormer clothes. Food was alright, I would like more vegetables ( dinner, lunch).</p></li>
+<li><p>The food was…..interesting. It should have been better. Accomodation is okay, but you should really stress the fact that there is no reception here.</p></li>
+<li><p>I really liked it.</p></li>
+<li><p>Not really. I liked it</p></li>
+<li><p>It was perfect!</p></li>
+<li><p>food might not have suited everyone, i personally am not that picky, but i can undrstand that many people considered the food to taste bad. location is absolutely perfect.</p></li>
+<li><p>more meat please and less vegetables and HAIR in the food</p></li>
+<li><p>For me there is nothing to complain about in terms of accommodation or the food from the canteen, however, I would prefer snacks before lunch and in the afternoon, because most of the time I felt quite hungry</p></li>
+<li><p>podskalie was better because it was ore spacious and we spent more time outside, eliminating the noise and it was more relaxing</p></li>
+</ul>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+
+</script>
+
+
+</body>
+</html>
