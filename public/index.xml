@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>blah</title>
+      <link>/post/blah/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/blah/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>/posts/blah/</link>
+      <pubDate>Tue, 14 Aug 2018 19:49:22 +0200</pubDate>
+      
+      <guid>/posts/blah/</guid>
+      <description>Blah Blah
+print(&amp;quot;hello world!&amp;quot;)  </description>
+    </item>
+    
+    <item>
+      <title>My second Post</title>
+      <link>/posts/blah2/</link>
+      <pubDate>Tue, 14 Aug 2018 19:49:22 +0200</pubDate>
+      
+      <guid>/posts/blah2/</guid>
+      <description>Blah Blah
+print(&amp;quot;hello world!&amp;quot;) ## [1] &amp;quot;hello world!&amp;quot; R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
+    </item>
+    
+  </channel>
+</rss>
