@@ -18,7 +18,7 @@ script:
   - Rscript -e 'blogdown::build_site()'
 
 deploy:
-  repo: username/username.github.io
+  repo: petrbouchal/petrbouchal.github.io
   target_branch: master
   provider: pages
   skip_cleanup: true
