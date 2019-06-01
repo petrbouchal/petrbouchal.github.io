@@ -1,0 +1,20 @@
+---
+title: blahpost
+author: ~
+date: '2019-06-01'
+slug: blahpost
+categories: [thiscat]
+tags: [thistag]
+authors: [petrbouchal]
+output:
+  blogdown::html_page:
+    highlight: "pygments"
+---
+
+
+```{r}
+print("hi")
+```
+
+
+
