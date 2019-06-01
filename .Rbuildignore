@@ -1,0 +1,5 @@
+^\.travis\.yml$
+^README\.Rmd$
+^renv$
+^.*\.Rproj$
+^\.Rproj\.user$
