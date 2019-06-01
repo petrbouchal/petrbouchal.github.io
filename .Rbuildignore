@@ -4,3 +4,4 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^petrbouchal\.github\.Rproj$
+^.Rprofile$
