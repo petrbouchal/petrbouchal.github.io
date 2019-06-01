@@ -1,4 +1,5 @@
 ---
+title: "petrbouchal.github.io"
 output: github_document
 ---
 
@@ -12,7 +13,6 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# petrbouchal.github.io
 
 <!-- badges: start -->
 
