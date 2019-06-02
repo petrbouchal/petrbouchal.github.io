@@ -16,5 +16,14 @@ output:
 print("hi")
 ```
 
+{{ .GitInfo.AbbreviatedHash }}
 
+```{r}
+cat(git2r::commits(n = 1)[[1]]$sha)
+```
+
+
+This is commit number `r substr(git2r::commits(n = 1)[[1]]$sha, 1, 7)`.
+
+Hi
 
