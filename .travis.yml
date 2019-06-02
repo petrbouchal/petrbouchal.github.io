@@ -6,7 +6,7 @@ latex: false
 
 branches:
   only:
-    - master
+    - src
 
 cache:
   packages: yes
