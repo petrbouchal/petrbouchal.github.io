@@ -12,6 +12,6 @@ Encoding: UTF-8
 Language: en
 LazyData: true
 Imports:
-  blogdown
+  blogdown,
   git2r
 Remotes: rstudio/blogdown
