@@ -12,3 +12,10 @@ status](https://travis-ci.org/petrbouchal/petrbouchal.github.io.svg?branch=maste
 <!-- badges: end -->
 
 <!-- badges: end -->
+
+# To do
+
+  - [ ] [socialise your
+    blogdown](https://xvrdm.github.io/2017/10/23/socialize-your-blogdown/)
+  - [ ] logo
+  - [ ] favicon

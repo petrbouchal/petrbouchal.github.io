@@ -21,3 +21,11 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 <!-- badges: end -->
+
+# To do
+
+- [ ] [socialise your blogdown](https://xvrdm.github.io/2017/10/23/socialize-your-blogdown/)
+- [ ] logo
+- [ ] favicon
+
+
