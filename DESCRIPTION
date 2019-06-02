@@ -11,5 +11,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Language: en
 LazyData: true
-Imports: blogdown
+Imports:
+  blogdown
+  git2r
 Remotes: rstudio/blogdown
