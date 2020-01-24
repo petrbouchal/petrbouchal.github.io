@@ -1,5 +1,5 @@
 baseURL = "https://petrbouchal.github.io"
-title = "Petr Bouchal"
+title = "Coming soon"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
 
@@ -25,7 +25,7 @@ enableEmoji = true
 defaultContentLanguage = "cz"
 
 [params.info]
-description = "Petr Bouchal"
+description = ""
 title404 = "Tady nic není!"
 
 [params.assets]
@@ -34,11 +34,11 @@ customCSS = ["css/custom.css"]
 customJS = ["js/custom.js"]
 gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 
-[params.copyright]
-prefix = ""
-holder = "Petr Bouchal"
-startYear = "2019"
-suffix = ""
+# [params.copyright]
+# prefix = ""
+# holder = ""
+# startYear = ""
+# suffix = ""
 
 [params.settings]
 # date & time format: https://golang.org/pkg/time/
@@ -52,12 +52,13 @@ accentColor = "#ffcd00"
 hideMainMenu = false
 
 [params.sidebar]
-enable = false
+enable = true
 
 [params.widgets]
-homepage = ["about", "recent_posts"]
-sidebar = ["about","search","sidebar_menu","taxonomy_cloud"]
-footer = ["social_menu"]
+# header = ["breadcrumbs"]
+homepage = ["social_menu"]
+# sidebar = ["about","search","sidebar_menu"]
+# footer = ["social_menu"]
 
 [params.opengraph.facebook]
 admins = [] # array of Facebook IDs
@@ -102,6 +103,7 @@ repository = "minimo"
 [params.search]
 client = "" # algolia / fuse / lunr
 
+
 [params.search.algolia]
 appId = ""
 indexName = ""
@@ -117,11 +119,11 @@ tag = "tags"
 page = "/:slug/"
 posts = "/:year/:month/:title/"
 
-[[menu.main]]
-name = "Repo"
-weight = -10
-identifier = "repository"
-url = "https://github.com/petrbouchal/petrbouchal.github.io"
+# [[menu.main]]
+# name = "Repo"
+# weight = -10
+# identifier = "repository"
+# url = "https://github.com/petrbouchal/petrbouchal.github.io"
 
 [blackfriday]
 hrefTargetBlank = true
