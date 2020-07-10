@@ -1,0 +1,263 @@
+---
+title: "Jak se dostat k českým otevřeným datům"
+subtitle: "a využít je v reprodukovatelném výzkumu"
+author: "Petr Bouchal"
+date: "PSSAÚ `r ptrr::format_date_human()`"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    yolo: false
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      titleSlideClass: [bottom, left, inverse]
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.retina = 3)
+library(fontawesome)
+library(tidyverse)
+library(pragr)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#0000ff",
+  header_font_google = google_font("IBM Plex Sans"),
+  text_font_google   = google_font("IBM Plex Sans"),
+  code_font_google   = google_font("IBM Plex Mono")
+)
+```
+
+---
+class: left, middle, inverse
+
+# Problém
+
+## Neefektivní a nereprodukovatelné využití dat
+
+---
+class: left, top
+
+## 1. najít data - někde?
+
+--
+
+## 2. nějak je načíst a zpracovat v Excelu
+
+--
+
+## 3. `data-nova-final_1-hotovo-oprava3_FIN.xlsx`
+
+--
+
+## 4. za týden nikdo neví, kde se data vzala a co jsme s nimi udělali
+
+---
+class: center, middle
+
+<img src="krugman.png" alt="drawing" width="700"/>
+
+---
+class: inverse, center, middle
+
+# Co s tím
+---
+
+# Reprodukovatelná analytika
+
+## Na delší povídání
+
+## Ale: pokud už s daty pracujete pomocí kódu (konkrétně jazyka R), mám pro vás způsob, jak se efektivně dostat k českým otevřeným datům
+
+---
+
+# Nástroje pro využití českých open dat
+
+## 1. Veřejné finance
+## 2. Otevřená data ČSÚ
+
+---
+
+# Veřejné finance: Monitor státní pokladny (MF ČR)
+
+## Rozpočty + výsledovky + rozvahy 2010-20
+
+###  = kde berou peníze, jak je utrácejí, jak hospodaří, co vlastní
+
+### + další specifické údaje (dotace, financování deficitů...)
+
+## Ministerstva, příspěvkovky, obce, městské části
+
+---
+
+# Monitor Státní pokladny
+
+## = [webové rozhraní](https://monitor.statnipokladna.cz) + [open data](https://monitor.statnipokladna.cz/datovy-katalog/)
+
+## open data: velké množství, relativně složité využití, holá data s kódy, třeba rozumět číselníkům
+
+---
+# Balík [{statnipokladna}](https://monitor.statnipokladna.cz/datovy-katalog/transakcni-data) v R
+
+--
+
+### rychlé načtení vyčištěných dat Státní pokladny
+
+--
+
+### snadný výběr organizace/obce (nebo jejich množiny)
+
+--
+
+### snadné doplnění číselníků ("dekódování dat")
+
+--
+
+### možnost kombinovat různé typy dat
+
+--
+
+### celý postup zaznamenán v kódu > jde snadno zopakovat
+
+--
+
+### [dokumentace vysvětlující i strukturu a obsah dat](https://petrbouchal.github.io/statnipokladna/articles/how-the-data-works.html)
+
+---
+
+# {statnipokladna}
+
+### Přijato do oficiálního repozitáře software pro jazyk R (CRAN) 
+
+### Dokumentace [petrbouchal.github.io/statnipokladna](https://petrbouchal.github.io/statnipokladna)
+
+<img src="sp.png" alt="drawing" width="250"/>
+
+---
+
+### Příklad 1: simulace dopadu ekonomické krize na obce 
+
+<img src="obce.png" alt="drawing" width="700"/>
+---
+
+### Příklad 2: analýza příjmů obecních rozpočtů 
+
+<img src="rud.png" alt="drawing" width="1000"/>
+
+---
+# Otevřená data ČSÚ
+
+## ČSÚ část dat poskytuje formou otevřených dat
+
+### = konzistentní, strojově zpracovatelné soubory
+
+### + katalog
+
+### cca 600 datových sad
+
+---
+
+### Příklad
+
+<img src="konjunk.png" alt="drawing" width="1000"/>
+
+---
+
+### Kde se to vzalo
+
+```{r, message=F, warning=F}
+library(czso)
+library(tidyverse)
+
+czso_get_catalogue() %>% 
+  filter(str_detect(title, "[Kk]onjunk|[Dd]ůvě|[Ee]konom")) %>% 
+  select(dataset_id, title, description)
+```
+
+```{r, message=F}
+czso_get_table("070013")
+```
+
+---
+
+---
+
+.pull-left[
+```{r plot-label, eval=FALSE}
+# code chunk here
+ggplot(iris) + 
+  aes(Sepal.Length, 
+      Sepal.Width, 
+      color = Species) + 
+  geom_point()
+```
+]
+
+.pull-right[
+```{r plot-label-out, ref.label="plot-label", echo=FALSE}
+```
+]
+
+---
+
+```{r}
+mpg %>% 
+  ggplot() +
+  geom_point(aes(cty, hwy)) +
+  theme_xaringan()
+```
+
+
+# {czso}
+
+### Přijato do oficiálního repozitáře software pro jazyk R (CRAN) 
+
+### Dokumentace [petrbouchal.github.io/czso](https://petrbouchal.github.io/czso)
+
+<img src="czso.png" alt="drawing" width="250"/>
+
+---
+# Další tipy na využití (nejen) českých otevřených dat v R
+
+- [CzechData](https://jancaha.github.io/CzechData) by @JanCaha for (mainly) geospatial data about the Czech Republic (both admin. boundaries and topology and geography)
+- [RCzechia](https://cran.r-project.org/package=RCzechia) též přístup k datům ČÚZK, číselníkům a geokodovacímu rozhraní ČÚZK (souřadnice <=> adresy)
+- [pragr](https://petrbouchal.github.io/pragr) [experimentální] pro přístup k mapovým podkladům IPR Praha (historické mapové podklady, územní plán, technické a tematické výkresy) a další utility pro práci s pražskými daty
+
+```{r}
+plot(pragr::district_tilegram %>% sf::st_as_sf(), max.plot = 1)
+```
+```{r}
+plot(pragr::district_hexogram %>% sf::st_as_sf(), max.plot = 1)
+```
+
+
+#
+
+- [eurostat](https://cran.r-project.org/package=eurostat) for access to Eurostat data
+- [OECD](https://cran.r-project.org/package=OECD) for access to OECD data, incl. a large amount of financial and economic data
+
+
+---
+# Co z toho plyne
+
+## ekosystém jazyka R se rozrůstá o nástroje pro práci s českými veřejnými daty
+## jejich využití přinese nejen efektivitu, ale i udržitelnější proces
+## vše výše = dobrý důvod zkusit se pustit do trochy programování s daty
+
+---
+class: inverse, bottom, right
+
+## <a href="https://twitter.com/petrbouchal">`r fa("twitter", fill = "white")`</a> <a href="https://github.com/petrbouchal">`r fa("github", fill = "white")`</a> <a href="https://linkedin.com/in/petrbouchal">`r fa("linkedin", fill = "white")`</a> petrbouchal
+
+pbouchal@gmail.com
+
+
+
+
+
