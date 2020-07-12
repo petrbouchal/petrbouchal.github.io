@@ -13,6 +13,9 @@ cache:
   - $HOME/.local/share/renv
   - $TRAVIS_BUILD_DIR/renv/library
 
+apt_packages:
+  - libudunits2-dev
+
 install:
   - Rscript -e "if (!requireNamespace('renv', quietly = TRUE)) install.packages('renv')"
   - Rscript -e "renv::restore()"
