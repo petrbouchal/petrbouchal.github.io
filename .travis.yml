@@ -16,7 +16,14 @@ cache:
 addons:
   apt:
     packages:
+      - libgdal-dev
+      - libgeos-dev
+      - libproj-dev
       - libudunits2-dev
+      - libv8-dev
+      - libprotobuf-dev
+      - protobuf-compiler
+      - libjq-dev
 
 install:
   - Rscript -e "if (!requireNamespace('renv', quietly = TRUE)) install.packages('renv')"
