@@ -18,7 +18,7 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(fig.retina = 3)
+knitr::opts_chunk$set(fig.retina = 3, echo = F, warning = F)
 library(fontawesome)
 library(tidyverse)
 library(pragr)
