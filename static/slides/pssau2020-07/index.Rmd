@@ -5,7 +5,7 @@ author: "Petr Bouchal"
 date: pro PSSAÚ `r ptrr::format_date_human(as.Date('2020-07-03'))` [neprezentováno]
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: [xaringan-themer.css, custom.css]
     lib_dir: libs
     yolo: false
     nature:
