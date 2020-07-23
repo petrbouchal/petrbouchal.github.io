@@ -1,0 +1,48 @@
+---
+title: "Index of talks and slides"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(htmltools)
+library(rmarkdown)
+```
+
+```{r}
+thisdir <- knitr::current_input(dir = TRUE)
+thisdir <- here::here("public/slides")
+dirs <- list.dirs(dirname(thisdir), recursive = F)
+
+thisdir <- here::here("public/slides")
+dirs <- list.dirs(thisdir, recursive = F)
+```
+
+```{r}
+rmds <- paste0(dirs, "/index.Rmd")
+```
+
+```{r}
+dir_link <- function(rmd) {
+  yml <- rmarkdown::yaml_front_matter(rmd)
+  ttl <- yml$title
+  sbttl <- yml$subtitle
+  dt <- yml$date
+
+  html_url <- stringr::str_replace(rmd, ".Rmd$", ".html")
+
+  a_text <- a(ttl, href = html_url)
+  next_text <- if(!is.null(sbttl)) stringr::str_glue(" - {sbttl}") else ""
+  date_text <- if(!is.null(dt)) stringr::str_glue(" ({dt})") else ""
+
+  # outpt <- paste(a_text, next_text, date_text)
+  outpt <- paste(a_text, next_text)
+
+  cat(outpt)
+}
+```
+
+```{r, results="asis"}
+purrr::walk(rmds, dir_link)
+```
+
