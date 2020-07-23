@@ -44,24 +44,39 @@ class: left, middle, inverse
 ---
 class: left, top
 
-## 1. najít data - někde?
+.large[
+ 1\. najít data - někde?
+]
+
 
 --
 
-## 2. nějak je načíst a zpracovat v Excelu
+.large[
+ 2\. nějak je načíst a zpracovat v Excelu
+]
+
 
 --
 
-## 3. `data-nova-final_1-hotovo-oprava3_FIN.xlsx`
+.large[
+ 3\. `data-nova-final_1-hotovo-oprava3_FIN.xlsx`
+]
+
 
 --
 
-## 4. za týden nikdo neví, kde se data vzala a co jsme s nimi udělali
+.large[
+ 4\. za týden nikdo neví, kde se data vzala a co jsme s nimi udělali
+]
+
 
 ---
 class: center, middle
 
-<img src="krugman.png" alt="drawing" width="700"/>
+```{r}
+knitr::include_graphics("krugman.png")
+```
+
 
 ---
 class: inverse, center, middle
@@ -71,103 +86,135 @@ class: inverse, center, middle
 
 # Reprodukovatelná analytika
 
-## Na delší povídání
+.large[Na delší povídání
 
-## Ale: pokud už s daty pracujete pomocí kódu (konkrétně jazyka R), mám pro vás způsob, jak se efektivně dostat k českým otevřeným datům
+Ale: pokud už s daty pracujete pomocí kódu (konkrétně jazyka R), mám pro vás způsob, jak se efektivně dostat k českým otevřeným datům
+
+(Pokud ne, důvod navíc to zkusit.)
+
+]
 
 ---
 
 # Nástroje pro využití českých open dat
 
-## 1. Veřejné finance
-## 2. Otevřená data ČSÚ
+.large[1. Veřejné finance
+2. Otevřená data ČSÚ]
 
 ---
 
 # Veřejné finance: Monitor státní pokladny (MF ČR)
 
-## Rozpočty + výsledovky + rozvahy 2010-20
+.large[Rozpočty + výsledovky + rozvahy 2010-20]
 
-###  = kde berou peníze, jak je utrácejí, jak hospodaří, co vlastní
+.medium[= kde berou peníze, jak je utrácejí, jak hospodaří, co vlastní
 
-### + další specifické údaje (dotace, financování deficitů...)
+\+ další specifické údaje (dotace, financování deficitů...)]
 
-## Ministerstva, příspěvkovky, obce, městské části
+.large[Ministerstva, příspěvkovky, obce, městské části]
 
 ---
 
 # Monitor Státní pokladny
 
-## = [webové rozhraní](https://monitor.statnipokladna.cz) + [open data](https://monitor.statnipokladna.cz/datovy-katalog/)
+.large[
 
-## open data: velké množství, relativně složité využití, holá data s kódy, třeba rozumět číselníkům
+= [webové rozhraní](https://monitor.statnipokladna.cz) + [open data](https://monitor.statnipokladna.cz/datovy-katalog/)
+
+open data: 
+
+- velké množství
+- holá data s kódy
+- relativně složité využití
+- nutnost rozumět číselníkům
+]
 
 ---
+class: large
 # Balík [{statnipokladna}](https://monitor.statnipokladna.cz/datovy-katalog/transakcni-data) v R
+--
+
+rychlé načtení vyčištěných dat Státní pokladny
 
 --
 
-### rychlé načtení vyčištěných dat Státní pokladny
+snadný výběr organizace/obce (nebo jejich množiny
 
 --
 
-### snadný výběr organizace/obce (nebo jejich množiny)
+snadné doplnění číselníků ("dekódování dat")
 
 --
 
-### snadné doplnění číselníků ("dekódování dat")
+možnost kombinovat různé typy dat
 
 --
 
-### možnost kombinovat různé typy dat
+kód = záznam postupu => snadné zopakovat
 
 --
 
-### celý postup zaznamenán v kódu > jde snadno zopakovat
-
---
-
-### [dokumentace vysvětlující i strukturu a obsah dat](https://petrbouchal.github.io/statnipokladna/articles/how-the-data-works.html)
+.large[[dokumentace vysvětlující](https://petrbouchal.github.io/statnipokladna/articles/how-the-data-works.html) i strukturu a obsah dat]
 
 ---
 
 # {statnipokladna}
 
-### Přijato do oficiálního repozitáře software pro jazyk R (CRAN) 
+.large[
 
-### Dokumentace [petrbouchal.github.io/statnipokladna](https://petrbouchal.github.io/statnipokladna)
+Přijato do oficiálního repozitáře software pro jazyk R (CRAN) 
 
-<img src="sp.png" alt="drawing" width="250"/>
+Dokumentace [petrbouchal.github.io/statnipokladna](https://petrbouchal.github.io/statnipokladna)
+
+]
+
+```{r, out.width="200px"}
+knitr::include_graphics("sp.png")
+```
+
 
 ---
 
 ### Příklad 1: simulace dopadu ekonomické krize na obce 
 
-<img src="obce.png" alt="drawing" width="700"/>
+<!-- <img src="obce.png" alt="drawing" width="700"/> -->
+```{r}
+knitr::include_graphics("obce.png")
+```
+
 ---
 
 ### Příklad 2: analýza příjmů obecních rozpočtů 
 
-<img src="rud.png" alt="drawing" width="1000"/>
+<!-- <img src="rud.png" alt="drawing" width="1000"/> -->
+```{r}
+knitr::include_graphics("rud.png")
+```
 
 ---
 # Otevřená data ČSÚ
 
-## ČSÚ část dat poskytuje formou otevřených dat
+.large[ČSÚ část dat poskytuje formou otevřených dat]
 
-### = konzistentní, strojově zpracovatelné soubory
+.medium[= konzistentní, strojově zpracovatelné soubory]
 
-### + katalog
+.medium[\+ katalog]
 
-### cca 600 datových sad
+.large[cca 600 datových sad]
 
 ---
 
 ### Příklad
 
-<img src="konjunk.png" alt="drawing" width="1000"/>
+<!-- <img src="konjunk.png" alt="drawing" width="1000"/> -->
+
+```{r}
+knitr::include_graphics("konjunk.png")
+```
+
 
 ---
+layout: true
 
 ### Kde se to vzalo
 
