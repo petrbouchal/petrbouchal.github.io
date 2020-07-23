@@ -18,11 +18,25 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(fig.retina = 3, echo = F, warning = F)
+knitr::opts_chunk$set(fig.retina = 3, echo = F,
+                      warning = F,
+                      dev = "ragg_png",
+                      fig.showtext = T,
+                      message = F)
 library(fontawesome)
 library(tidyverse)
 library(pragr)
+library(ptrr)
+
+ptrr::set_geom_defaults()
+update_geom_defaults("rect", list(fill = "blue"))
 ```
+
+```{r}
+sysfonts::font_add_google("IBM Plex Sans", "Roboto")
+sysfonts::font_add_google("IBM Plex Sans Condensed", "Roboto Condensed")
+```
+
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
@@ -242,15 +256,15 @@ czso_get_catalogue() %>%
 
 ---
 
-```{r, message=F, echo=T, eval=F, results="html"}
+```{r, message=F, echo=T, eval = F, results="html"}
+czso_get_table("070013") %>% head()
+```
+
+```{r, message=F, echo=F, eval=T, results="html"}
 czso_get_table("070013") %>% 
   head() %>% 
   gt::gt() %>%
   gt::as_raw_html()
-```
-
-```{r, message=F, echo=F, results="html"}
-czso_get_table("070013") %>% head()
 ```
 
 ---
@@ -273,35 +287,85 @@ knitr::include_graphics("czso.png")
 
 ---
 layout: true
+class: inverse
 
 # Další cesty k (nejen) českým datům v R
 
 ---
-class: large
+layout: false
 
-[{CzechData}](https://jancaha.github.io/CzechData) od @JanCaha
+## [{CzechData}](https://jancaha.github.io/CzechData) od @JanCaha
+
+.medium[
 
 přístup především k prostorovým datům o ČR od ČÚZK (administrativní hranice i topografie)
 
----
-class: large
+]
 
-[{RCzechia}](https://cran.r-project.org/package=RCzechia) od @JindraLacko
+.pull-left[
+```{r mapa-czech, echo=T, eval = F}
+library(CzechData)
+library(mapview)
+
+load_RUIAN_settlement("554782", "volebni okrsky") %>% 
+  mapview()
+```
+]
+
+.pull-right[
+
+```{r ref.label="mapa-czech"}
+
+```
+
+
+]
+
+
+
+---
+
+## [{RCzechia}](https://cran.r-project.org/package=RCzechia) od @JindraLacko
+
+.medium[
 
 též přístup k datům ČÚZK, číselníkům a geokódovacímu rozhraní ČÚZK (souřadnice <=> adresy)
 
----
-class: large
+]
 
-[{pragr}](https://petrbouchal.github.io/pragr) [experimentální] 
+.pull-left[
+
+```{r, echo=TRUE, eval = T, fig.asp=.5}
+library(RCzechia)
+vnitro <- geocode("náměstí Hrdinů 1634/3, Praha 4")
+mapview(vnitro)
+```
+
+]
+.pull-right[
+```{r zeleznice, echo = T, eval = T, fig.asp=.5}
+zeleznice() %>% mapview::mapview()
+```
+]
+
+
+
+---
+
+## [{pragr}](https://petrbouchal.github.io/pragr) [experimentální] 
+
+.large[
 
 pro přístup k mapovým podkladům IPR Praha (historické mapové podklady, územní plán, technické a tematické výkresy) a další utility pro práci s pražskými daty
 
+]
+---
+class: top, left
 
-[{pragr}](https://petrbouchal.github.io/pragr)
+### [{pragr}](https://petrbouchal.github.io/pragr)
 
 ```{r map-load, include=F, eval=T}
-prg_hranice <- CzechData::load_RUIAN_settlement(pragr::prg_kod)
+prg_hranice <- load_RUIAN_settlement(pragr::prg_kod)
 ```
 
 .pull-left[
@@ -322,12 +386,13 @@ prg_hranice %>%
 
 
 ---
+class: top, left
 
-[{pragr}](https://petrbouchal.github.io/pragr)
+### [{pragr}](https://petrbouchal.github.io/pragr)
 
 ```{r map-load-kata, include=F, eval=T}
-prg_hranice <- CzechData::load_RUIAN_settlement(pragr::prg_kod)
-katastr <- CzechData::load_cadastral_territory(CzechData::katastralni_uzemi[CzechData::katastralni_uzemi$nazev == "Nusle",]$kod)
+prg_hranice <- load_RUIAN_settlement(prg_kod)
+katastr <- load_cadastral_territory(katastralni_uzemi[CzechData::katastralni_uzemi$nazev == "Nusle",]$kod)
 ```
 
 .pull-left[
@@ -339,7 +404,8 @@ katastr %>%
   geom_sf(data = katastr, 
           fill = NA, 
           colour = "white", size = 3) +
-  theme_void() + theme(plot.margin = unit(c(0,0,0,0), "mm"))
+  theme_void() + 
+  theme(plot.margin = unit(c(0,0,0,0), "mm"))
 ```
 ]
 .pull-right[
@@ -349,7 +415,9 @@ katastr %>%
 
 ---
 
-[{pragr}](https://petrbouchal.github.io/pragr) 
+class: top, left
+
+### [{pragr}](https://petrbouchal.github.io/pragr)
 
 
 .pull-left[
@@ -372,6 +440,9 @@ ggplot(district_hexogram) +
 ]
 
 ---
+
+## Srovnávací data
+
 .large[
 
 [{eurostat}](https://cran.r-project.org/package=eurostat) pro přístup k datům Eurostatu, včetně hranic NUTS regionů)
@@ -384,9 +455,10 @@ Obojí používá stejnou logiku jako {czso}
 ---
 layout: false
 
-## {eurostat}
+## [{eurostat}](http://ropengov.github.io/eurostat/)
 
-```{r}
+.pull-left[
+```{r eurostat, echo=T, eval = F, fig.asp = .6}
 eurostat::get_eurostat("nama_10r_2gdp") %>%
   filter(unit == "PPS_HAB_EU") %>% 
   eurostat::add_nuts_level() %>% 
@@ -394,19 +466,73 @@ eurostat::get_eurostat("nama_10r_2gdp") %>%
   eurostat::label_eurostat(dic = "geo") %>%
   filter(geo %in% c("Wien", "Praha", "München", 
                     "Dresden", "Bratislavský kraj")) %>% 
-  select(geo, values, time)
+  select(geo, values, time) %>% 
+  ggplot() +
+  geom_col(aes(values/100, geo)) +
+  theme_ptrr("x", base_size = 25) +
+  scale_x_percent_cz() +
+  labs(title = "HDP jako podíl průměru EU",
+       subtitle = "PPS na obyvatele, 2018")
+```
+]
+
+.pull-right[
+
+```{r ref.label="eurostat", fig.asp=.7}
 ```
 
 
+]
+
+---
+
+## [{eurostat}](http://ropengov.github.io/eurostat/)
+
+.pull-left[
+
+```{r euronuts, echo=T, eval = F}
+nuts <- eurostat::get_eurostat_geospatial()
+ggplot()+
+  geom_sf(data = nuts) +
+  scale_y_continuous(limits = c(30, NA)) +
+  scale_x_continuous(limits = c(-20, 45))
+```
+
+]
+
+.pull-right[
+
+```{r ref.label="euronuts"}
+```
+
+]
+
 ---
 layout: false
 
-## OECD
+## [{OECD}](https://cran.r-project.org/package=OECD)
+
+.pull-left[
+```{r oecd, echo=T, eval = F}
+
+```
+]
+
+.pull-right[
+
+```{r ref.label="oecd"}
+
+```
+
+
+]
 
 ---
 layout: false
+class: inverse
 
 # Co z toho plyne
+
 
 .large[
 
@@ -415,6 +541,15 @@ ekosystém jazyka R se rozrůstá o nástroje pro práci s českými veřejnými
 jejich využití přinese nejen efektivitu, ale i udržitelnější proces
 
 vše výše = dobrý důvod zkusit se pustit do trochy programování s daty
+
+]
+
+---
+class: inverse, middle, center
+
+.large[
+
+(Tato prezentace je také reprodukovatelná: téměř všechny grafy a tabulky se generují naživo)
 
 ]
 
