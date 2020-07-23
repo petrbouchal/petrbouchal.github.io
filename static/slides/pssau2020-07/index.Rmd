@@ -30,7 +30,8 @@ style_mono_accent(
   base_color = "#0000ff",
   header_font_google = google_font("IBM Plex Sans"),
   text_font_google   = google_font("IBM Plex Sans"),
-  code_font_google   = google_font("IBM Plex Mono")
+  code_font_google   = google_font("IBM Plex Mono"),
+  table_row_even_background_color = "fff"
 )
 ```
 
