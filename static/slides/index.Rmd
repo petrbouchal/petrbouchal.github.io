@@ -19,7 +19,7 @@ dirs <- list.dirs(thisdir, recursive = F)
 ```
 
 ```{r}
-rmds <- paste0(dirs, "/index.Rmd")
+rmds <- file.path(dirs, "index.Rmd")
 ```
 
 ```{r}
@@ -28,10 +28,12 @@ dir_link <- function(rmd) {
   ttl <- yml$title
   sbttl <- yml$subtitle
   dt <- yml$date
+  
+  dironly <- dirname(rmd)
+  topdir_parts <- stringr::str_split(dironly, "/")
+  topdir <- topdir_parts[[1]][length(topdir_parts[[1]])]
 
-  html_url <- stringr::str_replace(rmd, ".Rmd$", ".html")
-
-  a_text <- a(ttl, href = html_url)
+  a_text <- a(ttl, href = paste0(topdir, "/index.html"))
   next_text <- if(!is.null(sbttl)) stringr::str_glue(" - {sbttl}") else ""
   date_text <- if(!is.null(dt)) stringr::str_glue(" ({dt})") else ""
 
