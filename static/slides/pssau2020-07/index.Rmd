@@ -218,91 +218,216 @@ layout: true
 
 ### Kde se to vzalo
 
-```{r, message=F, warning=F}
+---
+```{r echo=T, eval=F, message=FALSE, warning=FALSE, results="html"}
 library(czso)
 library(tidyverse)
 
 czso_get_catalogue() %>% 
-  filter(str_detect(title, "[Kk]onjunk|[Dd]ůvě|[Ee]konom")) %>% 
+  filter(str_detect(title, "[Kk]onjunk|[Dd]ůvě")) %>% 
   select(dataset_id, title, description)
 ```
 
-```{r, message=F}
-czso_get_table("070013")
+```{r echo=F, message=FALSE, warning=FALSE, results="html"}
+library(czso)
+library(tidyverse)
+
+czso_get_catalogue() %>% 
+  filter(str_detect(title, "[Kk]onjunk|[Dd]ůvě")) %>% 
+  select(dataset_id, title, description) %>% 
+  gt::gt() %>% 
+  gt::as_raw_html()
+```
+
+
+---
+
+```{r, message=F, echo=T, eval=F, results="html"}
+czso_get_table("070013") %>% 
+  head() %>% 
+  gt::gt() %>%
+  gt::as_raw_html()
+```
+
+```{r, message=F, echo=F, results="html"}
+czso_get_table("070013") %>% head()
 ```
 
 ---
+layout: false
+
+## R balík {czso}
+
+.large[
+
+Přijato do oficiálního repozitáře software pro jazyk R (CRAN) 
+
+Dokumentace [petrbouchal.github.io/czso](https://petrbouchal.github.io/czso)
+
+```{r out.width="200px"}
+knitr::include_graphics("czso.png")
+```
+
+
+]
+
+---
+layout: true
+
+# Další cesty k (nejen) českým datům v R
+
+---
+class: large
+
+[{CzechData}](https://jancaha.github.io/CzechData) od @JanCaha
+
+přístup především k prostorovým datům o ČR od ČÚZK (administrativní hranice i topografie)
+
+---
+class: large
+
+[{RCzechia}](https://cran.r-project.org/package=RCzechia) od @JindraLacko
+
+též přístup k datům ČÚZK, číselníkům a geokódovacímu rozhraní ČÚZK (souřadnice <=> adresy)
+
+---
+class: large
+
+[{pragr}](https://petrbouchal.github.io/pragr) [experimentální] 
+
+pro přístup k mapovým podkladům IPR Praha (historické mapové podklady, územní plán, technické a tematické výkresy) a další utility pro práci s pražskými daty
+
+
+[{pragr}](https://petrbouchal.github.io/pragr)
+
+```{r map-load, include=F, eval=T}
+prg_hranice <- CzechData::load_RUIAN_settlement(pragr::prg_kod)
+```
+
+.pull-left[
+```{r map-orto, eval = F, echo=T}
+prg_hranice %>% 
+  ggplot() +
+  prg_tile(prg_hranice, buffer = 200) +
+  geom_sf(data = prg_hranice, 
+          alpha = 0.3, fill = "white", 
+          colour = "white", size = 3) +
+  theme_void()
+```
+]
+.pull-right[
+```{r, ref.label="map-orto", echo = F, out.width="600px", out.height="400px", fig.width=6, fig.height=4}
+```
+]
+
 
 ---
 
+[{pragr}](https://petrbouchal.github.io/pragr)
+
+```{r map-load-kata, include=F, eval=T}
+prg_hranice <- CzechData::load_RUIAN_settlement(pragr::prg_kod)
+katastr <- CzechData::load_cadastral_territory(CzechData::katastralni_uzemi[CzechData::katastralni_uzemi$nazev == "Nusle",]$kod)
+```
+
 .pull-left[
-```{r plot-label, eval=FALSE}
-# code chunk here
-ggplot(iris) + 
-  aes(Sepal.Length, 
-      Sepal.Width, 
-      color = Species) + 
-  geom_point()
+```{r map-1945, eval=F, echo=T}
+katastr %>% 
+  ggplot() +
+  prg_basemap(katastr, buffer = 200,
+              image_service = "cisarske_otisky_1840") +
+  geom_sf(data = katastr, 
+          fill = NA, 
+          colour = "white", size = 3) +
+  theme_void() + theme(plot.margin = unit(c(0,0,0,0), "mm"))
+```
+]
+.pull-right[
+```{r, ref.label="map-1945", echo = F, out.width="400px", out.height="450px", fig.width=4.5, fig.height=4}
+```
+]
+
+---
+
+[{pragr}](https://petrbouchal.github.io/pragr) 
+
+
+.pull-left[
+```{r, echo = F, fig.asp=.7}
+library(pragr)
+ggplot(district_tilegram) +
+  geom_sf(data = district_tilegram, fill = "blue", colour = "white") +
+  theme_void() +
+  geom_sf_text(aes(label = label), colour = "white")
 ```
 ]
 
 .pull-right[
-```{r plot-label-out, ref.label="plot-label", echo=FALSE}
+```{r, echo = F, fig.asp=.7}
+ggplot(district_hexogram) +
+  geom_sf(data = district_hexogram, fill = "blue", colour = "white") +
+  theme_void() +
+  geom_sf_text(aes(label = label), colour = "white")
 ```
 ]
 
 ---
+.large[
 
-```{r}
-mpg %>% 
-  ggplot() +
-  geom_point(aes(cty, hwy)) +
-  theme_xaringan()
-```
+[{eurostat}](https://cran.r-project.org/package=eurostat) pro přístup k datům Eurostatu, včetně hranic NUTS regionů)
 
+[{OECD}](https://cran.r-project.org/package=OECD) pro přístup k datům OECD 
 
-# {czso}
-
-### Přijato do oficiálního repozitáře software pro jazyk R (CRAN) 
-
-### Dokumentace [petrbouchal.github.io/czso](https://petrbouchal.github.io/czso)
-
-<img src="czso.png" alt="drawing" width="250"/>
+Obojí používá stejnou logiku jako {czso}
+]
 
 ---
-# Další tipy na využití (nejen) českých otevřených dat v R
+layout: false
 
-- [CzechData](https://jancaha.github.io/CzechData) by @JanCaha for (mainly) geospatial data about the Czech Republic (both admin. boundaries and topology and geography)
-- [RCzechia](https://cran.r-project.org/package=RCzechia) též přístup k datům ČÚZK, číselníkům a geokodovacímu rozhraní ČÚZK (souřadnice <=> adresy)
-- [pragr](https://petrbouchal.github.io/pragr) [experimentální] pro přístup k mapovým podkladům IPR Praha (historické mapové podklady, územní plán, technické a tematické výkresy) a další utility pro práci s pražskými daty
+## {eurostat}
 
 ```{r}
-plot(pragr::district_tilegram %>% sf::st_as_sf(), max.plot = 1)
+eurostat::get_eurostat("nama_10r_2gdp") %>%
+  filter(unit == "PPS_HAB_EU") %>% 
+  eurostat::add_nuts_level() %>% 
+  filter(nuts_level == 2, time >= "2018-01-01") %>% 
+  eurostat::label_eurostat(dic = "geo") %>%
+  filter(geo %in% c("Wien", "Praha", "München", 
+                    "Dresden", "Bratislavský kraj")) %>% 
+  select(geo, values, time)
 ```
-```{r}
-plot(pragr::district_hexogram %>% sf::st_as_sf(), max.plot = 1)
-```
-
-
-#
-
-- [eurostat](https://cran.r-project.org/package=eurostat) for access to Eurostat data
-- [OECD](https://cran.r-project.org/package=OECD) for access to OECD data, incl. a large amount of financial and economic data
 
 
 ---
+layout: false
+
+## OECD
+
+---
+layout: false
+
 # Co z toho plyne
 
-## ekosystém jazyka R se rozrůstá o nástroje pro práci s českými veřejnými daty
-## jejich využití přinese nejen efektivitu, ale i udržitelnější proces
-## vše výše = dobrý důvod zkusit se pustit do trochy programování s daty
+.large[
+
+ekosystém jazyka R se rozrůstá o nástroje pro práci s českými veřejnými daty
+
+jejich využití přinese nejen efektivitu, ale i udržitelnější proces
+
+vše výše = dobrý důvod zkusit se pustit do trochy programování s daty
+
+]
 
 ---
 class: inverse, bottom, right
+layout: false
 
-## <a href="https://twitter.com/petrbouchal">`r fa("twitter", fill = "white")`</a> <a href="https://github.com/petrbouchal">`r fa("github", fill = "white")`</a> <a href="https://linkedin.com/in/petrbouchal">`r fa("linkedin", fill = "white")`</a> petrbouchal
+.large[
+<a href="https://twitter.com/petrbouchal">`r fa("twitter", fill = "white")`</a> <a href="https://github.com/petrbouchal">`r fa("github", fill = "white")`</a> <a href="https://linkedin.com/in/petrbouchal">`r fa("linkedin", fill = "white")`</a> petrbouchal
 
 pbouchal@gmail.com
+
+]
 
 
 
