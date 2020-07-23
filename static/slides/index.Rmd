@@ -11,11 +11,9 @@ library(rmarkdown)
 
 ```{r}
 thisdir <- knitr::current_input(dir = TRUE)
-# thisdir <- here::here("public/slides")
+# thisdir
 dirs <- list.dirs(dirname(thisdir), recursive = F)
-
-thisdir <- here::here("public/slides")
-dirs <- list.dirs(thisdir, recursive = F)
+# dirs
 ```
 
 ```{r}
