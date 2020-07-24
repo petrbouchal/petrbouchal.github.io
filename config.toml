@@ -10,7 +10,7 @@ theme = "minimo"
 info = "info info info"
 
 disqusShortname = ""
-googleAnalytics = "UA-42949500-1"
+googleAnalytics = ""
 
 Paginate = 5
 preserveTaxonomyNames = true
