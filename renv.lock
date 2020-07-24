@@ -905,11 +905,14 @@
     "ptrr": {
       "Package": "ptrr",
       "Version": "0.1.0.9000",
-      "Source": "Local",
-      "Remotes": "clauswilke/ggtext",
-      "RemoteType": "local",
-      "RemoteUrl": "/Users/petr/github/ptrr",
-      "Hash": "93d201866e7eede33bfe503da70df1d9"
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "petrbouchal",
+      "RemoteRepo": "ptrr",
+      "RemoteRef": "master",
+      "RemoteSha": "846dd2e455ee6cb1fcdb4b4d4beb970ed21e3241",
+      "Hash": "26d7c6f0cc8750072198d9d20d08839a"
     },
     "purrr": {
       "Package": "purrr",
