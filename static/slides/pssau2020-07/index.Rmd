@@ -2,7 +2,8 @@
 title: "Jak se dostat k českým otevřeným datům"
 subtitle: "a využít je pro reprodukovatelnou analytiku"
 author: "Petr Bouchal"
-date: pro PSSAÚ `r ptrr::format_date_human(as.Date('2020-07-03'))` [neprezentováno]
+# date: pro PSSAÚ `r ptrr::format_date_human(as.Date('2020-07-03'))` [neprezentováno]
+date: pro PSSAÚ 3. července 2020 [neprezentováno]
 output:
   xaringan::moon_reader:
     css: [xaringan-themer.css, custom.css]
