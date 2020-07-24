@@ -562,7 +562,7 @@ class: inverse, middle, center
 
 .large[
 
-(Tato prezentace je také reprodukovatelná: téměř všechny grafy a tabulky se generují naživo)
+(Tato prezentace je také reprodukovatelná: téměř všechny grafy a tabulky se generují naživo. Viz [<span style="text-decoration: underline; color: #fff">kód</span>](https://github.com/petrbouchal/petrbouchal.github.io/blob/src/static/slides/pssau2020-07/index.Rmd).)
 
 ]
 
