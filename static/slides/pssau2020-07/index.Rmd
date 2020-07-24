@@ -513,15 +513,28 @@ layout: false
 ## [{OECD}](https://cran.r-project.org/package=OECD)
 
 .pull-left[
-```{r oecd, echo=T, eval = F}
+```{r oecd-data, echo=T, eval = F, cache=T}
+gaag <- OECD::get_dataset("GOV_2019")
+```
 
+
+```{r oecd, echo=T, eval = F, cache=T}
+gaag %>% 
+  filter(IND %in% c("EPE_P_M"), 
+         COU %in% c("NLD", "CZE", "SVK", "DEU")) %>% 
+  ggplot(aes(obsTime, obsValue, group = COU)) +
+  geom_line() +
+  geom_point(size = 3) +
+  facet_grid(cols = vars(COU)) +
+  theme_ptrr("both", multiplot = T, base_size = 25) +
+  labs(title = "Metodologie ex-post evaluace",
+       subtitle = "ukotvení v primární leg. (OECD)")
 ```
 ]
 
 .pull-right[
 
-```{r ref.label="oecd"}
-
+```{r ref.label="oecd", fig.asp=.7, cache=T}
 ```
 
 
