@@ -63,6 +63,13 @@
       "Repository": "CRAN",
       "Hash": "08588806cba69f04797dab50627428ed"
     },
+    "OECD": {
+      "Package": "OECD",
+      "Version": "0.2.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "327ad7f80d940aadeb1fe6f1b5a2209f"
+    },
     "R6": {
       "Package": "R6",
       "Version": "2.4.1",
@@ -111,6 +118,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "8c4137a9ab70de4787d57758f8190617"
+    },
+    "XML": {
+      "Package": "XML",
+      "Version": "3.99-0.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2625adc5e07995996f05407a5eb39977"
     },
     "abind": {
       "Package": "abind",
@@ -921,13 +935,6 @@
       "Repository": "CRAN",
       "Hash": "97def703420c8ab10d8f0e6c72101e02"
     },
-    "ragg": {
-      "Package": "ragg",
-      "Version": "0.1.5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "55ecadf0808546b2d1e8a06b1658a787"
-    },
     "rapidjsonr": {
       "Package": "rapidjsonr",
       "Version": "1.2.0",
@@ -1046,6 +1053,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "f6a407ae5dd21f6f80a6708bbb6eb3ae"
+    },
+    "rsdmx": {
+      "Package": "rsdmx",
+      "Version": "0.5-14",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "0c676a76e329931d42f73f5959498890"
     },
     "rstudioapi": {
       "Package": "rstudioapi",
