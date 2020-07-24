@@ -513,7 +513,7 @@ layout: false
 ## [{OECD}](https://cran.r-project.org/package=OECD)
 
 .pull-left[
-```{r oecd-data, echo=T, eval = F, cache=T}
+```{r oecd-data, echo=T, eval = T, cache=T}
 gaag <- OECD::get_dataset("GOV_2019")
 ```
 
