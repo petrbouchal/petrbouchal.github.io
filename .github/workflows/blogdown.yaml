@@ -1,6 +1,6 @@
 on:
   push:
-    branches: master
+    branches: src
 
 name: blogdown
 
@@ -15,6 +15,14 @@ jobs:
 
       - name: Setup R
         uses: r-lib/actions/setup-r@master
+
+      - name: Install XQuartz on MacOS
+        if: runner.os == 'macOS'
+        run: brew cask install xquartz
+
+      - name: Install cairo
+        if: runner.os == 'macOS'
+        run: brew install cairo
 
       - name: Install pandoc and pandoc citeproc
         run: |
@@ -47,4 +55,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs
+          publish_dir: public
+          publish_branch: master
