@@ -47,6 +47,10 @@ jobs:
         run: |
           R -e 'blogdown::install_hugo()'
 
+      - name: Install theme via submodule
+        run: |
+          git submodule sync && git submodule update --init
+
       - name: Build site
         run: |
           R -e 'blogdown::build_site(TRUE)'
