@@ -33,7 +33,27 @@ ptrr::set_geom_defaults()
 update_geom_defaults("rect", list(fill = "blue"))
 ```
 
-```{r}
+```{r meta-social}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "Přehled nástrojů v prostředí R pro využití otevřených dat, mj. ČSÚ, Státní pokladny MF, Eurostatu a OECD",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "petrbouchal/petrbouchal.github.io") %>% 
+  meta_social(
+    title = "Jak se dostat k českým otevřeným datům v R",
+    url = "https://petrbouchal.github.io/slides/pssau2020-07/index.html",
+    image = "https://petrbouchal.github.io/slides/pssau2020-07/twitter_card.png",
+    image_alt = "První slide prezentace o využití otevřených dat v R",
+    og_type = "website",
+    og_author = "Petr Bouchal",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@petrbouchal"
+  )
+```
+
+```{r fonts}
 sysfonts::font_add_google("IBM Plex Sans", "Roboto")
 sysfonts::font_add_google("IBM Plex Sans Condensed", "Roboto Condensed")
 ```
