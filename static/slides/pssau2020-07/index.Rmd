@@ -2,13 +2,14 @@
 title: "Jak se dostat k českým otevřeným datům"
 subtitle: "a využít je pro reprodukovatelnou analytiku"
 author: "Petr Bouchal"
-# date: pro PSSAÚ `r ptrr::format_date_human(as.Date('2020-07-03'))` [neprezentováno]
 date: pro PSSAÚ 3. července 2020 [neprezentováno]
 output:
   xaringan::moon_reader:
     css: [xaringan-themer.css, custom.css]
     lib_dir: libs
     yolo: false
+    mathjax: NULL
+    seal: true 
     nature:
       ratio: 16:9
       highlightStyle: github
@@ -28,12 +29,29 @@ library(fontawesome)
 library(tidyverse)
 library(pragr)
 library(ptrr)
+library(ragg)
 
 ptrr::set_geom_defaults()
 update_geom_defaults("rect", list(fill = "blue"))
 ```
 
-```{r meta-social}
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#0000ff",
+  header_font_google = google_font("IBM Plex Sans"),
+  text_font_google   = google_font("IBM Plex Sans"),
+  code_font_google   = google_font("IBM Plex Mono"),
+  table_row_even_background_color = "fff"
+)
+```
+
+```{r fonts, include=FALSE}
+sysfonts::font_add_google("IBM Plex Sans", "Roboto")
+sysfonts::font_add_google("IBM Plex Sans Condensed", "Roboto Condensed")
+```
+
+```{r meta, echo=F}
 library(metathis)
 meta() %>%
   meta_general(
@@ -47,27 +65,12 @@ meta() %>%
     image = "https://petrbouchal.github.io/slides/pssau2020-07/twitter_card.png",
     image_alt = "První slide prezentace o využití otevřených dat v R",
     og_type = "website",
+    og_locale = "cs_CZ",
     og_author = "Petr Bouchal",
     twitter_card_type = "summary_large_image",
     twitter_creator = "@petrbouchal"
-  )
-```
-
-```{r fonts}
-sysfonts::font_add_google("IBM Plex Sans", "Roboto")
-sysfonts::font_add_google("IBM Plex Sans Condensed", "Roboto Condensed")
-```
-
-
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-style_mono_accent(
-  base_color = "#0000ff",
-  header_font_google = google_font("IBM Plex Sans"),
-  text_font_google   = google_font("IBM Plex Sans"),
-  code_font_google   = google_font("IBM Plex Mono"),
-  table_row_even_background_color = "fff"
-)
+  ) %>% 
+  include_meta()
 ```
 
 class: left, middle, inverse
