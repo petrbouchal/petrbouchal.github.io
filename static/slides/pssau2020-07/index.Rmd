@@ -33,6 +33,8 @@ library(ragg)
 
 ptrr::set_geom_defaults()
 update_geom_defaults("rect", list(fill = "blue"))
+
+webshot::install_phantomjs()
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
@@ -338,8 +340,15 @@ load_RUIAN_settlement("554782", "volebni okrsky") %>%
 
 .pull-right[
 
-```{r ref.label="mapa-czech"}
+```{r}
+okrpng <- here::here("static", "/w_okrsky.png")
 
+okrw <- load_RUIAN_settlement("554782", "volebni okrsky") %>% 
+  mapview()
+mapshot(okrw@map, file = okrpng,
+        remove_controls = NULL, vheight = 600, vwidth = 1000)
+
+knitr::include_graphics(okrpng)
 ```
 
 
@@ -367,9 +376,21 @@ mapview(vnitro)
 
 ]
 .pull-right[
-```{r zeleznice, echo = T, eval = T, fig.asp=.5}
-zeleznice() %>% mapview::mapview()
+```{r zeleznice, echo = T, eval = F, fig.asp=.5}
+zeleznice() %>% mapview()
 ```
+
+```{r}
+zelpng <- here::here("static", "/w_zeleznice.png")
+
+zelw <- zeleznice() %>% mapview()
+mapshot(wgt@map, file = zelpng,
+        remove_controls = NULL, vheight = 600, vwidth = 1000)
+
+knitr::include_graphics(zelpng)
+```
+
+
 ]
 
 
@@ -399,12 +420,12 @@ prg_hranice %>%
   prg_tile(prg_hranice, buffer = 200) +
   geom_sf(data = prg_hranice, 
           alpha = 0.3, fill = "white", 
-          colour = "white", size = 3) +
+          colour = "white", size = 2) +
   theme_void()
 ```
 ]
 .pull-right[
-```{r, ref.label="map-orto", echo = F, out.width="600px", out.height="400px", fig.width=6, fig.height=4}
+```{r, ref.label="map-orto", echo = F, out.width="600px", out.height="400px", fig.width=3, fig.height=2}
 ```
 ]
 
@@ -427,13 +448,13 @@ katastr %>%
               image_service = "cisarske_otisky_1840") +
   geom_sf(data = katastr, 
           fill = NA, 
-          colour = "white", size = 3) +
+          colour = "white", size = 2) +
   theme_void() + 
   theme(plot.margin = unit(c(0,0,0,0), "mm"))
 ```
 ]
 .pull-right[
-```{r, ref.label="map-1945", echo = F, out.width="400px", out.height="450px", fig.width=4.5, fig.height=4}
+```{r, ref.label="map-1945", echo = F, out.width="400px", out.height="450px", fig.width=2, fig.height=2}
 ```
 ]
 
