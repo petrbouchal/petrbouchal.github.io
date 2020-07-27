@@ -17,6 +17,7 @@ zeleznice() %>% mapview::mapview()
 ```{r, echo=F, warning=T, message=TRUE}
 getwd()
 
+webshot::install_phantomjs()
 library(mapview)
 
 mptpng <- here::here("static", "/maptest.png")
