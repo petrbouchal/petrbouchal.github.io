@@ -386,7 +386,7 @@ zeleznice() %>% mapview()
 zelpng <- here::here("static", "/w_zeleznice.png")
 
 zelw <- zeleznice() %>% mapview()
-mapshot(wgt@map, file = zelpng,
+mapshot(zelw@map, file = zelpng,
         remove_controls = NULL, vheight = 600, vwidth = 1000)
 
 knitr::include_graphics(zelpng)
