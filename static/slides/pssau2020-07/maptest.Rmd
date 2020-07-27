@@ -14,7 +14,7 @@ library(magrittr)
 zeleznice() %>% mapview::mapview()
 ```
 
-```{r, echo=F}
+```{r, echo=F, warning=T, message=TRUE}
 getwd()
 
 library(mapview)
