@@ -15,13 +15,15 @@ zeleznice() %>% mapview::mapview()
 ```
 
 ```{r, echo=F}
+getwd()
+
 library(mapview)
 wgt <- mapview::mapview(zeleznice())
-mapshot(wgt@map, file = "maptest.png", remove_controls = NULL)
+mapshot(wgt@map, file = paste0(getwd(),"/maptest.png"), remove_controls = NULL)
 ```
 
 
 ```{r, echo=F}
-knitr::include_graphics("maptest.png")
+knitr::include_graphics(paste0(getwd(),"/maptest.png"))
 ```
 
