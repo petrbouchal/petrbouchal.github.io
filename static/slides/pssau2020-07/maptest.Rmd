@@ -1,0 +1,27 @@
+---
+title: "maptest"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(RCzechia)
+library(magrittr)
+```
+
+```{r, eval=F}
+
+zeleznice() %>% mapview::mapview()
+```
+
+```{r, echo=F}
+library(mapview)
+wgt <- mapview::mapview(zeleznice())
+mapshot(wgt@map, file = "maptest.png", remove_controls = NULL)
+```
+
+
+```{r, echo=F}
+knitr::include_graphics("maptest.png")
+```
+
