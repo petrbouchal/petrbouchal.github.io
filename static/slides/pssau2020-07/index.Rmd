@@ -343,14 +343,15 @@ load_RUIAN_settlement("554782", "volebni okrsky") %>%
 ```{r}
 library(CzechData)
 library(mapview)
-okrpng <- here::here("static", "/w_okrsky.png")
+okrpng <- here::here("static", "slides", "pssau2020-07",
+                     "w_okrsky.png")
 
 okrw <- load_RUIAN_settlement("554782", "volebni okrsky") %>% 
   mapview()
 mapshot(okrw@map, file = okrpng,
         remove_controls = NULL, vheight = 600, vwidth = 1000)
 
-knitr::include_graphics(okrpng)
+knitr::include_graphics("w_okrsky.png")
 ```
 
 
@@ -383,13 +384,14 @@ zeleznice() %>% mapview()
 ```
 
 ```{r}
-zelpng <- here::here("static", "/w_zeleznice.png")
+zelpng <- here::here("static", "slides", "pssau2020-07",
+                     "w_zeleznice.png")
 
 zelw <- zeleznice() %>% mapview()
 mapshot(zelw@map, file = zelpng,
         remove_controls = NULL, vheight = 600, vwidth = 1000)
 
-knitr::include_graphics(zelpng)
+knitr::include_graphics("w_zeleznice.png")
 ```
 
 
