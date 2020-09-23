@@ -13,6 +13,6 @@ I work at the intersection of data analysis, public policy and technology. I do 
 
 Thematically, I am interested in public finance, urban governance and public strategy generally. Methodologically, I am broadly based as an analyst and policy evaluator with a preference for mixed methods research.
 
-Technologically, I work mostly in R with a strong focus on data analysis workflows suited to the reality of evidence use in public service and civil society. I work with all sorts of data - public open data, geospatial, administrative, statistical.
+Technologically, I work mostly in R with a strong focus on data analysis workflows suited to the reality of evidence use in public service and civil society. I work with all sorts of data - public open data, geospatial, administrative, statistical. I am also very interested in the communication of empirical evidence, especially data visualisation.
 
 I make [packages](/projects/#r-packages) for using open data in R, create [(experimental) data dashboards](/projects#dashboards), and do my own analysis of public open data as well as [consulting work](/projects#consulting-projects).
