@@ -24,7 +24,7 @@ pygmentsStyle = "tango"
 enableEmoji = true
 
 # Missing translations will default to this content language
-defaultContentLanguage = "cz"
+defaultContentLanguage = "en"
 
 [params.info]
 description = "Data analysis and applied research for better public governance"
@@ -112,7 +112,7 @@ indexName = ""
 searchApiKey = ""
 
 [taxonomies]
-author = "authors"
+# author = "authors"
 category = "categories"
 series = "series"
 tag = "tags"
@@ -144,7 +144,7 @@ hrefTargetBlank = true
 
 [languages]
 # edit this block for your own language
-  [languages.cz]
-  lang = "cz"
-  languageName = "Czech"
-  weight = 1
+[languages.en]
+lang = "en"
+languageName = "English"
+weight = 1
