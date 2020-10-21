@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Psychologie (Aug)</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/htmlwidgets-0.7/htmlwidgets.js"></script>
+<script src="site_libs/raphael-2.1.4/raphael-2.1.4.min.js"></script>
+<link href="site_libs/justgage-1.2.2.1/justgage.css" rel="stylesheet" />
+<script src="site_libs/justgage-1.2.2.1/justgage.js"></script>
+<script src="site_libs/gauge-binding-0.3/gauge.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Discover 2016</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-graduation-cap"></span>
+     
+    Júl
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="kurz_bioetika_júl.html">Bioetika</a>
+    </li>
+    <li>
+      <a href="kurz_behaviorální ekonomie_júl.html">Behaviorální ekonomie</a>
+    </li>
+    <li>
+      <a href="kurz_debata pro začátečníky_júl.html">Debata pro začátečníky</a>
+    </li>
+    <li>
+      <a href="kurz_efektivní altruismus_júl.html">Efektivní altruismus</a>
+    </li>
+    <li>
+      <a href="kurz_fyzika_júl.html">Fyzika</a>
+    </li>
+    <li>
+      <a href="kurz_informatika_júl.html">Informatika</a>
+    </li>
+    <li>
+      <a href="kurz_matematika_júl.html">Matematika</a>
+    </li>
+    <li>
+      <a href="kurz_medicína_júl.html">Medicína</a>
+    </li>
+    <li>
+      <a href="kurz_metodologie vědy_júl.html">Metodologie vědy</a>
+    </li>
+    <li>
+      <a href="kurz_politologie_júl.html">Politologie</a>
+    </li>
+    <li>
+      <a href="kurz_robotika_júl.html">Robotika</a>
+    </li>
+    <li>
+      <a href="kurz_psychologie_júl.html">Psychologie</a>
+    </li>
+    <li>
+      <a href="kurz_sociologie_júl.html">Sociologie</a>
+    </li>
+    <li>
+      <a href="kurz_teorie her_júl.html">Teorie her</a>
+    </li>
+    <li>
+      <a href="kurz_výtvarné umění_júl.html">Výtvarné umění</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-graduation-cap"></span>
+     
+    Aug
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="kurz_chemie_aug.html">Chemie</a>
+    </li>
+    <li>
+      <a href="kurz_debata pro pokročilé_aug.html">Debata pro pokročilé</a>
+    </li>
+    <li>
+      <a href="kurz_ekonomie_aug.html">Ekonomie</a>
+    </li>
+    <li>
+      <a href="kurz_fyzika_aug.html">Fyzika</a>
+    </li>
+    <li>
+      <a href="kurz_historie_aug.html">Historie</a>
+    </li>
+    <li>
+      <a href="kurz_interdisciplinarita_aug.html">Interdisciplinarita</a>
+    </li>
+    <li>
+      <a href="kurz_literatura_aug.html">Literatura</a>
+    </li>
+    <li>
+      <a href="kurz_medicína_aug.html">Medicína</a>
+    </li>
+    <li>
+      <a href="kurz_medicínská etika_aug.html">Medicínská etika</a>
+    </li>
+    <li>
+      <a href="kurz_metodologie vědy_aug.html">Metodologie vědy</a>
+    </li>
+    <li>
+      <a href="kurz_neurověda_aug.html">Neurověda</a>
+    </li>
+    <li>
+      <a href="kurz_právo_aug.html">Právo</a>
+    </li>
+    <li>
+      <a href="kurz_psychologie_aug.html">Psychologie</a>
+    </li>
+    <li>
+      <a href="kurz_rozvojová studia_aug.html">Rozvojová studia</a>
+    </li>
+    <li>
+      <a href="kurz_sociologie_aug.html">Sociologie</a>
+    </li>
+    <li>
+      <a href="kurz_teorie rozmnožování_aug.html">Teorie rozmnožování</a>
+    </li>
+    <li>
+      <a href="kurz_trestní právo_aug.html">Trestní právo</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-globe"></span>
+     
+    Int'l
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Courses</li>
+    <li>
+      <a href="kurz_biology and psychology: sleep and dreams_int.html">Biology and psychology: sleep and dreams</a>
+    </li>
+    <li>
+      <a href="kurz_development economics: poverty and human development_int.html">Development economics: poverty and human development</a>
+    </li>
+    <li>
+      <a href="kurz_fine art: from dots to dragons_int.html">Fine art</a>
+    </li>
+    <li>
+      <a href="kurz_law in practice_int.html">Law in practice</a>
+    </li>
+    <li>
+      <a href="kurz_literature: in the beginning was the word_int.html">Literature: in the beginning was the word</a>
+    </li>
+    <li>
+      <a href="kurz_machine learning_int.html">Machine Learning</a>
+    </li>
+    <li>
+      <a href="kurz_materials science: from atoms to fusion reactors_int.html">Materials Science: from atoms to fusion reactors</a>
+    </li>
+    <li>
+      <a href="kurz_neuroscience: the first look on the most important kilogram of fat in your body_int.html">Neuroscience</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="international.html">International aspects</a>
+    </li>
+    <li>
+      <a href="twopartws.html">Two-part workshops</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="teams.html">
+    <span class="fa fa-heart"></span>
+     
+    Teams &amp;c
+  </a>
+</li>
+<li>
+  <a href="workshops.html">
+    <span class="fa fa-hand-spock-o"></span>
+     
+    Workshops
+  </a>
+</li>
+<li>
+  <a href="volnycas.html">
+    <span class="fa fa-rocket"></span>
+     
+    Leisure &amp;c
+  </a>
+</li>
+<li>
+  <a href="dopad.html">
+    <span class="fa fa-bomb"></span>
+     
+    Impact
+  </a>
+</li>
+<li>
+  <a href="demog.html">
+    <span class="fa fa-area-chart"></span>
+     
+    
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Psychologie (Aug)</h1>
+
+</div>
+
+
+<div id="zpetna-vazba-na-kurz" class="section level1">
+<h1>Zpětná vazba na kurz</h1>
+<div id="celkove-hodnoceni" class="section level2">
+<h2>Celkové hodnocení</h2>
+<p>Průměrná známka:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Blok setkání</th>
+<th align="right">Průměrná známka</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">slot1</td>
+<td align="right">1.2</td>
+</tr>
+<tr class="even">
+<td align="left">slot2</td>
+<td align="right">1.2</td>
+</tr>
+</tbody>
+</table>
+<p>(Je možné, že jsi učil/a jen v jednom slotu, ale ukazují se ti oba, nebo naopak. Je to tím, jak studenti zadali kurzy v dotazníku.)</p>
+</div>
+<div id="co-se-studentum-nejvic-libilo" class="section level2">
+<h2>Co se studentům nejvíc líbilo?</h2>
+<ul>
+<li><p>V posledný deň, keď sme preberali rôzne výskumy, ktoré ľudia robili.</p></li>
+<li><p>Všetko</p></li>
+<li><p>Zistila som veľa nových vecí, ktoré som predtým netušila</p></li>
+<li><p>Nejvíc se mi líbila hodina forenzní psychologie. Debata o trestu smrti, profilování vraha a řešení vraždy. Tato oblast mě zajímá vzhledem k tomu, že mám ráda detektivky a kriminálky.</p></li>
+<li><p>Rôznorodé témy každého kurzu, všetky boli veľmi zaujímavé a kvalitne pripravené</p></li>
+<li><p>Pohotové lektorky, rozmanitosť, aktivní zapojení</p></li>
+<li><p>Nejvíce se mi líbilo tema o zločinci. Tohle me zajímá a strašně bavi. Bylo skvele vymyslet svoji teorii jak asi proběhla vrazda.</p></li>
+<li><p>Vyskumy, ktore sme pozerali posledny den.</p></li>
+<li><p>Pestrost témat. Pokaždé jsme si vyzkoušeli něco nového.</p></li>
+<li><p>Všechno….úplně všechno…</p></li>
+<li><p>Pokud si mam vybrat jedno tema, tak urcite cast venujici se vyjednavani.</p></li>
+<li><p>Byly to informace, typy, o kterých se běžně nedostaneme.</p></li>
+<li><p>Lektorky nám predvádzali rôzne techniky, akými nás môžu ľudia ovplyvňovať. Taktiež sa mi páčili aktivity - miesto činu a experimenty.</p></li>
+<li><p>Určitě to byly naše diskuze a psychologické pokusy. Techniky vyjednávání, kterých ale mohlo být více a to, že jsem sedávali venku na sluníčku.</p></li>
+<li><p>všetko, lebo kazda hodina bola zamerana na nieco ine</p></li>
+<li><p>uvolnena atmosfera, kdo mel co rict tak se mohl vyjadrit, napln kurzu</p></li>
+<li><p>Asi přístup holek, které braly kurz velmi interaktivním způsobem a prolínaly praktická cvičení s teoretickým výkladem, který vůbec nebyl nudný jako ve škole!</p></li>
+<li><p>Bolo veľmi prínosné, žekurz viedli dve lektorky, ktoré sa navzájom dopĺňali.</p></li>
+<li><p>Prakticke casti, lektorky.</p></li>
+<li><p>Forenzná psychológia - o tej by mal byť celý kurz. Zároveň behaviorálna ekonómia (viem kde bola :D ) A to, že sme menili prostredia, kde sme mali hodiny.</p></li>
+<li><p>Najviac sa mi na kurze páčil o, že ho viedli dve lektorky, ktoré sa navzájom super dopĺňali.</p></li>
+<li><p>Líbilo se mi, že jsme si v každé hodině ukázali nějaké jiné odvětví psychologie.</p></li>
+<li><p>Já jsem zatížená na psychologii osobnosti, lásky a obecně vztahů, takže asi tohle, a je to z důvodu, že jsem asi taková. Všechny druhy byly ale super, ať už kognitivní nebo forenzní, ale tohle, to bylo to top pro mě a bavilo mě to nejvíc. dokonce jsem si nechala doportučit i hnihy o psychologii lásky :)</p></li>
+<li><p>Nejvíce se mi líbily holky, jak se doplňovali, a že nikoho nijak nesoudí. Jsou to super lektorky. Taky se mi líbilo, jak jsme měli možnost vše diskutovat, a zkoušet si různé aktivity.</p></li>
+<li><p>Pristup lektoriek, autenticke aktivity, mohli sme si predstaviť kontext psychologie v praxi</p></li>
+<li><p>Príklady, ktoré sme si skúsili na vlastnú kožu.</p></li>
+<li><p>dve lektorky, boli velmi prijemne, chapajuce a priatelske, svela atmosfera</p></li>
+<li><p>forenzná psychológia a skúmanie osoností</p></li>
+<li><p>celkovo to bolo super prekticke cvicenia - aktivity</p></li>
+</ul>
+</div>
+<div id="co-zlepsit-na-kurzu" class="section level2">
+<h2>Co zlepšit na kurzu</h2>
+<ul>
+<li><p>Podľa môjho názoru bol kurz psychológie dosť teoretický, privítala by som viac diskusií, hier, spoločných aktivít</p></li>
+<li><p>Dala bych zřejmě více prostoru duševním onemocněním, jinak jsem byla s kurzem naprosto spokojená.</p></li>
+<li><p>Všehochuť bylo naprosto perfektní</p></li>
+<li><p>Co by jsem zmenila? Ja nevim možná více aktivit více příkladu z reality. Možná vymyslet i neco svého. A chtěli by více času na cely kurz..</p></li>
+<li><p>Psychické nemoci probírat více do hloubky. Jejich podstatu a vznik.</p></li>
+<li><p>co sa tyka forenznej, velmi by som ccela ist hlbsie (tie zaklady nam dajte na doma a na kurze robme nieco riadne cool)</p></li>
+<li><p>Viac sa zamerat na jednu temu, mozno i cely tyzden</p></li>
+<li><p>Zúžiť to o forenznú psychológiu (spravit kurz) a sústredit sa možno na niečo iné.</p></li>
+</ul>
+</div>
+</div>
+<div id="zapojeni" class="section level1">
+<h1>Zapojení</h1>
+<div id="obtiznost" class="section level2">
+<h2>Obtížnost</h2>
+<div id="setkani-kurzu" class="section level3">
+<h3>Setkání kurzu</h3>
+</div>
+<div id="materialy-na-kurz" class="section level3">
+<h3>Materiály na kurz</h3>
+</div>
+</div>
+</div>
+<div id="zpetna-vazba-na-lektora" class="section level1">
+<h1>Zpětná vazba na lektora</h1>
+<div id="hodnoceni" class="section level2">
+<h2>Hodnocení</h2>
+</div>
+<div id="poznamky-k-lektorovi" class="section level2">
+<h2>Poznámky k lektorovi</h2>
+<ul>
+<li><p>Eliška a Iva byly naprosto perfektní a jsem velmi ráda, že jsem si vybrala jejich kurz. :)</p></li>
+<li><p>Nemám žiadne. Všetko bolo super</p></li>
+<li><p>Pokračujte v podoném štýlu, děkuji :)</p></li>
+<li><p>Eliška a Iva! Jste super!</p></li>
+<li><p>Byly skvěle aktivní, energetické a optimistické.</p></li>
+<li><p>Ne, ani nemám, forma výuky se mi líbila, všichni se mohli zapojit a to bylo dobré.</p></li>
+<li><p>Ste super, tak ako lektorky tak aj ako osoby</p></li>
+<li><p>Iva a Eliška sú fantastická dvojka, ktorej to klape na vysokej úrovni.</p></li>
+<li><p>Jsem hrozně ráda, že psychologii učily obě psycholožky, Eliška i Iva, protože bych řekla, že se skvěle doplňují. Byly prostě super, jsem hrozně ráda, že jsem je poznala a mohla být na jejich kurzu.</p></li>
+<li><p>Ste super! ♡</p></li>
+</ul>
+</div>
+</div>
+<div id="dopad" class="section level1">
+<h1>Dopad</h1>
+<p>Ovlivnil kurz studenty?</p>
+<div id="ano-nebo-ne" class="section level2">
+<h2>Ano, nebo ne?</h2>
+<div id="htmlwidget-a81ca5c5aa974e627cef" style="width:672px;height:480px;" class="gauge html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a81ca5c5aa974e627cef">{"x":{"value":97,"min":0,"max":100,"customSectors":[{"lo":80,"hi":100,"color":"success"},{"lo":40,"hi":79,"color":"warning"},{"lo":0,"hi":39,"color":"danger"}],"symbol":"%","label":null,"humanFriendly":true,"humanFriendlyDecimal":1,"href":null},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="v-cem" class="section level2">
+<h2>V čem?</h2>
+<ul>
+<li><p>Naučila som sa nové veci v tejto oblasti.</p></li>
+<li><p>Pohľad na psychiku ľudí</p></li>
+<li><p>V přemýšlení o světě kolem, získala jsem i užitečné tipy týkající se mnoha oblastí života.</p></li>
+<li><p>V rozhodovaní o štúdiu</p></li>
+<li><p>Poznal jsem psychológii z té zábavnější části a uvažujú i hlubším samoštúdiu</p></li>
+<li><p>Ukázalo mi více pohledu na svět… Dozvěděla jsem se jak je jednoduché s lidmi manipulovat,ovlivňovat je apod..</p></li>
+<li><p>Vím, že ji chci jít studovat.</p></li>
+<li><p>V pohledu na určitě veci mého života.</p></li>
+<li><p>Naucil jsem se na kazdodenni problemy (i banality/ nahlizet z jine, vice psychologicke perspektivy.</p></li>
+<li><p>V každodenním myšlení a rozhodování se.</p></li>
+<li><p>Och…viac komunikujem, pýtam sa, vyjadrujem svoj názor. V škole zvyknem ticho sedieť, ale verím, že už nebudem.</p></li>
+<li><p>dodal mi nove vedomosti, nove obzory, lektorky su najlepsie na svete !!!!!!!</p></li>
+<li><p>Mám větší touhu studovat tento obor.</p></li>
+<li><p>Objavila som v sebe hlbší záujem o psychológiu a štúdium ľudskej mysle.</p></li>
+<li><p>Vyber VS UNI.</p></li>
+<li><p>V tom, že okrem metodologie v ekonomii, by sa mi páčila aj behaviorálna ekonómia, ako pododbor k ekonómii.</p></li>
+<li><p>Kurz mi rozšíril obzor, prehĺbil záujem a v určitých situáciách pomohol uvedomiť si veci.</p></li>
+<li><p>Zjistila jsem, že by mě velmi bavilo studovat tento obor.</p></li>
+<li><p>Psychologie mě velmi baví a pořád přemýšlím o jejím studiu na vysoké, ale uvědomila jsem si, že by mě asi bavilo malé procento z celého toho velikého spektra psychologie.</p></li>
+<li><p>Uvědomila jsem si, že mi psychologie dává mnohem více zajímavých a využitelnějších informací, a že je tento obor pro mě ten pravý.</p></li>
+<li><p>V pohlade na psychologiu a skumanie ludskej mysle a vsetkych jej aspektov</p></li>
+<li><p>zacala ma viac zaujimat psychologia</p></li>
+</ul>
+</div>
+<div id="pokud-ne-proc-ne" class="section level2">
+<h2>Pokud ne, proč ne?</h2>
+<ul>
+<li>Moc se mi líbil, ale většinou se mi zdálo, že probíraná témata už jsem znala a například hodina o psychických nemocech byla velice vágní a spíše reflektovala stereotypy, které jsme všichni znali, líbilo by se mi tam nějaké rozšíření a podívání se více do hloubky (což se nakonec stalo, ale až při večerním kurzu psychiatrie.</li>
+</ul>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+
+</script>
+
+
+</body>
+</html>

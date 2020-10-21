@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Literature: In the beginning was the word (Int)</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/htmlwidgets-0.7/htmlwidgets.js"></script>
+<script src="site_libs/raphael-2.1.4/raphael-2.1.4.min.js"></script>
+<link href="site_libs/justgage-1.2.2.1/justgage.css" rel="stylesheet" />
+<script src="site_libs/justgage-1.2.2.1/justgage.js"></script>
+<script src="site_libs/gauge-binding-0.3/gauge.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Discover 2016</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-graduation-cap"></span>
+     
+    Júl
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="kurz_bioetika_júl.html">Bioetika</a>
+    </li>
+    <li>
+      <a href="kurz_behaviorální ekonomie_júl.html">Behaviorální ekonomie</a>
+    </li>
+    <li>
+      <a href="kurz_debata pro začátečníky_júl.html">Debata pro začátečníky</a>
+    </li>
+    <li>
+      <a href="kurz_efektivní altruismus_júl.html">Efektivní altruismus</a>
+    </li>
+    <li>
+      <a href="kurz_fyzika_júl.html">Fyzika</a>
+    </li>
+    <li>
+      <a href="kurz_informatika_júl.html">Informatika</a>
+    </li>
+    <li>
+      <a href="kurz_matematika_júl.html">Matematika</a>
+    </li>
+    <li>
+      <a href="kurz_medicína_júl.html">Medicína</a>
+    </li>
+    <li>
+      <a href="kurz_metodologie vědy_júl.html">Metodologie vědy</a>
+    </li>
+    <li>
+      <a href="kurz_politologie_júl.html">Politologie</a>
+    </li>
+    <li>
+      <a href="kurz_robotika_júl.html">Robotika</a>
+    </li>
+    <li>
+      <a href="kurz_psychologie_júl.html">Psychologie</a>
+    </li>
+    <li>
+      <a href="kurz_sociologie_júl.html">Sociologie</a>
+    </li>
+    <li>
+      <a href="kurz_teorie her_júl.html">Teorie her</a>
+    </li>
+    <li>
+      <a href="kurz_výtvarné umění_júl.html">Výtvarné umění</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-graduation-cap"></span>
+     
+    Aug
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="kurz_chemie_aug.html">Chemie</a>
+    </li>
+    <li>
+      <a href="kurz_debata pro pokročilé_aug.html">Debata pro pokročilé</a>
+    </li>
+    <li>
+      <a href="kurz_ekonomie_aug.html">Ekonomie</a>
+    </li>
+    <li>
+      <a href="kurz_fyzika_aug.html">Fyzika</a>
+    </li>
+    <li>
+      <a href="kurz_historie_aug.html">Historie</a>
+    </li>
+    <li>
+      <a href="kurz_interdisciplinarita_aug.html">Interdisciplinarita</a>
+    </li>
+    <li>
+      <a href="kurz_literatura_aug.html">Literatura</a>
+    </li>
+    <li>
+      <a href="kurz_medicína_aug.html">Medicína</a>
+    </li>
+    <li>
+      <a href="kurz_medicínská etika_aug.html">Medicínská etika</a>
+    </li>
+    <li>
+      <a href="kurz_metodologie vědy_aug.html">Metodologie vědy</a>
+    </li>
+    <li>
+      <a href="kurz_neurověda_aug.html">Neurověda</a>
+    </li>
+    <li>
+      <a href="kurz_právo_aug.html">Právo</a>
+    </li>
+    <li>
+      <a href="kurz_psychologie_aug.html">Psychologie</a>
+    </li>
+    <li>
+      <a href="kurz_rozvojová studia_aug.html">Rozvojová studia</a>
+    </li>
+    <li>
+      <a href="kurz_sociologie_aug.html">Sociologie</a>
+    </li>
+    <li>
+      <a href="kurz_teorie rozmnožování_aug.html">Teorie rozmnožování</a>
+    </li>
+    <li>
+      <a href="kurz_trestní právo_aug.html">Trestní právo</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-globe"></span>
+     
+    Int'l
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Courses</li>
+    <li>
+      <a href="kurz_biology and psychology: sleep and dreams_int.html">Biology and psychology: sleep and dreams</a>
+    </li>
+    <li>
+      <a href="kurz_development economics: poverty and human development_int.html">Development economics: poverty and human development</a>
+    </li>
+    <li>
+      <a href="kurz_fine art: from dots to dragons_int.html">Fine art</a>
+    </li>
+    <li>
+      <a href="kurz_law in practice_int.html">Law in practice</a>
+    </li>
+    <li>
+      <a href="kurz_literature: in the beginning was the word_int.html">Literature: in the beginning was the word</a>
+    </li>
+    <li>
+      <a href="kurz_machine learning_int.html">Machine Learning</a>
+    </li>
+    <li>
+      <a href="kurz_materials science: from atoms to fusion reactors_int.html">Materials Science: from atoms to fusion reactors</a>
+    </li>
+    <li>
+      <a href="kurz_neuroscience: the first look on the most important kilogram of fat in your body_int.html">Neuroscience</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="international.html">International aspects</a>
+    </li>
+    <li>
+      <a href="twopartws.html">Two-part workshops</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="teams.html">
+    <span class="fa fa-heart"></span>
+     
+    Teams &amp;c
+  </a>
+</li>
+<li>
+  <a href="workshops.html">
+    <span class="fa fa-hand-spock-o"></span>
+     
+    Workshops
+  </a>
+</li>
+<li>
+  <a href="volnycas.html">
+    <span class="fa fa-rocket"></span>
+     
+    Leisure &amp;c
+  </a>
+</li>
+<li>
+  <a href="dopad.html">
+    <span class="fa fa-bomb"></span>
+     
+    Impact
+  </a>
+</li>
+<li>
+  <a href="demog.html">
+    <span class="fa fa-area-chart"></span>
+     
+    
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Literature: In the beginning was the word (Int)</h1>
+
+</div>
+
+
+<div id="course-feedback" class="section level1">
+<h1>Course feedback</h1>
+<div id="overall-rating" class="section level2">
+<h2>Overall rating</h2>
+<p>Average rating:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Course block</th>
+<th align="right">Average rating (1 is best, 5 worst)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">slot2</td>
+<td align="right">1.25</td>
+</tr>
+</tbody>
+</table>
+<p>(If you only taught in one slot and are seeing two, or vice versa, this is because of how the students input the data into the form.)</p>
+</div>
+<div id="what-did-they-like-best" class="section level2">
+<h2>What did they like best?</h2>
+<ul>
+<li><p>The interactive activities and how we derived some content from it (eg cavemen stories, circular poem), the last day (discussing our favourite texts) and the part that focused on early written works and mythology. Also references to important works, movements or persons during the course.</p></li>
+<li><p>I loved the discussions on different topics especially the one on creationism. It was a good way to integrate the class together and was really interesting to hear other percpectives. I also really enjoyed hearing other people’s favourite books as it was very varied, however, this may have been a better starter activity to help everyone get to know each other</p></li>
+<li><p>The interactive games to be completely honest, they made the class a lot livelier and merrier. But at the same time I really enjoyed the analysation of all sorts of different pieces of literature.</p></li>
+<li><p>The discussion, because we could absorb different ideas.</p></li>
+<li><p>Kryštof’s approach and the immense amount of material we covered (and it wasn’t too much work!).</p></li>
+<li><p>The play and the library</p></li>
+<li><p>Again, it was very thought-provoking and the discussions were just great. Tutor knows his shit and really knows how to sell it.</p></li>
+<li><p>the poetry part, finding hidden meaning</p></li>
+</ul>
+</div>
+<div id="what-could-be-improved" class="section level2">
+<h2>What could be improved</h2>
+<ul>
+<li><p>The lesson with hermeneutics was great in overall, but I felt we didnt really spend much time on the literary theory itself.</p></li>
+<li><p>Improve the atmosphere a little possibly [candles n shit] but other than that it was pretty much spot on.</p></li>
+<li><p>Unless Discover is extended to more than 7 days, thereby allowing the course to be extended as well, nothing could make this better. Maybe ice-cream.</p></li>
+<li><p>It’s perfect this way.</p></li>
+<li><p>nothing at all. keep it as it is</p></li>
+</ul>
+</div>
+<div id="how-difficult-was-it" class="section level2">
+<h2>How difficult was it?</h2>
+<div id="course-sessions" class="section level3">
+<h3>Course sessions</h3>
+</div>
+<div id="pre-discover-bundle" class="section level3">
+<h3>Pre-Discover bundle</h3>
+</div>
+</div>
+</div>
+<div id="participation" class="section level1">
+<h1>Participation</h1>
+</div>
+<div id="tutor-feedback" class="section level1">
+<h1>Tutor feedback</h1>
+<div id="rating" class="section level2">
+<h2>Rating</h2>
+</div>
+<div id="remarks-onto-the-tutor" class="section level2">
+<h2>Remarks on/to the tutor</h2>
+<ul>
+<li><p>Krystof made sure to include interactive activities as well as group discussions while delivering some content himself, which was a great mix. Starting the lesson with some game to make us feel more comfortable and energised was a great idea and I belive it worked well. It was also really easy to ask him about anything that we found interesting during the course afterwards, which was wonderful.</p></li>
+<li><p>Krystof’s enthusiasm within the class made the atmosphere more welcoming and made me feel more involved. Also his passion for literature made me really interested in what he was saying</p></li>
+<li><p>Grow a beard. ‘wink wink’</p></li>
+<li><p>See all above. You get the gist, I don’t have time to find more synonyms.</p></li>
+<li><p>As I Said, Kryštof is and amazing tutor. His passion for the subject is infectious.</p></li>
+<li><p>appreciate that he tried to get everyone involved</p></li>
+</ul>
+</div>
+</div>
+<div id="impact" class="section level1">
+<h1>Impact</h1>
+<p>Did the course influence the students?</p>
+<div id="yes-no" class="section level2">
+<h2>Yes, no?</h2>
+<div id="htmlwidget-16b250306e4c11a7feeb" style="width:672px;height:480px;" class="gauge html-widget"></div>
+<script type="application/json" data-for="htmlwidget-16b250306e4c11a7feeb">{"x":{"value":100,"min":0,"max":100,"customSectors":[{"lo":80,"hi":100,"color":"success"},{"lo":40,"hi":79,"color":"warning"},{"lo":0,"hi":39,"color":"danger"}],"symbol":"%","label":null,"humanFriendly":true,"humanFriendlyDecimal":1,"href":null},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="in-what-way" class="section level2">
+<h2>In what way?</h2>
+<ul>
+<li><p>it made me think about literature in a more critical way as well as making me more enthusiastic for the subject</p></li>
+<li><p>Similarly to the poetry workshops I really enjoyed the discussions of stuff we’ve just read. I think it convinced me that there’s way more to literature than just writing words that come to your mind.</p></li>
+<li><p>I can think differently about literature.</p></li>
+<li><p>Awe-inspiring. Utterly profound. Interactive and creative. Challenging and rewarding. Happy.</p></li>
+<li><p>I now know to listen to other people’s opinions</p></li>
+<li><p>I don’t think I’ll be able to perceive the literature the same way as before. In a good way…</p></li>
+<li><p>it is always intersting to hear thhat there are so many more explanations to everything than the obvious ones</p></li>
+</ul>
+</div>
+<div id="if-not-why" class="section level2">
+<h2>If not, why?</h2>
+<p>[Nothing]</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+
+</script>
+
+
+</body>
+</html>

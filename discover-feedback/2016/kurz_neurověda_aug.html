@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Neurověda (Aug)</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/htmlwidgets-0.7/htmlwidgets.js"></script>
+<script src="site_libs/raphael-2.1.4/raphael-2.1.4.min.js"></script>
+<link href="site_libs/justgage-1.2.2.1/justgage.css" rel="stylesheet" />
+<script src="site_libs/justgage-1.2.2.1/justgage.js"></script>
+<script src="site_libs/gauge-binding-0.3/gauge.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Discover 2016</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-graduation-cap"></span>
+     
+    Júl
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="kurz_bioetika_júl.html">Bioetika</a>
+    </li>
+    <li>
+      <a href="kurz_behaviorální ekonomie_júl.html">Behaviorální ekonomie</a>
+    </li>
+    <li>
+      <a href="kurz_debata pro začátečníky_júl.html">Debata pro začátečníky</a>
+    </li>
+    <li>
+      <a href="kurz_efektivní altruismus_júl.html">Efektivní altruismus</a>
+    </li>
+    <li>
+      <a href="kurz_fyzika_júl.html">Fyzika</a>
+    </li>
+    <li>
+      <a href="kurz_informatika_júl.html">Informatika</a>
+    </li>
+    <li>
+      <a href="kurz_matematika_júl.html">Matematika</a>
+    </li>
+    <li>
+      <a href="kurz_medicína_júl.html">Medicína</a>
+    </li>
+    <li>
+      <a href="kurz_metodologie vědy_júl.html">Metodologie vědy</a>
+    </li>
+    <li>
+      <a href="kurz_politologie_júl.html">Politologie</a>
+    </li>
+    <li>
+      <a href="kurz_robotika_júl.html">Robotika</a>
+    </li>
+    <li>
+      <a href="kurz_psychologie_júl.html">Psychologie</a>
+    </li>
+    <li>
+      <a href="kurz_sociologie_júl.html">Sociologie</a>
+    </li>
+    <li>
+      <a href="kurz_teorie her_júl.html">Teorie her</a>
+    </li>
+    <li>
+      <a href="kurz_výtvarné umění_júl.html">Výtvarné umění</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-graduation-cap"></span>
+     
+    Aug
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="kurz_chemie_aug.html">Chemie</a>
+    </li>
+    <li>
+      <a href="kurz_debata pro pokročilé_aug.html">Debata pro pokročilé</a>
+    </li>
+    <li>
+      <a href="kurz_ekonomie_aug.html">Ekonomie</a>
+    </li>
+    <li>
+      <a href="kurz_fyzika_aug.html">Fyzika</a>
+    </li>
+    <li>
+      <a href="kurz_historie_aug.html">Historie</a>
+    </li>
+    <li>
+      <a href="kurz_interdisciplinarita_aug.html">Interdisciplinarita</a>
+    </li>
+    <li>
+      <a href="kurz_literatura_aug.html">Literatura</a>
+    </li>
+    <li>
+      <a href="kurz_medicína_aug.html">Medicína</a>
+    </li>
+    <li>
+      <a href="kurz_medicínská etika_aug.html">Medicínská etika</a>
+    </li>
+    <li>
+      <a href="kurz_metodologie vědy_aug.html">Metodologie vědy</a>
+    </li>
+    <li>
+      <a href="kurz_neurověda_aug.html">Neurověda</a>
+    </li>
+    <li>
+      <a href="kurz_právo_aug.html">Právo</a>
+    </li>
+    <li>
+      <a href="kurz_psychologie_aug.html">Psychologie</a>
+    </li>
+    <li>
+      <a href="kurz_rozvojová studia_aug.html">Rozvojová studia</a>
+    </li>
+    <li>
+      <a href="kurz_sociologie_aug.html">Sociologie</a>
+    </li>
+    <li>
+      <a href="kurz_teorie rozmnožování_aug.html">Teorie rozmnožování</a>
+    </li>
+    <li>
+      <a href="kurz_trestní právo_aug.html">Trestní právo</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-globe"></span>
+     
+    Int'l
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Courses</li>
+    <li>
+      <a href="kurz_biology and psychology: sleep and dreams_int.html">Biology and psychology: sleep and dreams</a>
+    </li>
+    <li>
+      <a href="kurz_development economics: poverty and human development_int.html">Development economics: poverty and human development</a>
+    </li>
+    <li>
+      <a href="kurz_fine art: from dots to dragons_int.html">Fine art</a>
+    </li>
+    <li>
+      <a href="kurz_law in practice_int.html">Law in practice</a>
+    </li>
+    <li>
+      <a href="kurz_literature: in the beginning was the word_int.html">Literature: in the beginning was the word</a>
+    </li>
+    <li>
+      <a href="kurz_machine learning_int.html">Machine Learning</a>
+    </li>
+    <li>
+      <a href="kurz_materials science: from atoms to fusion reactors_int.html">Materials Science: from atoms to fusion reactors</a>
+    </li>
+    <li>
+      <a href="kurz_neuroscience: the first look on the most important kilogram of fat in your body_int.html">Neuroscience</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="international.html">International aspects</a>
+    </li>
+    <li>
+      <a href="twopartws.html">Two-part workshops</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="teams.html">
+    <span class="fa fa-heart"></span>
+     
+    Teams &amp;c
+  </a>
+</li>
+<li>
+  <a href="workshops.html">
+    <span class="fa fa-hand-spock-o"></span>
+     
+    Workshops
+  </a>
+</li>
+<li>
+  <a href="volnycas.html">
+    <span class="fa fa-rocket"></span>
+     
+    Leisure &amp;c
+  </a>
+</li>
+<li>
+  <a href="dopad.html">
+    <span class="fa fa-bomb"></span>
+     
+    Impact
+  </a>
+</li>
+<li>
+  <a href="demog.html">
+    <span class="fa fa-area-chart"></span>
+     
+    
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Neurověda (Aug)</h1>
+
+</div>
+
+
+<div id="zpetna-vazba-na-kurz" class="section level1">
+<h1>Zpětná vazba na kurz</h1>
+<div id="celkove-hodnoceni" class="section level2">
+<h2>Celkové hodnocení</h2>
+<p>Průměrná známka:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Blok setkání</th>
+<th align="right">Průměrná známka</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">slot1</td>
+<td align="right">1.50</td>
+</tr>
+<tr class="even">
+<td align="left">slot2</td>
+<td align="right">1.12</td>
+</tr>
+</tbody>
+</table>
+<p>(Je možné, že jsi učil/a jen v jednom slotu, ale ukazují se ti oba, nebo naopak. Je to tím, jak studenti zadali kurzy v dotazníku.)</p>
+</div>
+<div id="co-se-studentum-nejvic-libilo" class="section level2">
+<h2>Co se studentům nejvíc líbilo?</h2>
+<ul>
+<li><p>pristup a vyklad lektora, obrazky, videa, realni pacienti</p></li>
+<li><p>Adamov pristup a jednoduche vysvetlovanie na realnych pacientoch. Svoje skusenosti a super videa a pokusy. Jeho uzasna nalada a chut odpovedat na vsetky nase otazky. A samozrejme ochota.</p></li>
+<li><p>Na kurze neuroveda sa mi najviac páčili ojedinelé prípady pacientov.</p></li>
+<li><p>Adam, jeho pristup, vysvetlenie, priklady. Prakticke casti.</p></li>
+<li><p>Najviac sa mi páčili konkrétne príklady pacientov a skúmanie ich porúch.</p></li>
+<li><p>Témata. Diskuze.</p></li>
+<li><p>Miluji jakekoli grafy ci videa. A Adam tento koncept perfektne zpracoval. Videa a studium presnych pacientu bylo asi to nejzajimavejsi.</p></li>
+<li><p>seznameni s nemocemi a pacienty</p></li>
+<li><p>Pripravenosť lektora a ochota odpoveď na všetky otázky.</p></li>
+<li><p>to, ako su jednotlive hemisfery a centra prepojene a co sa stane ak niektore casti poskodime. to, ze nase ciny zavisia len na tom, ako mozog vyhodnoti realitu okolo.</p></li>
+<li><p>Zaujímavé témy, otvorený prístup lektora, príjemná atmosféra</p></li>
+<li><p>super lektor atmosfera aj plan vyucby</p></li>
+<li><p>Zistila som veľa nových a zaujímavých vecí</p></li>
+<li><p>Líbila se mi profesionalita a zároveň humor se kterou Adam pracoval. Také jeho poznatky z jeho práce na UCL.</p></li>
+<li><p>Príklady ľudí s abnormalnymi poruchami mozgu</p></li>
+<li><p>Adamov sposob vyucby a jeho zanietenie pre dany odbor … Adam si trieda!</p></li>
+<li><p>Najviac sa mi pacil Adamov sposob ucenia a jeho pristup: to, ze vsetko podal zabavne a vela nas do toho zapajal, ze vedel odpovedat na akukolvek otazku s obrovskym entuziazmom a zanietenim a ze pouzival vela zaujimavych prikladov.</p></li>
+<li><p>To ze som stretla niekoho kto sa venuje neurovede a povedal co vlastne taky neurovedec robi. A dozvedela sa odpovedw na vela otazok, co som mala.</p></li>
+<li><p>Jednotlive pripady pacientu. Byly zabavne i kdyz vlastne smutne a velmi dobre ilustrovali jak nemoci a neurovedecky vyzkum funguji/fungoval</p></li>
+</ul>
+</div>
+<div id="co-zlepsit-na-kurzu" class="section level2">
+<h2>Co zlepšit na kurzu</h2>
+<ul>
+<li><p>:) bolo to dobré</p></li>
+<li><p>NIC. Je dokonaly…</p></li>
+<li><p>Možno by bolo vhodné pridať pár experimentov, ktoré by si mohli vyskúšať študenti alebo modelovú situáciu ako zistiť, čo je pacientovi a celú diagnostiku pacienta.</p></li>
+<li><p>Z môjho pohľadu by bolo prospešné zaradiť do kurzu viac experimentov,kgoreby si mohli účastníci vyskúšať a modelovú situáciu pacienta, od príchodu pacienta cez uvažovanie o potrebných vyšetreniach až po zistenie diagnózy.</p></li>
+<li><p>mene teorie</p></li>
+<li><p>Adam, prines nam ukazat zafoliovany mozog o kt. sme hovorili na kurzoch + vybav nam exkurziu v laboratoriu na UCL … haha .. nie, nie si super fakt nemam co vytknut</p></li>
+<li><p>Mozna trochu vic pacientu, ale v zasade mi struktura vyhovovala. Hodina anatomie sice byla min zabavna, presto si myslim ze velmi dulezita aby nasledne hodiny davali smysl</p></li>
+</ul>
+</div>
+</div>
+<div id="zapojeni" class="section level1">
+<h1>Zapojení</h1>
+<div id="obtiznost" class="section level2">
+<h2>Obtížnost</h2>
+<div id="setkani-kurzu" class="section level3">
+<h3>Setkání kurzu</h3>
+</div>
+<div id="materialy-na-kurz" class="section level3">
+<h3>Materiály na kurz</h3>
+</div>
+</div>
+</div>
+<div id="zpetna-vazba-na-lektora" class="section level1">
+<h1>Zpětná vazba na lektora</h1>
+<div id="hodnoceni" class="section level2">
+<h2>Hodnocení</h2>
+</div>
+<div id="poznamky-k-lektorovi" class="section level2">
+<h2>Poznámky k lektorovi</h2>
+<ul>
+<li><p>Nikto ma predtym tak putavo neucil o biologii. Dakujem.</p></li>
+<li><p>Páči sa mi nápad si na začiatku nového dňa zopakovať to, čo som sa naucila deň predtým.</p></li>
+<li><p>Někdy se mi zdálo, že vysvětloval zbytečně složitě.</p></li>
+<li><p>Adam byl perfektni lektor, ktery mi odhalil krasu neurovedy. Takze mi prinesl vic, nez jsem cekal: a to motivaci si toto tema prostudovat i doma.</p></li>
+<li><p>mozno mohol trochu viac vysvetlit chemicke procesy v neurone a viac kreslit na flipchart tazke veci, ale inak to bolo super.</p></li>
+<li><p>Veľmi sa mi to páčilo, každá hodina mi zlepšila náladu, lektor bol super kombinácia odbornosti a vtipu</p></li>
+<li><p>Mily Adam, dakujem ti za sposob akym si viedol tento kurz. Bolo to velmi zaujimave a vsetky tie konkretne pripady o ktorych sme sa ucili bolo neocenitelne. Strasne ocenujem tvoj neuveritelny entuziazmus a to, ze bolo vidiet ako ta bavi a zaujima a ako sa vyznas do vsetkeho o com si nam hovoril a to, ze si bol schopny jednoducho a zrozumitelne zodpovedat naozaj vsetky otazky ktore sme mali.</p></li>
+<li><p>Moc toho nemen, mozna prijdej pacienty, pokud je kam. Opakovani na zacatku byl super napad, vic si toho takhle pamatuju. Presto ze se tak mozna v hodinach netvarim, kurz mne velmi bavil. Btw tvuj hlas je strasne prijemny a zvlastne uklidnujici (dobre se poslouchas). Mozna zkus rict i neco vic k tomu co primo ty delas, pokud mame sanci to po tydnu nejak vic pochopit.</p></li>
+</ul>
+</div>
+</div>
+<div id="dopad" class="section level1">
+<h1>Dopad</h1>
+<p>Ovlivnil kurz studenty?</p>
+<div id="ano-nebo-ne" class="section level2">
+<h2>Ano, nebo ne?</h2>
+<div id="htmlwidget-5adedf23441bebe45408" style="width:672px;height:480px;" class="gauge html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5adedf23441bebe45408">{"x":{"value":90,"min":0,"max":100,"customSectors":[{"lo":80,"hi":100,"color":"success"},{"lo":40,"hi":79,"color":"warning"},{"lo":0,"hi":39,"color":"danger"}],"symbol":"%","label":null,"humanFriendly":true,"humanFriendlyDecimal":1,"href":null},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="v-cem" class="section level2">
+<h2>V čem?</h2>
+<ul>
+<li><p>viem, ze aj ked su temy, ktore ma nebavia, vzdy sa najde nieco, co si najdem</p></li>
+<li><p>Adam ucil uzasne putavo. V skole som brala neurony a nervovu sustavu ako najnudnesiu latku aj ked som sa mi zdal mozog vo vseobecnosti ako neskutocne fascinujuci organ. Teraz dokonca uvazujem na studovani tohto odboru a to som pred tym uvazovala iba o spolocenskych vedach.</p></li>
+<li><p>Prehĺbil môj záujem o tento obor.</p></li>
+<li><p>Zvysil moj zaujem o dany odbor.</p></li>
+<li><p>Kurz neuroveda ešte viac prehĺbil môj záujem o túto oblasť a uvažujem o tom, že sa jej v budúcnosti budem venovať.</p></li>
+<li><p>Neuroveda pro me vzdy byla neco, co je velmi tezke. Ale konecne jsem zaklady pochopil a nalezl jsem si k ni zalibeni, takze doufam, ze se ji budu i venovat.</p></li>
+<li><p>Rozšíril mi obzory.</p></li>
+<li><p>uvazujem teraz o studiu neurologie, pretoze ma fakt zaujalo to kolko toho este o mozgu nevieme.</p></li>
+<li><p>Začnem sa viac zaujímať o neurovedu, pretože som zistila aké je fascinujúce fungovanie mozgu.</p></li>
+<li><p>Uvažujem, že pôjdem možno týmto smerom.</p></li>
+<li><p>chcem sa zucastnit na pitve mozgu s Adamom</p></li>
+<li><p>Dozvedela som sa strasne vela zaujimavych informacii o mozgu a o tom ako funguje, co ma velmi zaujimalo a bavilo a som velmi rada, ze som mala prilezitost nahliadnut na temy ku ktorym by som sa nikde inde nedostala.</p></li>
+<li><p>O neurovede/mozkovych poruchach jsem dosud vedel malo nebo nic. Dalo mi to predstavu jak neurovada vubec funguje a jak se da pripadne studovat</p></li>
+</ul>
+</div>
+<div id="pokud-ne-proc-ne" class="section level2">
+<h2>Pokud ne, proč ne?</h2>
+<ul>
+<li>nechci delat neurovedu jen mi prijde zajimava</li>
+</ul>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+
+</script>
+
+
+</body>
+</html>
