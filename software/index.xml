@@ -2,8 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Software on Petr Bouchal</title>
-    <link>https://petrbouchal.github.io/software/</link>
+    <link>/software/</link>
     <description>Recent content in Software on Petr Bouchal</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://petrbouchal.github.io/software/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

@@ -3,37 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://petrbouchal.github.io/post/</loc>
+    <loc>/post/</loc>
     <lastmod>2020-07-24T14:05:48+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://petrbouchal.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2020-07-24T14:02:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://petrbouchal.github.io/bio/</loc>
+    <loc>/bio/</loc>
   </url>
   
   <url>
-    <loc>https://petrbouchal.github.io/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>https://petrbouchal.github.io/projects/</loc>
+    <loc>/projects/</loc>
   </url>
   
   <url>
-    <loc>https://petrbouchal.github.io/series/</loc>
+    <loc>/series/</loc>
   </url>
   
   <url>
-    <loc>https://petrbouchal.github.io/software/</loc>
+    <loc>/software/</loc>
   </url>
   
   <url>
-    <loc>https://petrbouchal.github.io/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>

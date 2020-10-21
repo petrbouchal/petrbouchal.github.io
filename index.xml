@@ -2,9 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>index on Petr Bouchal</title>
-    <link>https://petrbouchal.github.io/</link>
+    <link>/</link>
     <description>Recent content in index on Petr Bouchal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 24 Jul 2020 14:02:00 +0200</lastBuildDate><atom:link href="https://petrbouchal.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jul 2020 14:02:00 +0200</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>
