@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 .widget-social_menu a{
     color: #00f;
 }
@@ -22,4 +26,11 @@ blockquote {
     margin-bottom: 0;
     color: #00f;
     font-family: "IBM Plex Sans", "Helvetica Neue", "Arial", sans-serif;
+}
+
+pre {
+	border: 0px;
+	border-radius: 0px;
+	background: #e3f1ff;
+	padding: 0.4em;
 }
