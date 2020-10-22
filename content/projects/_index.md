@@ -1,6 +1,8 @@
 ---
 title: Projects
 comments: false
+images: ["mstile-150x150.png"]
+description: Research, Consulting, R packages, dashboards
 menu: 
   main:
     weight: -2
