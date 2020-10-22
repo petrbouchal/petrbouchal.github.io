@@ -148,3 +148,9 @@ hrefTargetBlank = true
 lang = "en"
 languageName = "English"
 weight = 1
+
+[params]
+  highlightjsVersion = "9.11.0"
+  highlightjsCDN = "//cdn.bootcss.com"
+  highlightjsLang = ["r", "yaml"]
+  highlightjsTheme = "github"

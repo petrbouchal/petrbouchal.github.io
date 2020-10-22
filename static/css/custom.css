@@ -23,3 +23,10 @@ blockquote {
     color: #00f;
     font-family: "IBM Plex Sans", "Helvetica Neue", "Arial", sans-serif;
 }
+
+pre {
+	border: 0px;
+	border-radius: 0px;
+	background: #e3f1ff;
+	padding: 0.4em;
+}
