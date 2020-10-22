@@ -1,0 +1,38 @@
+---
+title: "czso 0.3.2 on CRAN"
+author: ~
+date: '2020-10-22'
+slug: czso
+categories: []
+tags: []
+authors: []
+---
+
+```{r}
+print("hi")
+```
+
+```{r}
+3 * 5
+```
+
+```{r}
+# hi there
+
+hi <- function(there) {
+  print(there)
+}
+```
+
+```{r}
+hi(as.character(7))
+```
+
+Hi there
+
+```{r}
+3 * (1/3)
+```
+
+
+
