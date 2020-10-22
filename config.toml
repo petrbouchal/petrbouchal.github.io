@@ -1,4 +1,4 @@
-baseURL = "https://petrbouchal.github.io"
+baseURL = "https://petrbouchal.xyz"
 title = "Petr Bouchal"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
@@ -68,7 +68,7 @@ appID = ""
 pageID = ""
 
 [params.opengraph.twitter]
-page = "@petrbouchal" # Twitter page username
+page = "petrbouchal" # Twitter page username
 
 [params.seo]
 # Title Separator: - – — · • * ⋆ | ~ « » < >

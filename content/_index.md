@@ -2,7 +2,7 @@
 date: "2020-07-24T14:02:00+02:00"
 title: "index"
 authors: []
-images: ["mstile-150x150.png"]
+images: ["https://petrbouchal.xyz/mstile-150x150.png"]
 categories:
   -
 tags:
