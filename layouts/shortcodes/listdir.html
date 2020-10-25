@@ -1,0 +1,8 @@
+
+{{ $x := .Get 1 }}
+{{ range (readDir (.Get 0)) }}
+{{if (.IsDir) }}
+  <a href = {{site.Site.BaseURL}}{{($x)}}/{{.Name}}>{{ .Name }}</a>
+<br>
+{{ end }}
+{{ end}}
