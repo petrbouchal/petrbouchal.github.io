@@ -151,7 +151,7 @@ identifier = "talks"
 url = "/talks"
 
 [[menu.main]]
-name = "(CZ)"
+name = " · CZ"
 weight = 6
 identifier = "cz"
 url = "/cz"
@@ -184,7 +184,7 @@ title404 = "Tady nic není!"
 
 [[languages.cz.menu.main]]
 url    = "/index.html"
-name   = "(EN)"
+name   = " · EN"
 weight = 6
 
 [[languages.cz.menu.main]]
