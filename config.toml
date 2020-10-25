@@ -28,7 +28,7 @@ defaultContentLanguage = "en"
 
 [params.info]
 description = "Data analysis and applied research for better public governance"
-title404 = "Tady nic není!"
+title404 = "Nothing here!"
 
 [params.assets]
 favicon = "favicon.ico"
@@ -46,6 +46,17 @@ gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 # date & time format: https://golang.org/pkg/time/
 dateFormat = "Jan 02 2006"
 listDateFormat = "Jan 02 2006"
+archiveDateFormat = "Jan 02"
+hideEntryNavigation = ["page"] # boolean / array of sections
+showReadingTime = true
+taxonomyCloudShuffle = true
+accentColor = "#00f"
+hideMainMenu = false
+
+[languages.cz.params.settings]
+# date & time format: https://golang.org/pkg/time/
+dateFormat = "02. 01. 2006"
+listDateFormat = "02. 01. 2006"
 archiveDateFormat = "Jan 02"
 hideEntryNavigation = ["page"] # boolean / array of sections
 showReadingTime = true
@@ -131,13 +142,19 @@ url = "/"
 name = "Byrokrates"
 weight = 5
 identifier = "byrokrates"
-url = "https://byrokrates.cz"
+url = "/cz/byrokrates"
 
 [[menu.main]]
-name = "Slides"
+name = "Talks &c"
 weight = 4
-identifier = "slides"
-url = "/slides"
+identifier = "talks"
+url = "/talks"
+
+[[menu.main]]
+name = "(CZ)"
+weight = 6
+identifier = "cz"
+url = "/cz"
 
 [blackfriday]
 hrefTargetBlank = true
@@ -154,3 +171,37 @@ weight = 1
   highlightjsCDN = "//cdn.bootcss.com"
   highlightjsLang = ["r", "yaml"]
   highlightjsTheme = "github"
+
+[languages.cz]
+lang = "cz"
+languageName = "Česky"
+weight = 0.8
+contentDir = "content/czech"
+
+[languages.cz.params.info]
+description = "Analýza dat a aplikovaný výzkum pro lepší vládnutí"
+title404 = "Tady nic není!"
+
+[[languages.cz.menu.main]]
+url    = "/index.html"
+name   = "(EN)"
+weight = 6
+
+[[languages.cz.menu.main]]
+name = "✱"
+weight = -5
+identifier = "home-cz"
+url = "/cz"
+
+
+[[languages.cz.menu.main]]
+name = "Přednášky &c"
+weight = 4
+identifier = "talks"
+url = "/cz/talks"
+
+[[languages.cz.menu.main]]
+name = "Byrokrates"
+weight = 5
+identifier = "byrokrates-cz"
+url = "/cz/byrokrates"
