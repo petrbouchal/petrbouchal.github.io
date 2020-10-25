@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Petr Bouchal</title>
+    <link>/cz/categories/</link>
+    <description>Recent content in Categories on Petr Bouchal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 31 May 2016 07:04:48 +0000</lastBuildDate><atom:link href="/cz/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zajímavé čtení odjinud</title>
+      <link>/cz/categories/zaj%C3%ADmav%C3%A9-%C4%8Dten%C3%AD-odjinud/</link>
+      <pubDate>Tue, 31 May 2016 07:04:48 +0000</pubDate>
+      
+      <guid>/cz/categories/zaj%C3%ADmav%C3%A9-%C4%8Dten%C3%AD-odjinud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nezařazené</title>
+      <link>/cz/categories/neza%C5%99azen%C3%A9/</link>
+      <pubDate>Sun, 29 May 2016 16:36:17 +0000</pubDate>
+      
+      <guid>/cz/categories/neza%C5%99azen%C3%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Public policy</title>
+      <link>/cz/categories/public-policy/</link>
+      <pubDate>Tue, 22 Mar 2016 20:49:57 +0000</pubDate>
+      
+      <guid>/cz/categories/public-policy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reforma</title>
+      <link>/cz/categories/reforma/</link>
+      <pubDate>Thu, 27 Nov 2014 22:03:34 +0000</pubDate>
+      
+      <guid>/cz/categories/reforma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lepší státní správa</title>
+      <link>/cz/categories/lep%C5%A1%C3%AD-st%C3%A1tn%C3%AD-spr%C3%A1va/</link>
+      <pubDate>Tue, 11 Nov 2014 23:03:50 +0000</pubDate>
+      
+      <guid>/cz/categories/lep%C5%A1%C3%AD-st%C3%A1tn%C3%AD-spr%C3%A1va/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

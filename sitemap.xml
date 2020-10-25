@@ -1,44 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>/post/czso/</loc>
-    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-07-24T14:05:48+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-07-24T14:02:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/bio/</loc>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>/projects/</loc>
-  </url>
-  
-  <url>
-    <loc>/series/</loc>
-  </url>
-  
-  <url>
-    <loc>/software/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-  </url>
-  
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>/en/sitemap.xml</loc>
+		
+	   	<lastmod>2020-10-22T00:00:00+00:00</lastmod>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>/cz/sitemap.xml</loc>
+		
+	   	<lastmod>2016-05-31T07:04:48+00:00</lastmod>
+		
+	</sitemap>
+	
+</sitemapindex>

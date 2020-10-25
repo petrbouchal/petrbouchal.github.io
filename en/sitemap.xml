@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/talks/</loc>
+    <lastmod>2020-10-22T22:11:12+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="/cz/talks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/talks/"
+                />
+  </url>
+  
+  <url>
+    <loc>/dev/</loc>
+    <lastmod>2020-10-22T15:36:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/czso/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-07-24T14:05:48+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-07-24T14:02:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="/cz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+  </url>
+  
+  <url>
+    <loc>/bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="/cz/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>/projects/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="/cz/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/projects/"
+                />
+  </url>
+  
+  <url>
+    <loc>/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="/cz/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>/software/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="/cz/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/"
+                />
+  </url>
+  
+</urlset>
