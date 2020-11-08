@@ -9,7 +9,7 @@ tags:
 draft: false
 ---
 
-## Upcoming
+## Past
 
 ### Workshop: Effective and manageable data analysis in R (in Czech)
 
@@ -18,8 +18,6 @@ draft: false
 Konference evaluační jednotky ESIF, MMR, 5 November 2020
 
 [basic info | slides | materials](https://petrbouchal.xyz/eval2020) | [code repo](https://github.com/petrbouchal/eval2020)
-
-## Past
 
 ### How to access Czech open data - and use it reproducible data analysis (in Czech)
 
