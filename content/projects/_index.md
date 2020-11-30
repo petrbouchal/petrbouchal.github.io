@@ -38,7 +38,7 @@ menu:
 
 Prague Institute for Planning and Development
 
-- [Prague's finances in international and national comparison (2020)](https://www.iprpraha.cz/uploads/assets/dokumenty/chude_mesto_prazske.pdf) - lead author of 2 parts, using open budget data (Státní pokladna)
+- [Prague's finances in international and national comparison (2020)](https://www.iprpraha.cz/uploads/assets/dokumenty/ssp/analyzy/ekonomika/chude%20mesto%20aj/ipr_chude_mesto_prazske_sazba_en.pdf) - lead author of 2 parts, using open budget data (Státní pokladna)
 - Core Spatial Analytics Report (Územně analytické podklady, forthcoming) - lead author of data analysis on Prague's public finances (time series analysis, comparison, visualisation)
 
 Ministry of Regional Development
