@@ -3,565 +3,580 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/cz/talks/</loc>
+    <loc>https://petrbouchal.xyz/cz/talks/</loc>
     <lastmod>2020-10-22T22:11:12+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/talks/"
+                href="https://petrbouchal.xyz/talks/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/talks/"
+                href="https://petrbouchal.xyz/cz/talks/"
                 />
   </url>
   
   <url>
-    <loc>/cz/byrokrates/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/o-byrokratovi/</loc>
     <lastmod>2020-10-22T13:56:58+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/o-byrokratovi/</loc>
-    <lastmod>2020-10-22T13:56:58+02:00</lastmod>
+    <loc>https://petrbouchal.xyz/cz/post/</loc>
+    <lastmod>2020-07-24T14:05:48+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://petrbouchal.xyz/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="https://petrbouchal.xyz/cz/post/"
+                />
   </url>
   
   <url>
-    <loc>/cz/</loc>
+    <loc>https://petrbouchal.xyz/cz/</loc>
     <lastmod>2020-07-24T14:02:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="https://petrbouchal.xyz/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/"
+                href="https://petrbouchal.xyz/cz/"
                 />
   </url>
   
   <url>
-    <loc>/cz/categories/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/</loc>
+    <lastmod>2016-05-31T07:04:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/cz/categories/</loc>
     <lastmod>2016-05-31T07:04:48+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="https://petrbouchal.xyz/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/categories/"
+                href="https://petrbouchal.xyz/cz/categories/"
                 />
   </url>
   
   <url>
-    <loc>/cz/byrokrates/dobre-cteni-jak-vznika-byrospeak-jak-byt-slysen-opendata/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-jak-vznika-byrospeak-jak-byt-slysen-opendata/</loc>
     <lastmod>2016-05-31T07:04:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/categories/zaj%C3%ADmav%C3%A9-%C4%8Dten%C3%AD-odjinud/</loc>
+    <loc>https://petrbouchal.xyz/cz/categories/zaj%C3%ADmav%C3%A9-%C4%8Dten%C3%AD-odjinud/</loc>
     <lastmod>2016-05-31T07:04:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/bigdata/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/bigdata/</loc>
     <lastmod>2016-05-29T16:36:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/dobre-cteni-inovace-data-mzdy/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-inovace-data-mzdy/</loc>
     <lastmod>2016-05-29T16:36:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/inovace/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/inovace/</loc>
     <lastmod>2016-05-29T16:36:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/categories/neza%C5%99azen%C3%A9/</loc>
+    <loc>https://petrbouchal.xyz/cz/categories/neza%C5%99azen%C3%A9/</loc>
     <lastmod>2016-05-29T16:36:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/opendata/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/opendata/</loc>
     <lastmod>2016-05-29T16:36:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/</loc>
     <lastmod>2016-05-29T16:36:17+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="https://petrbouchal.xyz/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/tags/"
+                href="https://petrbouchal.xyz/cz/tags/"
                 />
   </url>
   
   <url>
-    <loc>/cz/byrokrates/dobre-cteni-na-zchladle-jarni-vecery/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-na-zchladle-jarni-vecery/</loc>
     <lastmod>2016-04-07T20:18:16+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/hura-kauzalita/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/hura-kauzalita/</loc>
     <lastmod>2016-03-25T09:33:01+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/dobre-cteni-predvelikonocni-meritokracie-pruzkumy-trendy/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-predvelikonocni-meritokracie-pruzkumy-trendy/</loc>
     <lastmod>2016-03-24T07:47:38+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/evidence-based-policy/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/evidence-based-policy/</loc>
     <lastmod>2016-03-22T20:49:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/categories/public-policy/</loc>
+    <loc>https://petrbouchal.xyz/cz/categories/public-policy/</loc>
     <lastmod>2016-03-22T20:49:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/randomizatori-a-ti-druzi/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/randomizatori-a-ti-druzi/</loc>
     <lastmod>2016-03-22T20:49:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/dataviz/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/dataviz/</loc>
     <lastmod>2016-03-06T13:42:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/dobre-cteni-papir-statistika-hospodsky-test-a-dalsi/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-papir-statistika-hospodsky-test-a-dalsi/</loc>
     <lastmod>2016-03-06T13:42:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/heckman/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/heckman/</loc>
     <lastmod>2016-03-06T13:42:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/open-data/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/open-data/</loc>
     <lastmod>2016-03-06T13:42:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/ta%C4%8Dr/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/ta%C4%8Dr/</loc>
     <lastmod>2016-03-06T13:42:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/setrvacnost-2/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/setrvacnost-2/</loc>
     <lastmod>2016-02-27T14:34:44+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/dobre-cteni-nudge-v-evropske-praxi/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-nudge-v-evropske-praxi/</loc>
     <lastmod>2016-02-23T20:31:38+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/dobre-cteni-slet-ekonomu-aneb-stouchani-a-dalsi-vynalezy/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-slet-ekonomu-aneb-stouchani-a-dalsi-vynalezy/</loc>
     <lastmod>2016-02-21T21:02:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/reinkarnace/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/reinkarnace/</loc>
     <lastmod>2016-02-21T20:37:59+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/vizualizace/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/vizualizace/</loc>
     <lastmod>2015-08-18T20:01:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/pondelni-vzpruha-verejne-finance-jako-telocvicna-pro-krecky/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/pondelni-vzpruha-verejne-finance-jako-telocvicna-pro-krecky/</loc>
     <lastmod>2015-01-26T11:48:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/hleda-se-vypracovatel-pisemne-prace-zn-sef-statni-sluzby/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/hleda-se-vypracovatel-pisemne-prace-zn-sef-statni-sluzby/</loc>
     <lastmod>2014-11-27T22:03:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/categories/reforma/</loc>
+    <loc>https://petrbouchal.xyz/cz/categories/reforma/</loc>
     <lastmod>2014-11-27T22:03:34+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/categories/lep%C5%A1%C3%AD-st%C3%A1tn%C3%AD-spr%C3%A1va/</loc>
+    <loc>https://petrbouchal.xyz/cz/categories/lep%C5%A1%C3%AD-st%C3%A1tn%C3%AD-spr%C3%A1va/</loc>
     <lastmod>2014-11-11T23:03:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/odborny-referent-pro-vino-a-jine-velke-sance/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/odborny-referent-pro-vino-a-jine-velke-sance/</loc>
     <lastmod>2014-11-11T23:03:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/tak-mame-zakon-o-statni-sluzbe/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/tak-mame-zakon-o-statni-sluzbe/</loc>
     <lastmod>2014-10-02T20:56:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/co-bylo-pred-tremi-tydny-klicove-ohlasy-ke-sluzebnimu-zakonu/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/co-bylo-pred-tremi-tydny-klicove-ohlasy-ke-sluzebnimu-zakonu/</loc>
     <lastmod>2014-08-26T22:28:04+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/jak-o-statni-sprave-premyslet-svetove/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/jak-o-statni-sprave-premyslet-svetove/</loc>
     <lastmod>2014-08-25T14:17:26+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/oprava-opravy-aneb-jedna-technicka-o-politickych-namestcich/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/oprava-opravy-aneb-jedna-technicka-o-politickych-namestcich/</loc>
     <lastmod>2014-08-15T22:37:09+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/delaji-kreativni-cinnost-a-nemeli-by-padat-pod-zakon-o-statni-sluzbe/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/delaji-kreativni-cinnost-a-nemeli-by-padat-pod-zakon-o-statni-sluzbe/</loc>
     <lastmod>2014-07-17T05:08:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/apel-na-pud-sebezachovy-aneb-k-cemu-jsou-politikum-urednici/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/apel-na-pud-sebezachovy-aneb-k-cemu-jsou-politikum-urednici/</loc>
     <lastmod>2014-07-15T22:52:31+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/k-cemu-jsou-urednici-podklady/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/k-cemu-jsou-urednici-podklady/</loc>
     <lastmod>2014-07-15T22:51:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/skladani-uctu-data/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/skladani-uctu-data/</loc>
     <lastmod>2014-07-13T19:09:56+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/lidezvenci/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/lidezvenci/</loc>
     <lastmod>2014-06-26T06:12:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/v-cem-je-cesky-stat-dobry-a-v-cem-ne-nova-data/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/v-cem-je-cesky-stat-dobry-a-v-cem-ne-nova-data/</loc>
     <lastmod>2014-06-19T21:41:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/ctvrta-revoluce/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/ctvrta-revoluce/</loc>
     <lastmod>2014-06-14T12:27:54+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/diplomaticti-trafikanti-ve-statnich-sluzbach/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/diplomaticti-trafikanti-ve-statnich-sluzbach/</loc>
     <lastmod>2014-06-10T20:54:21+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/pohled-zvenci-a-tri-zakladni-ukoly-statni-spravy/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/pohled-zvenci-a-tri-zakladni-ukoly-statni-spravy/</loc>
     <lastmod>2014-06-10T16:17:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/vladni-web-ke-statni-sluzbe-je-uzitecny/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/vladni-web-ke-statni-sluzbe-je-uzitecny/</loc>
     <lastmod>2014-06-10T09:04:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/dvakrat-tri-orisky-sluzebniho-zakona/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/dvakrat-tri-orisky-sluzebniho-zakona/</loc>
     <lastmod>2014-06-10T06:07:56+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/eurokrates/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/eurokrates/</loc>
     <lastmod>2014-05-25T10:23:51+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/byrokuriozity/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/byrokuriozity/</loc>
     <lastmod>2014-05-25T01:24:55+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/rozinkovy-urad/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/rozinkovy-urad/</loc>
     <lastmod>2014-05-25T01:24:55+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/habemus-emendationem/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/habemus-emendationem/</loc>
     <lastmod>2014-05-21T18:46:24+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/byrokraticke-cteni-do-noveho-tydne-nudge-a-verejne-ucty/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/byrokraticke-cteni-do-noveho-tydne-nudge-a-verejne-ucty/</loc>
     <lastmod>2014-05-12T12:55:07+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/inspirace-hlavne-pro-evaluatory/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/inspirace-hlavne-pro-evaluatory/</loc>
     <lastmod>2014-04-21T22:05:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/zastupna-reseni-a-moudra-z-harvardu-jeste-k-urednicke-zkousce/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/zastupna-reseni-a-moudra-z-harvardu-jeste-k-urednicke-zkousce/</loc>
     <lastmod>2014-04-21T21:26:38+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/cteni-na-velikonoce-co-byrokrates-zahledl-noveho-ve-svete/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/cteni-na-velikonoce-co-byrokrates-zahledl-noveho-ve-svete/</loc>
     <lastmod>2014-04-16T07:02:13+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/urednik-nejmladsi-profese/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/urednik-nejmladsi-profese/</loc>
     <lastmod>2014-04-14T22:43:24+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/inovace-ve-verejne-sprave/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/inovace-ve-verejne-sprave/</loc>
     <lastmod>2014-04-12T13:19:26+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/reforma-statni-spravy-navod-k-pouziti/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/reforma-statni-spravy-navod-k-pouziti/</loc>
     <lastmod>2013-11-12T06:48:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/centralizovane-zidle/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/centralizovane-zidle/</loc>
     <lastmod>2013-11-11T20:49:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/ano-pane-poradce-co-poji-martina-knetiga-s-adamem-smithem/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/ano-pane-poradce-co-poji-martina-knetiga-s-adamem-smithem/</loc>
     <lastmod>2013-10-23T20:45:36+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/chtit-vykonny-stat/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/chtit-vykonny-stat/</loc>
     <lastmod>2013-10-23T20:36:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/fukuyama/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/fukuyama/</loc>
     <lastmod>2013-09-08T14:16:03+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/governance/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/governance/</loc>
     <lastmod>2013-09-08T14:16:03+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/prednaska-na-nedeli-fukuyama-why-public-administration-gets-no-respect-and-why-it-should/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/prednaska-na-nedeli-fukuyama-why-public-administration-gets-no-respect-and-why-it-should/</loc>
     <lastmod>2013-09-08T14:16:03+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/video/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/video/</loc>
     <lastmod>2013-09-08T14:16:03+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/hnuti-za-mene-planou-cestinu/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/hnuti-za-mene-planou-cestinu/</loc>
     <lastmod>2013-09-07T16:45:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/komunikace/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/komunikace/</loc>
     <lastmod>2013-09-07T16:45:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/plain-english/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/plain-english/</loc>
     <lastmod>2013-09-07T16:45:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/plan%C3%A1-%C4%8De%C5%A1tina/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/plan%C3%A1-%C4%8De%C5%A1tina/</loc>
     <lastmod>2013-09-07T16:45:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/platy-urad-vlady/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/platy-urad-vlady/</loc>
     <lastmod>2013-08-26T18:55:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/platy/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/platy/</loc>
     <lastmod>2013-08-26T18:55:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/%C3%BA%C5%99ad-vl%C3%A1dy/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/%C3%BA%C5%99ad-vl%C3%A1dy/</loc>
     <lastmod>2013-08-26T18:55:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/jak-nestanovovat-minimalni-mzdu-podruhe/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/jak-nestanovovat-minimalni-mzdu-podruhe/</loc>
     <lastmod>2013-06-24T23:47:59+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/ekonomie/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/ekonomie/</loc>
     <lastmod>2013-06-23T13:08:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/it-ve-st%C3%A1tn%C3%AD-spr%C3%A1v%C4%9B/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/it-ve-st%C3%A1tn%C3%AD-spr%C3%A1v%C4%9B/</loc>
     <lastmod>2013-06-23T13:08:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/odpolitizov%C3%A1n%C3%AD-st%C3%A1tn%C3%AD-spr%C3%A1vy/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/odpolitizov%C3%A1n%C3%AD-st%C3%A1tn%C3%AD-spr%C3%A1vy/</loc>
     <lastmod>2013-06-23T13:08:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/profesionalizace-st%C3%A1tn%C3%AD-spr%C3%A1vy/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/profesionalizace-st%C3%A1tn%C3%AD-spr%C3%A1vy/</loc>
     <lastmod>2013-06-23T13:08:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/reforma-st%C3%A1tn%C3%AD-spr%C3%A1vy/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/reforma-st%C3%A1tn%C3%AD-spr%C3%A1vy/</loc>
     <lastmod>2013-06-23T13:08:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/cteni-na-nedeli-pepek-namornik-albert-hirschman-a-odpolitizovani-urednictva/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/cteni-na-nedeli-pepek-namornik-albert-hirschman-a-odpolitizovani-urednictva/</loc>
     <lastmod>2013-06-23T13:08:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/dobre-cteni-odjinud-cisla-sir-humphrey-a-fukuyama-o-dobrem-vladnuti/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-odjinud-cisla-sir-humphrey-a-fukuyama-o-dobrem-vladnuti/</loc>
     <lastmod>2013-06-10T23:16:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/good-governance/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/good-governance/</loc>
     <lastmod>2013-06-10T23:16:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/strategie/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/strategie/</loc>
     <lastmod>2013-06-10T23:16:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/uk/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/uk/</loc>
     <lastmod>2013-06-10T23:16:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/za-kolik-se-proda-vojensky-vleckovy-urad/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/za-kolik-se-proda-vojensky-vleckovy-urad/</loc>
     <lastmod>2013-05-20T23:08:39+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/byrokracie/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/byrokracie/</loc>
     <lastmod>2013-05-10T23:17:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/indie/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/indie/</loc>
     <lastmod>2013-05-10T23:17:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/kafka/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/kafka/</loc>
     <lastmod>2013-05-10T23:17:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/lehka-cetba-na-vikend-aneb-o-papirovani/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/lehka-cetba-na-vikend-aneb-o-papirovani/</loc>
     <lastmod>2013-05-10T23:17:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/pap%C3%ADrov%C3%A1n%C3%AD/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/pap%C3%ADrov%C3%A1n%C3%AD/</loc>
     <lastmod>2013-05-10T23:17:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/weber/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/weber/</loc>
     <lastmod>2013-05-10T23:17:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/jak-nestanovovat-minimalni-mzdu/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/jak-nestanovovat-minimalni-mzdu/</loc>
     <lastmod>2013-04-26T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/minim%C3%A1ln%C3%AD-mzda/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/minim%C3%A1ln%C3%AD-mzda/</loc>
     <lastmod>2013-04-26T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/patrani-po-byrokratove-prisaze-zacina/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/patrani-po-byrokratove-prisaze-zacina/</loc>
     <lastmod>2013-04-25T17:55:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/byrokrates/jak-vytrhnout-bransonovi-stolicku/</loc>
+    <loc>https://petrbouchal.xyz/cz/byrokrates/jak-vytrhnout-bransonovi-stolicku/</loc>
     <lastmod>2012-11-29T20:59:12+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/katastrofistika/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/katastrofistika/</loc>
     <lastmod>2012-11-29T20:59:12+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/ministerstvo-dopravy/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/ministerstvo-dopravy/</loc>
     <lastmod>2012-11-29T20:59:12+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/tags/registr-vozidel/</loc>
+    <loc>https://petrbouchal.xyz/cz/tags/registr-vozidel/</loc>
     <lastmod>2012-11-29T20:59:12+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cz/projects/</loc>
+    <loc>https://petrbouchal.xyz/cz/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/projects/"
+                href="https://petrbouchal.xyz/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/projects/"
+                href="https://petrbouchal.xyz/cz/projects/"
                 />
   </url>
   
   <url>
-    <loc>/cz/series/</loc>
+    <loc>https://petrbouchal.xyz/cz/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/series/"
+                href="https://petrbouchal.xyz/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/series/"
+                href="https://petrbouchal.xyz/cz/series/"
                 />
   </url>
   

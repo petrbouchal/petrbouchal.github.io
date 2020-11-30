@@ -2,9 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>O Byrokratovi on Petr Bouchal</title>
-    <link>/cz/byrokrates/o-byrokratovi/</link>
+    <link>https://petrbouchal.xyz/cz/byrokrates/o-byrokratovi/</link>
     <description>Recent content in O Byrokratovi on Petr Bouchal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 Oct 2020 13:56:58 +0200</lastBuildDate><atom:link href="/cz/byrokrates/o-byrokratovi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Oct 2020 13:56:58 +0200</lastBuildDate>
+    
+	<atom:link href="https://petrbouchal.xyz/cz/byrokrates/o-byrokratovi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

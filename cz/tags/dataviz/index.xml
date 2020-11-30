@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dataviz on Petr Bouchal</title>
-    <link>/cz/tags/dataviz/</link>
+    <link>https://petrbouchal.xyz/cz/tags/dataviz/</link>
     <description>Recent content in dataviz on Petr Bouchal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 06 Mar 2016 13:42:45 +0000</lastBuildDate><atom:link href="/cz/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Mar 2016 13:42:45 +0000</lastBuildDate><atom:link href="https://petrbouchal.xyz/cz/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dobré čtení: papír, statistika, hospodský test a další</title>
-      <link>/cz/byrokrates/dobre-cteni-papir-statistika-hospodsky-test-a-dalsi/</link>
+      <link>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-papir-statistika-hospodsky-test-a-dalsi/</link>
       <pubDate>Sun, 06 Mar 2016 13:42:45 +0000</pubDate>
       
-      <guid>/cz/byrokrates/dobre-cteni-papir-statistika-hospodsky-test-a-dalsi/</guid>
+      <guid>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-papir-statistika-hospodsky-test-a-dalsi/</guid>
       <description>&lt;p&gt;Co se dělo a co má smysl číst z posledního týdne nebo dvou. Statistika, crowdsourcing, dopad veřejných politik, open data a jiné.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;nový-web-britského-statistického-úřadu-vypadá-jako-by-byl-stavěný-pro-lidihttponsgovuk&#34;&gt;&lt;a href=&#34;http://ons.gov.uk&#34;&gt;Nový web britského statistického úřadu vypadá, jako by byl stavěný pro lidi&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;nov-web-britskho-statistickho-adu-vypad-jako-by-byl-stavn-pro-lidihttponsgovuk&#34;&gt;&lt;a href=&#34;http://ons.gov.uk&#34;&gt;Nový web britského statistického úřadu vypadá, jako by byl stavěný pro lidi&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Britský statistický úřad byl notorický známý svým nepoužitelným webovým portálem - jeden komentátor jej nazval &amp;ldquo;google na LSD&amp;rdquo;. Teď, po roce práce týmu webdesignérů, je na světě nový statistický web a je o poznání lepší. Posuďte sami. Detaily &lt;a href=&#34;http://blog.ons.digital/2016/02/25/new-ons-website-launched/&#34;&gt;zde&lt;/a&gt;; tým tvůrců svoji práci veřejně &lt;a href=&#34;http://blog.ons.digital/&#34;&gt;dokumentoval&lt;/a&gt; po celý uplynulý rok. Jako příklad, jak nově vypadá takový statistický výstup, můžu doporučit třeba &lt;a href=&#34;https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/publicsectorpersonnel/bulletins/civilservicestatistics/2015-10-08&#34;&gt;každoroční shrnutí statistik o britské státní službě&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;ale-i-čsú-se-v-komunikaci-zlepšujehttpwwwstatistikaamycz&#34;&gt;&lt;a href=&#34;http://www.statistikaamy.cz/&#34;&gt;Ale i ČSÚ se v komunikaci zlepšuje&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;ale-i-s-se-v-komunikaci-zlepujehttpwwwstatistikaamycz&#34;&gt;&lt;a href=&#34;http://www.statistikaamy.cz/&#34;&gt;Ale i ČSÚ se v komunikaci zlepšuje&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Časopis Statistika a my pro mě byl příjemným objevem - jak obsahově, tak prezentačně. Kromě tištěné verze existuje i na webu. Stojí za to jej sledovat, pokud vás zajímají číselné trendy ve společnosti a ekonomice nebo i občas bizarní statistické zprávy ze světa. Každé číslo je zaměřené na konkrétní téma - v lednu 2016 to byli senioři, v únoru cizinci. Krom šikovně poskládaných a popsaných statistických výstupů tam najdete i zprávy o tom, co a jak ČSÚ dělá (např. v lednovém čísle priority ČSÚ na 2016 a popis změn ve sběru dat o rodinných účtech) a diskusi některých technických konceptů.&lt;/p&gt;
-&lt;h2 id=&#34;chytřejší-státhttpsmarterstatecom&#34;&gt;&lt;a href=&#34;(http://smarterstate.com/)&#34;&gt;Chytřejší stát&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;chytej-stthttpsmarterstatecom&#34;&gt;&lt;a href=&#34;(http://smarterstate.com/)&#34;&gt;Chytřejší stát&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Vyšla knížka &lt;a href=&#34;http://smarterstate.com/&#34;&gt;&lt;strong&gt;Smarter Citizens, Smarter State&lt;/strong&gt;&lt;/a&gt;. Autorkou je Beth Noveck, profesorka na New York University, která šéfovala otevřenému vládnutí v Obamově týmu. Hlavním argumentem knížky je, že zdrojem lepšího a efektivnější vládnutí mohou být i sami občané - jejich expertiza a jejich přímé zapojení do aktivit veřejných institucí. Noveck tvrdí, že snahy vlád se zatím v této oblasti soustředily na transparentnost (např. otevřená data) a sběr preferencí (petice a participace na některých rozhodnutích), chybí ale způsoby, jak využít expertizy občanů k efektivnějšímu řešení zapeklitých problémů - a knížka takové mechanismy navrhuje a popisuje některé slibné příklady. Zatím nemám přečteno, odkážu tedy jen na &lt;a href=&#34;https://medium.com/@bethnoveck/the-rise-of-the-citizen-expert-ffba66dea199#.niys0d4xa&#34;&gt;výcuc/reklamu na blogu autorky&lt;/a&gt;;
 &lt;a href=&#34;http://bostonreview.net/blog/andrew-mayersohn-beth-simone-noveck-smart-citizens-smarter-state&#34;&gt;recenzi&lt;/a&gt; a &lt;a href=&#34;http://www.instituteforgovernment.org.uk/events/smart-citizens-smarter-state-technologies-expertise-and-future-governing-professor-beth&#34;&gt;video a prezentaci&lt;/a&gt; a &lt;a href=&#34;http://www.instituteforgovernment.org.uk/blog/13259/out-to-tinder-beth-simone-noveck-on-using-citizen-expertise-in-government/&#34;&gt;report&lt;/a&gt; z jedné z veřejných přednášek a diskusí nad knížkou.&lt;/p&gt;
 &lt;h2 id=&#34;co-je-to-dopad&#34;&gt;Co je to dopad?&lt;/h2&gt;
 &lt;p&gt;Pokud jste zmatení pokaždé, když slyšíte, že je potřeba měřit dopad nějaké aktivity, &lt;a href=&#34;http://www.odi.org/publications/10326-impact&#34;&gt;nový paper&lt;/a&gt; rozvojového think tanku Overseas Development Institute by vám mohl pomoct tento koncept rozmotat. Více v &lt;a href=&#34;http://www.researchtoaction.org/2016/02/what-do-we-mean-by-impact/&#34;&gt;blogovém avíz studie&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;papír-papír-papír&#34;&gt;Papír, papír, papír&lt;/h2&gt;
+&lt;h2 id=&#34;papr-papr-papr&#34;&gt;Papír, papír, papír&lt;/h2&gt;
 &lt;p&gt;Šéf digitální transformace britského úřadu vlády Stefan Czerniawski se zamýšlí (&lt;a href=&#34;http://publicstrategist.com/2016/01/thinking-on-paper/&#34;&gt;část 1&lt;/a&gt;, &lt;a href=&#34;http://publicstrategist.com/2016/02/paper-cutouts-thinking-on-paper-part-2/&#34;&gt;část 2&lt;/a&gt; o tom, jak metafora listu papíru formuje naše uvažování o správě informací ve veřejných organizacích - přesto, že všechno důležité se děje prostřednictvím nástrojů, které se s papírem nikdy nepotkají.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;psychologists-take-powerhttpwwwnybookscomarticles20160225the-psychologists-take-power&#34;&gt;&lt;a href=&#34;http://www.nybooks.com/articles/2016/02/25/the-psychologists-take-power/&#34;&gt;Psychologists take power&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;V únorovém čísle New York Review of Books vyšel dlouhý (volně přístupný) článek o rostoucím vlivu psychologického výzkumu v oblasti veřejných politik.&lt;/p&gt;
-&lt;h2 id=&#34;hospodský-testhttpsmediumcompublic-innovators-networkbad-service-design-is-not-a-strategy-b3024efd3e9daeoazbc9n&#34;&gt;&lt;a href=&#34;https://medium.com/public-innovators-network/bad-service-design-is-not-a-strategy-b3024efd3e9d#.aeoazbc9n&#34;&gt;Hospodský test&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;hospodsk-testhttpsmediumcompublic-innovators-networkbad-service-design-is-not-a-strategy-b3024efd3e9daeoazbc9n&#34;&gt;&lt;a href=&#34;https://medium.com/public-innovators-network/bad-service-design-is-not-a-strategy-b3024efd3e9d#.aeoazbc9n&#34;&gt;Hospodský test&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Na blogu původně o digitálních veřejných službách jsem narazil na skvělou pasáž o tom, jak testovat, jestli náhodou věci, které v denodenním byrokratickém provozu považujeme za běžné, nejsou úplně padlé na hlavu:&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;efektivita-ve-veřejném-sektoruhttpsquarterlybloggovuk20160125improving-public-sector-efficiency-to-deliver-a-smarter-state&#34;&gt;&lt;a href=&#34;https://quarterly.blog.gov.uk/2016/01/25/improving-public-sector-efficiency-to-deliver-a-smarter-state/&#34;&gt;Efektivita ve veřejném sektoru&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;efektivita-ve-veejnm-sektoruhttpsquarterlybloggovuk20160125improving-public-sector-efficiency-to-deliver-a-smarter-state&#34;&gt;&lt;a href=&#34;https://quarterly.blog.gov.uk/2016/01/25/improving-public-sector-efficiency-to-deliver-a-smarter-state/&#34;&gt;Efektivita ve veřejném sektoru&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Analytici britského úřadu vlády rozebírají měřítka efektivity apod. pro veřejný sektor.&lt;/p&gt;
 &lt;h2 id=&#34;collaborative-overloadhttpshbrorg201601collaborative-overload&#34;&gt;&lt;a href=&#34;https://hbr.org/2016/01/collaborative-overload&#34;&gt;Collaborative Overload&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Harvard Business Review shrnuje výzkum o tom, na koho a proč padá nejvíc žádostí o radu, spolupráci a tak dál - a jaké to má dopady a co s tím. Ve zkratce: mantra &amp;ldquo;potřebujeme více spolupracovat&amp;rdquo; má za následek, že někteří obzvláště žádaní jedinci investují velkou část své energie na&lt;/p&gt;
@@ -44,9 +44,9 @@
 So I do not know what to ask you for.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&amp;hellip;a tak dál. Pokud patříte mezi vydavatele nebo uživatele otevřených dat, určitě čtěte.&lt;/p&gt;
-&lt;h2 id=&#34;technologická-agentura-veřejněhttpwwwtacrblogihnedcz&#34;&gt;&lt;a href=&#34;http://www.tacr.blog.ihned.cz/&#34;&gt;Technologická agentura veřejně&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;technologick-agentura-veejnhttpwwwtacrblogihnedcz&#34;&gt;&lt;a href=&#34;http://www.tacr.blog.ihned.cz/&#34;&gt;Technologická agentura veřejně&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Technologická agentura se otevírá - mentálně i komunikačně. Mentální otevření se projevuje na odkazovaném blogu, kde se dočtete o novém programu na inovativní využití humanitních věd. Komunikační otevření sledujte mimo jiné na &lt;a href=&#34;http://www.slideshare.net/TACRprezentace/presentations&#34;&gt;Slideshare účtu&lt;/a&gt; agentury, kde najdete něco z vnitřního fungování agentury a jejích plánů a z interních přednášek o všehochuti velkých témat.&lt;/p&gt;
-&lt;h2 id=&#34;příběhy-z-dat-ann-emeryhttpannkemerycomfour-storytelling-strategies&#34;&gt;&lt;a href=&#34;http://annkemery.com/four-storytelling-strategies/&#34;&gt;Příběhy z dat: Ann Emery&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;pbhy-z-dat-ann-emeryhttpannkemerycomfour-storytelling-strategies&#34;&gt;&lt;a href=&#34;http://annkemery.com/four-storytelling-strategies/&#34;&gt;Příběhy z dat: Ann Emery&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Chcete ukázat data, nebo sdělit to hlavní?&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Other times, we need to get a message across in our graphs — and fast! This is especially true for my workshop participants who are consultants or those who work in communications-y roles. Their viewers are busy, busy, busy. Their viewers are hoping that someone else — you! — will dig through mountains of data and uncover the handful of nuggets worth paying attention to.&lt;/p&gt;

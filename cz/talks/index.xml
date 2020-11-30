@@ -2,9 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Prezentace, workshopy &amp;c: materiály a slidy on Petr Bouchal</title>
-    <link>/cz/talks/</link>
+    <link>https://petrbouchal.xyz/cz/talks/</link>
     <description>Recent content in Prezentace, workshopy &amp;c: materiály a slidy on Petr Bouchal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 Oct 2020 22:11:12 +0200</lastBuildDate><atom:link href="/cz/talks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Oct 2020 22:11:12 +0200</lastBuildDate>
+    
+	<atom:link href="https://petrbouchal.xyz/cz/talks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

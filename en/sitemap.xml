@@ -3,111 +3,116 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/talks/</loc>
+    <loc>https://petrbouchal.xyz/talks/</loc>
     <lastmod>2020-10-22T22:11:12+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/talks/"
+                href="https://petrbouchal.xyz/cz/talks/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/talks/"
+                href="https://petrbouchal.xyz/talks/"
                 />
   </url>
   
   <url>
-    <loc>/dev/</loc>
+    <loc>https://petrbouchal.xyz/dev/</loc>
     <lastmod>2020-10-22T15:36:08+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/czso/</loc>
-    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
+    <loc>https://petrbouchal.xyz/post/</loc>
     <lastmod>2020-07-24T14:05:48+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="https://petrbouchal.xyz/cz/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://petrbouchal.xyz/post/"
+                />
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://petrbouchal.xyz/</loc>
     <lastmod>2020-07-24T14:02:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/"
+                href="https://petrbouchal.xyz/cz/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="https://petrbouchal.xyz/"
                 />
   </url>
   
   <url>
-    <loc>/bio/</loc>
+    <loc>https://petrbouchal.xyz/bio/</loc>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://petrbouchal.xyz/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/categories/"
+                href="https://petrbouchal.xyz/cz/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="https://petrbouchal.xyz/categories/"
                 />
   </url>
   
   <url>
-    <loc>/projects/</loc>
+    <loc>https://petrbouchal.xyz/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/projects/"
+                href="https://petrbouchal.xyz/cz/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/projects/"
+                href="https://petrbouchal.xyz/projects/"
                 />
   </url>
   
   <url>
-    <loc>/series/</loc>
+    <loc>https://petrbouchal.xyz/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/series/"
+                href="https://petrbouchal.xyz/cz/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/series/"
+                href="https://petrbouchal.xyz/series/"
                 />
   </url>
   
   <url>
-    <loc>/software/</loc>
+    <loc>https://petrbouchal.xyz/software/</loc>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://petrbouchal.xyz/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="/cz/tags/"
+                href="https://petrbouchal.xyz/cz/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="https://petrbouchal.xyz/tags/"
                 />
   </url>
   

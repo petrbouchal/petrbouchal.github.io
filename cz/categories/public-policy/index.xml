@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Public policy on Petr Bouchal</title>
-    <link>/cz/categories/public-policy/</link>
+    <link>https://petrbouchal.xyz/cz/categories/public-policy/</link>
     <description>Recent content in Public policy on Petr Bouchal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Mar 2016 20:49:57 +0000</lastBuildDate><atom:link href="/cz/categories/public-policy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Mar 2016 20:49:57 +0000</lastBuildDate><atom:link href="https://petrbouchal.xyz/cz/categories/public-policy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Randomizátoři a ti druzí</title>
-      <link>/cz/byrokrates/randomizatori-a-ti-druzi/</link>
+      <link>https://petrbouchal.xyz/cz/byrokrates/randomizatori-a-ti-druzi/</link>
       <pubDate>Tue, 22 Mar 2016 20:49:57 +0000</pubDate>
       
-      <guid>/cz/byrokrates/randomizatori-a-ti-druzi/</guid>
-      <description>&lt;p&gt;[caption id=&amp;ldquo;attachment_785&amp;rdquo; align=&amp;ldquo;alignright&amp;rdquo; width=&amp;ldquo;700&amp;rdquo;]&lt;img src=&#34;http://emmatomkinson.files.wordpress.com/2013/05/rct1.png?w=1400&#34; alt=&#34;RCT&#34;&gt; Laura Haynes et al., Test, Learn, Adapt, UK Cabinet Office, 2012[/caption]&lt;/p&gt;
+      <guid>https://petrbouchal.xyz/cz/byrokrates/randomizatori-a-ti-druzi/</guid>
+      <description>&lt;p&gt;[caption id=&amp;quot;attachment_785&amp;rdquo; align=&amp;quot;alignright&amp;rdquo; width=&amp;quot;700&amp;rdquo;]&lt;img src=&#34;http://emmatomkinson.files.wordpress.com/2013/05/rct1.png?w=1400&#34; alt=&#34;RCT&#34;&gt; Laura Haynes et al., Test, Learn, Adapt, UK Cabinet Office, 2012[/caption]&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Tentokrát pár odkazů a poznámek na téma radnomizované experimenty a &amp;ldquo;co funguje&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Ricardo Hausmann  se před pár týdny &lt;a href=&#34;https://www.project-syndicate.org/commentary/evidence-based-policy-problems-by-ricardo-hausmann-2016-02&#34;&gt;opřel do randomizovaných experimentů&lt;/a&gt; coby nástroje zjišťování &amp;ldquo;what works&amp;rdquo;. Zopakoval známé slabé stránky RCTs - ve zkratce: &amp;ldquo;že to fungovalo tam, kde jste udělali experiment, neznamená, že to funguje&amp;rdquo; - a místo randomizace celých intervencí navrhuje, abychom otázku &amp;ldquo;co funguje?&amp;rdquo; odpovídali pomocí iterativního učení se - tedy abychom v každé veřejné intervenci identifikovali jednotlivé součástky a následně se cíleně a průběžně učili z toho, jak celá intervence funguje při různých kombinacích těchto součástek. Dobře tento přístup popisují harvardští rozvojoví ekonomové Lant Pritchett, Matt Andrews a Michael Woolcock (na které se Hausman taky odkazuje) v nedávném &lt;a href=&#34;http://bsc.cid.harvard.edu/files/bsc/files/doing_problem_driven_work_wp_307.pdf&#34;&gt;paperu&lt;/a&gt;; techničtější ale dobře pochopitelný popis je ve &lt;a href=&#34;http://www.cgdev.org/publication/its-all-about-mee-using-structured-experiential-learning-e-crawl-design-space&#34;&gt;starším paperu Lanta Pritchetta a kolegů&lt;/a&gt;.&lt;/p&gt;
@@ -26,9 +26,9 @@
 &lt;p&gt;Now, trial-and-error innovation combined with randomized trails could be more powerful. That was my point. But make no mistake: both are still the tools of the inept planner.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;(Některým kolegům možná tyto věty něco připomínají&amp;hellip;)&lt;/p&gt;
-&lt;h2 id=&#34;james-heckman-o-faktech-měření-dopadů-a-stavu-ekonometriehttpwwwecontalkorgarchives201601james_heckman_ohtml&#34;&gt;&lt;a href=&#34;http://www.econtalk.org/archives/2016/01/james_heckman_o.html&#34;&gt;James Heckman o faktech, měření dopadů a stavu ekonometrie&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;james-heckman-o-faktech-men-dopad-a-stavu-ekonometriehttpwwwecontalkorgarchives201601james-heckman-ohtml&#34;&gt;&lt;a href=&#34;http://www.econtalk.org/archives/2016/01/james_heckman_o.html&#34;&gt;James Heckman o faktech, měření dopadů a stavu ekonometrie&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Velmi, velmi doporučuji poslechnout si alespoň prvních 20 minut rozhovoru s jedním z veteránů empirické práce na veřejných politikách.&lt;/p&gt;
-&lt;h2 id=&#34;jak-funguje-what-works-v-medicíně&#34;&gt;Jak funguje &amp;ldquo;what works&amp;rdquo; v medicíně&lt;/h2&gt;
+&lt;h2 id=&#34;jak-funguje-what-works-v-medicn&#34;&gt;Jak funguje &amp;ldquo;what works&amp;rdquo; v medicíně&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.kingsfund.org.uk/blog/2016/02/nice-a-terrible-beauty&#34;&gt;Text&lt;/a&gt; britského zdravotnického think tanku Kings Fund, který dobře ukazuje, jakou roli může v systému (zde zdravotnictví, ale může jít třeba o školství) hrát instituce obdařená nějakou mírou pravomoci rozhodovat, co je &amp;ldquo;dobrá praxe&amp;rdquo;.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;But it has also been a beauty, in the way that, over the past 16 years, it has sought to balance an essentially unequal equation. Its elements include the interest of the taxpayer in the NHS being cost-effective. The interests of individual patients who, when not paying themselves, have little personal interest in cost-effectiveness – but who do nonetheless have a longer term interest (along with that of other taxpayers) in avoiding situations in which the cost _in_effective drives out the cost effective. The interests of clinicians who generally welcome guidance but detest instruction.&lt;/p&gt;
@@ -40,18 +40,18 @@
     
     <item>
       <title>Pondělní vzpruha: veřejné finance jako tělocvična pro křečky</title>
-      <link>/cz/byrokrates/pondelni-vzpruha-verejne-finance-jako-telocvicna-pro-krecky/</link>
+      <link>https://petrbouchal.xyz/cz/byrokrates/pondelni-vzpruha-verejne-finance-jako-telocvicna-pro-krecky/</link>
       <pubDate>Mon, 26 Jan 2015 11:48:02 +0000</pubDate>
       
-      <guid>/cz/byrokrates/pondelni-vzpruha-verejne-finance-jako-telocvicna-pro-krecky/</guid>
+      <guid>https://petrbouchal.xyz/cz/byrokrates/pondelni-vzpruha-verejne-finance-jako-telocvicna-pro-krecky/</guid>
       <description>&lt;p&gt;Byrokrates se vydal do londýnského Science Museum na výstavu &lt;a href=&#34;http://www.sciencemuseum.org.uk/visitmuseum/Plan_your_visit/exhibitions/information_age.aspx&#34;&gt;Information Age&lt;/a&gt;. Výstavu doporučuji, je skvělá, a krom toho ji před pár měsíci otevírala královna památným tweetem:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://twitter.com/BritishMonarchy/status/525596327674400768&#34;&gt;https://twitter.com/BritishMonarchy/status/525596327674400768&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Jako důstojnou náhražku návštěvy výstavy doporučuju nedávnou knížku Jamese Gleicka &lt;em&gt;The Information&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Proč o tom ale píšu tady: mezi vstupem do muzea a začátkem výstavy jsem narazil na tohle:&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;img src=&#34;/wp-content/uploads/2015/01/IMAG0647_600wide.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petrbouchal.xyz/wp-content/uploads/2015/01/IMAG0647_600wide.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Model ekonomiky, poháněný vodou, který postavil ve 40. letech na LSE chlapík jménem Bill Phillips. Je to tak názorné, až by si člověk čekl: konečně jasný a pochopitelný model veřejných financí - a ekonomiky vůbec&amp;hellip; Takhle to vypadá v akci:&lt;/p&gt;
-&lt;p&gt;[youtube https://www.youtube.com/watch?v=k_-uGHWz_k0 width=600px]&lt;/p&gt;
+&lt;p&gt;[youtube &lt;a href=&#34;https://www.youtube.com/watch?v=k_-uGHWz_k0&#34;&gt;https://www.youtube.com/watch?v=k_-uGHWz_k0&lt;/a&gt; width=600px]&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Slyšel jsem o tom před časem v pořadu BBC Pop-up Economics vyprávět sloupkaře &lt;em&gt;Financial Times&lt;/em&gt; Tima Harforda. Pozoruhodný příběh.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;                                 [![Get Adobe Flash player](http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif)](http://www.adobe.com/go/getflash)
@@ -62,10 +62,10 @@
     
     <item>
       <title>Jak (ne)stanovovat minimální mzdu, podruhé</title>
-      <link>/cz/byrokrates/jak-nestanovovat-minimalni-mzdu-podruhe/</link>
+      <link>https://petrbouchal.xyz/cz/byrokrates/jak-nestanovovat-minimalni-mzdu-podruhe/</link>
       <pubDate>Mon, 24 Jun 2013 23:47:59 +0000</pubDate>
       
-      <guid>/cz/byrokrates/jak-nestanovovat-minimalni-mzdu-podruhe/</guid>
+      <guid>https://petrbouchal.xyz/cz/byrokrates/jak-nestanovovat-minimalni-mzdu-podruhe/</guid>
       <description>&lt;p&gt;Uprostřed zuřícího bezvládí až polovládí se kdovíproč &lt;a href=&#34;http://zpravy.ihned.cz/cesko/c1-60125320-mullerova-ma-zastani-u-zemana-aby-se-zvedla-minimalni-mzda-necas-je-proti&#34;&gt;znovu vynořila myšlenka na změnu výše minimální mzdy.&lt;/a&gt;&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;O této problematice jsem tady &lt;a href=&#34;http://byrokrates.wordpress.com/2013/04/26/jak-nestanovovat-minimalni-mzdu/&#34;&gt;nedávno psal&lt;/a&gt; a poukázal jsem na jeden způsob (odborná poradní komise), jak se vyhnout tomu, co právě pozorujeme - totiž že nová výše minimální mzdy se určí nejspíš tak, že necháme náhodně vybranou opici hodit šipku do prostoru mezi status quo a kdovíjak vzniklý návrh ministryně, a pak se zeptáme prezidenta, jestli souhlasí.&lt;/p&gt;
@@ -82,10 +82,10 @@
     
     <item>
       <title>Jak (ne)stanovovat minimální mzdu</title>
-      <link>/cz/byrokrates/jak-nestanovovat-minimalni-mzdu/</link>
+      <link>https://petrbouchal.xyz/cz/byrokrates/jak-nestanovovat-minimalni-mzdu/</link>
       <pubDate>Fri, 26 Apr 2013 13:00:00 +0000</pubDate>
       
-      <guid>/cz/byrokrates/jak-nestanovovat-minimalni-mzdu/</guid>
+      <guid>https://petrbouchal.xyz/cz/byrokrates/jak-nestanovovat-minimalni-mzdu/</guid>
       <description>&lt;p&gt;Se zpožděním jsem si pustil &lt;a href=&#34;http://www.ceskatelevize.cz/specialy/hydepark/9.4.2013/&#34;&gt;Hydepark ČT24 z 9. dubna&lt;/a&gt; s &lt;a href=&#34;http://blog.aktualne.centrum.cz/blogy/daniel-munich.php&#34;&gt;Danielem Münichem&lt;/a&gt; o navrhovaných opatřeních na podporu zaměstnanosti a dalších tématech.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Kromě věcně výborných vstupů patří Danovi velké díky i za to, že jeho odpověď na téměř všechny otázky zněla, ve zkratce, &amp;ldquo;potřebujeme politiku založenou na důkazech&amp;rdquo;. Problém v rozhodování ve veřejné správě je často v tom, že:&lt;/p&gt;
@@ -102,8 +102,8 @@
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;V přepisu se ztratil jemný humor, který vyplývá ze záznamu – totiž že proces stanovování minimální mzdy může být  &amp;ldquo;propracovaný a standardní&amp;rdquo; a zároveň zcela prostý jakéhokoli základu v poznatcích o realitě.&lt;/p&gt;
 &lt;p&gt;Pro případ, že se nad tím na MPSV někdo zamýšlí, se dopustím jednoho, na tomto blogu nikoli posledního, &amp;ldquo;jak se to dělá v Británii&amp;rdquo;. Vzpomněl jsem si na to, protože jsem tento týden na internetu zahlédl &lt;a href=&#34;http://www.lowpay.gov.uk/lowpay/report/pdf/9305-BIS-Low_Pay-Accessible6.pdf&#34;&gt;zprávu britské Low Pay Commission&lt;/a&gt; o tom, jestli je potřeba zvyšit britskou minimální mzdu.&lt;/p&gt;
-&lt;p&gt;O co jde? V krátkosti: zavedení a systém stanovování výše minimální mzdy bylo jedním z &lt;a href=&#34;http://www.instituteforgovernment.org.uk/sites/default/files/the_mimimum_wage.pdf&#34;&gt;úspěchů při tvorbě veřejných politik&lt;/a&gt;, na kterých se před nedávnem shodla skupina expertů ze státní správy.&lt;a href=&#34;http://www.instituteforgovernment.org.uk/our-work/better-policy-making/policy-successes&#34;&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;O co jde? V krátkosti: zavedení a systém stanovování výše minimální mzdy bylo jedním z &lt;a href=&#34;http://www.instituteforgovernment.org.uk/sites/default/files/the_mimimum_wage.pdf&#34;&gt;úspěchů při tvorbě veřejných politik&lt;/a&gt;, na kterých se před nedávnem shodla skupina expertů ze státní správy.[
+](&lt;a href=&#34;http://www.instituteforgovernment.org.uk/our-work/better-policy-making/policy-successes&#34;&gt;http://www.instituteforgovernment.org.uk/our-work/better-policy-making/policy-successes&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.instituteforgovernment.org.uk/sites/default/files/the_mimimum_wage.pdf&#34;&gt;Krátká studie&lt;/a&gt; vzešlá ze setkáná expertů vysvětluje, jak zavedení minimální mzdy probíhalo, jak systém minimální mzdy funguje, a proč jej lze považovat za jeden z významných úspěchů posledních let. Studie stojí za přečtení celá, ale ve zkratce alespoň pár hlavních bodů:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
