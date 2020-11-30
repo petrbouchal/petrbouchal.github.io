@@ -26,12 +26,23 @@ Translation and organisation of multilingual content:
 
 https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/
 
++ language switcher in menu: https://xdeb.org/post/2018/04/05/go-multilingual-with-hugo/
+
 Other todo
 
 - https://github.com/panr/hugo-theme-hello-friend/#features
 - https://github.com/halogenica/beautifulhugo
 - https://github.com/yihui/hugo-lithium
 - academic
+
+Local hosting of fonts
+
+- https://kinsta.com/blog/local-fonts/
+- https://www.pagecloud.com/blog/how-to-add-custom-fonts-to-any-website
+
+Citations
+
+- https://blogdown-demo.rbind.io/2017/08/28/adding-citations-to-posts/
 
 Other howtos
 
@@ -42,4 +53,6 @@ Other howtos
 - https://stackoverflow.com/questions/61060920/r-blogdown-deploy-with-github-actions-on-gh-pages
 - https://gist.github.com/lrnv/17f2c721f4ac30ce55ae335cb83b6639
 - https://dev.to/christiankastner/make-your-website-shareable-on-facebook-twitter-and-linkedin-1kk7
-- https://drmowinckels.io/blog/changing-you-blogdown-workflow/- 
+- https://drmowinckels.io/blog/changing-you-blogdown-workflow/
+- https://lazappi.id.au/post/2020-04-09-caching-blogdown/
+
