@@ -46,7 +46,7 @@ jobs:
 
       - name: Install hugo
         run: |
-          R -e 'blogdown::install_hugo(version = "0.62.2")'
+          R -e 'blogdown::install_hugo(version = "0.61.0")'
 
       - name: Install theme via submodule
         run: |
