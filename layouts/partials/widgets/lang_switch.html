@@ -24,7 +24,7 @@
       {{ range .Site.Languages -}}
         {{ if ne $.Site.Language.Lang .Lang }}
         <li>
-          <a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}"> > {{ .Lang }}</a>
+          <a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}"> > {{ .LanguageName }}</a>
         </li>
         {{ end -}}
       {{ end -}}
