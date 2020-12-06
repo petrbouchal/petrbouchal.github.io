@@ -11,6 +11,9 @@
     text-transform: none;
 }
 
+.container {
+  max-width: 900px;
+}
 .widget-title {
     color: #00f;
 .menu a{
