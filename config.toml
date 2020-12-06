@@ -49,7 +49,7 @@ hideEntryNavigation = ["page"] # boolean / array of sections
 showReadingTime = true
 taxonomyCloudShuffle = true
 accentColor = "#00f"
-hideMainMenu = false
+hideMainMenu = true
 
 [languages.cz.params.settings]
 # date & time format: https://golang.org/pkg/time/
@@ -60,15 +60,15 @@ hideEntryNavigation = ["page"] # boolean / array of sections
 showReadingTime = true
 taxonomyCloudShuffle = true
 accentColor = "#00f"
-hideMainMenu = false
+hideMainMenu = true
 
 [params.sidebar]
-enable = false
+enable = true
 
 [params.widgets]
 header = ["breadcrumbs"]
 homepage = []
-sidebar = ["about","sidebar_menu", "social_menu"]
+sidebar = ["sidebar_menu", "lang_switch", "search"]
 footer = ["social_menu"]
 
 [params.opengraph.facebook]
