@@ -191,15 +191,15 @@
     },
     "blogdown": {
       "Package": "blogdown",
-      "Version": "0.21.47",
+      "Version": "0.21.48",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "blogdown",
       "RemoteUsername": "rstudio",
       "RemoteRef": "master",
-      "RemoteSha": "400cd909efd4777bc7a22f011528d6ea1c09080a",
-      "Hash": "9cd4ef1a64f7b5ade195ef6009cdb1ab"
+      "RemoteSha": "ece8b5832fac861eb8b353626ce4924fd4aef5ff",
+      "Hash": "92975331572e450a2f42b4148c97ddf7"
     },
     "bookdown": {
       "Package": "bookdown",
