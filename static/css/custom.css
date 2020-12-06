@@ -6,6 +6,11 @@
     color: #00f;
 }
 
+.widget-lang_switch .menu a{
+    color: #00f;
+    text-transform: none;
+}
+
 .menu a{
     color: #00f;
 }

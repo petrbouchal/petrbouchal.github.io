@@ -1,0 +1,34 @@
+{{- $defaultConfig := .Site.Data.config.default.widgets.social_menu -}}
+{{- $configData := ( or .Site.Data.config.widgets.lang_switch $defaultConfig ) -}}
+{{- $lang := .Site.Language.Lang -}}
+{{- $config := ( ( index $configData $lang ) | default $configData ) -}}
+
+<section class='widget widget-lang_switch sep-after'>
+  {{- with $config.title -}}
+  <header>
+    <h4 class='title widget-title'>
+      {{- . -}}
+    </h4>
+  </header>
+  {{- end -}}
+
+  <nav aria-label='{{ i18n "langSwitch" }}' class = "menu">
+    <ul>
+    {{ if .IsTranslated -}}
+      {{ range .Translations }}
+      <li>
+        <a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}"> > {{ .Language.LanguageName }}</a>
+      </li>
+      {{ end -}}
+    {{ else -}}
+      {{ range .Site.Languages -}}
+        {{ if ne $.Site.Language.Lang .Lang }}
+        <li>
+          <a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}"> > {{ .Lang }}</a>
+        </li>
+        {{ end -}}
+      {{ end -}}
+    {{ end -}}
+    </ul>
+  </nav>
+</section>

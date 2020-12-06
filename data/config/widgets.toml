@@ -17,7 +17,11 @@ excludeTypes = ["page"]               # default: ["page"]
 
 # Search Widget config
 [search]
-title = "Search"                      # default: "Search"
+title = " "                      # default: "Search"
+
+# Language switcher, custom-made by PB
+[lang_switch]
+title = ""
 
 # Sidebar Menu Widget config
 [sidebar_menu]
