@@ -41,7 +41,7 @@ other = "{{ .Count }} comments on {{ .Title }}"
 other = "Contact via Email"
 
 [currentPage]
-other = "Current page"
+other = "Aktuální stránka"
 
 [email]
 other = "Email"
@@ -50,28 +50,28 @@ other = "Email"
 other = "Gopher"
 
 [goHome]
-other = "Go Home..."
+other = "Domů"
 
 [lastUpdated]
-other = "Last updated"
+other = "Aktualizováno"
 
 [leaveAComment]
 other = "Leave a comment"
 
 [mainMenu]
-other = "Main Menu"
+other = "Hlavní menu"
 
 [name]
-other = "Name"
+other = "Název"
 
 [next]
-other = "Next"
+other = "Další"
 
 [nextPage]
-other = "Next page"
+other = "Další"
 
 [nextPost]
-other = "Next post"
+other = "Další"
 
 [noTerm]
 other = "Not a single {{ .Term }}!"
@@ -83,19 +83,19 @@ other = "OK"
 other = "Open {{ .Platform }} account in new tab"
 
 [page]
-other = "Page"
+other = "Stránka"
 
 [previous]
-other = "Previous"
+other = "Předchozí"
 
 [previousPage]
-other = "Previous page"
+other = "Předchozí"
 
 [previousPost]
-other = "Previous post"
+other = "Předchozí"
 
 [postedOn]
-other = "Posted on"
+other = "Zveřejněno"
 
 [readingTime]
 one = "Čtení na minutu"
@@ -104,7 +104,7 @@ few = "Čtení na {{ .Count }} minuty."
 other = "Čtení na {{ .Count }} minut(y)."
 
 [recentPosts]
-other = "Recent Posts"
+other = "Nedávné na blogu"
 
 [reply]
 other = "Reply"
@@ -125,17 +125,17 @@ other = "Nic nenalezeno."
 other = "Hledám"
 
 [series]
-one = "Series"
-other = "Series"
+one = "Seriál"
+other = "Seriály"
 
 [sidebarMenu]
 other = "Sidebar Menu"
 
 [skipToContent]
-other = "Skip to Content"
+other = "Na obsah"
 
 [skipToMainMenu]
-other = "Skip to Main Menu"
+other = "Na hlavní menu"
 
 [socialMenu]
 other = "Social Menu"
@@ -151,7 +151,7 @@ one = "Tag"
 other = "Tagy"
 
 [toggleSidebar]
-other = "Toggle Sidebar"
+other = "Přepnout menu"
 
 [website]
-other = "Website"
+other = "Stránka"
