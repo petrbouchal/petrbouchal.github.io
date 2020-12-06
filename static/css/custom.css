@@ -39,3 +39,7 @@ pre {
 	background: #e3f1ff;
 	padding: 0.4em;
 }
+
+.search-term {
+  width: 40%;
+}

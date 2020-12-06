@@ -116,13 +116,13 @@ other = "Reply to {{ .Author }}"
 other = "says"
 
 [search]
-other = "Search"
+other = "Hledat"
 
 [searchResultEmpty]
-other = "Nothing found!"
+other = "Nic nenalezeno."
 
 [searching]
-other = "Searching"
+other = "Hledám"
 
 [series]
 one = "Series"
