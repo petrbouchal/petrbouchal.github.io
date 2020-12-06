@@ -11,6 +11,8 @@
     text-transform: none;
 }
 
+.widget-title {
+    color: #00f;
 .menu a{
     color: #00f;
 }
