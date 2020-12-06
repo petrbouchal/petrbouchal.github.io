@@ -16,4 +16,4 @@ Thematically, I am interested in public finance, urban governance and public str
 
 Technologically, I work mostly in R with a strong focus on data analysis workflows suited to the reality of evidence use in public service and civil society. I work with all sorts of data - public open data, geospatial, administrative, statistical. I am also very interested in the communication of empirical evidence, especially data visualisation.
 
-I make [packages](/projects/#r-packages) for using open data in R, create [(experimental) data dashboards](/projects#dashboards), and do my own analysis of public open data as well as [consulting work](/projects#consulting-projects).
+I make [packages](/work/#r-packages) for using open data in R, create [(experimental) data dashboards](/work#dashboards), and do my own analysis of public open data as well as [consulting work](/work#consulting-projects).
