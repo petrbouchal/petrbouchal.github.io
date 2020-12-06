@@ -67,7 +67,7 @@ enable = true
 
 [params.widgets]
 header = ["breadcrumbs"]
-homepage = []
+homepage = ["recent_posts"]
 sidebar = ["sidebar_menu", "lang_switch", "search"]
 footer = ["social_menu"]
 
