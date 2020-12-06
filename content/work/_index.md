@@ -1,9 +1,8 @@
 ---
-title: Projekty
-slug: projekty
+title: Work
 comments: false
 images: ["https://petrbouchal.xyz/mstile-150x150.png"]
-description: Výzkum, poradenství, analýza dat, R
+description: Research, Consulting, R packages, dashboards
 menu: 
   main:
     weight: -2
@@ -39,7 +38,7 @@ menu:
 
 Prague Institute for Planning and Development
 
-- [Prague's finances in international and national comparison (2020)](https://www.iprpraha.cz/uploads/assets/dokumenty/chude_mesto_prazske.pdf) - lead author of 2 parts, using open budget data (Státní pokladna)
+- [Prague's finances in international and national comparison (2020)](https://www.iprpraha.cz/uploads/assets/dokumenty/ssp/analyzy/ekonomika/chude%20mesto%20aj/ipr_chude_mesto_prazske_sazba_en.pdf) - lead author of 2 parts, using open budget data (Státní pokladna)
 - Core Spatial Analytics Report (Územně analytické podklady, forthcoming) - lead author of data analysis on Prague's public finances (time series analysis, comparison, visualisation)
 
 Ministry of Regional Development
@@ -54,3 +53,5 @@ Institute for Government
 IDEA at CERGE-EI:
 
 - [Public servants: who are they, where do they work, how much do they earn? (2014)](https://idea.cerge-ei.cz/studies/2014-06-statni-urednici-kolik-jich-vlastne-je-kde-a-za-jake-platy-pracuji)
+
+
