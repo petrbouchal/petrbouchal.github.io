@@ -34,30 +34,71 @@ Ale jedno konstatování se neodpustím. Nikoli k samotnému obsahu, ale k tónu
 </head>
 
 
-<body class='page type-byrokrates layout-post'>
+<body class='page type-byrokrates layout-post has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/cz'>✱</a></li><li class='item'>
+  <a href='/cz/work/'>Práce</a></li><li class='item'>
+  <a href='/cz/talks'>Přednášky &amp;c</a></li><li class='item'>
+  <a href='/cz/byrokrates'>Byrokrates</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-lang_switch sep-after'><nav aria-label='' class = "menu">
+    <ul>
+    
+        <li>
+          <a rel="alternate" href="/en" hreflang="en" lang="en"> > en</a>
+        </li>
+        </ul>
+  </nav>
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'> </h4>
+  </header>
+
+  <form action='/cz/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Hledat</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Hledat&hellip;'>
+    </label></form>
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
-      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
-  <div class='container'>
-    
-    <ul><li class='item'>
-        <a href='/cz'>✱</a>
-      </li><li class='item'>
-        <a href='/cz/projects/'>Projekty</a>
-      </li><li class='item'>
-        <a href='/cz/talks'>Přednášky &amp;c</a>
-      </li><li class='item'>
-        <a href='/cz/byrokrates'>Byrokrates</a>
-      </li>
-          <li><a rel="alternate" href="/en" hreflang="en" lang="en"> · en</a></li>
-        </ul>
-  </div>
-</nav>
+      <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
@@ -99,7 +140,7 @@ Ale jedno konstatování se neodpustím. Nikoli k samotnému obsahu, ale k tónu
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-Čtení na 4 minut(y).
+Čtení na 5 minut(y).
 </span>
 
 
@@ -117,15 +158,19 @@ Ale jedno konstatování se neodpustím. Nikoli k samotnému obsahu, ale k tónu
 <p><img src="http://imgs.xkcd.com/comics/duty_calls.png" alt="Zdroj: xkcd">
 Zdroj: <a href="http://xkcd.com/386/">xkcd</a></p>
 <p>Ale jedno konstatování se neodpustím. Nikoli k samotnému obsahu, ale k tónu debaty a k tomu, co tento tón říká o obrazu úřednictva, který mají politici v hlavách. Úředník je v očích našich politiků někdo, kdo zpravidla dělá práci procedurální, netvůrčí, veze se v zajetých kolejích - obsluhuje nějaký administrativní proces, v lepším případě aplikuje normu. Je to člověk, který víc než co jiného chce klid a jistotu.</p>
-<!-- raw HTML omitted -->
+<!-- more -->
 <p>Má to dva důležité následky. Zaprvé, politici nabývají dojmu, že reforma státní správy je hrou paragrafů plných procedurálních pravidel a zcela rezignují na jakoukoli ambici vytvořit opravdu dobrou státní správu. Druhý, související následek je, že si politici státní správu představují jako soubor &ldquo;agend&rdquo; a procesů obsluhovaných úředníky s velkými razítky a malými mozky, kteří samozřejmě nepotřebují žádný management, žádné cílené vedení, budování kapacit, znalostí a dovedností a institucionálních schopností, žádné hledání a ustanovování efektivních způsobů práce, řízení a řešení problémů - což jsou přesně funkce, které by měli vést a podporovat např. státní tajemníci a ředitelství státní služby, proti kterým tolik politiků najednou brojí.</p>
 <p>Ukážu to na příkladech, které shodou okolností pocházejí z opačných stran Sněmovny. Záměrně nejmenuji autory výroků, protože nejde o jména a protože tyto výroky jsou tak či onak pouze ilustrací.</p>
 <p>Příklad první:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+  Každopádně, když jsem dělala ty testy úředníkům, tak jsem vždy zjistila, že úředník typově je člověk, který má rád stabilitu, nemá rád rizika, rizik se poměrně značně bojí, pokud ho vykývneme z té stability, tak jeho výkonnost značně poklesává a samozřejmě se to potom podepisuje na jeho práci. Kdyby vás to zajímalo, tak v české státní správě, jak jsem z těch testů vyrozuměla, není příliš mnoho inovátorů, není tam příliš mnoho razantních developerů, není tam příliš mnoho lidí, kteří chtějí měnit věci. A já říkám, že je to tak dobře, protože státní správa má mít tuto základní vlastnost, kterou je stabilita.
+</blockquote>
 <p>Ano, některé charakteristiky práce ve státní správě přitahují lidi určitého typu (např. relativní jistota zaměstnání, kterou vyžaduje právě ochrana od politických vlivů a která je ale vyvážena nižším ohodnocením). To ale neznamená, že máme cíleně budovat takovou státní správu, která bude podporovat jen tento přístup k práci a přitahovat jen tento typ lidí. Taková státní správa moc efektivní nebude. Nebude umět řešit složité problémy, a to je je na vysoké úrovni - tam, kde se potkává s ministry - její hlavní role, která vyžaduje právě inovativní myšlení. Ano, mnohé státní správy (ale i soukromé firmy) bojují se slabou schopnností myslet kreativně a inovovat. To neznamená, že nad tím máme zlomit hůl. Co se týče souvislosti se stabilitou ve smyslu institucionálním (tj. aby každá změna vlády nepřinesla personální otřesy atd. atd.), zde se autorka výroku dopustila zmatení pojmů: státní správa má být organizačně a pokud možno personálně stabilní, ale nikoli proto, že to údajně úředníkům dělá dobře na duši. A obráceně: to, jaké osobnostní rysy máme chtít po dobrém úředníkovi, nemá být určováno jen naší touhou po stabilní státní správě.</p>
 <p>A že konkrétně v české státní správě není mnoho inovátorů a &ldquo;developerů&rdquo; možná vzhledem k jejímu stavu a nedávné historii není překvapením. Toto konstatování by ale mělo být součástí definice problému, nikoli premisou nefunkčního argumentu pro stabilitu.</p>
 <p>Příklad druhý:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+  Co znamená vytváření informačních systémů? Chápu to dobře, že státní úředníci budou programovat a budou vytvářet ty softwary? To je poměrně neefektivní, protože to bude velice finančně náročné. Ale pokud ano, tak si myslím, že tedy programátoři by neměli být státními úředníky. Programátoři jsou lidé, kteří dělají kreativní činnost a neměli by padat pod zákon o státní službě. A určitě, pokud mají programátoři vytvářet komplikované softwary, tak se nevejdou do těch tabulek, které jsou navrženy.
+</blockquote>
 <p>Jakkoli souhlasím s poslední větou, na ten zbytek si dovolím zareagovat obrázkem. I takto může vypadat kus státní správy:</p>
 <p><img src="http://cdni.wired.co.uk/620x413/o_r/photo_2.JPG" alt="Zdroj: Wired">
 Zdroj: <a href="http://www.wired.co.uk/news/archive/2012-02/01/gov-uk-enters-beta">Wired</a></p>

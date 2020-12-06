@@ -30,30 +30,71 @@
 </head>
 
 
-<body class='page type-byrokrates layout-post'>
+<body class='page type-byrokrates layout-post has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/cz'>✱</a></li><li class='item'>
+  <a href='/cz/work/'>Práce</a></li><li class='item'>
+  <a href='/cz/talks'>Přednášky &amp;c</a></li><li class='item'>
+  <a href='/cz/byrokrates'>Byrokrates</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-lang_switch sep-after'><nav aria-label='' class = "menu">
+    <ul>
+    
+        <li>
+          <a rel="alternate" href="/en" hreflang="en" lang="en"> > en</a>
+        </li>
+        </ul>
+  </nav>
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'> </h4>
+  </header>
+
+  <form action='/cz/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Hledat</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Hledat&hellip;'>
+    </label></form>
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
-      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
-  <div class='container'>
-    
-    <ul><li class='item'>
-        <a href='/cz'>✱</a>
-      </li><li class='item'>
-        <a href='/cz/projects/'>Projekty</a>
-      </li><li class='item'>
-        <a href='/cz/talks'>Přednášky &amp;c</a>
-      </li><li class='item'>
-        <a href='/cz/byrokrates'>Byrokrates</a>
-      </li>
-          <li><a rel="alternate" href="/en" hreflang="en" lang="en"> · en</a></li>
-        </ul>
-  </div>
-</nav>
+      <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
@@ -95,7 +136,7 @@
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-Čtení na 4 minut(y).
+Čtení na 5 minut(y).
 </span>
 
 
@@ -118,32 +159,38 @@
 <p>No a jak je to v Česku? Stav hlavní české strategie na podporu výzkumu a vývoje <a href="http://metodikahodnoceni.blogspot.cz/2016/03/strategie-ris3-tajemny-hrad-v-karpatech.html">popisuje na svém blogu Daniel Münich</a>. Pokud o tom víc neví on, tak už u nás nikdo.</p>
 <h2 id="svtov-banka-ppadov-studie-byrospeakuhttpwwwnytimescom20160415upshotat-the-world-bank-a-shortage-of-concrete-languagehtml">Světová banka: <a href="http://www.nytimes.com/2016/04/15/upshot/at-the-world-bank-a-shortage-of-concrete-language.html">případová studie byrospeaku</a></h2>
 <p>New York Times popisují čerstvou studii lingvistů, kteří se pokusili kvantifikovat, jak se změnil jazyk ve zprávách Světové banky.</p>
-<!-- raw HTML omitted -->
+<blockquote>
+  In the early decades, for example, bank reports consistently referred to specific places, projects, equipment, tools and activities. Past and present tense verbs were common, marking completed activities and allowing for comparisons.
 <p>&hellip;</p>
 <p>In the last 20 years, that kind of nuts-and-bolts language disappears, Mr. Pestre said. Verbs are turned into nouns – something that linguists have argued converts specific actions taken by named actors into “abstract objects.” (People and countries no longer “cooperate,” for example; there is just “cooperation.”)</p>
 <p>&hellip;</p>
 <p>At the same time, the use of adverbs that refer to a particular time frame (such as “now,” “recently” or “later”) declined by more than 50 percent. Past tense verbs grew rarer, while jargon and acronyms proliferated.</p>
-<!-- raw HTML omitted -->
+</blockquote>
 <h2 id="opendata">#opendata</h2>
 <p>Na ministerstvu financí vydali <a href="http://www.mfcr.cz/cs/verejny-sektor/smart-governance/otevrena-data-ministerstva-financi/vyrocni-zprava-k-projektu-otevrenych-dat-24518">výročku o otevřených datech</a>, via <a href="http://blog.aktualne.cz/blogy/michal-tosovsky.php?itemid=27224">blog Michala Tošovského</a> z Nadace Open Society Fund Praha.</p>
 <p>A 9. června proběhne v Praze <a href="http://www.otevrenadata.cz/aktualni-deni/open-data-expo-tak-trochu-jiny-veletrh/">Open Data Expo</a>:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote>
+  Publikujete otevřená data? Chtěli byste data publikovat, ale nevíte jak na to? Rádi byste předali svoje zkušenosti jako dobrou praxi ostatním? Anebo jste na druhé straně a otevřená data využíváte? Připravujete projekt, aplikaci, či prototyp, který získá díky otevřeným datům na jedinečnosti: Registrujte se na historicky první veletrh otevřených dat [Open Data Expo](https://docs.google.com/forms/d/1TXHncgmlzWvOFGIAaUd_Nj5uc4-XPub1eLTs0RtJ4Sc/viewform)!</blockquote>
+</blockquote>
 <h2 id="nestarme-se-o-rodinn-stbro">Nestaráme se o rodinné stříbro</h2>
 <p>Martin Wolf <a href="https://next.ft.com/content/416a83f4-0184-11e6-99cb-83242733f755">recenzuje</a> ve Financial knihu The Public Wealth of Nations od Daga Dettera, ve které autoři upozorňují, že veřejná aktiva - firmy, budovy a jiný majetek - jsou nevyužitým a málo sledovaným koutem veřejných financí.</p>
-<!-- raw HTML omitted -->
+ <blockquote>What is not measured does not count. This is dramatically true in discussion of the public sector. A few numbers — the annual financial deficit and the stock of debt — dominate the debate. The result is chronic mismanagement. The current UK debate, for example, largely ignores assets and makes little distinction between current and capital spending. The present focus also ignores many liabilities and pays little attention to management of assets.</blockquote>
 <p>A často nás trápí nejen nevyužité veřejné statky, ale ty soukromé - nedávno mě zaujal web <a href="http://prazdnedomy.cz">Prázdné domy</a>.</p>
 <h2 id="aby-vs-nkdo-poslouchal">Aby vás někdo poslouchal</h2>
 <p>Britská Alliance for Useful Evidence dala dohromady evidence-based průvodce o tom, jak nejlépe podat vaši evidence tak, aby došla využití.](<a href="http://www.alliance4usefulevidence.org/publication/using-evidence-what-works-april-2016/)">http://www.alliance4usefulevidence.org/publication/using-evidence-what-works-april-2016/)</a>. Shrnutí <a href="https://whatworkswellbeing.org/2016/04/12/so-what-works-in-getting-research-used-in-decision-making/">na blogu centra What Works Wellbeing</a></p>
 <p><a href="http://www.civilserviceworld.com/articles/feature/are-what-works-centres-working-%E2%80%93-or-evidence-based-policymaking-still-pipe-dream">Jak jsou na tom What Works Centres</a></p>
 <p>aneb jde to:</p>
-<!-- raw HTML omitted -->
+ <blockquote>
+   “Previously, evidence was not widely used in education. It was largely a tradition of fads and fashions. We very quickly determined the organisation’s focus would be how to supply evidence to enable better decisions, rather than write guidance and use compliance to make people follow it,” Collins says. He adds that the EEF has made “a big push to make sure we present evidence in a way that is accessible to people”. [shrnutí](http://www.civilserviceworld.com/articles/feature/are-what-works-centres-working-%E2%80%93-or-evidence-based-policymaking-still-pipe-dream)
+</blockquote>
 <h2 id="designov-slubyhttpwwwthespiderprojecteu"><a href="http://www.thespiderproject.eu/">Designové služby</a></h2>
 <p><a href="http://www.thespiderproject.eu/wp-content/uploads/2016/04/SPIDER_EvaluationReport_V1_March2016.pdf">Zpráva o evropském projektu SPIDER</a>: pečlivěji a více strukturovaně než  většina předešlých publikací o designu ve veřejných službách a sociálních inovacích rozebírá design služeb na příkladech případových studií.</p>
 <p>Z projektu vypadl i <a href="http://www.servicedesigntoolkit.org/index.html">toolkit.</a></p>
 <h3 id="webov-mgov-britsk-vldy-kte-postavili-na-nohy-govuk-vysvtluj-design-sluebhttpsgdsbloggovuk20160418what-we-mean-by-service-design"><a href="https://gds.blog.gov.uk/2016/04/18/what-we-mean-by-service-design/">Weboví mágové britské vlády, kteří postavili na nohy GOV.UK, vysvětlují design služeb</a></h3>
 <p><a href="https://designnotes.blog.gov.uk/2015/06/22/good-services-are-verbs-2/">Dobré služby jsou slovesa, špatné služby jsou podstatná jména.</a></p>
-<!-- raw HTML omitted -->
+ <blockquote>
+   Imagine walking into crowded room and trying to find a doctor, and only once you’ve learned her name can you ask her to help you. That’s how using a lot of  government services works.
+</blockquote>
 <h3 id="ale-mon-je-to-v-praxi-hlavn-archeologiehttpstwittercomemilyishnessstatus722059035894222848cgvevquwsaapwjchttpbyrokratesczwp-contentuploads201604cgvevquwsaapwjcjpg">Ale možná je to v praxi <a href="https://twitter.com/Emilyishness/status/722059035894222848">hlavně archeologie</a><img src="http://byrokrates.cz/wp-content/uploads/2016/04/CgVEvqUWsAApwJC.jpg" alt="CgVEvqUWsAApwJC"></h3>
 <h2 id="jak-nabrat-a-motivovat-zamstnance-ve-veejn-sfehttpeconomicsmitedufiles11220"><a href="http://economics.mit.edu/files/11220">Jak nabírat a motivovat zaměstnance ve veřejné sféře</a></h2>
 <p>&hellip;aneb co všechno se ví o tom, co motivuje zaměstnance veřejných institucí a jaké způsoby výběru lidí vedou k dobrým výsledkům. Založeno především na studiích z rozvojových zemí - studie je souhrnem literatury z dílny expertů na MIT.</p>

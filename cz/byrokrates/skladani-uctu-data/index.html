@@ -32,30 +32,71 @@ Veřejné účty nejsou zrovna poutavé čtení, ale jsou důležité pro kontro
 </head>
 
 
-<body class='page type-byrokrates layout-post'>
+<body class='page type-byrokrates layout-post has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/cz'>✱</a></li><li class='item'>
+  <a href='/cz/work/'>Práce</a></li><li class='item'>
+  <a href='/cz/talks'>Přednášky &amp;c</a></li><li class='item'>
+  <a href='/cz/byrokrates'>Byrokrates</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-lang_switch sep-after'><nav aria-label='' class = "menu">
+    <ul>
+    
+        <li>
+          <a rel="alternate" href="/en" hreflang="en" lang="en"> > en</a>
+        </li>
+        </ul>
+  </nav>
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'> </h4>
+  </header>
+
+  <form action='/cz/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Hledat</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Hledat&hellip;'>
+    </label></form>
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
-      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
-  <div class='container'>
-    
-    <ul><li class='item'>
-        <a href='/cz'>✱</a>
-      </li><li class='item'>
-        <a href='/cz/projects/'>Projekty</a>
-      </li><li class='item'>
-        <a href='/cz/talks'>Přednášky &amp;c</a>
-      </li><li class='item'>
-        <a href='/cz/byrokrates'>Byrokrates</a>
-      </li>
-          <li><a rel="alternate" href="/en" hreflang="en" lang="en"> · en</a></li>
-        </ul>
-  </div>
-</nav>
+      <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
@@ -97,7 +138,7 @@ Veřejné účty nejsou zrovna poutavé čtení, ale jsou důležité pro kontro
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-Čtení na 3 minut(y).
+Čtení na 4 minut(y).
 </span>
 
 
@@ -114,7 +155,7 @@ Veřejné účty nejsou zrovna poutavé čtení, ale jsou důležité pro kontro
   <p>Odpovědnost veřejných institucí je těžko uchopitelný pojem. Anglický a francouzský termín pro odpovědnost - <em>accountability, comptabilité</em> - ale ukazují na jeden hmatatelný rozměr odpovědnosti: skládání účtů.</p>
 <p>Veřejné účty nejsou zrovna poutavé čtení, ale jsou důležité pro kontrolu veřejných výdajů. Proto je podstatné, aby byly pravdivé. Od toho je audit, ve veřejném sektoru ještě finanční kontrola a speciálně NKÚ. Důležité také je, aby účty byly čitelné. Veřejné účty českého státu na první pohled příliš užitečné nejsou: pro laického uživatele nejsou čitelné a něco se z nich dovědět vyžaduje trpělivost.</p>
 <p>Možná ale stojí za to začít od uplného základu: uvádějí české úřady ve svých závěrečných účtech alespoň ty informace, které po nich vyžadují předpisy?</p>
-<!-- raw HTML omitted -->
+<!-- more -->
 <p>Tuto otázku každý rok zodpovídá Nejvyšší kontrolní úřad, když sestavuje své <a href="http://www.nku.cz/assets/publikace/stanovisko-nku-k-szu-2013.pdf">stanovisko ke státním závěrečnému účtu (pdf)</a>. V příloze na konci dokumentu se skrývá důležitá tabulka - bohužel také není příliš uživatelsky přívětivá. Ukazuje, které vyhláškou vyžadované údaje jednotlivé úřady opravdu uvedly ve svém závěrečném účtu. Zpráva stojí za nahlédnují už jen proto, že závěrečný účet částečně převádí do stravitelné podoby. Krom toho v ní najdete i spoustu užitečných komentářů k fungování českých veřejných financí.</p>
 <p>Část zjištění NKÚ jsem shrnul v tabulce níže. Nahoře jsou údaje, které v závěrečných účtech nejčastěji chybí, dole naopak několik ukázek údajů, které ve všech účtech rozpočtových kapitol najdete.</p>
 <ul>
@@ -125,53 +166,146 @@ Veřejné účty nejsou zrovna poutavé čtení, ale jsou důležité pro kontro
 <p>Špatná zpráva je, že nejčastěji chybí informace o efektivitě vynakládání veřejných peněz: 35% závěrečných účtů tyto informace neobsahuje vůbec a dalších 35% jen částečně. Jen každý třetí úřad tedy reportuje o efektivitě svých výdajů tak, jak má.</p>
 </li>
 </ul>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<table >
+<tr >
+Údaj v závěrečném účtu
+Kapitoly neuvádějící údaj
+</tr>
+<tbody >
+<tr >
+<td align="left" >Hodnocení hospodárnosti, efektivnosti a účelnosti vynakládání výdajů
+</td>
+<td align="left" >35%
+</td>
+</tr>
+<tr >
+<td align="left" >Informace o bezúplatných převodech majetku (nezahrnují se vzájemné převody mezi OSS)
+</td>
+<td align="left" >32%
+</td>
+</tr>
+<tr >
+<td align="left" >Komentář výdajů na platy a ostatní platby za provedenou práci v rámci společných programů ČR a E
+</td>
+<td align="left" >19%
+</td>
+</tr>
+<tr >
+<td align="left" >Rozbor rovnoměrnosti čerpání výdajů se zdůvodněním výkyvů v jednotlivých čtvrtletích roku (zvlášť běžné výdaje a kapitálové výdaje)
+</td>
+<td align="left" >16%
+</td>
+</tr>
+<tr >
+<td align="left" >Přehledy všech zálohových plateb včetně zdůvodnění plateb
+</td>
+<td align="left" >14%
+</td>
+</tr>
+<tr >
+<td align="left" >Čerpání a vývoj investičních transferů poskytnutých neziskovým a podobným organizacím
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Hodnocení a vývoj neinvestičních transferů poskytnutých příspěvkovým a podobným organizacím
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Hodnocení použití prostředků státního rozpočtu na zahraniční rozvojovou spolupráci a humanitární pomoc
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Hodnocení využití prostředků uvolněných na odstraňování následků živelních katastrof a uvedení výše přijatých prostředků zahraniční pomoci
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Hodnocení využití účelově poskytnutých finančních prostředků ze státního rozpočtu na stanovené celostátní programy
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Komentář k plnění závazných ukazatelů
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Komentář vč. zapojení mimorozpočtových zdrojů
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Komentování neinvestičních a investičních transferů podnikatelským subjektům
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Přehled programů zařazených v informačním systému programového financování se základní charakteristikou každého programu včetně jejich rozboru a hodnocení
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Příjmy z rozpočtu EU členěny podle jednotlivých nástrojů
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Rozbor zaměstnanosti a čerpání mzdových prostředků v rozdělení na organizační složky státu a příspěvkové organizace
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Stav nesplacených půjček a návratných finančních výpomocí
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Uvedení výsledků kontrol
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Vyčíslení a komentář výdajů na podporu výzkumu a vývoje a inovací
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Vyčíslení a komentování daňových a nedaňových příjmů (správní poplatky, soudní poplatky, pokuty
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Vyčíslení a zhodnocení poskytnutých i přijatých finančních prostředků na zahraniční aktivity
+</td>
+<td align="left" >0%
+</td>
+</tr>
+<tr >
+<td align="left" >Vyhodnocení příjmů kapitoly (zejména nedaňové, kapitálové, přijaté transfery
+</td>
+<td align="left" >0%
+</td>
+</tr>
+</tbody>
+</table>
 <p>Jak si stojí jednotlivé úřady? Údaje máme za rozpočtové kapitoly; shrnul jsem je graficky níže. (Zvýraznil jsem kapitoly, které jsou spravovány ministerstvy).</p>
 <p>Dobrá zpráva opět je, že z většiny závěrečných účtů se lze dozvědět většinu informací, které v nich podle vyhlášky mají být.</p>
 <p>Špatná zpráva je, že některé úřady až třetinu údajů ve svých zprávach neposkytují vůbec nebo jen zčásti.</p>

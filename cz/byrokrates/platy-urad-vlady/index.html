@@ -36,30 +36,71 @@ Problém je, že z dostupných informací lze vyšíst jen velice málo a cílem
 </head>
 
 
-<body class='page type-byrokrates layout-post'>
+<body class='page type-byrokrates layout-post has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/cz'>✱</a></li><li class='item'>
+  <a href='/cz/work/'>Práce</a></li><li class='item'>
+  <a href='/cz/talks'>Přednášky &amp;c</a></li><li class='item'>
+  <a href='/cz/byrokrates'>Byrokrates</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-lang_switch sep-after'><nav aria-label='' class = "menu">
+    <ul>
+    
+        <li>
+          <a rel="alternate" href="/en" hreflang="en" lang="en"> > en</a>
+        </li>
+        </ul>
+  </nav>
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'> </h4>
+  </header>
+
+  <form action='/cz/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Hledat</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Hledat&hellip;'>
+    </label></form>
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
-      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
-  <div class='container'>
-    
-    <ul><li class='item'>
-        <a href='/cz'>✱</a>
-      </li><li class='item'>
-        <a href='/cz/projects/'>Projekty</a>
-      </li><li class='item'>
-        <a href='/cz/talks'>Přednášky &amp;c</a>
-      </li><li class='item'>
-        <a href='/cz/byrokrates'>Byrokrates</a>
-      </li>
-          <li><a rel="alternate" href="/en" hreflang="en" lang="en"> · en</a></li>
-        </ul>
-  </div>
-</nav>
+      <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
@@ -116,7 +157,7 @@ Problém je, že z dostupných informací lze vyšíst jen velice málo a cílem
 
   <div class='container entry-content'>
   <p>Skvělý začátek, chtělo by se říct. Úřad vlády <a href="http://www.vlada.cz/cz/media-centrum/tiskove-zpravy/odmeny-109343/">zveřejnil</a> výše platů a odměn svých vysokých úředníků (<a href="http://www.vlada.cz/cz/media-centrum/aktualne/urad-vlady-rozsiruje-zverejnovani-platu-vedoucich-pracovniku--109828/">druhá část</a>).</p>
-<!-- raw HTML omitted -->
+<!-- more -->
 <p><a href="http://byrokrates.files.wordpress.com/2013/08/uv_platy.jpg"><img src="http://byrokrates.files.wordpress.com/2013/08/uv_platy.jpg?w=373" alt="Image"></a></p>
 <p>Problém je, že z dostupných informací lze vyšíst jen velice málo a cílem podle všeho bylo zveřejnit několik hrozivě vypadajících čísel, nikoli uvolnit použitelné informace. Zde je několik konkrétních problémů, které by Úřad vlády a jeho ředitel Radek Augustin měli vysvětlit a napravit.</p>
 <ol>

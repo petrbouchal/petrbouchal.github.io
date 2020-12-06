@@ -553,16 +553,30 @@
   </url>
   
   <url>
-    <loc>https://petrbouchal.xyz/cz/projects/</loc>
+    <loc>https://petrbouchal.xyz/cz/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://petrbouchal.xyz/projects/"
+                href="https://petrbouchal.xyz/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cz"
-                href="https://petrbouchal.xyz/cz/projects/"
+                href="https://petrbouchal.xyz/cz/search/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/cz/work/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://petrbouchal.xyz/work/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="https://petrbouchal.xyz/cz/work/"
                 />
   </url>
   

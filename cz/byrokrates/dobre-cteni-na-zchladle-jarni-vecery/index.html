@@ -34,30 +34,71 @@ Přístup se dostal i do nové sbírky textů OECD na téma governance určené 
 </head>
 
 
-<body class='page type-byrokrates layout-post'>
+<body class='page type-byrokrates layout-post has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/cz'>✱</a></li><li class='item'>
+  <a href='/cz/work/'>Práce</a></li><li class='item'>
+  <a href='/cz/talks'>Přednášky &amp;c</a></li><li class='item'>
+  <a href='/cz/byrokrates'>Byrokrates</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-lang_switch sep-after'><nav aria-label='' class = "menu">
+    <ul>
+    
+        <li>
+          <a rel="alternate" href="/en" hreflang="en" lang="en"> > en</a>
+        </li>
+        </ul>
+  </nav>
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'> </h4>
+  </header>
+
+  <form action='/cz/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Hledat</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Hledat&hellip;'>
+    </label></form>
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
-      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
-  <div class='container'>
-    
-    <ul><li class='item'>
-        <a href='/cz'>✱</a>
-      </li><li class='item'>
-        <a href='/cz/projects/'>Projekty</a>
-      </li><li class='item'>
-        <a href='/cz/talks'>Přednášky &amp;c</a>
-      </li><li class='item'>
-        <a href='/cz/byrokrates'>Byrokrates</a>
-      </li>
-          <li><a rel="alternate" href="/en" hreflang="en" lang="en"> · en</a></li>
-        </ul>
-  </div>
-</nav>
+      <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
@@ -99,7 +140,7 @@ Přístup se dostal i do nové sbírky textů OECD na téma governance určené 
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-Čtení na 3 minut(y).
+Čtení na 4 minut(y).
 </span>
 
 
@@ -119,18 +160,30 @@ Přístup se dostal i do nové sbírky textů OECD na téma governance určené 
 <p>Jde o přístup, o kterém jsem tu už vícekrát psal, naposledy <a href="http://byrokrates.cz/2016/03/22/randomizatori-a-ti-druzi/">před pár týdny</a>.</p>
 <p>Přístup se dostal i do <a href="http://www.oecd.org/dac/governance-peace/governance/governance-practitioners-notebook.htm">nové sbírky textů OECD na téma governance</a> určené pro rozvojové praktiky. Zdá se, že OECD v oblasti governance prochází něčím podobným, čím před pár lety prošla Světová banka - tedy hlubší promýšlení vlastního přístupu k problematice vládnutí a částečné ustupování od důrazu na best practices (<a href="http://byrokrates.cz/2013/11/12/reforma-statni-spravy-navod-k-pouziti/">blog</a>, <a href="http://siteresources.worldbank.org/PUBLICSECTORANDGOVERNANCE/Resources/285741-1287520109339/PSM-Approach.pdf">zpráva Světové banky</a>).</p>
 <p>Nad užitečností RCTs jako &ldquo;zlatého standartu&rdquo; učení se o tom co funguje <a href="http://innovationgrowthlab.org/blog/how-learn-and-improve-what-we-do-rugged-landscape-programmes-and-policies">uvažují</a> v kontextu podpory růstu a malých a středních podniků i experti Innovation Growth Lab:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+   One way to facilitate quick learning and get the right combination of components and parameters in place is to **be more experimental **in a wider sense than ‘just doing RCTs’. We could consider including some mechanisms in the intervention that inform the practitioners in real time, for example, about how well SMEs participating in the face-to-face skills-based programme absorb the concepts and material presented to them.
+</blockquote>
 <p>Na toto téma - dobrá praxe versus pokus, hierarchie versus místní řešení - též pár nedávných textů:</p>
 <h3 id="hbr-top-down-solutions-like-holacracy-dont-workhttpshbrorg201603top-down-solutions-like-holacracy-wont-fix-bureaucracy"><a href="https://hbr.org/2016/03/top-down-solutions-like-holacracy-wont-fix-bureaucracy">HBR: top down solutions like holacracy don't work</a>.</h3>
-<!-- raw HTML omitted -->
+<blockquote>
+   In our view, there is something inherently contradictory about using authoritarian means to implement a management model aimed at enhancing self-determination. Nothing will sabotage the work of busting bureaucracy faster than an abrupt and ill-conceived move that creates organizational upheaval and unites opponents.
+</blockquote>
 <p>&hellip;</p>
-<!-- raw HTML omitted -->
+<blockquote>
+  Bureaucracy didn’t burst forth fully formed 150 years ago. It emerged gradually as the product of relentless experimentation — and that’s how progressive organizations will chart a course to a post-bureaucratic future. Revolutionary goals, evolutionary steps — that’s the recipe.
+</blockquote>
 <h3 id="how-the-us-historically-avoided-the-tyranny-of-expertshttpbuildingstatecapabilitycom20140404you-cannot-juggle-without-the-struggle-how-the-usa-historically-avoided-the-tyranny-of-experts"><a href="http://buildingstatecapability.com/2014/04/04/you-cannot-juggle-without-the-struggle-how-the-usa-historically-avoided-the-tyranny-of-experts/">How the US historically avoided the tyranny of experts</a></h3>
-<!-- raw HTML omitted -->
+<blockquote>
+   In each of these cases narratives of “scientific” and “efficiency” and “rational” and “ordered” and “modern” were used to justify placing ever greater power into the hands of centralized organizations. But these organizations had to struggle against counter-claims of people and grass-roots movements and local politics who knew they were losing power.
+</blockquote>
 <h3 id="why-trust-beats-hierarchyhttpsmediumcompublic-innovators-networkwhy-trust-beats-hierarchy-52861563ec1aigpafutkq"><a href="https://medium.com/public-innovators-network/why-trust-beats-hierarchy-52861563ec1a#.igpafutkq">Why trust beats hierarchy</a></h3>
-<!-- raw HTML omitted -->
+<blockquote>
+   Big organisations are full of isolated cells. We call them departments, arms-length bodies, units, professions, teams. At the moment, the best leaders should feel like they’re spending almost all their time scaling these walls. Not a minute of it is wasted. We need them to climb faster than the people building the walls.
+</blockquote>
 <p>&hellip;</p>
-<!-- raw HTML omitted -->
+<blockquote>
+   Sometimes trust is misplaced. But if an organisation starts from the assumption it’ll be screwed over, even the best leaders will be scuppered from the start.
+</blockquote>
 <h3 id="payment-by-results-pro-to-vichni-chtj-kdy-to-nefungujehttpoxfamblogsorgfp2ppayment-by-results-hasnt-produced-much-in-the-way-of-results-but-aid-donors-are-doing-it-anyway-why"><a href="http://oxfamblogs.org/fp2p/payment-by-results-hasnt-produced-much-in-the-way-of-results-but-aid-donors-are-doing-it-anyway-why/">Payment by results: proč to všichni chtějí, když to nefunguje?</a></h3>
 <p>Trend &ldquo;já [stát] vám [nevládkám a firmám poskytujícícím mým jménem veřejné služby] zaplatím za výsledky, ne za vstupy&rdquo; začal v britské veřejné správě, hlavně v zapeklitých oblastech typu probace, a zanedlouho se rozšířit do oblasti mezinárodního rozvoje. Narozdíl od domácích politik, kde se úspěchy najdou, není v rozvoji vyzkoušený, přesto ale velmi populární mezi donory. Duncan Green se ptá proč tomu tak je.</p>
 <h3 id="a-do-tetice-z-pihrdky-trendy-pstupy-positive-deviancehttpoxfamblogsorgfp2pbook-review-the-power-of-positive-deviance">A do třetice z přihrádky &ldquo;trendy přístupy&rdquo;: <a href="http://oxfamblogs.org/fp2p/book-review-the-power-of-positive-deviance/">positive deviance</a></h3>
@@ -138,7 +191,9 @@ Přístup se dostal i do nové sbírky textů OECD na téma governance určené 
 <h2 id="experimenty-pokolikt-u">Experimenty, pokolikáté už</h2>
 <p>Celkem jasnozřivě (když vezmeme v potaz čerstvě vypuštěné heslo jedné strany debaty o inkluzi ve znění <a href="http://www.ods.cz/clanek/11516-skolstvi-musi-byt-prioritou-mame-konkretni-reseni">&ldquo;na dětech se netestuje&rdquo;</a> ) napsal před pár dny Michal Kašpárek <a href="http://www.penize.cz/ekonomika/309920-socialnich-experimentu-nepodnikame-moc-ale-malo">užitečnou úvahu</a> nad rétorikou &ldquo;sociálních experimentů&rdquo; v české veřejné debatě.</p>
 <p>Kašpárek argumentuje, že experimentů je u nás málo, nikoli moc. Navíc ale nejde jen o kvantitu experimentů, ale i o jejich náklady a o chuť do nich investovat, jak vysvětluje <a href="http://thelongandshort.org/society/the-problem-with-evidence-based-policy">text</a> v online žurnálu The Long &amp; Short britské inovační nadace Nesta.</p>
-<!-- raw HTML omitted -->
+<blockquote>
+    If you're serious about basing policy on evidence, how much are you prepared to spend on research, and how long are you prepared to wait for the answers?
+</blockquote>
 <h2 id="neortodoxn-pstupy-ke-tvorb-politik">Neortodoxní přístupy ke tvorbě politik</h2>
 <p>Když se budete zajímat nejen o to, <em>co</em> mají veřejné instituce dělat (tady odpověď mohou najít experimenty zmiňované výše), ale <em>jak</em>, narazíte v kategorii <em>nové trendy</em> na pokusy o přebírání postupů z oblasti vývoje softwaru - viz text <a href="https://medium.com/public-innovators-network/10-things-policy-can-learn-from-product-bc7eedbae96#.jbjwlhw39">10 things policy can learn from product</a> a nebo z designu a participativních přístupů. Obojí se hodně odrážíb v britském tažení za <em>open policy making</em>, které se před pár týdny zhmotnilo v celý <a href="https://www.gov.uk/guidance/open-policy-making-toolkit">open policy making toolkit</a>.</p>
 <h2 id="jak-chud-skuten-jsme">Jak &ldquo;chudí&rdquo; skutečně jsme?</h2>

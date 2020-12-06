@@ -34,30 +34,71 @@ Ricardo Hausmann se před pár týdny opřel do randomizovaných experimentů co
 </head>
 
 
-<body class='page type-byrokrates layout-post'>
+<body class='page type-byrokrates layout-post has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/cz'>✱</a></li><li class='item'>
+  <a href='/cz/work/'>Práce</a></li><li class='item'>
+  <a href='/cz/talks'>Přednášky &amp;c</a></li><li class='item'>
+  <a href='/cz/byrokrates'>Byrokrates</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-lang_switch sep-after'><nav aria-label='' class = "menu">
+    <ul>
+    
+        <li>
+          <a rel="alternate" href="/en" hreflang="en" lang="en"> > en</a>
+        </li>
+        </ul>
+  </nav>
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'> </h4>
+  </header>
+
+  <form action='/cz/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Hledat</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Hledat&hellip;'>
+    </label></form>
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
-      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
-  <div class='container'>
-    
-    <ul><li class='item'>
-        <a href='/cz'>✱</a>
-      </li><li class='item'>
-        <a href='/cz/projects/'>Projekty</a>
-      </li><li class='item'>
-        <a href='/cz/talks'>Přednášky &amp;c</a>
-      </li><li class='item'>
-        <a href='/cz/byrokrates'>Byrokrates</a>
-      </li>
-          <li><a rel="alternate" href="/en" hreflang="en" lang="en"> · en</a></li>
-        </ul>
-  </div>
-</nav>
+      <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
@@ -99,7 +140,7 @@ Ricardo Hausmann se před pár týdny opřel do randomizovaných experimentů co
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-Čtení na 4 minut(y).
+Čtení na 5 minut(y).
 </span>
 
 
@@ -114,26 +155,30 @@ Ricardo Hausmann se před pár týdny opřel do randomizovaných experimentů co
 
   <div class='container entry-content'>
   <p>[caption id=&quot;attachment_785&rdquo; align=&quot;alignright&rdquo; width=&quot;700&rdquo;]<img src="http://emmatomkinson.files.wordpress.com/2013/05/rct1.png?w=1400" alt="RCT"> Laura Haynes et al., Test, Learn, Adapt, UK Cabinet Office, 2012[/caption]</p>
-<!-- raw HTML omitted -->
+<!-- more -->
 <p>Tentokrát pár odkazů a poznámek na téma radnomizované experimenty a &ldquo;co funguje&rdquo;.</p>
 <p>Ricardo Hausmann  se před pár týdny <a href="https://www.project-syndicate.org/commentary/evidence-based-policy-problems-by-ricardo-hausmann-2016-02">opřel do randomizovaných experimentů</a> coby nástroje zjišťování &ldquo;what works&rdquo;. Zopakoval známé slabé stránky RCTs - ve zkratce: &ldquo;že to fungovalo tam, kde jste udělali experiment, neznamená, že to funguje&rdquo; - a místo randomizace celých intervencí navrhuje, abychom otázku &ldquo;co funguje?&rdquo; odpovídali pomocí iterativního učení se - tedy abychom v každé veřejné intervenci identifikovali jednotlivé součástky a následně se cíleně a průběžně učili z toho, jak celá intervence funguje při různých kombinacích těchto součástek. Dobře tento přístup popisují harvardští rozvojoví ekonomové Lant Pritchett, Matt Andrews a Michael Woolcock (na které se Hausman taky odkazuje) v nedávném <a href="http://bsc.cid.harvard.edu/files/bsc/files/doing_problem_driven_work_wp_307.pdf">paperu</a>; techničtější ale dobře pochopitelný popis je ve <a href="http://www.cgdev.org/publication/its-all-about-mee-using-structured-experiential-learning-e-crawl-design-space">starším paperu Lanta Pritchetta a kolegů</a>.</p>
 <p>Dobrou, stručnou a ucelenou reakci na tuto polemiku s rozvojovým (a čím dál tím i mainstreamově evaluačním) konsensem sepsal <a href="http://chrisblattman.com/2016/02/25/13667/">Chris Blattman</a>. Za přečtení stojí celá. Jako člověka s politologickým vzděláním mě zaujala tato věta:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+   In political science, the generation before me fought (and still fights) the methodological war. My generation mostly gets on with doing both qualitative and quantitative research more harmoniously. I feel the same way about the randomista debate. People like me do a little observational work, a little forecasting, a little qualitative work, some randomized trials, and I’m even starting to do some trial-and-error style work with police in Latin America. I don’t think I’m the exception.
+</blockquote>
 <p>Následoval ještě <a href="http://chrisblattman.com/2016/02/29/13709/">dodatek s odstupem</a>, ve kterém se Blattman rozepisu o paralele mezi iterativním zjišťováním &ldquo;co funguje&rdquo; a modelem řízením Lean, známý z Toyoty:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+  ... imagine a Toyota that gives customers a car whether they like it or not. Front-line worker innovation might or might not develop cars that people want to own. The problem is there’s no vote or market test where the ultimate users decide.
 <p>I think this is called the Lada.</p>
 <p>This is the fundamental problem of aid. A bunch of planners have the power to decide and are only accountable to donors, most of whom seem happy to remain ignorant of the details or the actual success of their interventions.</p>
 <p>People have put ahead randomized trials as an improvement over the current mess (including donors who quite fairly don’t know any other way to make this better).</p>
 <p>Now, trial-and-error innovation combined with randomized trails could be more powerful. That was my point. But make no mistake: both are still the tools of the inept planner.</p>
-<!-- raw HTML omitted -->
+</blockquote>
 <p>(Některým kolegům možná tyto věty něco připomínají&hellip;)</p>
 <h2 id="james-heckman-o-faktech-men-dopad-a-stavu-ekonometriehttpwwwecontalkorgarchives201601james-heckman-ohtml"><a href="http://www.econtalk.org/archives/2016/01/james_heckman_o.html">James Heckman o faktech, měření dopadů a stavu ekonometrie</a></h2>
 <p>Velmi, velmi doporučuji poslechnout si alespoň prvních 20 minut rozhovoru s jedním z veteránů empirické práce na veřejných politikách.</p>
 <h2 id="jak-funguje-what-works-v-medicn">Jak funguje &ldquo;what works&rdquo; v medicíně</h2>
 <p><a href="http://www.kingsfund.org.uk/blog/2016/02/nice-a-terrible-beauty">Text</a> britského zdravotnického think tanku Kings Fund, který dobře ukazuje, jakou roli může v systému (zde zdravotnictví, ale může jít třeba o školství) hrát instituce obdařená nějakou mírou pravomoci rozhodovat, co je &ldquo;dobrá praxe&rdquo;.</p>
-<!-- raw HTML omitted -->
+<blockquote>
+   Terrible because it has been, for those denied treatments that failed to cross NICE’s threshold for cost effectiveness. Terrible too, for those in the life sciences industry who spent time and effort producing new products only to find the price set by their employers was too high – for whatever reason – for NICE to approve.
 <p>But it has also been a beauty, in the way that, over the past 16 years, it has sought to balance an essentially unequal equation. Its elements include the interest of the taxpayer in the NHS being cost-effective. The interests of individual patients who, when not paying themselves, have little personal interest in cost-effectiveness – but who do nonetheless have a longer term interest (along with that of other taxpayers) in avoiding situations in which the cost _in_effective drives out the cost effective. The interests of clinicians who generally welcome guidance but detest instruction.</p>
-<!-- raw HTML omitted -->
+</blockquote>
 <p>Což nás přibližuje otázce &ldquo;když už víme, co funguje, proč se to nepoužívá?&rdquo; Pár hezkých případových studií, shodou okolností taky medicínských, kdysi sepsal Atul Gawande v New Yorkeru v článku <a href="http://www.newyorker.com/magazine/2013/07/29/slow-ideas">Slow Ideas</a>; nedávno se k tématu nešíření prokazatelně funkčních věcí <a href="http://opinionator.blogs.nytimes.com/2016/02/29/dont-just-solve-a-problem-go-tell-the-world/">vrátila</a> Tina Rosenberg, která už pět let pro New York Times píše sloupek <a href="http://opinionator.blogs.nytimes.com/category/fixes/?_r=0">Fixes</a>, ve kterém právě takováto šiřitelná řešení rozvojových problémů hledá a propaguje.</p>
 <p>Jako jednu z bariér šíření funkčních řešení Tina Rosenberg identifikuje všudypřítomné pobídky - v akademii, ve filantropii, na trhu - vymýšlet něco nového na úkor využívání existujících a otestovaných nápadů. Možná i v tom mohou být RCTs užitečné: tím, že dávají na stůl jasný (i když nedokonalý, pace Hausmann výše) stav poznání, nutí nás zamýšlet se nad tím, jak toto poznání využít, ne nutně jak zase vymyslet něco ještě chytřejšího. Na druhé straně: když budete poslouchat lidi a týmy, kteří pracují na sociálních inovacích, často zjistíte, že inovací se nemyslí něco nového, co se otestuje a může fungovat všude, ale právě něco, co vznikne iterací a testováním v daném prostředí, pro dané lidi, na řešení konkrétního problému. A jsme zpátky u Hausmanna a harvardských iterátorů: stav mysli, který se kloní k iterativnímu učení  se a hledání řešení na míru, nenahrává představě, že cílem inovace je vymyslet něco &ldquo;škálovatelného&rdquo;. V takové situaci není problém, že chybí motivace chytré inovace šířit, ale že chytré inovace, vzniklé v tomto paradigmatu designového přemýšlení atd. zkrátka nejsou něco, co jde škálovat a šířit. Teď jen, kdyby někdo otestoval, který z těchto přístupů funguje pro jaké typy problémů! Nejlépe experimentálně. <a href="https://xkcd.com/1462/">Počkat&hellip;?</a></p>
 

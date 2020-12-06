@@ -32,30 +32,71 @@ Data jsou sestavena tak, aby pomohla osvětlit rozměry v modelu vládnutí, kte
 </head>
 
 
-<body class='page type-byrokrates layout-post'>
+<body class='page type-byrokrates layout-post has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/cz'>✱</a></li><li class='item'>
+  <a href='/cz/work/'>Práce</a></li><li class='item'>
+  <a href='/cz/talks'>Přednášky &amp;c</a></li><li class='item'>
+  <a href='/cz/byrokrates'>Byrokrates</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-lang_switch sep-after'><nav aria-label='' class = "menu">
+    <ul>
+    
+        <li>
+          <a rel="alternate" href="/en" hreflang="en" lang="en"> > en</a>
+        </li>
+        </ul>
+  </nav>
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'> </h4>
+  </header>
+
+  <form action='/cz/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Hledat</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Hledat&hellip;'>
+    </label></form>
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
-      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
-  <div class='container'>
-    
-    <ul><li class='item'>
-        <a href='/cz'>✱</a>
-      </li><li class='item'>
-        <a href='/cz/projects/'>Projekty</a>
-      </li><li class='item'>
-        <a href='/cz/talks'>Přednášky &amp;c</a>
-      </li><li class='item'>
-        <a href='/cz/byrokrates'>Byrokrates</a>
-      </li>
-          <li><a rel="alternate" href="/en" hreflang="en" lang="en"> · en</a></li>
-        </ul>
-  </div>
-</nav>
+      <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
@@ -112,7 +153,7 @@ Data jsou sestavena tak, aby pomohla osvětlit rozměry v modelu vládnutí, kte
 
   <div class='container entry-content'>
   <p>Experti z LSE a berlínské Hertie School of Governance minulý týden zveřejnili každoroční <a href="http://www.governancereport.org/home/the-2014-report/"><em>Governance Report</em></a>. Letošní zpráva se zaměřila na kapacitu státu vládnout. Kromě pokusu uchopit tento pojem studie přináší i větší množství dat o fungování státního aparátu téměř 200 zemí. Byrokrates se byl podívat na křtu publikace a pak si hrál s daty. Následuje několik poznámek o tom, co zjistil.</p>
-<!-- raw HTML omitted -->
+<!-- more -->
 <p>Data jsou sestavena tak, aby pomohla osvětlit rozměry v modelu vládnutí, který autoři studie vyvinuli, ale některé ukazatele jsou velice informativní i samy o sobě. Dávají nám totiž nahlédnout a srovnat, jak státní spravy různých zemí fungují - jak dobře se umí koordinovat, jakou mají kapacitu zpracovávat a využívat informace, atd.</p>
 <p>To je rozdíl oproti většině existujících indikátorů, které se typicky zaměřují na to, <em>jaká státní správa je</em> (zkorumpovaná či ne, zpolitizovaná či ne, viz index vnímání korupce), nebo naopak na to, <em>jakých dosahuje výsledků</em>, často ve velké míře zobecnění (konkurenceschopnost, kvalita či otravnost regulace, viz World Bank Governance Indicators). To vše je důležité, ale obzváště zajímavá jsou nová data o té tajemné zóně mezi těmito dvěma póly - tedy <em>jak státní zpráva umí dělat to, co dělá</em>. Informace o tomhle rozměru kvality vládnutí jsou podstatné pro pojmenování silných a slabých míst.</p>
 <p>Pro obrázek níže jsem vybral několik indexů z dat studie, které relativně dobře vystihují právě konkrétní aspekty vládnutí jako něčeho, co veřejné organizace <em>dělají</em>. Pro kontext jsem přidal index výsledků vládnutí - ten zahrnuje např. kvalitu zdravotnictví, školství, nebo životního prostředí. Českou republiku jsem postavil do srování se státy v regionu i s státy, které mají relativně kvalitní a výkonnou státní správu.</p>

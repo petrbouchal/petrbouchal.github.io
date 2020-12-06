@@ -32,30 +32,71 @@ Při bližším ohledání se ale ukazuje, že jde spíš o kosmetické opatřen
 </head>
 
 
-<body class='page type-byrokrates layout-post'>
+<body class='page type-byrokrates layout-post has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/cz'>✱</a></li><li class='item'>
+  <a href='/cz/work/'>Práce</a></li><li class='item'>
+  <a href='/cz/talks'>Přednášky &amp;c</a></li><li class='item'>
+  <a href='/cz/byrokrates'>Byrokrates</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-lang_switch sep-after'><nav aria-label='' class = "menu">
+    <ul>
+    
+        <li>
+          <a rel="alternate" href="/en" hreflang="en" lang="en"> > en</a>
+        </li>
+        </ul>
+  </nav>
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'> </h4>
+  </header>
+
+  <form action='/cz/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Hledat</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Hledat&hellip;'>
+    </label></form>
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
-      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
-  <div class='container'>
-    
-    <ul><li class='item'>
-        <a href='/cz'>✱</a>
-      </li><li class='item'>
-        <a href='/cz/projects/'>Projekty</a>
-      </li><li class='item'>
-        <a href='/cz/talks'>Přednášky &amp;c</a>
-      </li><li class='item'>
-        <a href='/cz/byrokrates'>Byrokrates</a>
-      </li>
-          <li><a rel="alternate" href="/en" hreflang="en" lang="en"> · en</a></li>
-        </ul>
-  </div>
-</nav>
+      <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
@@ -97,7 +138,7 @@ Při bližším ohledání se ale ukazuje, že jde spíš o kosmetické opatřen
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-Čtení na 4 minut(y).
+Čtení na 5 minut(y).
 </span>
 
 
@@ -113,7 +154,7 @@ Při bližším ohledání se ale ukazuje, že jde spíš o kosmetické opatřen
   <div class='container entry-content'>
   <p>Jednou z klíčových součástí  nového zákona o státní službě je institut úřednické zkoušky. Je to na první pohled logickou cestou ke zvýšení kvality úřednictva: ti hloupí zkouškou přece neprojdou.</p>
 <p>Při bližším ohledání se ale ukazuje, že jde spíš o kosmetické opatření, které vytváří zbytečnou bariéru vstupu a nové chráněné odvětví; nevyřeší problém, který se alespoň navenek řešit snaží (&ldquo;kvalita úředníků&rdquo;); omylem vytváří profesi, která ve skutečnosti profesí není; a odvádí pozornost od standardních nástrojů, jejichž zlepšení nebo zprovoznění naopak zkvalitnění úřednictva přinést může.</p>
-<!-- raw HTML omitted -->
+<!-- more -->
 <p>Pojďme se nejdřív podívat na situace, kdy profesní zkoušky mají opodstatnění.</p>
 <p>Profesní zkoušky (spolu se členstvím profesní komory) se typicky objevují u profesí, o kterých platí následující:</p>
 <ul>
@@ -146,11 +187,11 @@ Při bližším ohledání se ale ukazuje, že jde spíš o kosmetické opatřen
 <p>Dodatek z 21. dubna: pro nadšence jsem přidal o<a href="http://byrokrates.cz/zastupna-reseni-a-moudra-z-harvardu-jeste-k-urednicke-zkousce/">dkaz na video a working paper o problému nefunkčních efektních</a> řešení a la úřednická zkouška.</p>
 <hr>
 <p><em>Pro odlehčení: v <a href="http://www.civilservice.gov.uk/about/a-partial-history-of-the-civil-service/the-starting-point-before-northcote-trevelyan">takovémhle průšvihu</a> byla britská státní správa, než v 60. letech 19. století zavedli zkoušky tam:</em></p>
-<!-- raw HTML omitted -->
+<blockquote>I have known many instances of individuals boldly stating that they were not put into the service by their patrons to work…. The most feeble sons in families which have been so fortunate as to obtain an appointment, yes and others too, either mentally or physically incapacitated, enter the Service.</blockquote>
 <p>Ano, takovýhle problém šlo řešit zkouškou - ale Česko v roce 2014 je na tom snad lépe?</p>
 <p><a href="http://www.civilservice.gov.uk/about/a-partial-history-of-the-civil-service/the-origins-of-the-modern-civil-service-the-1850s">Takto</a> vypadala kritéra na nábor. Ukázkové otázky ze zkoušky:</p>
-<!-- raw HTML omitted -->
-<p>Find the income tax on £2382.7s.6d at the rate of 16d in the pound.<!-- raw HTML omitted --></p>
+<blockquote>A person having £5,704. 18s. 4½d lays out one third in good which he sells for £2316 5s 10d, how much has he at last, and how much has he gained?
+<p>Find the income tax on £2382.7s.6d at the rate of 16d in the pound.</blockquote></p>
 
 </div>
 

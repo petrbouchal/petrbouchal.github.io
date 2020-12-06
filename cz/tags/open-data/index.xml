@@ -13,7 +13,7 @@
       
       <guid>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-papir-statistika-hospodsky-test-a-dalsi/</guid>
       <description>&lt;p&gt;Co se dělo a co má smysl číst z posledního týdne nebo dvou. Statistika, crowdsourcing, dopad veřejných politik, open data a jiné.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- more --&gt;
 &lt;h2 id=&#34;nov-web-britskho-statistickho-adu-vypad-jako-by-byl-stavn-pro-lidihttponsgovuk&#34;&gt;&lt;a href=&#34;http://ons.gov.uk&#34;&gt;Nový web britského statistického úřadu vypadá, jako by byl stavěný pro lidi&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Britský statistický úřad byl notorický známý svým nepoužitelným webovým portálem - jeden komentátor jej nazval &amp;ldquo;google na LSD&amp;rdquo;. Teď, po roce práce týmu webdesignérů, je na světě nový statistický web a je o poznání lepší. Posuďte sami. Detaily &lt;a href=&#34;http://blog.ons.digital/2016/02/25/new-ons-website-launched/&#34;&gt;zde&lt;/a&gt;; tým tvůrců svoji práci veřejně &lt;a href=&#34;http://blog.ons.digital/&#34;&gt;dokumentoval&lt;/a&gt; po celý uplynulý rok. Jako příklad, jak nově vypadá takový statistický výstup, můžu doporučit třeba &lt;a href=&#34;https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/publicsectorpersonnel/bulletins/civilservicestatistics/2015-10-08&#34;&gt;každoroční shrnutí statistik o britské státní službě&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;ale-i-s-se-v-komunikaci-zlepujehttpwwwstatistikaamycz&#34;&gt;&lt;a href=&#34;http://www.statistikaamy.cz/&#34;&gt;Ale i ČSÚ se v komunikaci zlepšuje&lt;/a&gt;&lt;/h2&gt;
@@ -25,32 +25,39 @@
 &lt;p&gt;Pokud jste zmatení pokaždé, když slyšíte, že je potřeba měřit dopad nějaké aktivity, &lt;a href=&#34;http://www.odi.org/publications/10326-impact&#34;&gt;nový paper&lt;/a&gt; rozvojového think tanku Overseas Development Institute by vám mohl pomoct tento koncept rozmotat. Více v &lt;a href=&#34;http://www.researchtoaction.org/2016/02/what-do-we-mean-by-impact/&#34;&gt;blogovém avíz studie&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;papr-papr-papr&#34;&gt;Papír, papír, papír&lt;/h2&gt;
 &lt;p&gt;Šéf digitální transformace britského úřadu vlády Stefan Czerniawski se zamýšlí (&lt;a href=&#34;http://publicstrategist.com/2016/01/thinking-on-paper/&#34;&gt;část 1&lt;/a&gt;, &lt;a href=&#34;http://publicstrategist.com/2016/02/paper-cutouts-thinking-on-paper-part-2/&#34;&gt;část 2&lt;/a&gt; o tom, jak metafora listu papíru formuje naše uvažování o správě informací ve veřejných organizacích - přesto, že všechno důležité se děje prostřednictvím nástrojů, které se s papírem nikdy nepotkají.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+  all too often, we organise information as if it were on paper, even when it never has been and there is no expectation that it ever will be.
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;psychologists-take-powerhttpwwwnybookscomarticles20160225the-psychologists-take-power&#34;&gt;&lt;a href=&#34;http://www.nybooks.com/articles/2016/02/25/the-psychologists-take-power/&#34;&gt;Psychologists take power&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;V únorovém čísle New York Review of Books vyšel dlouhý (volně přístupný) článek o rostoucím vlivu psychologického výzkumu v oblasti veřejných politik.&lt;/p&gt;
 &lt;h2 id=&#34;hospodsk-testhttpsmediumcompublic-innovators-networkbad-service-design-is-not-a-strategy-b3024efd3e9daeoazbc9n&#34;&gt;&lt;a href=&#34;https://medium.com/public-innovators-network/bad-service-design-is-not-a-strategy-b3024efd3e9d#.aeoazbc9n&#34;&gt;Hospodský test&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Na blogu původně o digitálních veřejných službách jsem narazil na skvělou pasáž o tom, jak testovat, jestli náhodou věci, které v denodenním byrokratickém provozu považujeme za běžné, nejsou úplně padlé na hlavu:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+  The best way to examine arguments like this is the pub test. Can you go to the pub with friends and family — not work colleagues — and make that argument with straight face to a chorus of appreciative nods? I like to think my friends would give me a good slap if I tried that in this case.
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;efektivita-ve-veejnm-sektoruhttpsquarterlybloggovuk20160125improving-public-sector-efficiency-to-deliver-a-smarter-state&#34;&gt;&lt;a href=&#34;https://quarterly.blog.gov.uk/2016/01/25/improving-public-sector-efficiency-to-deliver-a-smarter-state/&#34;&gt;Efektivita ve veřejném sektoru&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Analytici britského úřadu vlády rozebírají měřítka efektivity apod. pro veřejný sektor.&lt;/p&gt;
 &lt;h2 id=&#34;collaborative-overloadhttpshbrorg201601collaborative-overload&#34;&gt;&lt;a href=&#34;https://hbr.org/2016/01/collaborative-overload&#34;&gt;Collaborative Overload&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Harvard Business Review shrnuje výzkum o tom, na koho a proč padá nejvíc žádostí o radu, spolupráci a tak dál - a jaké to má dopady a co s tím. Ve zkratce: mantra &amp;ldquo;potřebujeme více spolupracovat&amp;rdquo; má za následek, že někteří obzvláště žádaní jedinci investují velkou část své energie na&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;We find that what starts as a virtuous cycle soon turns vicious. Soon helpful employees become institutional bottlenecks: Work doesn’t progress until they’ve weighed in. Worse, they are so overtaxed that they’re no longer personally effective.&lt;/blockquote&gt;
 &lt;p&gt;Všiml si toho i &lt;a href=&#34;http://www.economist.com/news/business/21688872-fashion-making-employees-collaborate-has-gone-too-far-collaboration-curse&#34;&gt;The Economist&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;open-data-knots-and-how-to-escape-themhttptheodiorgblogopen-data-knots&#34;&gt;&lt;a href=&#34;http://theodi.org/blog/open-data-knots&#34;&gt;Open data knots and how to escape them&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Jeni Tennison, technická šéfová Open Data Institute, ve skvělé dramaticko-dialogické zkratce popisuje klasické zádrhele mezi institucemi a uživateli v procesu publikace otevřených dat:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+  OWNER: I do not know what data you want
+  So I do not know what to give you.
 &lt;p&gt;USER: I do not know what data you have
 So I do not know what to ask you for.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&amp;hellip;a tak dál. Pokud patříte mezi vydavatele nebo uživatele otevřených dat, určitě čtěte.&lt;/p&gt;
 &lt;h2 id=&#34;technologick-agentura-veejnhttpwwwtacrblogihnedcz&#34;&gt;&lt;a href=&#34;http://www.tacr.blog.ihned.cz/&#34;&gt;Technologická agentura veřejně&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Technologická agentura se otevírá - mentálně i komunikačně. Mentální otevření se projevuje na odkazovaném blogu, kde se dočtete o novém programu na inovativní využití humanitních věd. Komunikační otevření sledujte mimo jiné na &lt;a href=&#34;http://www.slideshare.net/TACRprezentace/presentations&#34;&gt;Slideshare účtu&lt;/a&gt; agentury, kde najdete něco z vnitřního fungování agentury a jejích plánů a z interních přednášek o všehochuti velkých témat.&lt;/p&gt;
 &lt;h2 id=&#34;pbhy-z-dat-ann-emeryhttpannkemerycomfour-storytelling-strategies&#34;&gt;&lt;a href=&#34;http://annkemery.com/four-storytelling-strategies/&#34;&gt;Příběhy z dat: Ann Emery&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Chcete ukázat data, nebo sdělit to hlavní?&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+  Sometimes we need to serve as unbiased collectors and disseminators of information. This is especially true for my workshop participants in research-y roles who publish their data in places like peer-reviewed journal articles or formal research reports with lengthy appendices.
 &lt;p&gt;Other times, we need to get a message across in our graphs — and fast! This is especially true for my workshop participants who are consultants or those who work in communications-y roles. Their viewers are busy, busy, busy. Their viewers are hoping that someone else — you! — will dig through mountains of data and uncover the handful of nuggets worth paying attention to.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;http://byrokrates.cz/wp-content/uploads/2016/02/charts-1-1024x575.png&#34; alt=&#34;charts&#34;&gt;&lt;/p&gt;
 </description>
     </item>

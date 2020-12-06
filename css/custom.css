@@ -6,6 +6,11 @@
     color: #00f;
 }
 
+.widget-lang_switch .menu a{
+    color: #00f;
+    text-transform: none;
+}
+
 .menu a{
     color: #00f;
 }
@@ -33,4 +38,8 @@ pre {
 	border-radius: 0px;
 	background: #e3f1ff;
 	padding: 0.4em;
+}
+
+.search-term {
+  width: 40%;
 }

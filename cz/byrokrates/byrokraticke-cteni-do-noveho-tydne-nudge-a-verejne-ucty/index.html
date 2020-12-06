@@ -34,30 +34,71 @@ Geoff Mulgan, bývalý šéf policy unit v úřadu britského premiéra zveřejn
 </head>
 
 
-<body class='page type-byrokrates layout-post'>
+<body class='page type-byrokrates layout-post has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/cz'>✱</a></li><li class='item'>
+  <a href='/cz/work/'>Práce</a></li><li class='item'>
+  <a href='/cz/talks'>Přednášky &amp;c</a></li><li class='item'>
+  <a href='/cz/byrokrates'>Byrokrates</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-lang_switch sep-after'><nav aria-label='' class = "menu">
+    <ul>
+    
+        <li>
+          <a rel="alternate" href="/en" hreflang="en" lang="en"> > en</a>
+        </li>
+        </ul>
+  </nav>
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'> </h4>
+  </header>
+
+  <form action='/cz/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Hledat</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Hledat&hellip;'>
+    </label></form>
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
-      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
-  <div class='container'>
-    
-    <ul><li class='item'>
-        <a href='/cz'>✱</a>
-      </li><li class='item'>
-        <a href='/cz/projects/'>Projekty</a>
-      </li><li class='item'>
-        <a href='/cz/talks'>Přednášky &amp;c</a>
-      </li><li class='item'>
-        <a href='/cz/byrokrates'>Byrokrates</a>
-      </li>
-          <li><a rel="alternate" href="/en" hreflang="en" lang="en"> · en</a></li>
-        </ul>
-  </div>
-</nav>
+      <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
@@ -114,7 +155,7 @@ Geoff Mulgan, bývalý šéf policy unit v úřadu britského premiéra zveřejn
 
   <div class='container entry-content'>
   <p>Tentokrát mj. o tom, k čemu jsou úřady vlády, jak došťouchat občany ke kýženému chování, a k čemu je státní účetnictví a jak souvisí s dobrým vládnutím.</p>
-<!-- raw HTML omitted -->
+<!-- more -->
 <h2 id="na-vod-pr-general-interest-odkaz">Na úvod pár &ldquo;general interest&rdquo; odkazů</h2>
 <p>Vyšlo <a href="http://quarterly.blog.gov.uk">nové číslo Civil Service Quarterly</a> - výkladní skříň britské státní služby. Tentokrát se v něm sešly články o tom, jak přimět jednotlivá ministerstva, aby realizovala to, co vymyslela nebo jak uspořádat vládní hackday.</p>
 <p>Geoff Mulgan, bývalý šéf policy unit v úřadu britského premiéra <a href="http://www.nesta.org.uk/sites/default/files/reforming_centres_of_govts_-_geoff_mulgan.pdf">zveřejnil svou črtu o roli &ldquo;centra vlády&rdquo;</a>. Užitečné by to mohlo být třeba i pro český Úřad vlády, až se tamní šéfové budou snažit přijít na to, jak zkoordinovat a využít těch <a href="http://www.vlada.cz/cz/clenove-vlady/premier/poradci/poradni-sbor-predsedy-vlady-cr-bohuslava-sobotky-116868/">několik desítek premiérských poradců</a> nebo jak se vyznat v nově zveřejněném (a dlouhém) <a href="http://www.vlada.cz/cz/urad-vlady/organizacni-struktura/organizacni-schema-uradu-vlady-cr-65949/">organogramu Úřadu vlády</a>. (Za zveřejnění ale patří ÚV uznání, teď jen to udržovat aktuální.)</p>
@@ -123,11 +164,12 @@ Geoff Mulgan, bývalý šéf policy unit v úřadu britského premiéra zveřejn
 <p>V posledních pár týdnech se sešlo velké množství novinek a článků na téma využití behaviourálních metod (nudge, šťouch) ve veřejné správě. Tady jsou.</p>
 <p>Cass Sunstein, spoluautor knihy, která &ldquo;šťouchání&rdquo; dala název, sepsal <a href="http://www.theguardian.com/commentisfree/2014/apr/24/nudge-backlash-free-society-dignity-coercion">obranu tohoto přístupu k veřejné politice</a>.</p>
 <p>V jiném článku Sunstein <a href="http://www.bloombergview.com/articles/2014-04-15/nudging-taxpayers-to-do-the-right-thing">shrnuje výsledky využití behaviorálních technik při výběru daní v Británii</a>. Závěr:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+  With this experiment, Hallsworth and his colleagues replicated their earlier finding: "Norm" messages have a large impact. They also found that descriptive norms have a bigger effect than injunctive norms. Finally, highlighting a penalty that would increase over time made it more likely that people would pay.
 <p>Within a period of about three weeks, Hallsworth and his colleagues were able to generate about $15.24 million in additional tax revenue. Note that letters of this sort are essentially cost-free to produce and send, so the benefits of the intervention were easily justified.</p>
 <p>How can these results be explained? The best answer is that people care whether they are acting morally. Their willingness to pay taxes, or to stop procrastinating, depends on whether the moral question is salient to them &ndash; on whether they are incurring “moral costs.”</p>
 <p>If the goal is to promote compliance, it helps if people learn that their fellow citizens think that they should. It helps even more if people learn that those who have not paid are part of a small minority of cheaters.</p>
-<!-- raw HTML omitted -->
+</blockquote>
 <p>Sunsteinovy sloupky jsem nově zařadil mezi <a href="http://byrokrates.cz/blogroll/">doporučené blogy</a>.</p>
 <p>Behavioural Insights Team, který za těmito úspěchy stojí, se mezitím <a href="http://www.economist.com/blogs/freeexchange/2014/02/market-paternalism">vymanil z veřejného sektoru</a> a vydal novou příručku pro využití behaviourálních metod s mnemotechnickým názvem <a href="http://www.behaviouralinsights.co.uk/blogpost/behavioural-insights-team-publishes-east-%E2%80%93-new-framework-applying-behavioural-insights">EAST</a></p>
 <p>Financial Times <a href="http://www.ft.com/intl/cms/s/2/3421a0be-cece-11e3-8e62-00144feabdc0.html">recenzují</a> novou knihu <a href="http://yalepress.yale.edu/yupbooks/book.asp?isbn=9780300197860"><em>Why Nudge?</em></a></p>

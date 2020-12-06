@@ -53,6 +53,20 @@
   </url>
   
   <url>
+    <loc>https://petrbouchal.xyz/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="https://petrbouchal.xyz/cz/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://petrbouchal.xyz/search/"
+                />
+  </url>
+  
+  <url>
     <loc>https://petrbouchal.xyz/bio/</loc>
   </url>
   
@@ -67,20 +81,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://petrbouchal.xyz/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://petrbouchal.xyz/projects/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cz"
-                href="https://petrbouchal.xyz/cz/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://petrbouchal.xyz/projects/"
                 />
   </url>
   
@@ -113,6 +113,20 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://petrbouchal.xyz/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/work/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="https://petrbouchal.xyz/cz/work/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://petrbouchal.xyz/work/"
                 />
   </url>
   
