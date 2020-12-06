@@ -25,7 +25,7 @@ jobs:
         if: runner.os == 'macOS'
         run: brew install cairo
 
-      - name: Install pandoc and pandoc citeproc
+      - name: Install pandoc
         run: |
           brew install pandoc
 
