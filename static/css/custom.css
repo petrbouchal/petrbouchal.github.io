@@ -16,6 +16,21 @@
 }
 .widget-title {
     color: #00f;
+
+}
+
+@media screen and (min-width:920px) {
+ .main {
+  width:auto
+ }
+ .has-sidebar .main {
+  float:none;
+  margin-left:300px;
+  padding-left:2em
+ }
+}
+
+
 .menu a{
     color: #00f;
 }
