@@ -28,7 +28,7 @@
 {{- end -}}
 
 {{- if not ( or .Params.images .Params.cover ) -}}
-  <meta property='og:image' content='{{ .Site.BaseURL }}{{ .Site.Params.images }}'>
+  <meta property='og:image' content='{{ .Site.Params.images | absURL }}'>
 {{- end -}}
 
 {{- with .Params.audios -}}
