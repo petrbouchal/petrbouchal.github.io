@@ -158,6 +158,7 @@ hrefTargetBlank = true
   highlightjsLang = ["r", "yaml"]
   highlightjsTheme = "github"
   images = ["mstile-150x150.png"]
+  cover = ["mstile-150x150.png"]
 
 
 [languages]
