@@ -16,7 +16,8 @@ preserveTaxonomyNames = true
 enableRobotsTXT = true # generate robots.txt
 
 # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
-pygmentsCodefences = false
+pygmentsCodefences = true
+pygmentsUseClasses = true
 pygmentsStyle = "tango"
 
 enableEmoji = true
