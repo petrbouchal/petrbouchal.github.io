@@ -12,7 +12,7 @@ authors: []
 Zjednodušeně řečeno: cíle a opatření navržené v této střešní strategii jsou rozumné; problém je v tom, že reálná aktivita veřejných institucí často směřuje k jiným cílům nebo protichůdně.
 
 **Ale**: jako vedlejší následek vzniku této strategie jsme získali jeden z nejucelenějších pokusů o pravidelné vyhodnocení toho, jak se Česku daří nebo nedaří posouvat se k vytyčeným cílům. 
-A jako vedlejší efekt tohoto cvičení dostáváme docela dobrou mapu poznatků o vývoji. 
+A jako vedlejší efekt tohoto cvičení dostáváme docela dobrou mapu poznatků o vývoji v klíčových oblastech života. 
 (A tím i upozornění na onen zádrhel, že se strategie a reálná činnost státu rozchází.)
 
 První vyhodnocení právě probíhá (dotyčné dokumenty jsou nebo právě prošly meziresortním připomínkováním) a lidé z MŽP své poznatky prezentovali na [Fóru udržitelného rozvoje, které proběhlo minulý týden](https://www.mzp.cz/cz/forum_udrzitelneho_rozvoje_2020). 
