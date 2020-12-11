@@ -157,6 +157,8 @@ hrefTargetBlank = true
   highlightjsCDN = "//cdn.bootcss.com"
   highlightjsLang = ["r", "yaml"]
   highlightjsTheme = "github"
+  images = ["mstile-150x150.png"]
+
 
 [languages]
 # edit this block for your own language
