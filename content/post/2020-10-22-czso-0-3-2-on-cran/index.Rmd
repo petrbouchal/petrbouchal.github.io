@@ -1,0 +1,48 @@
+---
+title: czso 0.3.2 on CRAN
+author: Petr Bouchal
+date: '2020-10-22'
+slug: czso
+categories: [rstats]
+tags: []
+authors: []
+output: 
+  blogdown::html_page:
+    pandoc_args: ["--lua-filter", "pandoc-quotes.lua"]
+lang: cs
+draft: true
+---
+
+```{r}
+print("hi")
+```
+
+```{r}
+3 * 5
+```
+
+```{r}
+# hi there
+
+hi <- function(there) {
+  print(there)
+}
+```
+
+```{r}
+hi(as.character(7))
+```
+
+"Hi" there!!! h!! !!
+
+```{r}
+3 * (1/3)
+```
+
+```r
+123458789 123458789 123458789 123458789 123458789 123458789 123458789 1234587890
+```
+
+
+
+
