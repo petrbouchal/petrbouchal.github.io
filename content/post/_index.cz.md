@@ -13,4 +13,9 @@ tags:
 draft: false
 ---
 
-Časem tu něco bude
+Na tomto blogu se míchají technické a tematické poznámky. 
+Koho zajímá jen nějaké téma, možná se bude chtít podívat na texty podle [kategorií](/cz/categories/) nebo [tagů](/cz/tags/).
+
+Některé texty také existují jen [anglicky](/en/post/).
+
+Texty z dřívějšího blogu Byrokrates jsou v [oddělené sekci](/cz/byrokrates).
