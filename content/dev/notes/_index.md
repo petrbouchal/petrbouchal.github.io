@@ -14,7 +14,7 @@ title: ""
 Menu:
 
 - \*
-- research | výzkum
+- research | výzkum / publications?
 - projects | projekty
 - software ?
 - collaboration / work with me / consulting | poradenství / spolupráce
