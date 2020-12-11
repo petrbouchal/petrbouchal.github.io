@@ -28,6 +28,31 @@
   </url>
   
   <url>
+    <loc>https://petrbouchal.xyz/categories/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="https://petrbouchal.xyz/cz/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://petrbouchal.xyz/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/post/czso/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/categories/rstats/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://petrbouchal.xyz/post/</loc>
     <lastmod>2020-07-24T14:05:48+02:00</lastmod>
     <xhtml:link
@@ -73,20 +98,6 @@
   
   <url>
     <loc>https://petrbouchal.xyz/bio/</loc>
-  </url>
-  
-  <url>
-    <loc>https://petrbouchal.xyz/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cz"
-                href="https://petrbouchal.xyz/cz/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://petrbouchal.xyz/categories/"
-                />
   </url>
   
   <url>
