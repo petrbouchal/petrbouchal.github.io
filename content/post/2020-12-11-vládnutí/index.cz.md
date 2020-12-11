@@ -5,7 +5,6 @@ date: '2020-12-11'
 slug: vladnuti
 categories: []
 tags: []
-images: ["mstile-150x150.png"]
 authors: []
 ---
 
