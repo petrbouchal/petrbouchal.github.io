@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Petr Bouchal</title>
+    <link>https://petrbouchal.xyz/dev/notes/</link>
+    <description>Recent content on Petr Bouchal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 22 Oct 2020 15:36:08 +0200</lastBuildDate><atom:link href="https://petrbouchal.xyz/dev/notes/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
