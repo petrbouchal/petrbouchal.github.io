@@ -15,4 +15,7 @@ draft: false
 
 The English version of this blog contains mostly technical pieces. 
 The [Czech version](/cz/post) contains a mix of technical and substantive writing.
+
 There is also [Byrokrates](/cz/byrokrates), a mirror of my earlier blog on governance. This only exists in Czech.
+
+[RSS feed](/post/index.xml)

@@ -19,3 +19,5 @@ Koho zajímá jen nějaké téma, možná se bude chtít podívat na texty podle
 Některé (hlavně ty technické) texty také existují jen [anglicky](/en/post/).
 
 Texty z dřívějšího blogu Byrokrates jsou v [oddělené sekci](/cz/byrokrates).
+
+[RSS feed](/cz/post/index.xml)
