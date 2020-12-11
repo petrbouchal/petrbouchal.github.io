@@ -3,7 +3,7 @@ one = "Autor"
 other = "Autoři"
 
 [authorsAvatar]
-other = "{{ .Author }}'s avatar"
+other = "avatar uživatele {{ .Author }}"
 
 [by]
 other = "od"
