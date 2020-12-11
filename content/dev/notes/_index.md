@@ -1,13 +1,29 @@
 ---
-date: "2020-10-22T15:36:08+02:00"
-title: ""
-authors: []
+authors: [petrbouchal]
 categories:
-  -
-tags:
-  -
+- null
+date: "2020-10-22T15:36:08+02:00"
 draft: false
+tags:
+- null
+title: ""
 ---
+
+# Future structure
+
+Menu:
+
+- \*
+- research | výzkum
+- projects | projekty
+- software ?
+- collaboration / work with me / consulting | poradenství / spolupráce
+- talks
+- teaching ? | výuka
+- training ? | školení
+- bio
+
+# Links
 
 Dates:
 r
@@ -56,3 +72,6 @@ Other howtos
 - https://drmowinckels.io/blog/changing-you-blogdown-workflow/
 - https://lazappi.id.au/post/2020-04-09-caching-blogdown/
 
+RSS fix
+
+https://jdheyburn.co.uk/blog/who-goes-blogging-6-three-steps-to-improve-hugos-rss-feeds/#fix-image-rendering
