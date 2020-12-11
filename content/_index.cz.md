@@ -10,8 +10,12 @@ tags:
 draft: false
 ---
 
-Petr Bouchal pracuje na rozhraní mezi aplikovaným výzkumem a veřejnými politikami. 
+Pracuji na rozhraní mezi aplikovaným výzkumem a veřejnými politikami. 
 
-Vedl evaluační jednotku NOK, datový tým malé poradenské společnosti a strategický tým IPR Praha; pracoval jako analytik v britském think tanku Institute for Government. 
+Momentálně jsem na volné noze a průběžně spolupracuji s veřejnými a nevládními organizacemi.
 
-Ve všech těchto rolích se snažil mimo jiné zlepšovat práci s daty v prostředí veřejných institucí, včetně jejich komunikace, vizualizace a využití v rozhodování. Kromě řady analytických výstupů je autorem několika softwarových balíků pro využití českých otevřených dat v prostředí statistického jazyka R.
+Vedl jsem evaluační jednotku evropských fondů na MMR, datový tým malé poradenské společnosti a strategický tým IPR Praha; pracoval jako analytik v britském think tanku Institute for Government. 
+
+Ve všech těchto rolích jsem se snažil mimo jiné zlepšovat práci s daty v prostředí veřejných institucí, především jejich komunikace, vizualizace a využití v rozhodování. Kromě jiného jsem členem správní rady [České evaluační společnosti](https://czecheval.cz). Stejně jako využívání dat ve vládnutí mě zajímá i dopad dat a technologií na veřejnou sféru.
+
+Kromě řady analytických [projektů a publikací](/cz/work#applied-analysis) jsem autorem několika [softwarových balíků](/cz/work#r-packages) pro využití českých otevřených dat v prostředí statistického jazyka R.

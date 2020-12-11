@@ -12,7 +12,9 @@ draft: false
 
 I work at the intersection of data analysis, public policy and technology. I do data analysis and create tools for better, evidence-informed governance.
 
-Thematically, I am interested in public finance, urban governance and public strategy generally. Methodologically, I am broadly based as an analyst and policy evaluator with a preference for mixed methods research.
+Currently I am a freelancer, working primarily with public and non-profit organisations. I am available for contract work.
+
+Thematically, I am interested in public finance, urban governance and public strategy generally. Methodologically, I am broadly based as an analyst and policy evaluator with a preference for mixed methods research. I currently serve as a member of the board of the [Czech Evaluation Society](https://czecheval.cz).
 
 Technologically, I work mostly in R with a strong focus on data analysis workflows suited to the reality of evidence use in public service and civil society. I work with all sorts of data - public open data, geospatial, administrative, statistical. I am also very interested in the communication of empirical evidence, especially data visualisation.
 
