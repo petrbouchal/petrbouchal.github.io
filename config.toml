@@ -132,8 +132,14 @@ identifier = "home"
 url = "/"
 
 [[menu.main]]
-name = "Byrokrates"
+name = "Writing"
 weight = 5
+identifier = "blog"
+url = "/post"
+
+[[menu.main]]
+name = "Byrokrates"
+weight = 6
 identifier = "byrokrates"
 url = "/cz/byrokrates"
 
@@ -184,8 +190,14 @@ identifier = "talks"
 url = "/cz/talks"
 
 [[languages.cz.menu.main]]
-name = "Byrokrates"
+name = "Texty"
 weight = 5
+identifier = "blog"
+url = "/cz/post"
+
+[[languages.cz.menu.main]]
+name = "Byrokrates"
+weight = 6
 identifier = "byrokrates-cz"
 url = "/cz/byrokrates"
 
