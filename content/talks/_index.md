@@ -1,7 +1,7 @@
 ---
 date: "2020-10-22T22:11:12+02:00"
 title: "Talks, workshops &c: slides and materials"
-authors: []
+authors: [petrbouchal]
 categories:
   -
 tags:
