@@ -12,7 +12,7 @@ draft: false
 
 I work at the intersection of data analysis, public policy and technology. I do data analysis and create tools for better, evidence-informed governance.
 
-Currently I am a freelancer, working primarily with public and non-profit organisations. I am available for contract work.
+Currently I am a freelancer, working primarily with public and non-profit organisations. I am available for contract work. Previously, I led the strategy team at Prague's Institute for Planning and Development, the Czech government's evaluation unit for EU funds, as well as the data team at a small consulting company. Earlier in my career I worked as a research analyst at the Institute for Government. 
 
 Thematically, I am interested in public finance, urban governance and public strategy generally. Methodologically, I am broadly based as an analyst and policy evaluator with a preference for mixed methods research. I currently serve as a member of the board of the [Czech Evaluation Society](https://czecheval.cz).
 
