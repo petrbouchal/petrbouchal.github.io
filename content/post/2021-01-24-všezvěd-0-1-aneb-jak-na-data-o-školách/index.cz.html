@@ -1,0 +1,66 @@
+---
+title: všezvěd 0.1 aneb jak na data o školách
+author: R package build
+date: '2021-01-25'
+slug: vsezved
+categories: [rstats]
+tags: [štístko, MŠMT, open-data, školy]
+authors: []
+cover: https://repository-images.githubusercontent.com/332728743/29043d00-5f53-11eb-8e97-01ec2cfcfea1
+---
+
+<script src="{{< blogdown/postref >}}index.cz_files/header-attrs/header-attrs.js"></script>
+
+
+<p><strong>tl;dr: <a href="https://petrbouchal.xyz/vsezved">nový balík v R</a> na využití dat z rejstříku škol</strong></p>
+<p>Základní data o školách jsou <em>labyrint</em>.</p>
+<blockquote>
+<p>I vyšel sem od sebe sám a ohlédati se počal mysle, odkud a jak začíti.</p>
+</blockquote>
+<p>(Technicky vzato se bavíme o <strong>rejstříku škol a školských zařízení</strong> a nepřímo i o <strong>rejstříku školských právnických osob</strong>.)</p>
+<p>Můžete mít data o školských právnických osobách, o školských zařízeních, o umístěních školských zařízení, nebo o oborech, které se v jednotlivých školách učí.</p>
+<p>Anebo můžete mít základní kontaktní údaje.</p>
+<p>Dohromady to nejde.</p>
+<blockquote>
+<p>Viděl sem všecky skutky, kteréž se dějí pod sluncem a aj všecko jest marnost a trápení ducha.</p>
+</blockquote>
+<p>Ministerstvo školství zveřejňuje open data té první sady výše - v <a href="https://data.msmt.cz/dataset/rejstrik-skol-a-skolskych-zarizeni-cela-cr">jednom obrovském XML souboru</a>, popř. po krajích - ale pro každou školu jsou všechna data zaklíněna do sebe v jedné XML struktuře. (Jinak to taky můžeme mít <a href="https://rejstriky.msmt.cz/rejskol/">z vyhledávacího formuláře v omezeném množství a bez možnosti exportu</a>.)</p>
+<p>Pak taky existuje server <a href="http://stistko.uiv.cz/registr/vybskolrn.asp">Štístko</a>, kde za několika formuláři a čudlíky najdete polopoužitelný excel s kontaktními adresami a emaily škol.</p>
+<p>Pokud cokoli z toho chcete používat opakovaně, neřkuli strojově, je to dost fuška.</p>
+<blockquote>
+<p>Málo pak tu byl kdo zahálivý, všickni se prací nějakou zanášeli, ale kteréž práce (a tohoť bych se byl nikdý nenadál) nic nebyly než aneb hřičky dětinské aneb leda pachtování.</p>
+</blockquote>
+<p>Proto je tu <a href="https://petrbouchal.xyz/vsezved"><code>{všezvěd}</code></a>: balík v jazyce R, díky němuž se automatizovaně dostanete v vyčištěným datům podle vaší potřeby, bez nutnosti něco naklikávat, stahovat a konvertovat.</p>
+<p>Je v úplně první minimálně funkční verzi.</p>
+<p>Co umí:</p>
+<blockquote>
+<p>Z brány když vycházíme, vidím, že každému tomu ponabroušenému cejch dávají, po němž by, že mezi učence přináleží, poznán býti mohl, kalamář za pás, za ucho péro a do ruky prázdnou knihu k shledávání umění; i dostal sem toho také.</p>
+</blockquote>
+<ul>
+<li>načíst kteroukoli ze čtyř vrstev rejstříku škol (škola, školské zařízení, umístění, obory) z opendatového XML</li>
+<li>načíst kontaktní údaje pro kteroukoli z těchto vrstev ze serveru Štístko, v případě potřeby i s filtrem (tj. například stáhnout ze serveru jen základní školy v okresu Semily)</li>
+</ul>
+<p>Co to znamená:</p>
+<blockquote>
+<p>„Do jakéž sme toto pak apatéky vešli?“ „Do apatéky,“ řekl tlumočník, „kdež se lékové proti neduhům mysli chovají, a ta vlastním jménem bibliotéka slove.</p>
+</blockquote>
+<ul>
+<li>v datech jsou adresy (včetně kódu adresních bodů podle ČÚZK), kapacity škol, ředitelé, statutáři, zřizovatelé a různé kategorizace</li>
+<li>každá škola a školské zařízení mají své ID (REDIZO, resp. IZO)</li>
+<li>je to primárně registr, tj. nejsou tam žádné “živé” údaje o školách (jak jsou dobré nebo špatné, co se v nich děje atd.)</li>
+</ul>
+<p>Co (zatím) neumí:</p>
+<blockquote>
+<p>I šli sme a uvedli mne na nějaký plac, uprostřed něhož uzřím veliký rozložitý strom, na němž všelijaké lístí a všelijaké ovoce (v škořepinách všecko) rostlo, pravili mu Natura.</p>
+</blockquote>
+<ul>
+<li><a href="https://data.msmt.cz/dataset/rejstrik-spo">rejstřík školských právnických osob</a></li>
+<li>stáhnout XML jen pro jednoltivé kraje (tyto exporty se v katalogu objevily až nedávno)</li>
+<li>vyzobávat data o statutárech z opendatového XML, byť tam jsou i s adresami trvalého pobytu…</li>
+<li>žádná “živá” data o školách, která vytváří statistický aparát resortu školství (ročenky, kvanta různých exportů z výkazů od škol a ad hoc sběrů dat)</li>
+</ul>
+<p>A kdo to je: Protože data o školách jsou labyrint a ve školách se učí celý ráj světa, průvodce po datech se jmenuje Všezvěd, stejně jako průvodce Poutníka v <em>Komenského Labyrintu světa a ráji srdce</em>.</p>
+<p>Možná se měl spíš jmenovat Mámil, jako Poutníkův průvodce? Nebo je to vlastně celé <em>lusthauz</em>?</p>
+<blockquote>
+<p>Illustritati Tuae devotus cliens.</p>
+</blockquote>
