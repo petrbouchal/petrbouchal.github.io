@@ -3,6 +3,66 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://petrbouchal.xyz/cz/categories/</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://petrbouchal.xyz/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="https://petrbouchal.xyz/cz/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/cz/tags/m%C5%A1mt/</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/cz/tags/open-data/</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/cz/categories/rstats/</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/cz/tags/</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://petrbouchal.xyz/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="https://petrbouchal.xyz/cz/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/cz/post/vsezved/</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/cz/tags/%C5%A1koly/</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://petrbouchal.xyz/cz/tags/%C5%A1t%C3%ADstko/</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://petrbouchal.xyz/cz/post/vladnuti/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url>
@@ -63,21 +123,6 @@
   </url>
   
   <url>
-    <loc>https://petrbouchal.xyz/cz/categories/</loc>
-    <lastmod>2016-05-31T07:04:48+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://petrbouchal.xyz/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cz"
-                href="https://petrbouchal.xyz/cz/categories/"
-                />
-  </url>
-  
-  <url>
     <loc>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-jak-vznika-byrospeak-jak-byt-slysen-opendata/</loc>
     <lastmod>2016-05-31T07:04:48+00:00</lastmod>
   </url>
@@ -110,21 +155,6 @@
   <url>
     <loc>https://petrbouchal.xyz/cz/tags/opendata/</loc>
     <lastmod>2016-05-29T16:36:17+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://petrbouchal.xyz/cz/tags/</loc>
-    <lastmod>2016-05-29T16:36:17+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://petrbouchal.xyz/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cz"
-                href="https://petrbouchal.xyz/cz/tags/"
-                />
   </url>
   
   <url>
@@ -169,11 +199,6 @@
   
   <url>
     <loc>https://petrbouchal.xyz/cz/tags/heckman/</loc>
-    <lastmod>2016-03-06T13:42:45+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://petrbouchal.xyz/cz/tags/open-data/</loc>
     <lastmod>2016-03-06T13:42:45+00:00</lastmod>
   </url>
   

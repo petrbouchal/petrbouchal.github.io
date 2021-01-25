@@ -7,6 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 24 Jul 2020 14:02:00 +0200</lastBuildDate><atom:link href="https://petrbouchal.xyz/cz/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>všezvěd 0.1 aneb jak na data o školách</title>
+      <link>https://petrbouchal.xyz/cz/post/vsezved/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://petrbouchal.xyz/cz/post/vsezved/</guid>
+      <description>tl;dr: nový balík v R na využití dat z rejstříku škol
+Základní data o školách jsou labyrint.
+ I vyšel sem od sebe sám a ohlédati se počal mysle, odkud a jak začíti.
+ (Technicky vzato se bavíme o rejstříku škol a školských zařízení a nepřímo i o rejstříku školských právnických osob.)
+Můžete mít data o školských právnických osobách, o školských zařízeních, o umístěních školských zařízení, nebo o oborech, které se v jednotlivých školách učí.</description>
+    </item>
+    
+    <item>
       <title>O stavu vládnutí (ad Česko 2030)</title>
       <link>https://petrbouchal.xyz/cz/post/vladnuti/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
