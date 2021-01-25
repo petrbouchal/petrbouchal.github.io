@@ -1,9 +1,9 @@
 ---
 title: Práce
-slug: work
 comments: false
 images: ["https://petrbouchal.xyz/mstile-150x150.png"]
 description: Výzkum, poradenství, analýza dat, R
+slug: prace
 menu: 
   main:
     weight: -2
@@ -11,9 +11,10 @@ menu:
 
 ## R packages
 
-- [{statnipokladna}](https://petrbouchal.github.io/statnipokladna): using [Czech public finance data](https://monitor.statnipokladna.cz) in R
-- [{czso}](https://petrbouchal.github.io/czso): discovery and use of data from the [Czech Statistical Office (CZSO)](https://czso.cz)
-- [{pragr}](https://petrbouchal.github.io/pragr): use [Prague's open geospatial data](https://www.geoportalpraha.cz/)
+- [{statnipokladna}](https://petrbouchal.xyz/statnipokladna): using [Czech public finance data](https://monitor.statnipokladna.cz) in R
+- [{czso}](https://petrbouchal.xyz/czso): discovery and use of data from the [Czech Statistical Office (CZSO)](https://czso.cz)
+- [{pragr}](https://petrbouchal.xyz/pragr): use [Prague's open geospatial data](https://www.geoportalpraha.cz/)
+- [{vsezved}](https://petrbouchal.xyz/vsezved): use [open](https://data.msmt.cz) and [not so open](http://stistko.uiv.cz/registr/vybskolrn.asp) data on Czech schools ("registr škol")
 
 ## Quick experimental dashboards
 
