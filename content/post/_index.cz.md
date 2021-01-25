@@ -1,6 +1,6 @@
 ---
 date: "2020-07-24T14:05:48+02:00"
-title: "Posts"
+title: "Texty"
 authors: [petrbouchal]
 # menu: 
 #   main:

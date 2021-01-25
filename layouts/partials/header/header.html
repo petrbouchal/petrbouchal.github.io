@@ -1,0 +1,23 @@
+<header class='header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>
+        {{- if eq .Kind "taxonomy" -}}
+          {{- ( ( i18n .Data.Singular 2 ) | default .Data.Singular ) -}}
+        {{- else if eq .Kind "term" -}}
+          {{- ( ( i18n .Data.Singular 1 ) | default .Title ) -}}
+          {{- print ": " -}}
+          <span class='taxonomy-name'>
+          {{- .Title -}}
+          </span>
+        {{- else if eq .Data.one "author" -}}
+          {{- partial "data/author/displayName" . -}}
+        {{- else -}}
+          {{- .Title -}}
+        {{- end -}}
+      </h1>
+
+      {{ partial "header/description" . }}
+    </div>
+  </div>
+</header>
