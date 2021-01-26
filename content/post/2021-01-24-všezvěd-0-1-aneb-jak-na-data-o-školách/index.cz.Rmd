@@ -11,6 +11,8 @@ cover: https://repository-images.githubusercontent.com/332728743/29043d00-5f53-1
 
 **tl;dr: [nový balík v R](https://petrbouchal.xyz/vsezved) na využití dat z rejstříku škol**
 
+Update: doplnil jsem [technický text o tom, jak část balíku funguje (v angličtině)](/post/rvest-time).
+
 Základní data o školách jsou *labyrint*.
 
 > I vyšel sem od sebe sám a ohlédati se počal mysle, odkud a jak začíti.
