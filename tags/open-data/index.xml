@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Petr Bouchal</title>
-    <link>https://petrbouchal.xyz/post/</link>
-    <description>Recent content in Posts on Petr Bouchal</description>
+    <title>open-data on Petr Bouchal</title>
+    <link>https://petrbouchal.xyz/tags/open-data/</link>
+    <description>Recent content in open-data on Petr Bouchal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 24 Jul 2020 14:05:48 +0200</lastBuildDate><atom:link href="https://petrbouchal.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://petrbouchal.xyz/tags/open-data/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting data from a messy website using the new rvest</title>
       <link>https://petrbouchal.xyz/post/rvest-time/</link>

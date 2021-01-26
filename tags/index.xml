@@ -4,6 +4,43 @@
     <title>Tags on Petr Bouchal</title>
     <link>https://petrbouchal.xyz/tags/</link>
     <description>Recent content in Tags on Petr Bouchal</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://petrbouchal.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://petrbouchal.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>open-data</title>
+      <link>https://petrbouchal.xyz/tags/open-data/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://petrbouchal.xyz/tags/open-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rvest</title>
+      <link>https://petrbouchal.xyz/tags/rvest/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://petrbouchal.xyz/tags/rvest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>schools</title>
+      <link>https://petrbouchal.xyz/tags/schools/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://petrbouchal.xyz/tags/schools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scraping</title>
+      <link>https://petrbouchal.xyz/tags/scraping/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://petrbouchal.xyz/tags/scraping/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

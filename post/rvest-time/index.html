@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='This is a brief walk through of the session functionality in {rvest} as used on a recent project involving data on the web hidden behind multiple layers of forms and file-download malarkey.
+It comes from a recent project where a periodically updated export of an online official database was needed.
+I worked on it as Hadley Wickham was updating rvest for release of version 1.0, so I got to test some new/redesigned features and workflows and report a few minor bugs along the way.'>
+<meta name='theme-color' content='#00f'>
+
+<meta property='og:title' content='Getting data from a messy website using the new rvest • Petr Bouchal'>
+<meta property='og:description' content='This is a brief walk through of the session functionality in {rvest} as used on a recent project involving data on the web hidden behind multiple layers of forms and file-download malarkey.
+It comes from a recent project where a periodically updated export of an online official database was needed.
+I worked on it as Hadley Wickham was updating rvest for release of version 1.0, so I got to test some new/redesigned features and workflows and report a few minor bugs along the way.'>
+<meta property='og:url' content='https://petrbouchal.xyz/post/rvest-time/'>
+<meta property='og:site_name' content='Petr Bouchal'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://petrbouchal.xyz/android-chrome-512x512.png'><meta property='article:section' content='post'><meta property='article:tag' content='rvest'><meta property='article:tag' content='scraping'><meta property='article:tag' content='schools'><meta property='article:tag' content='open-data'><meta property='article:published_time' content='2021-01-26T00:00:00Z'/><meta property='article:modified_time' content='2021-01-26T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@petrbouchal'>
+
+<meta name="generator" content="Hugo 0.79.0" />
+
+  <title>Getting data from a messy website using the new rvest • Petr Bouchal</title>
+  <link rel='canonical' href='https://petrbouchal.xyz/post/rvest-time/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#00f;}
+</style>
+
+  <link rel="stylesheet" href="https://petrbouchal.xyz/css/syntax.css" rel="stylesheet" id="theme-stylesheet">
+<script src="https://petrbouchal.xyz/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+
+<body class='page type-post has-sidebar'>
+
+  <div class='site'>
+
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/'>✱</a></li><li class='item'>
+  <a href='/work/'>Work</a></li><li class='item'>
+  <a href='/talks'>Talks &amp;c</a></li><li class='item'>
+  <a href='/post'>Writing</a></li><li class='item'>
+  <a href='/cz/byrokrates'>Byrokrates</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-lang_switch sep-after'><nav aria-label='' class = "menu">
+    <ul>
+    
+        <li>
+          <a rel="alternate" href="/cz" hreflang="cz" lang="cz"> > Česky</a>
+        </li>
+        </ul>
+  </nav>
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'> </h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
+
+    <div class='main'>
+
+      <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Petr Bouchal</p><p class='desc site-desc'>Data analysis and applied research for better public governance</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Getting data from a messy website using the new rvest</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2021-01-26T00:00:00Z'>Jan 26 2021</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+7 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+<script src="https://petrbouchal.xyz/post/rvest-time/index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>This is a brief walk through of the session functionality in <a href="https://rvest.tidyverse.org/"><code>{rvest}</code></a> as used on a recent project involving data on the web hidden behind multiple layers of forms and file-download malarkey.</p>
+<p>It comes from a recent project where a periodically updated export of an online official database was needed.</p>
+<p>I worked on it as Hadley Wickham was updating rvest for release of version 1.0, so I got to test some new/redesigned features and workflows and report a few minor bugs along the way.</p>
+<p>I ended up using a set of <code>{rvest}</code> functions for which I have seen relatively little documentation and use in the wild, so I thought it might be worth writing up. (I am not sure how much of the functionality is new or just redesigned.)</p>
+<p>The result forms part of the <a href="https://petrbouchal.xyz/vsezved"><code>{vsezved}</code></a> package, which is an R gateway to the public register of schools in the Czech Republic.</p>
+<p>Note: as far as I can tell, this is legitimate use of the data source, but obviously please do not go and bombard the server with hundreds od massive search queries.</p>
+<div id="the-data-the-website" class="section level2">
+<h2>The data, the website</h2>
+<p>The data source contains a school register. The data is located behind this <a href="http://stistko.uiv.cz/registr/vybskolrn.asp">antique-looking form</a>. The bit we want - for a Covid-19-related project - is contact information for each of the country’s several thousand primary and secondary education institutions, as well as some metadata about the type of school, who established it etc.</p>
+</div>
+<div id="the-path-to-the-data" class="section level2">
+<h2>The path to the data</h2>
+<p>The thing we want is not to scrape the massive paginated table we get from the search form, but to download the “Excel” (more on that later) export you can get after you run the search query. Unfortunately that is hidden behind two layers of forms and is itself downloaded by submitting one of four forms in the last layer.</p>
+<p>The whole thing is written in some ASP/.Net tools I do not understand - all I can tell from inspecting the requests in browser developer tools and from trying to replicate those requests in curl, httr and in simple rvest steps is that the whole thing is held together by a bunch of cookies and session logics which the client needs to keep track of and return exactly, otherwise the server throws errors.</p>
+</div>
+<div id="the-rvest-workflow" class="section level2">
+<h2>The rvest workflow</h2>
+<p><code>{rvest}</code> to the rescue. One set of tools inside {rvest} that I previously ignored is the session-based workflow - which happens to solve exactly this problem. I started playing with it just as Hadley was doing some improvements and refactoring, so here is my understanding of how it works currently (it is now in the <a href="https://github.com/tidyverse/rvest/">dev version on Github</a> but probably soon on CRAN):</p>
+<pre class="r"><code>library(rvest)</code></pre>
+<ol style="list-style-type: decimal">
+<li>Start a session using <code>session()</code>:</li>
+</ol>
+<pre class="r"><code>sess &lt;- session(&quot;http://stistko.uiv.cz/registr/vybskolrn.asp&quot;)
+sess</code></pre>
+<pre><code>## &lt;session&gt; http://stistko.uiv.cz/registr/vybskolrn.asp
+##   Status: 200
+##   Type:   text/html
+##   Size:   23117</code></pre>
+<p>This is an <code>rvest_session</code> object but can also be approached as a <code>html_document</code>. E.g. you can extract a form from it:</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Extract the form</li>
+</ol>
+<pre class="r"><code>form1 &lt;- html_form(sess)</code></pre>
+<p>The benefit of having the session object is that you can use it to submit the form, and all the right cookies will be automatically submitted with it.</p>
+<p>Note that we added a user agent header to identify ourselves.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Fill the form</li>
+</ol>
+<p>But first, we need to set the values in the form - as it turns out, the defaults for this particular form, as seen in the browser, are not actually encoded in the HTML, so even if we want to submit a blank “give me everything” search, we need to manually set the defaults. (The object returned by <code>html_form()</code> is a list of <code>rvest_form</code> objects, which we nead to bear in mind when inspecting it.)</p>
+<p>e.g. let’s look at a particular field:</p>
+<pre class="r"><code>form1[[1]][[&#39;fields&#39;]][[&#39;uzemi&#39;]]</code></pre>
+<pre><code>## &lt;field&gt; (select) uzemi:</code></pre>
+<p>and see its value (normally that would be the default):</p>
+<pre class="r"><code>form1[[1]][[&#39;fields&#39;]][[&#39;uzemi&#39;]]$value</code></pre>
+<pre><code>## character(0)</code></pre>
+<p>So to set the values in the form, we need to have a look at what the first option is and set that as the value.</p>
+<pre class="r"><code>form1[[1]][[&#39;fields&#39;]][[&#39;uzemi&#39;]][[&#39;options&#39;]][[1]]</code></pre>
+<pre><code>## [1] &quot;NIC&quot;</code></pre>
+<p>That turns out to be the case for most of the select fields, so we can set it like so:</p>
+<pre class="r"><code>form1set &lt;- html_form_set(form1[[1]], 
+                          # set to a small region so we don&#39;t blast the 
+                          # server with heavy queries
+                          uzemi = &quot;CZ0514&quot;, 
+                          # the rest are defaults (&quot;NOTHING&quot;)
+                          zrizovatel = &quot;NIC&quot;,
+                          organ = &quot;NIC&quot;,
+                          typ = &quot;NIC&quot;,
+                          jazs = &quot;NIC&quot;,
+                          delka = &quot;NIC&quot;,
+                          forma = &quot;NIC&quot;,
+                          jazob = &quot;NIC&quot;,
+                          skupobor = &quot;NIC&quot;,
+                          kmobor = &quot;NIC&quot;,
+                          obor = &quot;NIC&quot;)</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Submit the form, using the session</li>
+</ol>
+<pre class="r"><code>session_after_form1 &lt;- session_submit(sess, form1set, submit = NULL, httr::user_agent(&quot;github.com/petrbouchal&quot;))</code></pre>
+<pre><code>## Submitting with &#39;XX&#39;</code></pre>
+<pre class="r"><code>session_after_form1</code></pre>
+<pre><code>## &lt;session&gt; http://stistko.uiv.cz/registr/skolyrn.asp
+##   Status: 200
+##   Type:   text/html
+##   Size:   33316</code></pre>
+<p>Now if we look at the results page in browser dev tools, we will see that the way to proceed to the export page is to submit another form:</p>
+<pre class="r"><code>results_forms &lt;- session_after_form1 %&gt;% html_form()
+length(results_forms)</code></pre>
+<pre><code>## [1] 14</code></pre>
+<pre class="r"><code>results_forms[1]</code></pre>
+<pre><code>## [[1]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/vybskolrn.asp)
+##   &lt;field&gt; (submit) AA: Návrat na výběr</code></pre>
+<pre class="r"><code>results_forms[2]</code></pre>
+<pre><code>## [[1]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/exportqx.asp)
+##   &lt;field&gt; (submit) EX: Export do Excelu</code></pre>
+<p>Fourteen forms on a simple results page…</p>
+<p>The text suggests the second form is what we want - it’s a single button, so we submit it. Notice that (a) we use <code>session_submit()</code> and (b) an object from the previous call is again included in the submit call to maintain the session:</p>
+<pre class="r"><code>export_page &lt;- session_submit(session_after_form1, results_forms[[2]], submit = NULL,
+                              httr::user_agent(&quot;github.com/petrbouchal&quot;))
+export_page</code></pre>
+<pre><code>## &lt;session&gt; http://stistko.uiv.cz/registr/exportqx.asp
+##   Status: 200
+##   Type:   text/html
+##   Size:   2782</code></pre>
+<p>Looking at this in browser, we find we now face another set of forms which will hopefully give us the coveted excel exports.</p>
+<pre class="r"><code>export_forms &lt;- html_form(export_page)
+export_forms</code></pre>
+<pre><code>## [[1]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/exportq.asp)
+##   &lt;field&gt; (submit) EX: Export adresáře
+## 
+## [[2]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/exportqs.asp)
+##   &lt;field&gt; (submit) EXX: Export škol
+## 
+## [[3]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/exportqm.asp)
+##   &lt;field&gt; (submit) EXM: Export škol s mís...
+## 
+## [[4]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/exportqo.asp)
+##   &lt;field&gt; (submit) EXO: Export škol s obo...</code></pre>
+<p>These are exports of different bits of data from the database. Let’s look at the first one:</p>
+<pre class="r"><code>export &lt;- session_submit(export_page, export_forms[[1]], submit = NULL,
+                         httr::user_agent(&quot;github.com/petrbouchal&quot;))
+export</code></pre>
+<pre><code>## &lt;session&gt; http://stistko.uiv.cz/registr/exportq.asp
+##   Status: 200
+##   Type:   application/vnd.ms-excel
+##   Size:   55674</code></pre>
+</div>
+<div id="the-quasi-excel-data-dump" class="section level2">
+<h2>The quasi excel data dump</h2>
+<p>This seems to be an excel file of 55 kB - great. What exactly is it?</p>
+<pre class="r"><code>export$response$headers$`content-disposition`</code></pre>
+<pre><code>## [1] &quot;attachment; filename=Adresar.xls&quot;</code></pre>
+<p>An XLS file to be precise. Let’s write it to disk.</p>
+<pre class="r"><code>writeBin(export$response$content, &quot;export.xls&quot;)</code></pre>
+<p>And read it in:</p>
+<pre class="r"><code>readxl::read_excel(&quot;export.xls&quot;)</code></pre>
+<pre><code>## Error: 
+##   filepath: /Users/petr/cpers/petrbouchal.github.io/content/post/2021-01-26-rvesting/export.xls
+##   libxls error: Unable to open file</code></pre>
+<p>Hmm…what it this?</p>
+<pre class="r"><code>readLines(&quot;export.xls&quot;, n = 3)</code></pre>
+<pre><code>## [1] &quot;&quot;       &quot;&lt;html&gt;&quot; &quot;&lt;head&gt;&quot;</code></pre>
+<p>Right, so this is actually a HTML file. Is it a table?</p>
+<pre class="r"><code>stringr::str_sub(readr::read_lines(&quot;export.xls&quot;, n_max = 1, skip = 7), 1, 100)</code></pre>
+<pre><code>## [1] &quot;&lt;table border=&#39;1&#39;&gt;&lt;tr&gt;&lt;td&gt;RED_IZO&lt;/td&gt;&lt;td&gt;I\xc8O&lt;/td&gt;&lt;td&gt;Z\xf8izovatel&lt;/td&gt;&lt;td&gt;\xdazem\xed&lt;/td&gt;&lt;td&gt;Kraj&lt;/td&gt;&lt;td&gt;&quot;</code></pre>
+<p>Let’s try parsing it then.</p>
+<pre class="r"><code>tbl &lt;- read_html(&quot;export.xls&quot;) %&gt;% 
+  html_table(header = T)</code></pre>
+<pre class="r"><code>tbl[[1]]</code></pre>
+<pre><code>## # A tibble: 99 x 27
+##    RED_IZO    IČO Zřizovatel Území Kraj  `Správní úřad`   ORP `Plný název`
+##      &lt;int&gt;  &lt;int&gt;      &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;       
+##  1  6.00e8 8.55e5          7 CZ05… Libe… B51000          5109 Gymnázium, …
+##  2  6.00e8 8.55e5          7 CZ05… Libe… B51000          5109 Střední umě…
+##  3  6.00e8 8.56e5          7 CZ05… Libe… B51000          5107 Gymnázium I…
+##  4  6.00e8 5.81e5          7 CZ05… Libe… B51000          5109 Střední zdr…
+##  5  6.00e8 7.08e7          7 CZ05… Libe… B51000          5107 Základní šk…
+##  6  6.00e8 8.55e5          7 CZ05… Libe… B51000          5107 Dětský domo…
+##  7  6.00e8 7.09e7          7 CZ05… Libe… B51000          5107 Pedagogicko…
+##  8  6.00e8 7.10e7          2 CZ05… Libe… D51040          5104 Mateřská šk…
+##  9  6.00e8 7.07e7          2 CZ05… Libe… D51080          5108 Mateřská šk…
+## 10  6.00e8 7.27e7          2 CZ05… Libe… D51040          5104 Mateřská šk…
+## # … with 89 more rows, and 19 more variables: `Zkrácený název` &lt;chr&gt;,
+## #   Ulice &lt;chr&gt;, č.p. &lt;int&gt;, č.or. &lt;lgl&gt;, č.obce &lt;chr&gt;, PSČ &lt;int&gt;, Místo &lt;chr&gt;,
+## #   Telefon &lt;chr&gt;, Fax &lt;chr&gt;, `Email 1` &lt;chr&gt;, `Email 2` &lt;chr&gt;, WWW &lt;chr&gt;, `ID
+## #   dat. schránky subjektu` &lt;chr&gt;, Ředitel &lt;chr&gt;, X &lt;chr&gt;, `je OVM` &lt;chr&gt;,
+## #   ZUJ &lt;int&gt;, `Email zřizovatele` &lt;chr&gt;, `ID dat. schránky zřizovatele` &lt;chr&gt;</code></pre>
+<p>There we go - so the <code>{rvest}</code> machinery turned out to be useful not just for getting through the maze of forms and cookies, but for parsing a HTML table masquerading as an Excel file.</p>
+<p>If you are interested in how this is packaged into a (very early stages) package, take a look at <code>{vsezved}</code>: <a href="https://github.com/petrbouchal/vsezved">code</a>, <a href="https://petrbouchal.xyz/vsezved">website</a>.</p>
+</div>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='categories'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/rstats/'>R blog posts</a></div>
+<div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/rvest/'>rvest</a>, <a class='tag' href='/tags/scraping/'>scraping</a>, <a class='tag' href='/tags/schools/'>schools</a>, <a class='tag' href='/tags/open-data/'>open-data</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/petrbouchal' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/petrbouchal' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:pbouchal@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/petrbouchal' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.68cb493a.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

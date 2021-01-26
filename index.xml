@@ -7,6 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 24 Jul 2020 14:02:00 +0200</lastBuildDate><atom:link href="https://petrbouchal.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Getting data from a messy website using the new rvest</title>
+      <link>https://petrbouchal.xyz/post/rvest-time/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://petrbouchal.xyz/post/rvest-time/</guid>
+      <description>This is a brief walk through of the session functionality in {rvest} as used on a recent project involving data on the web hidden behind multiple layers of forms and file-download malarkey.
+It comes from a recent project where a periodically updated export of an online official database was needed.
+I worked on it as Hadley Wickham was updating rvest for release of version 1.0, so I got to test some new/redesigned features and workflows and report a few minor bugs along the way.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://petrbouchal.xyz/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

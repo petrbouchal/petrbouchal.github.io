@@ -25,11 +25,31 @@
   <url>
     <loc>https://petrbouchal.xyz/cz/tags/open-data/</loc>
     <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://petrbouchal.xyz/tags/open-data/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="https://petrbouchal.xyz/cz/tags/open-data/"
+                />
   </url>
   
   <url>
     <loc>https://petrbouchal.xyz/cz/categories/rstats/</loc>
     <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://petrbouchal.xyz/categories/rstats/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="https://petrbouchal.xyz/cz/categories/rstats/"
+                />
   </url>
   
   <url>
