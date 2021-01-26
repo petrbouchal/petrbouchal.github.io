@@ -1,0 +1,176 @@
+---
+title: Getting data from a messy website using the new rvest
+date: '2021-01-26'
+slug: rvest-time
+categories: [rstats]
+tags: [rvest, scraping, schools, open-data]
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>This is a brief walk through of the session functionality in <a href="https://rvest.tidyverse.org/"><code>{rvest}</code></a> as used on a recent project involving data on the web hidden behind multiple layers of forms and file-download malarkey.</p>
+<p>It comes from a recent project where a periodically updated export of an online official database was needed.</p>
+<p>I worked on it as Hadley Wickham was updating rvest for release of version 1.0, so I got to test some new/redesigned features and workflows and report a few minor bugs along the way.</p>
+<p>I ended up using a set of <code>{rvest}</code> functions for which I have seen relatively little documentation and use in the wild, so I thought it might be worth writing up. (I am not sure how much of the functionality is new or just redesigned.)</p>
+<p>The result forms part of the <a href="https://petrbouchal.xyz/vsezved"><code>{vsezved}</code></a> package, which is an R gateway to the public register of schools in the Czech Republic.</p>
+<p>Note: as far as I can tell, this is legitimate use of the data source, but obviously please do not go and bombard the server with hundreds od massive search queries.</p>
+<div id="the-data-the-website" class="section level2">
+<h2>The data, the website</h2>
+<p>The data source contains a school register. The data is located behind this <a href="http://stistko.uiv.cz/registr/vybskolrn.asp">antique-looking form</a>. The bit we want - for a Covid-19-related project - is contact information for each of the country’s several thousand primary and secondary education institutions, as well as some metadata about the type of school, who established it etc.</p>
+</div>
+<div id="the-path-to-the-data" class="section level2">
+<h2>The path to the data</h2>
+<p>The thing we want is not to scrape the massive paginated table we get from the search form, but to download the “Excel” (more on that later) export you can get after you run the search query. Unfortunately that is hidden behind two layers of forms and is itself downloaded by submitting one of four forms in the last layer.</p>
+<p>The whole thing is written in some ASP/.Net tools I do not understand - all I can tell from inspecting the requests in browser developer tools and from trying to replicate those requests in curl, httr and in simple rvest steps is that the whole thing is held together by a bunch of cookies and session logics which the client needs to keep track of and return exactly, otherwise the server throws errors.</p>
+</div>
+<div id="the-rvest-workflow" class="section level2">
+<h2>The rvest workflow</h2>
+<p><code>{rvest}</code> to the rescue. One set of tools inside {rvest} that I previously ignored is the session-based workflow - which happens to solve exactly this problem. I started playing with it just as Hadley was doing some improvements and refactoring, so here is my understanding of how it works currently (it is now in the <a href="https://github.com/tidyverse/rvest/">dev version on Github</a> but probably soon on CRAN):</p>
+<pre class="r"><code>library(rvest)</code></pre>
+<ol style="list-style-type: decimal">
+<li>Start a session using <code>session()</code>:</li>
+</ol>
+<pre class="r"><code>sess &lt;- session(&quot;http://stistko.uiv.cz/registr/vybskolrn.asp&quot;)
+sess</code></pre>
+<pre><code>## &lt;session&gt; http://stistko.uiv.cz/registr/vybskolrn.asp
+##   Status: 200
+##   Type:   text/html
+##   Size:   23117</code></pre>
+<p>This is an <code>rvest_session</code> object but can also be approached as a <code>html_document</code>. E.g. you can extract a form from it:</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Extract the form</li>
+</ol>
+<pre class="r"><code>form1 &lt;- html_form(sess)</code></pre>
+<p>The benefit of having the session object is that you can use it to submit the form, and all the right cookies will be automatically submitted with it.</p>
+<p>Note that we added a user agent header to identify ourselves.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Fill the form</li>
+</ol>
+<p>But first, we need to set the values in the form - as it turns out, the defaults for this particular form, as seen in the browser, are not actually encoded in the HTML, so even if we want to submit a blank “give me everything” search, we need to manually set the defaults. (The object returned by <code>html_form()</code> is a list of <code>rvest_form</code> objects, which we nead to bear in mind when inspecting it.)</p>
+<p>e.g. let’s look at a particular field:</p>
+<pre class="r"><code>form1[[1]][[&#39;fields&#39;]][[&#39;uzemi&#39;]]</code></pre>
+<pre><code>## &lt;field&gt; (select) uzemi:</code></pre>
+<p>and see its value (normally that would be the default):</p>
+<pre class="r"><code>form1[[1]][[&#39;fields&#39;]][[&#39;uzemi&#39;]]$value</code></pre>
+<pre><code>## character(0)</code></pre>
+<p>So to set the values in the form, we need to have a look at what the first option is and set that as the value.</p>
+<pre class="r"><code>form1[[1]][[&#39;fields&#39;]][[&#39;uzemi&#39;]][[&#39;options&#39;]][[1]]</code></pre>
+<pre><code>## [1] &quot;NIC&quot;</code></pre>
+<p>That turns out to be the case for most of the select fields, so we can set it like so:</p>
+<pre class="r"><code>form1set &lt;- html_form_set(form1[[1]], 
+                          # set to a small region so we don&#39;t blast the 
+                          # server with heavy queries
+                          uzemi = &quot;CZ0514&quot;, 
+                          # the rest are defaults (&quot;NOTHING&quot;)
+                          zrizovatel = &quot;NIC&quot;,
+                          organ = &quot;NIC&quot;,
+                          typ = &quot;NIC&quot;,
+                          jazs = &quot;NIC&quot;,
+                          delka = &quot;NIC&quot;,
+                          forma = &quot;NIC&quot;,
+                          jazob = &quot;NIC&quot;,
+                          skupobor = &quot;NIC&quot;,
+                          kmobor = &quot;NIC&quot;,
+                          obor = &quot;NIC&quot;)</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Submit the form, using the session</li>
+</ol>
+<pre class="r"><code>session_after_form1 &lt;- session_submit(sess, form1set, submit = NULL, httr::user_agent(&quot;github.com/petrbouchal&quot;))</code></pre>
+<pre><code>## Submitting with &#39;XX&#39;</code></pre>
+<pre class="r"><code>session_after_form1</code></pre>
+<pre><code>## &lt;session&gt; http://stistko.uiv.cz/registr/skolyrn.asp
+##   Status: 200
+##   Type:   text/html
+##   Size:   33316</code></pre>
+<p>Now if we look at the results page in browser dev tools, we will see that the way to proceed to the export page is to submit another form:</p>
+<pre class="r"><code>results_forms &lt;- session_after_form1 %&gt;% html_form()
+length(results_forms)</code></pre>
+<pre><code>## [1] 14</code></pre>
+<pre class="r"><code>results_forms[1]</code></pre>
+<pre><code>## [[1]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/vybskolrn.asp)
+##   &lt;field&gt; (submit) AA: Návrat na výběr</code></pre>
+<pre class="r"><code>results_forms[2]</code></pre>
+<pre><code>## [[1]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/exportqx.asp)
+##   &lt;field&gt; (submit) EX: Export do Excelu</code></pre>
+<p>Fourteen forms on a simple results page…</p>
+<p>The text suggests the second form is what we want - it’s a single button, so we submit it. Notice that (a) we use <code>session_submit()</code> and (b) an object from the previous call is again included in the submit call to maintain the session:</p>
+<pre class="r"><code>export_page &lt;- session_submit(session_after_form1, results_forms[[2]], submit = NULL,
+                              httr::user_agent(&quot;github.com/petrbouchal&quot;))
+export_page</code></pre>
+<pre><code>## &lt;session&gt; http://stistko.uiv.cz/registr/exportqx.asp
+##   Status: 200
+##   Type:   text/html
+##   Size:   2782</code></pre>
+<p>Looking at this in browser, we find we now face another set of forms which will hopefully give us the coveted excel exports.</p>
+<pre class="r"><code>export_forms &lt;- html_form(export_page)
+export_forms</code></pre>
+<pre><code>## [[1]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/exportq.asp)
+##   &lt;field&gt; (submit) EX: Export adresáře
+## 
+## [[2]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/exportqs.asp)
+##   &lt;field&gt; (submit) EXX: Export škol
+## 
+## [[3]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/exportqm.asp)
+##   &lt;field&gt; (submit) EXM: Export škol s mís...
+## 
+## [[4]]
+## &lt;form&gt; &#39;&lt;unnamed&gt;&#39; (POST http://stistko.uiv.cz/registr/exportqo.asp)
+##   &lt;field&gt; (submit) EXO: Export škol s obo...</code></pre>
+<p>These are exports of different bits of data from the database. Let’s look at the first one:</p>
+<pre class="r"><code>export &lt;- session_submit(export_page, export_forms[[1]], submit = NULL,
+                         httr::user_agent(&quot;github.com/petrbouchal&quot;))
+export</code></pre>
+<pre><code>## &lt;session&gt; http://stistko.uiv.cz/registr/exportq.asp
+##   Status: 200
+##   Type:   application/vnd.ms-excel
+##   Size:   55674</code></pre>
+</div>
+<div id="the-quasi-excel-data-dump" class="section level2">
+<h2>The quasi excel data dump</h2>
+<p>This seems to be an excel file of 55 kB - great. What exactly is it?</p>
+<pre class="r"><code>export$response$headers$`content-disposition`</code></pre>
+<pre><code>## [1] &quot;attachment; filename=Adresar.xls&quot;</code></pre>
+<p>An XLS file to be precise. Let’s write it to disk.</p>
+<pre class="r"><code>writeBin(export$response$content, &quot;export.xls&quot;)</code></pre>
+<p>And read it in:</p>
+<pre class="r"><code>readxl::read_excel(&quot;export.xls&quot;)</code></pre>
+<pre><code>## Error: 
+##   filepath: /Users/petr/cpers/petrbouchal.github.io/content/post/2021-01-26-rvesting/export.xls
+##   libxls error: Unable to open file</code></pre>
+<p>Hmm…what it this?</p>
+<pre class="r"><code>readLines(&quot;export.xls&quot;, n = 3)</code></pre>
+<pre><code>## [1] &quot;&quot;       &quot;&lt;html&gt;&quot; &quot;&lt;head&gt;&quot;</code></pre>
+<p>Right, so this is actually a HTML file. Is it a table?</p>
+<pre class="r"><code>stringr::str_sub(readr::read_lines(&quot;export.xls&quot;, n_max = 1, skip = 7), 1, 100)</code></pre>
+<pre><code>## [1] &quot;&lt;table border=&#39;1&#39;&gt;&lt;tr&gt;&lt;td&gt;RED_IZO&lt;/td&gt;&lt;td&gt;I\xc8O&lt;/td&gt;&lt;td&gt;Z\xf8izovatel&lt;/td&gt;&lt;td&gt;\xdazem\xed&lt;/td&gt;&lt;td&gt;Kraj&lt;/td&gt;&lt;td&gt;&quot;</code></pre>
+<p>Let’s try parsing it then.</p>
+<pre class="r"><code>tbl &lt;- read_html(&quot;export.xls&quot;) %&gt;% 
+  html_table(header = T)</code></pre>
+<pre class="r"><code>tbl[[1]]</code></pre>
+<pre><code>## # A tibble: 99 x 27
+##    RED_IZO    IČO Zřizovatel Území Kraj  `Správní úřad`   ORP `Plný název`
+##      &lt;int&gt;  &lt;int&gt;      &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;       
+##  1  6.00e8 8.55e5          7 CZ05… Libe… B51000          5109 Gymnázium, …
+##  2  6.00e8 8.55e5          7 CZ05… Libe… B51000          5109 Střední umě…
+##  3  6.00e8 8.56e5          7 CZ05… Libe… B51000          5107 Gymnázium I…
+##  4  6.00e8 5.81e5          7 CZ05… Libe… B51000          5109 Střední zdr…
+##  5  6.00e8 7.08e7          7 CZ05… Libe… B51000          5107 Základní šk…
+##  6  6.00e8 8.55e5          7 CZ05… Libe… B51000          5107 Dětský domo…
+##  7  6.00e8 7.09e7          7 CZ05… Libe… B51000          5107 Pedagogicko…
+##  8  6.00e8 7.10e7          2 CZ05… Libe… D51040          5104 Mateřská šk…
+##  9  6.00e8 7.07e7          2 CZ05… Libe… D51080          5108 Mateřská šk…
+## 10  6.00e8 7.27e7          2 CZ05… Libe… D51040          5104 Mateřská šk…
+## # … with 89 more rows, and 19 more variables: `Zkrácený název` &lt;chr&gt;,
+## #   Ulice &lt;chr&gt;, č.p. &lt;int&gt;, č.or. &lt;lgl&gt;, č.obce &lt;chr&gt;, PSČ &lt;int&gt;, Místo &lt;chr&gt;,
+## #   Telefon &lt;chr&gt;, Fax &lt;chr&gt;, `Email 1` &lt;chr&gt;, `Email 2` &lt;chr&gt;, WWW &lt;chr&gt;, `ID
+## #   dat. schránky subjektu` &lt;chr&gt;, Ředitel &lt;chr&gt;, X &lt;chr&gt;, `je OVM` &lt;chr&gt;,
+## #   ZUJ &lt;int&gt;, `Email zřizovatele` &lt;chr&gt;, `ID dat. schránky zřizovatele` &lt;chr&gt;</code></pre>
+<p>There we go - so the <code>{rvest}</code> machinery turned out to be useful not just for getting through the maze of forms and cookies, but for parsing a HTML table masquerading as an Excel file.</p>
+<p>If you are interested in how this is packaged into a (very early stages) package, take a look at <code>{vsezved}</code>: <a href="https://github.com/petrbouchal/vsezved">code</a>, <a href="https://petrbouchal.xyz/vsezved">website</a>.</p>
+</div>

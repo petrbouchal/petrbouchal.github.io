@@ -1,0 +1,186 @@
+---
+title: Getting data from a messy website using the new rvest
+date: '2021-01-26'
+slug: rvest-time
+categories: [rstats]
+tags: [rvest, scraping, schools, open-data]
+---
+
+This is a brief walk through of the session functionality in [`{rvest}`](https://rvest.tidyverse.org/) as used on a recent project involving data on the web hidden behind multiple layers of forms and file-download malarkey.
+
+It comes from a recent project where a periodically updated export of an online official database was needed.
+
+I worked on it as Hadley Wickham was updating rvest for release of version 1.0, so I got to test some new/redesigned features and workflows and report a few minor bugs along the way.
+
+I ended up using a set of `{rvest}` functions for which I have seen relatively little documentation and use in the wild, so I thought it might be worth writing up. (I am not sure how much of the functionality is new or just redesigned.)
+
+The result forms part of the [`{vsezved}`](https://petrbouchal.xyz/vsezved) package, which is an R gateway to the public register of schools in the Czech Republic.
+
+Note: as far as I can tell, this is legitimate use of the data source, but obviously please do not go and bombard the server with hundreds od massive search queries.
+
+## The data, the website
+
+The data source contains a school register. The data is located behind this [antique-looking form](http://stistko.uiv.cz/registr/vybskolrn.asp). The bit we want - for a Covid-19-related project - is contact information for each of the country's several thousand primary and secondary education institutions, as well as some metadata about the type of school, who established it etc.
+
+## The path to the data
+
+The thing we want is not to scrape the massive paginated table we get from the search form, but to download the "Excel" (more on that later) export you can get after you run the search query. Unfortunately that is hidden behind two layers of forms and is itself downloaded by submitting one of four forms in the last layer.
+
+The whole thing is written in some ASP/.Net tools I do not understand - all I can tell from inspecting the requests in browser developer tools and from trying to replicate those requests in curl, httr and in simple rvest steps is that the whole thing is held together by a bunch of cookies and session logics which the client needs to keep track of and return exactly, otherwise the server throws errors.
+
+## The rvest workflow
+
+`{rvest}` to the rescue. One set of tools inside {rvest} that I previously ignored is the session-based workflow - which happens to solve exactly this problem. I started playing with it just as Hadley was doing some improvements and refactoring, so here is my understanding of how it works currently (it is now in the [dev version on Github](https://github.com/tidyverse/rvest/) but probably soon on CRAN):
+
+```{r}
+library(rvest)
+```
+
+1. Start a session using `session()`:
+
+```{r}
+sess <- session("http://stistko.uiv.cz/registr/vybskolrn.asp")
+sess
+```
+
+This is an `rvest_session` object but can also be approached as a `html_document`. E.g. you can extract a form from it:
+
+2. Extract the form 
+
+```{r}
+form1 <- html_form(sess)
+```
+
+The benefit of having the session object is that you can use it to submit the form, and all the right cookies will be automatically submitted with it. 
+
+Note that we added a user agent header to identify ourselves.
+
+3. Fill the form
+
+But first, we need to set the values in the form - as it turns out, the defaults for this particular form, as seen in the browser, are not actually encoded in the HTML, so even if we want to submit a blank "give me everything" search, we need to manually set the defaults. (The object returned by `html_form()` is a list of `rvest_form` objects, which we nead to bear in mind when inspecting it.)
+
+e.g. let's look at a particular field:
+
+```{r}
+form1[[1]][['fields']][['uzemi']]
+```
+
+and see its value (normally that would be the default):
+
+```{r}
+form1[[1]][['fields']][['uzemi']]$value
+```
+
+So to set the values in the form, we need to have a look at what the first option is and set that as the value. 
+
+```{r}
+form1[[1]][['fields']][['uzemi']][['options']][[1]]
+```
+
+That turns out to be the case for most of the select fields, so we can set it like so:
+
+```{r}
+form1set <- html_form_set(form1[[1]], 
+                          # set to a small region so we don't blast the 
+                          # server with heavy queries
+                          uzemi = "CZ0514", 
+                          # the rest are defaults ("NOTHING")
+                          zrizovatel = "NIC",
+                          organ = "NIC",
+                          typ = "NIC",
+                          jazs = "NIC",
+                          delka = "NIC",
+                          forma = "NIC",
+                          jazob = "NIC",
+                          skupobor = "NIC",
+                          kmobor = "NIC",
+                          obor = "NIC")
+```
+
+4. Submit the form, using the session
+
+```{r}
+session_after_form1 <- session_submit(sess, form1set, submit = NULL, httr::user_agent("github.com/petrbouchal"))
+session_after_form1
+```
+
+Now if we look at the results page in browser dev tools, we will see that the way to proceed to the export page is to submit another form:
+
+```{r}
+results_forms <- session_after_form1 %>% html_form()
+length(results_forms)
+results_forms[1]
+results_forms[2]
+```
+
+Fourteen forms on a simple results page...
+
+The text suggests the second form is what we want - it's a single button, so we submit it. Notice that (a) we use `session_submit()` and (b) an object from the previous call is again included in the submit call to maintain the session:
+
+```{r}
+export_page <- session_submit(session_after_form1, results_forms[[2]], submit = NULL,
+                              httr::user_agent("github.com/petrbouchal"))
+export_page
+```
+
+Looking at this in browser, we find we now face another set of forms which will hopefully give us the coveted excel exports.
+
+```{r}
+export_forms <- html_form(export_page)
+export_forms
+```
+
+These are exports of different bits of data from the database. Let's look at the first one:
+
+```{r}
+export <- session_submit(export_page, export_forms[[1]], submit = NULL,
+                         httr::user_agent("github.com/petrbouchal"))
+export
+```
+
+## The quasi excel data dump
+
+This seems to be an excel file of 55 kB - great. What exactly is it?
+
+```{r}
+export$response$headers$`content-disposition`
+```
+
+An XLS file to be precise. Let's write it to disk.
+
+```{r}
+writeBin(export$response$content, "export.xls")
+```
+
+And read it in:
+
+```{r, error=TRUE}
+readxl::read_excel("export.xls")
+```
+
+Hmm...what it this?
+
+```{r}
+readLines("export.xls", n = 3)
+```
+
+Right, so this is actually a HTML file. Is it a table?
+
+```{r}
+stringr::str_sub(readr::read_lines("export.xls", n_max = 1, skip = 7), 1, 100)
+```
+
+Let's try parsing it then.
+
+```{r}
+tbl <- read_html("export.xls") %>% 
+  html_table(header = T)
+
+```
+
+```{r}
+tbl[[1]]
+```
+There we go - so the `{rvest}` machinery turned out to be useful not just for getting through the maze of forms and cookies, but for parsing a HTML table masquerading as an Excel file.
+
+If you are interested in how this is packaged into a (very early stages) package, take a look at `{vsezved}`: [code](https://github.com/petrbouchal/vsezved), [website](https://petrbouchal.xyz/vsezved).
