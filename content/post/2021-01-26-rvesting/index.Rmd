@@ -1,5 +1,5 @@
 ---
-title: Getting data from a messy website using the new rvest
+title: Crawling through a web labyrinth using {rvest}
 date: '2021-01-26'
 slug: rvest-time
 categories: [rstats]
