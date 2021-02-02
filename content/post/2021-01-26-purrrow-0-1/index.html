@@ -1,0 +1,46 @@
+---
+title: "purrrow 0.0.1: new package for building Arrow datasets out of memory"
+date: '2021-01-26'
+slug: purrrow
+categories: [rstats]
+tags: [package, data-storage]
+draft: true
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>I build and use a few packages and analytical workflows which basically follow this pattern:</p>
+<ol style="list-style-type: decimal">
+<li>grab some rather large dataset from an external source, often from CSV, XML or a shapefile</li>
+<li>write it into an intermediate data store, usually a parquet file for simplicity</li>
+<li>do 1 and 2 it again for a different time period / set of units</li>
+<li>do this again, and again</li>
+<li>if needed, collect all bits into one place (a data frame, if memory allows), or, if possible, create an Arrow dataset for each bit</li>
+<li>write to a partitioned Arrow dataset, or collate a new dataset from existing partial datasets without loading the data all into memory</li>
+</ol>
+<p>Most of this pattern is now simplified by <code>{purrrow}</code>, which is basically a simple wrapper around <code>{purrr}</code> and <code>{arrow}</code>, making use of Arrow’s ability to combine datasets without reading them into memory - effectively by shuffling files around disk.</p>
+<p>The logic is as follows:</p>
+<ol style="list-style-type: decimal">
+<li>pass a function to purr-like function; the function needs to produce a data frame/tibble.</li>
+<li>provide parameters of length &gt; 1 over which the function should iterate, producing a different (but structurally identical) output for each value of the parameter</li>
+<li>tell the function where the final combined dataset should go</li>
+<li></li>
+</ol>
+<p>A primitive example is as follows:</p>
+<pre class="r"><code>library(purrrow)
+manufacturers &lt;- unique(ggplot2::mpg$manufacturer)</code></pre>
+<pre><code>## Warning: replacing previous import &#39;vctrs::data_frame&#39; by &#39;tibble::data_frame&#39;
+## when loading &#39;dplyr&#39;</code></pre>
+<pre class="r"><code>dt &lt;- ggplot2::mpg
+td &lt;- tempfile()
+dir.create(td)
+part_of_mpg &lt;- function(manufacturer) {
+  dt[dt$manufacturer==manufacturer,]  
+}
+
+mpg_arrow &lt;- purrrow:::marrow_dir(manufacturers, part_of_mpg, 
+                                     .path = td)</code></pre>
+<pre class="r"><code>mpg_back &lt;- arrow::open_dataset(mpg_arrow) %&gt;% dplyr::collect()
+dplyr::all_equal(mpg_back, ggplot2::mpg)</code></pre>
+<pre><code>## [1] TRUE</code></pre>

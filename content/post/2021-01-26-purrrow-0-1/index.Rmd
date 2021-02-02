@@ -1,0 +1,49 @@
+---
+title: "purrrow 0.0.1: new package for building Arrow datasets out of memory"
+date: '2021-01-26'
+slug: purrrow
+categories: [rstats]
+tags: [package, data-storage]
+draft: true
+---
+
+I build and use a few packages and analytical workflows which basically follow this pattern:
+
+1. grab some rather large dataset from an external source, often from CSV, XML or a shapefile
+1. write it into an intermediate data store, usually a parquet file for simplicity
+1. do 1 and 2 it again for a different time period / set of units
+1. do this again, and again
+1. if needed, collect all bits into one place (a data frame, if memory allows), or, if possible, create an Arrow dataset for each bit
+1. write to a partitioned Arrow dataset, or collate a new dataset from existing partial datasets without loading the data all into memory
+
+Most of this pattern is now simplified by `{purrrow}`, which is basically a simple wrapper around `{purrr}` and `{arrow}`, making use of Arrow's ability to combine datasets without reading them into memory - effectively by shuffling files around disk. 
+
+The logic is as follows:
+
+1. pass a function to purr-like function; the function needs to produce a data frame/tibble.
+2. provide parameters of length > 1 over which the function should iterate, producing a different (but structurally identical) output for each value of the parameter
+3. tell the function where the final combined dataset should go
+4. 
+
+A primitive example is as follows:
+
+```{r}
+library(purrrow)
+manufacturers <- unique(ggplot2::mpg$manufacturer)
+dt <- ggplot2::mpg
+td <- tempfile()
+dir.create(td)
+part_of_mpg <- function(manufacturer) {
+  dt[dt$manufacturer==manufacturer,]  
+}
+
+mpg_arrow <- purrrow:::marrow_dir(manufacturers, part_of_mpg, 
+                                     .path = td)
+```
+
+```{r}
+mpg_back <- arrow::open_dataset(mpg_arrow) %>% dplyr::collect()
+dplyr::all_equal(mpg_back, ggplot2::mpg)
+```
+
+
