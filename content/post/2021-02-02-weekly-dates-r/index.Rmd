@@ -1,0 +1,80 @@
+---
+title: Working with weekly dates in R
+author: Petr Bouchal
+date: '2021-02-02'
+slug: weekly-dates-r
+categories:
+  - rstats
+tags: []
+authors: []
+---
+ 
+**tl;dr: some stats agencies use the ISO standard to number weeks for data with weekly frequency. This has some funny implications, some of which cannot be handled with base R on some systems nor with {lubridate}. Use {ISOweek} for now.**
+
+This is one of those posts written for future me -  though I suspect it might be useful to more people as we see more use of mortality data which this problem relates to.
+
+I have been working with statistical data on mortality. These are often reported with weekly intervals, e.g. by Eurostat and hence most European stats agencies. The time periods are labelled using strings like "2020-W23". 
+
+```{r setup, warning=FALSE, message=FALSE, echo=FALSE}
+knitr::opts_chunk$set(comment = "#")
+```
+
+```{r, warning=FALSE, message=FALSE}
+library(dplyr)
+library(lubridate)
+library(czso)
+```
+
+Here is data from the Czech Statistical Office:
+
+```{r}
+czso::czso_get_table("130185") %>% select(hodnota, vek_txt, 
+                                          roktyden, casref_do)
+```
+
+In [plots](/covid), I wanted to label the axis with actual dates since few people know when exactly week 23 begins. I also needed to join some daily data with actual dates on them to weekly data with dates like "2020-W23", so I used some `floor_date()` and `make_date()` and `isoweek()` magic from {lubridate}.
+
+(The data above has a start and end date for each week period, but since I also needed to join and summarise data from multiple years, I needed to work with the week periods at particular stages of the analysis so that the data would align correctly across years).
+
+This worked fine, until 2021. With the first weekly data of 2021, I found out the hard way that in the ISO standard, 1 Jan 2021 belongs to week 53 of 2020. (This is because of some logic where which year a week falls into is determined by which day the year breaks at.) That means that you cannot easily construct a normal date from a "YYYY-WNN" string. Even if you can derive an ISO week from a date (`isoweek()` + `isoyear()`), you cannot derive a date from a year-week string (and a weekday). 
+
+It turns out there is a POSIX date format string, `"%V"`, which would allow us to parse such dates, but this is unsupported in {lubridate}. 
+
+```{r, error=TRUE}
+parse_date_time("2020-W53-1", "%G-%V-%u") # should return a date in 2020
+parse_date_time("2020-W53-7", "%G-%V-%u") # should return a date in 2021
+```
+
+And it quietly returns NA in base R (`strptime()`).
+
+```{r}
+strptime("2020-W53-1", "%G-%U-%u") # should return a date in 2020
+strptime("2020-W53-7", "%G-%U-%u") # should return a date in 2021
+```
+
+It does work in `format()`, but that won't solve our problem.
+
+```{r}
+format(as.Date("2020-12-28"), "%G-W%V") # should be in ISO wk 53 of 2020
+format(as.Date("2021-01-03"), "%G-W%V") # ditto
+format(as.Date("2021-01-04"), "%G-W%V") # should be ISO week 1 of 2021
+```
+
+Solution: [{`ISOweek`}](https://cran.r-project.org/package=ISOweek). Does what it says on the tin: converts between dates and ISO weeks in both directions.
+
+```{r}
+library(ISOweek)
+```
+
+
+```{r}
+ISOweek2date("2020-W53-1")
+ISOweek2date("2020-W53-7")
+date2ISOweek("2020-12-28") # should be in ISO wk 53 of 2020
+date2ISOweek("2021-01-03") # ditto
+date2ISOweek("2021-01-04") # should be ISO week 1 of 2021
+```
+
+There is a [discussion](https://github.com/tidyverse/lubridate/issues/506) below a {lubridate} issue on whether and how {lubridate} should support ISO weeks more fully.
+
+
