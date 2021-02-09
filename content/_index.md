@@ -20,6 +20,8 @@ Technologically, I work mostly in R with a strong focus on data analysis workflo
 
 I make [packages](/work/#r-packages) for using open data in R, create [(experimental) data dashboards](/work#dashboards), and do my own analysis of public open data as well as [consulting work](/work#consulting-projects).
 
+[[See complete CV](cv/)]
+
 ---
 
 See the [Czech blog](/cz/post) if the below listing does not show what you expect.

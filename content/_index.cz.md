@@ -19,3 +19,5 @@ Vedl jsem evaluační jednotku evropských fondů na MMR, datový tým malé por
 Ve všech těchto rolích jsem se snažil mimo jiné zlepšovat práci s daty v prostředí veřejných institucí, především jejich komunikace, vizualizace a využití v rozhodování. Kromě jiného jsem členem správní rady [České evaluační společnosti](https://czecheval.cz). Stejně jako využívání dat ve vládnutí mě zajímá i dopad dat a technologií na veřejnou sféru.
 
 Kromě řady analytických [projektů a publikací](/cz/work#applied-analysis) jsem autorem několika [softwarových balíků](/cz/work#r-packages) pro využití českých otevřených dat v prostředí statistického jazyka R.
+
+[[životopis](cv/)]
