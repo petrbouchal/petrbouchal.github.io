@@ -9,6 +9,28 @@ menu:
     weight: -2
 ---
 
+## Consulting work
+
+*Ongoing*
+
+Office of the Government, CZ (2021-ongoing): developing dataset of public finance data for estimating the impact of EU funds on the economy; analysis of public finance data to understand the role of EU funding in public spending.
+
+I also work on non-technical topics (governance, policy making) with [České priority / Czech Priorities](https://ceskepriority.cz/), a nonprofit working to strengthen evidence-based decision making in the Czech public sector.
+
+*Ping me at pbouchal <<at>> gmail <<dot>> com to discuss your project!*
+
+*Completed*
+
+[Schola Empirica](http://www.scholaempirica.org/) (2020): transitioning the organisation's data analysis team to state-of-the-art reproducible workflow using [custom-built package {reschola}](https://github.com/scholaempirica/reschola/) with document templates, custom visual themes and project templates.
+
+[Ministry of Regional Development CZ](https://www.dotaceeu.cz/cs/evropske-fondy-v-cr/narodni-organ-pro-koordinaci/evaluace) (2020): preparing core data on EU subsidies for analysis, incl. extensive data checking and transformation using administrative open data and geospatial and text analysis.
+
+## Learning and development / Training
+
+I am available to design and deliver training in data analysis (mostly R), data visualisation, open data/data governance and related topics, including comprehensive programs to help teams transition to more effective ways of working with data and empirical evidence.
+
+You might be interested in these [examples of talks and trainings](/talks/) (in Czech) I have delivered recently.
+
 ## R packages
 
 - [{statnipokladna}](https://petrbouchal.xyz/statnipokladna): using [Czech public finance data](https://monitor.statnipokladna.cz) in R
@@ -26,13 +48,10 @@ menu:
 - [Obce COVID-19](obce-covid19.netlify.app/) simulating the impact of Covid-related economic shocks on local public finance
 - [Czech public service in numbers](https://github.com/petrbouchal/urednici2019/) looking at the Czech public sector workforce, updating [preview work](https://idea.cerge-ei.cz/studies/2014-06-statni-urednici-kolik-jich-vlastne-je-kde-a-za-jake-platy-pracuji) with [Petr Janský](https://petrjansky.cz)
 
-## Consulting projects
+## Pro bono
 
-[Schola Empirica](http://www.scholaempirica.org/) (2020): transitioning the organisation's data analysis team to state-of-the-art reproducible workflow using [custom-built package {reschola}](https://github.com/scholaempirica/reschola/) with document templates, custom visual themes and project templates.
+[Česko.digital: Učíme online (2021)](https://ucimeonline.petrbouchal.xyz/): data integration and analysis supporting operations and evaluation of volunteers helping schools with remote instruction. (Includes open and proprietary spatial, administrative, survey and project data from across a range of sources and storage locations); [integration of core data on schools](https://github.com/petrbouchal/ucimeonline); collection and analysis of network data to assess the state of school technology; [analysis and visualisation](https://ucimeonline.petrbouchal.xyz/) of data on technologies used by schools
 
-[Ministry of Regional Development CZ](https://www.dotaceeu.cz/cs/evropske-fondy-v-cr/narodni-organ-pro-koordinaci/evaluace) (2020): preparing core data on EU subsidies for analysis, incl. extensive data checking and transformation using administrative open data and geospatial and text analysis.
-
-*Ping me at pbouchal <<at>> gmail <<dot>> com to discuss your project!*
 
 ## Applied analysis
 
@@ -40,7 +59,7 @@ menu:
 
 Prague Institute for Planning and Development
 
-- [Prague's finances in international and national comparison (2020)](https://www.iprpraha.cz/uploads/assets/dokumenty/chude_mesto_prazske.pdf) - lead author of 2 parts, using open budget data (Státní pokladna)
+- [Prague's finances in international and national comparison (2020)](https://www.iprpraha.cz/uploads/assets/dokumenty/ssp/analyzy/ekonomika/chude%20mesto%20aj/ipr_chude_mesto_prazske_sazba_en.pdf) - lead author of 2 parts, using open budget data (Státní pokladna)
 - Core Spatial Analytics Report (Územně analytické podklady, forthcoming) - lead author of data analysis on Prague's public finances (time series analysis, comparison, visualisation)
 
 Ministry of Regional Development
