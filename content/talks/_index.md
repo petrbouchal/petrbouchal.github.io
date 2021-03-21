@@ -11,11 +11,17 @@ draft: false
 
 ## Past
 
+### \[Pandemic\] Open Data Expo 2021
+
+Two-minute idea pitch: Better Data Analysis in the Public Service (in Czech), 8 March 2021
+
+[Slides](https://petrbouchal.xyz/opendataexpo2021) | [video](https://youtu.be/W1oFsliDVqY?t=9629) (starting at 2h 40m)
+
 ### Workshop: Effective and manageable data analysis in R (in Czech)
 
 [Efektivní a přehledná práce s daty v jazyce R]
 
-Konference evaluační jednotky ESIF, MMR, 5 November 2020
+EU Funds Evaluation Unit Conference, MoRD CZ, 5 November 2020
 
 [basic info | slides | materials](https://petrbouchal.xyz/eval2020) | [code repo](https://github.com/petrbouchal/eval2020)
 

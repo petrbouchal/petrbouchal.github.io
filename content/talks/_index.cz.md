@@ -11,6 +11,12 @@ draft: false
 
 ## Proběhlé
 
+### \[Pandemic\] Open Data Expo 2021
+
+Dvouminutový pitch: *Lepší analytická práce ve veřejné správě*, 8. 3. 2021
+
+[Slides](https://petrbouchal.xyz/opendataexpo2021) | [video](https://youtu.be/W1oFsliDVqY?t=9629) (začíná v čase 2h 40m)
+
 ### Fórum udržitelného rozvoje 2020
 
 Respondent k tématické oblasti Vládnutí, 4. 12. 2020 (MŽP / online)
