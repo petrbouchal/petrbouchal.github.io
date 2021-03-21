@@ -35,7 +35,7 @@ menu:
 
 ## Applied analysis
 
-*These are some publicly accessible examples of my work done various employers over the years.*
+*These are some publicly accessible examples of my work done for various employers over the years.*
 
 Prague Institute for Planning and Development
 
