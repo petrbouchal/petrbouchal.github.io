@@ -7,14 +7,14 @@ categories:
   - rstats
 tags: []
 authors: []
-draft: yes
+draft: no
 ---
  
 **tl;dr: some stats agencies use the ISO standard to number weeks for data with weekly frequency. This has some funny implications, some of which cannot be handled with base R on some systems nor with {lubridate}. Use {ISOweek} for now.**
 
 This is one of those posts written for future me -  though I suspect it might be useful to more people as we see more use of mortality data which this problem relates to.
 
-I have been working with statistical data on mortality. These are often reported with weekly intervals, e.g. by Eurostat and hence most European stats agencies. The time periods are labelled using strings like "2020-W23". 
+I have been [working with statistical data on mortality](https://petrbouchal.xyz/covid). These are often reported with weekly intervals, e.g. by Eurostat and hence most European stats agencies. The time periods are labelled using strings like "2020-W23". 
 
 ```{r setup, warning=FALSE, message=FALSE, echo=FALSE}
 knitr::opts_chunk$set(comment = "#")
@@ -28,9 +28,10 @@ library(czso)
 
 Here is data from the Czech Statistical Office:
 
-```{r}
+```{r, message = FALSE}
 czso::czso_get_table("130185") %>% select(hodnota, vek_txt, 
-                                          roktyden, casref_do)
+                                          roktyden, casref_do) %>% 
+  slice_head(n = 5)
 ```
 
 In [plots](/covid), I wanted to label the axis with actual dates since few people know when exactly week 23 begins. I also needed to join some daily data with actual dates on them to weekly data with dates like "2020-W23", so I used some `floor_date()` and `make_date()` and `isoweek()` magic from {lubridate}.
@@ -70,12 +71,30 @@ library(ISOweek)
 
 ```{r}
 ISOweek2date("2020-W53-1")
+```
+
+
+```{r}
 ISOweek2date("2020-W53-7")
+```
+
+
+```{r}
 date2ISOweek("2020-12-28") # should be in ISO wk 53 of 2020
+```
+
+
+```{r}
 date2ISOweek("2021-01-03") # ditto
+```
+
+
+```{r}
 date2ISOweek("2021-01-04") # should be ISO week 1 of 2021
 ```
 
-There is a [discussion](https://github.com/tidyverse/lubridate/issues/506) below a {lubridate} issue on whether and how {lubridate} should support ISO weeks more fully.
+There is a [discussion](https://github.com/tidyverse/lubridate/issues/506) below a {lubridate} issue on whether and how {lubridate} should support ISO weeks more fully. 
+
+I suspect the {[clock](https://clock.r-lib.org/)} might also be relevant here, it not now then in the near future.
 
 

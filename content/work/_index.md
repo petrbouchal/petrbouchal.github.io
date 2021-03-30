@@ -12,7 +12,7 @@ menu:
 
 *Ongoing*
 
-Office of the Government, CZ (2021-ongoing): developing dataset of public finance data for estimating the impact of EU funds on the economy; analysis of public finance data to understand the role of EU funding in public spending.
+Office of the Government, CZ (2021-ongoing): [developing dataset of public finance data](https://github.com/petrbouchal/esifunguji) for estimating the impact of EU funds on the economy; analysis of public finance data to understand the role of EU funding in public spending.
 
 I also work on non-technical topics (governance, policy making) with [České priority / Czech Priorities](https://ceskepriority.cz/), a nonprofit working to strengthen evidence-based decision making in the Czech public sector.
 
