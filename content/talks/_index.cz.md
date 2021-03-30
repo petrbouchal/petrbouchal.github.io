@@ -11,6 +11,10 @@ draft: false
 
 ## Proběhlé
 
+### IES FSV UK: přednáška o rozpočtování v BA kurzu Public Economics
+
+[Slides](https://petrbouchal.xyz/ies2021)
+
 ### \[Pandemic\] Open Data Expo 2021
 
 Dvouminutový pitch: *Lepší analytická práce ve veřejné správě*, 8. 3. 2021

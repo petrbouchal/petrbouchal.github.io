@@ -11,6 +11,10 @@ draft: false
 
 ## Past
 
+### IES FSV UK: guest lecture on Budgeting for the BA Public Economics course
+
+[Slides](https://petrbouchal.xyz/ies2021)
+
 ### \[Pandemic\] Open Data Expo 2021
 
 Two-minute idea pitch: Better Data Analysis in the Public Service (in Czech), 8 March 2021
