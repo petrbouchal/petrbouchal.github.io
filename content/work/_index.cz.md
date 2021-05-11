@@ -17,7 +17,7 @@ Office of the Government, CZ (2021-ongoing): [developing dataset of public finan
 
 I also work on non-technical topics (governance, policy making) with [České priority / Czech Priorities](https://ceskepriority.cz/), a nonprofit working to strengthen evidence-based decision making in the Czech public sector.
 
-*Ping me at pbouchal <<at>> gmail <<dot>> com to discuss your project!*
+*I am currently unable to take on larger projects.*
 
 *Completed*
 
