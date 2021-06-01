@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.0.2",
+    "Version": "4.0.4",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -1299,10 +1299,10 @@
     },
     "units": {
       "Package": "units",
-      "Version": "0.6-7",
+      "Version": "0.7-1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "4a3df844d6d35ca2ba2b7ba95446b955"
+      "Hash": "1eb71bc3895bf5a047485c16758c4862"
     },
     "usethis": {
       "Package": "usethis",
