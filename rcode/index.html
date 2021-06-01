@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Data analysis and applied research for better public governance'>
+<meta name='theme-color' content='#00f'>
+
+<meta property='og:title' content='R Project Principles • Petr Bouchal'>
+<meta property='og:description' content='Data analysis and applied research for better public governance'>
+<meta property='og:url' content='https://petrbouchal.xyz/rcode/'>
+<meta property='og:site_name' content='Petr Bouchal'>
+<meta property='og:type' content='website'><meta property='og:image' content='https://petrbouchal.xyz/android-chrome-512x512.png'><meta property='og:updated_time' content='2021-06-01T21:43:05&#43;02:00'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@petrbouchal'>
+
+<meta name="generator" content="Hugo 0.79.0" />
+
+  <title>R Project Principles • Petr Bouchal</title>
+  <link rel='canonical' href='https://petrbouchal.xyz/rcode/'>
+  
+    <link href="https://petrbouchal.xyz/rcode/index.xml" rel="alternate" type="application/rss+xml" title="Petr Bouchal" />
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#00f;}
+</style>
+
+  <link rel="stylesheet" href="https://petrbouchal.xyz/css/syntax.css" rel="stylesheet" id="theme-stylesheet">
+<script src="https://petrbouchal.xyz/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+
+<body class='section type-rcode has-sidebar'>
+
+  <div class='site'>
+
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/'>✱</a></li><li class='item'>
+  <a href='/work/'>Work</a></li><li class='item'>
+  <a href='/talks'>Talks &amp;c</a></li><li class='item'>
+  <a href='/post'>Writing</a></li><li class='item'>
+  <a href='/cz/byrokrates'>Byrokrates</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-lang_switch sep-after'><nav aria-label='' class = "menu">
+    <ul>
+    
+        <li>
+          <a rel="alternate" href="/cz" hreflang="cz" lang="cz"> > Česky</a>
+        </li>
+        </ul>
+  </nav>
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'> </h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
+
+    <div class='main'>
+
+      <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Petr Bouchal</p><p class='desc site-desc'>Data analysis and applied research for better public governance</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<header class='header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>R Project Principles</h1>
+
+      
+
+    </div>
+  </div>
+</header>
+
+
+
+<div class='entry'>
+  <div class='container entry-content'>
+  <p>This is a set of standards, design choices and technology choices I like to keep consistent across projects I work on. I don&rsquo;t always succeed in sticking to the ambitions around e.g. reproducibility and style, but I try to keep improving.</p>
+<p>These are also standards that I hope will make collaboration easier.</p>
+<h1 id="project-structure-and-organisation">Project structure and organisation</h1>
+<ul>
+<li>everything needed to run the project should be contained in one directory.</li>
+<li>all paths should begin at the <code>/</code> root of the project directory</li>
+<li>use RStudio projects if you use RStudio</li>
+<li>if there are more than a handful of scripts, they should be in a subdirectly named e.g. <code>code</code>, <code>src</code>, or, ideally, <code>R</code>. If there is code in other languages, it should live in subdirectories named for each language</li>
+<li>scripts that need to be run in order should be numbered in their names</li>
+<li>use machine readable file names <a href="http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf">a la this guide</a>
+<ul>
+<li><code>01_load_excel-file.R</code>: underscores separate parts of names, dashes separate word breaks within parts of names</li>
+<li>no spaces in names</li>
+<li>only ASCII in file names</li>
+<li>numbering and file name structure should play well with default ordering</li>
+<li>dates should be e.g. 2021-02-28</li>
+<li>versioning should be done mostly by git, not file names</li>
+</ul>
+</li>
+<li>one project, on git/Github repository</li>
+<li>I tend to use <code>data-input</code>, <code>data-output</code>, <code>data-processed</code> and <code>data-export</code> directories for data. The exact names don&rsquo;t matter, but the point is that input data != output data != intermediate data storage.</li>
+<li><code>docs</code> is a sensible name for the directory containing rendered HTML documentation to be published via Github pages</li>
+</ul>
+<h1 id="tools">Tools</h1>
+<ul>
+<li>prefer <code>{tidyverse}</code> tools to base R (within reason)</li>
+<li>prefer <code>{ggplot2}</code> to other graphics systems</li>
+<li>for accessing data from the Czech Statistical Office, check if the data is available in open format and use the <code>{czso}</code> package if possible (on CRAN)</li>
+<li>ditto for public finance data (Státní pokladna, package {statnipokladna} on CRAN)</li>
+<li><code>{pointblank}</code> is my preferred data validation package which I recommend</li>
+<li><code>{arrow}</code> is now mature enough that it should be the default format for storing intermediate data and exporting for other code-based users - mainly because of speed and efficiency of storage and access (esp. partintioned Arrow datasets).</li>
+<li>if using Czech spatial data, check out <code>{CzechData}</code> from @JanCaha and <code>{RCzechia}</code> on CRAN.</li>
+<li>for OECD data, there is <code>{oecd}</code>, for Eurostat there is <code>{eurostat}</code>, and for World Bank data there is <code>{wbstats}</code>.</li>
+<li>for EU spatial data (NUTS regions etc.), there is <a href="https://dieghernan.github.io/giscoR/"><code>{giscoR}</code></a> but beware the licensing conditions on the underlying data</li>
+</ul>
+<h1 id="reports-and-other-outputs">Reports and other outputs</h1>
+<ul>
+<li>if the project results in a report, write it in Rmarkdown, with git playing the role of tracked changes</li>
+<li>{redoc} may be useful for gathering external feedback through Word documents</li>
+<li><a href="https://web.hypothes.is/">hypothes.is</a> is a good, easy way to gather feedback on web-facing content; it may even be worth generating a HTML page of a draft report just for getting feedback</li>
+<li>use the built-in citation system; can easily be linked to Zotero via the Better BibTex Zotero Plugin (or nowadays perhaps even without it); CSL-JSON may well be the most sensible format for storing citation data</li>
+<li>in (R)markdown, when using git for version control it&rsquo;s nice to put each sentence on its own line (just one line break, so in the rendered Docx or PDF it stays as one paragraph)</li>
+</ul>
+<h1 id="workflow">Workflow</h1>
+<ul>
+<li>use git and Github for version control</li>
+<li>use {targets} if the project contains more than a single script and a single data source - this is fast becoming the gold standard for efficient pipeline/workflow orchestration in R</li>
+<li>it does not make a whole lot of sense to me to develop analysis projects into packages - for many of the reasons mentioned by <a href="https://www.milesmcbain.com/posts/an-okay-idea/">Miles McBain</a>.</li>
+<li>Github issues are quite good for tracking bunches of work to be done and storing information which will be needed to make progress</li>
+<li>only commit outputs to git at reasonable key points</li>
+<li>{pointblank} and {convo} (once/if the latte matures) may be good for codifying and validating outputs</li>
+</ul>
+<h1 id="documentation">Documentation</h1>
+<ul>
+<li><code>README.md</code> in every directory, describing the files in that directory</li>
+<li>the top-level README or a document like <code>rev.md</code> or some such should describe how to reproduce the work</li>
+<li>comments in code</li>
+<li>it may make sense to document the whole project in a set of Rmd files, including some which showcase the outputs or even create the main report, and which together form an Rmarkdown website</li>
+<li>there are a few rough templats in my personal package <code>[{ptrr}](https://github.com/petrbouchal/ptrr)</code> - xaringan/remark slides, Rmarkdown website, basic one-page Rmd/HTML documentation</li>
+</ul>
+<h1 id="reproducibility">Reproducibility</h1>
+<ul>
+<li>see above on {targets} - highly recommend to put in the work to make the workflow clear and efficient and thus easy to tweak without having to re-run everything or having to dig into where a particular object is used.</li>
+<li>use {renv} religiously to track exact versions of the packages on which the project depends</li>
+<li>there should be a simple way to run the whole workflow from start to finish, perhaps via {targets} or a build script</li>
+<li>(as I&rsquo;ve found out the hard way), an Rmarkdown website where all work is done in one of multiple Rmarkdown scripts is not a sustainable framework for reproducibility. Much better to use Rmarkdown to weave artifacts (models, visuals, numbers) generated in a proper workflow in R scripts.</li>
+</ul>
+<h1 id="style">Style</h1>
+<ul>
+<li>if in doubt, use spaces between things</li>
+<li>use whitespace and code sections (Ctrl+R in Rstudio)</li>
+<li>prefer {purrr} map-type functions to loops</li>
+<li>if you do the same thing more than twice, write a function</li>
+<li>git commits should be in the form &ldquo;do something&rdquo;; ideally each commit should contain an increment of work such that the whole project will run when checked out at that commit</li>
+</ul>
+<h1 id="visuals">Visuals</h1>
+<ul>
+<li>do the hard work to make the chart/table easy to use for the reader</li>
+<li>prefer direct labels to legends</li>
+<li>{ggforce} contains great helpers for annotation</li>
+<li>{ggiraph} is nice for basic interactivity on web pages</li>
+<li>{gt} seems to be the most sensible table formatting tool nowadays</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<div class='container list-container'>
+  <ul class='list'>
+    
+  </ul>
+
+  
+
+</div>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/petrbouchal' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/petrbouchal' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:pbouchal@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/petrbouchal' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.68cb493a.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+
