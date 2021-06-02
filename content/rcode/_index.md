@@ -79,6 +79,7 @@ These are also standards that I hope will make collaboration easier.
 # Style
 
 - if in doubt, use spaces between things
+- all package loading to be done at the top of the script
 - use whitespace and code sections (Ctrl+R in Rstudio)
 - prefer {purrr} map-type functions to loops
 - if you do the same thing more than twice, write a function
