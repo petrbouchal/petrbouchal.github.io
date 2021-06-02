@@ -75,7 +75,7 @@ These are also standards that I hope will make collaboration easier.
 - esp. for {targets}-based pipelines, it may be helpful to put all file paths, time periods and other inputs which you expect to change over time (e.g. when in the future the pipeline is rerun with update data) into a `config.yml` file and pass the config values to the pipeline via the {config} package. The main benefit is that all the settings are in one place and one does not need to hunt for them in the depth of the code itself.
 - use {renv} religiously to track exact versions of the packages on which the project depends.
 - there should be a simple way to run the whole workflow from start to finish, perhaps via {targets} or a build script.
-- (as I've found out the hard way), an Rmarkdown website where all work is done in one of multiple Rmarkdown scripts is not a sustainable framework for reproducibility. Much better to use Rmarkdown to weave artifacts (models, visuals, numbers) generated in a proper workflow in R scripts.
+- (as I've found out the hard way), an Rmarkdown website where all work is done across multiple Rmarkdown scripts is not a sustainable framework for reproducibility. Much better to use Rmarkdown to weave artifacts (models, visuals, numbers) generated in a proper workflow in R scripts.
 
 # Style
 
