@@ -79,10 +79,12 @@ These are also standards that I hope will make collaboration easier.
 
 # Style
 
+- snake case
+- snake-case column names in data frames, with no spaces and diacritics
 - if in doubt, use spaces between things
 - all package loading to be done at the top of the script
 - use whitespace and code sections (Ctrl+R in Rstudio)
-- prefer {purrr} map-type functions to loops
+- prefer `{purrr}` map-type functions to loops and `*apply()` functions
 - if you do the same thing more than twice, write a function
 - git commits should be in the form "do something"; ideally each commit should contain an increment of work such that the whole project will run when checked out at that commit
 
