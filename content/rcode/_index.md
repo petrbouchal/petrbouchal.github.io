@@ -95,6 +95,6 @@ These are also standards that I hope will make collaboration easier.
 
 - do the hard work to make the chart/table easy to use for the reader
 - prefer direct labels to legends
-- {ggforce} contains great helpers for annotation
-- {ggiraph} is nice for basic interactivity on web pages
-- {gt} seems to be the most sensible table formatting tool nowadays
+- `{ggforce}` contains great helpers for annotation
+- `{ggiraph}` is nice for basic interactivity on web pages
+- `{gt}` seems to be the most sensible table formatting tool nowadays
