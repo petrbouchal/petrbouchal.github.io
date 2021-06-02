@@ -64,9 +64,9 @@ These are also standards that I hope will make collaboration easier.
 # Documentation
 
 - `README.md` in every directory, describing the files in that directory
-- the top-level README or a document like `rev.md` or some such should describe how to reproduce the work
+- the top-level README or a document like `rev.md` or some such should describe how to reproduce the work, but more importantly it should give a good overview of the project
 - comments in code
-- it may make sense to document the whole project in a set of Rmd files, including some which showcase the outputs or even create the main report, and which together form an Rmarkdown website
+- it may make sense to document the whole project in a set of (R)md files, including some which showcase the outputs or even create the main report, and which together form an Rmarkdown website
 - there are a few rough templats in my personal package `[{ptrr}](https://github.com/petrbouchal/ptrr)` - xaringan/remark slides, Rmarkdown website, basic one-page Rmd/HTML documentation
 
 # Reproducibility
