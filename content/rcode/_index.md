@@ -82,8 +82,8 @@ These are also standards that I hope will make collaboration easier.
 
 # Style
 
-- snake case
-- snake-case column names in data frames, with no spaces and diacritics
+- snake case object/variable names
+- snake-case column names in data frames, with no spaces and diacritics (`janitor::clean_names()` is great for this)
 - if in doubt, use spaces between things
 - all package loading to be done at the top of the script
 - use whitespace and code sections (Ctrl+R in Rstudio)
