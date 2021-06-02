@@ -179,9 +179,9 @@
 <h1 id="documentation">Documentation</h1>
 <ul>
 <li><code>README.md</code> in every directory, describing the files in that directory</li>
-<li>the top-level README or a document like <code>rev.md</code> or some such should describe how to reproduce the work</li>
+<li>the top-level README or a document like <code>rev.md</code> or some such should describe how to reproduce the work, but more importantly it should give a good overview of the project</li>
 <li>comments in code</li>
-<li>it may make sense to document the whole project in a set of Rmd files, including some which showcase the outputs or even create the main report, and which together form an Rmarkdown website</li>
+<li>it may make sense to document the whole project in a set of (R)md files, including some which showcase the outputs or even create the main report, and which together form an Rmarkdown website</li>
 <li>there are a few rough templats in my personal package <code>[{ptrr}](https://github.com/petrbouchal/ptrr)</code> - xaringan/remark slides, Rmarkdown website, basic one-page Rmd/HTML documentation</li>
 </ul>
 <h1 id="reproducibility">Reproducibility</h1>
@@ -189,13 +189,16 @@
 <li>see above on {targets} - highly recommend to put in the work to make the workflow clear and efficient and thus easy to tweak without having to re-run everything or having to dig into where a particular object is used.</li>
 <li>esp. for {targets}-based pipelines, it may be helpful to put all file paths, time periods and other inputs which you expect to change over time (e.g. when in the future the pipeline is rerun with update data) into a <code>config.yml</code> file and pass the config values to the pipeline via the {config} package. The main benefit is that all the settings are in one place and one does not need to hunt for them in the depth of the code itself.</li>
 <li>use {renv} religiously to track exact versions of the packages on which the project depends.</li>
+<li><a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">don&rsquo;s use <code>rm(list = ls())</code></a></li>
+<li>ditto for <code>setwd()</code> - if it is necessary, something is wrong with the project structure</li>
+<li>use <code>{here}</code> for paths</li>
 <li>there should be a simple way to run the whole workflow from start to finish, perhaps via {targets} or a build script.</li>
-<li>(as I&rsquo;ve found out the hard way), an Rmarkdown website where all work is done in one of multiple Rmarkdown scripts is not a sustainable framework for reproducibility. Much better to use Rmarkdown to weave artifacts (models, visuals, numbers) generated in a proper workflow in R scripts.</li>
+<li>(as I&rsquo;ve found out the hard way), an Rmarkdown website where all work is done across multiple Rmarkdown scripts is not a sustainable framework for reproducibility. Much better to use Rmarkdown to weave artifacts (models, visuals, numbers) generated in a proper workflow in R scripts.</li>
 </ul>
 <h1 id="style">Style</h1>
 <ul>
-<li>snake case</li>
-<li>snake-case column names in data frames, with no spaces and diacritics</li>
+<li>snake case object/variable names</li>
+<li>snake-case column names in data frames, with no spaces and diacritics (<code>janitor::clean_names()</code> is great for this)</li>
 <li>if in doubt, use spaces between things</li>
 <li>all package loading to be done at the top of the script</li>
 <li>use whitespace and code sections (Ctrl+R in Rstudio)</li>
