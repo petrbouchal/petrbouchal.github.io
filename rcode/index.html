@@ -187,13 +187,15 @@
 <h1 id="reproducibility">Reproducibility</h1>
 <ul>
 <li>see above on {targets} - highly recommend to put in the work to make the workflow clear and efficient and thus easy to tweak without having to re-run everything or having to dig into where a particular object is used.</li>
-<li>use {renv} religiously to track exact versions of the packages on which the project depends</li>
-<li>there should be a simple way to run the whole workflow from start to finish, perhaps via {targets} or a build script</li>
+<li>esp. for {targets}-based pipelines, it may be helpful to put all file paths, time periods and other inputs which you expect to change over time (e.g. when in the future the pipeline is rerun with update data) into a <code>config.yml</code> file and pass the config values to the pipeline via the {config} package. The main benefit is that all the settings are in one place and one does not need to hunt for them in the depth of the code itself.</li>
+<li>use {renv} religiously to track exact versions of the packages on which the project depends.</li>
+<li>there should be a simple way to run the whole workflow from start to finish, perhaps via {targets} or a build script.</li>
 <li>(as I&rsquo;ve found out the hard way), an Rmarkdown website where all work is done in one of multiple Rmarkdown scripts is not a sustainable framework for reproducibility. Much better to use Rmarkdown to weave artifacts (models, visuals, numbers) generated in a proper workflow in R scripts.</li>
 </ul>
 <h1 id="style">Style</h1>
 <ul>
 <li>if in doubt, use spaces between things</li>
+<li>all package loading to be done at the top of the script</li>
 <li>use whitespace and code sections (Ctrl+R in Rstudio)</li>
 <li>prefer {purrr} map-type functions to loops</li>
 <li>if you do the same thing more than twice, write a function</li>
