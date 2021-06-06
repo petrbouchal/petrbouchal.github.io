@@ -59,6 +59,7 @@ These are also standards that I hope will make collaboration easier.
 - Github issues are quite good for tracking bunches of work to be done and storing information which will be needed to make progress
 - only commit outputs to git at reasonable key points
 - {pointblank} and {convo} (once/if the latte matures) may be good for codifying and validating outputs
+- for simple input parameters (paths, numbers, dates), using {config} helps to keep them in one place (config.yml)
 
 
 # Documentation
