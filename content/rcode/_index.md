@@ -49,7 +49,7 @@ These are also standards that I hope will make collaboration easier.
 - {redoc} may be useful for gathering external feedback through Word documents
 - [hypothes.is](https://web.hypothes.is/) is a good, easy way to gather feedback on web-facing content; it may even be worth generating a HTML page of a draft report just for getting feedback
 - use the built-in citation system; can easily be linked to Zotero via the Better BibTex Zotero Plugin (or nowadays perhaps even without it); CSL-JSON may well be the most sensible format for storing citation data
-- in (R)markdown, when using git for version control it's nice to put each sentence on its own line (just one line break, so in the rendered Docx or PDF it stays as one paragraph)
+- in (R)markdown, when using git for version control it's nice to put each sentence on its own line (just one line break, so in the rendered Docx or PDF it stays as one paragraph = ["Semantic Line Breaks"](https://sembr.org/))
 
 # Workflow
 
