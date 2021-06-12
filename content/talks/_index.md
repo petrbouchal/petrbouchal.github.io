@@ -9,7 +9,7 @@ tags:
 draft: false
 ---
 
-## Upcoming
+## Past
 
 ### Surviving data analysis: an evaluator's gentle introduction to R (in English only)
 
@@ -23,7 +23,6 @@ This workshop is for those overwhelmed with piles of Excel files and “who know
 - You will receive instructions for (easy) technical setup before the workshop but you won’t need to install any software on your machine to take part in the workshop.
 - No prior knowledge of R or programming is required. If you attended the [R data analysis workshop](https://petrbouchal.xyz/eval2020) at the 2020 MMR Evaluation conference, this will cover similar ground, with more focus on real-life applications. If you know a bit of R or used it way back in university, this will get you up to date on the R toolkit.
 
-## Past
 
 ### IES FSV UK: guest lecture on Budgeting for the BA Public Economics course
 
