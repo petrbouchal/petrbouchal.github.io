@@ -15,6 +15,8 @@ menu:
 
 Office of the Government, CZ (2021-ongoing): [developing dataset of public finance data](https://github.com/petrbouchal/esifunguji) for estimating the impact of EU funds on the economy; analysis of public finance data to understand the role of EU funding in public spending.
 
+Centre for Transport and Energy, CZ (2021-ongoing): [Climate Tagging of EU Funds in the Czech Republic](https://cdeorgcz.github.io/esiftagging)
+
 I also work on non-technical topics (governance, policy making) with [České priority / Czech Priorities](https://ceskepriority.cz/), a nonprofit working to strengthen evidence-based decision making in the Czech public sector.
 
 *I am currently unable to take on larger projects.*
@@ -60,7 +62,7 @@ You might be interested in these [examples of talks and trainings](/talks/) (in 
 Prague Institute for Planning and Development
 
 - [Prague's finances in international and national comparison (2020)](https://www.iprpraha.cz/uploads/assets/dokumenty/ssp/analyzy/ekonomika/chude%20mesto%20aj/ipr_chude_mesto_prazske_sazba_en.pdf) - lead author of 2 parts, using open budget data (Státní pokladna)
-- Core Spatial Analytics Report (Územně analytické podklady, forthcoming) - lead author of data analysis on Prague's public finances (time series analysis, comparison, visualisation)
+- [Core Spatial Analytics Report](https://uap.iprpraha.cz/) (Územně analytické podklady, 2020) - lead author of [data analysis on Prague's public finances](https://uap.iprpraha.cz/#/texty/326615/326979) (time series analysis, comparative analysis, visualisation)
 
 Ministry of Regional Development
 
