@@ -46,7 +46,7 @@ These are also standards that I hope will make collaboration easier.
 # Reports and other outputs
 
 - if the project results in a report, write it in Rmarkdown, with git playing the role of tracked changes
-- {redoc} may be useful for gathering external feedback through Word documents
+- ~~{redoc} may be useful for gathering external feedback through Word documents~~ now obsolete - this referred to the now unmaintained {redoc} package by Noam Ross
 - [hypothes.is](https://web.hypothes.is/) is a good, easy way to gather feedback on web-facing content; it may even be worth generating a HTML page of a draft report just for getting feedback
 - use the built-in citation system; can easily be linked to Zotero via the Better BibTex Zotero Plugin (or nowadays perhaps even without it); CSL-JSON may well be the most sensible format for storing citation data
 - in (R)markdown, when using git for version control it's nice to put each sentence on its own line (just one line break, so in the rendered Docx or PDF it stays as one paragraph = ["Semantic Line Breaks"](https://sembr.org/))
@@ -64,11 +64,11 @@ These are also standards that I hope will make collaboration easier.
 
 # Documentation
 
-- `README.md` in every directory, describing the files in that directory
-- the top-level README or a document like `rev.md` or some such should describe how to reproduce the work, but more importantly it should give a good overview of the project
+- optional but nice: `README.md` in every directory, describing the files in that directory
+- the top-level README or a document like `dev.md` or some such should describe how to reproduce the work, but more importantly it should give a good overview of the project
 - comments in code
 - it may make sense to document the whole project in a set of (R)md files, including some which showcase the outputs or even create the main report, and which together form an Rmarkdown website
-- there are a few rough templats in my personal package `[{ptrr}](https://github.com/petrbouchal/ptrr)` - xaringan/remark slides, Rmarkdown website, basic one-page Rmd/HTML documentation
+- there are a few rough templates in my personal package `[{ptrr}](https://github.com/petrbouchal/ptrr)` - xaringan/remark slides, Rmarkdown website, basic one-page Rmd/HTML documentation
 
 # Reproducibility
 
