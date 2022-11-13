@@ -83,7 +83,7 @@ These are also standards that I hope will make collaboration easier.
 
 # Style
 
-- snake case object/variable names
+- `snake_case` object/variable names
 - snake-case column names in data frames, with no spaces and diacritics (`janitor::clean_names()` is great for this)
 - if in doubt, use spaces between things
 - all package loading to be done at the top of the script
