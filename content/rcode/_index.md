@@ -85,7 +85,7 @@ These are also standards that I hope will make collaboration easier.
 
 - `snake_case` object/variable names
 - snake-case column names in data frames, with no spaces and diacritics (`janitor::clean_names()` is great for this)
-- if in doubt, use spaces between things
+- if in doubt, use spaces between things (`a == b`, `x <- "3"`, `a |> f()` `a > b`, `f(this, that)`)
 - all package loading to be done at the top of the script
 - use whitespace and code sections (Ctrl+R in Rstudio)
 - prefer `{purrr}` map-type functions to loops and `*apply()` functions
