@@ -162,7 +162,7 @@
 <h1 id="reports-and-other-outputs">Reports and other outputs</h1>
 <ul>
 <li>if the project results in a report, write it in Rmarkdown, with git playing the role of tracked changes</li>
-<li>{redoc} may be useful for gathering external feedback through Word documents</li>
+<li><del>{redoc} may be useful for gathering external feedback through Word documents</del> now obsolete - this referred to the now unmaintained {redoc} package by Noam Ross</li>
 <li><a href="https://web.hypothes.is/">hypothes.is</a> is a good, easy way to gather feedback on web-facing content; it may even be worth generating a HTML page of a draft report just for getting feedback</li>
 <li>use the built-in citation system; can easily be linked to Zotero via the Better BibTex Zotero Plugin (or nowadays perhaps even without it); CSL-JSON may well be the most sensible format for storing citation data</li>
 <li>in (R)markdown, when using git for version control it&rsquo;s nice to put each sentence on its own line (just one line break, so in the rendered Docx or PDF it stays as one paragraph = <a href="https://sembr.org/">&ldquo;Semantic Line Breaks&rdquo;</a>)</li>
@@ -179,11 +179,11 @@
 </ul>
 <h1 id="documentation">Documentation</h1>
 <ul>
-<li><code>README.md</code> in every directory, describing the files in that directory</li>
-<li>the top-level README or a document like <code>rev.md</code> or some such should describe how to reproduce the work, but more importantly it should give a good overview of the project</li>
+<li>optional but nice: <code>README.md</code> in every directory, describing the files in that directory</li>
+<li>the top-level README or a document like <code>dev.md</code> or some such should describe how to reproduce the work, but more importantly it should give a good overview of the project</li>
 <li>comments in code</li>
 <li>it may make sense to document the whole project in a set of (R)md files, including some which showcase the outputs or even create the main report, and which together form an Rmarkdown website</li>
-<li>there are a few rough templats in my personal package <code>[{ptrr}](https://github.com/petrbouchal/ptrr)</code> - xaringan/remark slides, Rmarkdown website, basic one-page Rmd/HTML documentation</li>
+<li>there are a few rough templates in my personal package <code>[{ptrr}](https://github.com/petrbouchal/ptrr)</code> - xaringan/remark slides, Rmarkdown website, basic one-page Rmd/HTML documentation</li>
 </ul>
 <h1 id="reproducibility">Reproducibility</h1>
 <ul>
@@ -198,7 +198,7 @@
 </ul>
 <h1 id="style">Style</h1>
 <ul>
-<li>snake case object/variable names</li>
+<li><code>snake_case</code> object/variable names</li>
 <li>snake-case column names in data frames, with no spaces and diacritics (<code>janitor::clean_names()</code> is great for this)</li>
 <li>if in doubt, use spaces between things</li>
 <li>all package loading to be done at the top of the script</li>
