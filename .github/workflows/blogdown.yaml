@@ -10,8 +10,18 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
+
       - name: install udunits
         run: brew install udunits
+
+      - name: install fribidi
+        run: brew install fribidi
+
+      - name: install freetype2
+        run: brew install freetype
+
+      - name: install harfbuzz
+        run: brew install harfbuzz
 
       - name: Checkout repo
         uses: actions/checkout@v2
