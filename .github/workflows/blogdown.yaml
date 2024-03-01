@@ -10,8 +10,9 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - install udunits
+      - name: install udunits
         run: brew install udunits
+
       - name: Checkout repo
         uses: actions/checkout@v2
 
