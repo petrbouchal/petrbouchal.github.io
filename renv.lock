@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.3.1",
+    "Version": "4.3.3",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -343,13 +343,15 @@
     },
     "blogdown": {
       "Package": "blogdown",
-      "Version": "1.1",
+      "Version": "1.19",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
+        "R",
         "bookdown",
         "htmltools",
         "httpuv",
+        "jsonlite",
         "knitr",
         "later",
         "rmarkdown",
@@ -357,22 +359,24 @@
         "xfun",
         "yaml"
       ],
-      "Hash": "aa3c45dbbb52e1862fb1f2898319ef6a"
+      "Hash": "c6f9a963617c1947fe759a2904adf4ad"
     },
     "bookdown": {
       "Package": "bookdown",
-      "Version": "0.21",
+      "Version": "0.37",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
+        "R",
         "htmltools",
+        "jquerylib",
         "knitr",
         "rmarkdown",
         "tinytex",
         "xfun",
         "yaml"
       ],
-      "Hash": "1bf627f1f77313e345f71e779b658578"
+      "Hash": "b1b1c3be5c75309f6107726fa58ee20c"
     },
     "brew": {
       "Package": "brew",
