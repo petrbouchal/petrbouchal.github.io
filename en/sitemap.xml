@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://petrbouchal.xyz/rcode/</loc>
     <lastmod>2021-06-01T21:43:05+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/categories/</loc>
     <lastmod>2021-02-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -20,19 +17,13 @@
                 hreflang="en"
                 href="https://petrbouchal.xyz/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/post/weekly-dates-r/</loc>
     <lastmod>2021-02-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/post/rvest-time/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/tags/open-data/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -45,24 +36,16 @@
                 hreflang="en"
                 href="https://petrbouchal.xyz/tags/open-data/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/tags/rvest/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/tags/schools/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/tags/scraping/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/tags/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -75,9 +58,7 @@
                 hreflang="en"
                 href="https://petrbouchal.xyz/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/categories/rstats/</loc>
     <lastmod>2021-01-25T22:12:05+01:00</lastmod>
     <xhtml:link
@@ -90,9 +71,7 @@
                 hreflang="en"
                 href="https://petrbouchal.xyz/categories/rstats/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/talks/</loc>
     <lastmod>2020-10-22T22:11:12+02:00</lastmod>
     <xhtml:link
@@ -105,19 +84,13 @@
                 hreflang="en"
                 href="https://petrbouchal.xyz/talks/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/dev/notes/</loc>
     <lastmod>2020-10-22T15:36:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/dev/</loc>
     <lastmod>2020-10-22T15:36:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/post/</loc>
     <lastmod>2020-07-24T14:05:48+02:00</lastmod>
     <xhtml:link
@@ -130,9 +103,7 @@
                 hreflang="en"
                 href="https://petrbouchal.xyz/post/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/</loc>
     <lastmod>2020-07-24T14:02:00+02:00</lastmod>
     <xhtml:link
@@ -145,9 +116,7 @@
                 hreflang="en"
                 href="https://petrbouchal.xyz/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/search/</loc>
     <xhtml:link
                 rel="alternate"
@@ -159,13 +128,9 @@
                 hreflang="en"
                 href="https://petrbouchal.xyz/search/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/bio/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -177,13 +142,9 @@
                 hreflang="en"
                 href="https://petrbouchal.xyz/series/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/software/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://petrbouchal.xyz/work/</loc>
     <xhtml:link
                 rel="alternate"
@@ -196,5 +157,4 @@
                 href="https://petrbouchal.xyz/work/"
                 />
   </url>
-  
 </urlset>
