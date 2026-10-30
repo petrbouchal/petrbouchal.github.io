@@ -12,7 +12,7 @@ draft: false
 
 Pracuji na rozhraní mezi aplikovaným výzkumem a veřejnými politikami. 
 
-Momentálně vedu datový tým ve Vládním analytickém útvaru na Úřady vlády.
+V současnosti vedu datový tým ve Vládním analytickém útvaru na Úřady vlády.
 
 Dříve jsem vedl projektový tým [PANK](https://pank.cz) v Českých prioritách, evaluační jednotku evropských fondů na MMR, datový tým malé poradenské společnosti a strategický tým IPR Praha; pracoval jsem jako analytik v britském think tanku Institute for Government. 
 
