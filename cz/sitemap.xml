@@ -69,6 +69,19 @@
     <loc>https://petrbouchal.xyz/cz/post/vladnuti/</loc>
     <lastmod>2020-12-11T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://petrbouchal.xyz/cz/</loc>
+    <lastmod>2020-10-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://petrbouchal.xyz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cz"
+                href="https://petrbouchal.xyz/cz/"
+                />
+  </url><url>
     <loc>https://petrbouchal.xyz/cz/talks/</loc>
     <lastmod>2020-10-22T22:11:12+02:00</lastmod>
     <xhtml:link
@@ -99,19 +112,6 @@
                 rel="alternate"
                 hreflang="cz"
                 href="https://petrbouchal.xyz/cz/post/"
-                />
-  </url><url>
-    <loc>https://petrbouchal.xyz/cz/</loc>
-    <lastmod>2020-07-24T14:02:00+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://petrbouchal.xyz/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cz"
-                href="https://petrbouchal.xyz/cz/"
                 />
   </url><url>
     <loc>https://petrbouchal.xyz/cz/byrokrates/dobre-cteni-jak-vznika-byrospeak-jak-byt-slysen-opendata/</loc>
